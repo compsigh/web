@@ -11,4 +11,7 @@ app.get('/register', (req, res) => {
   res.sendFile(__dirname + '/register.html');
 });
 
+// Make the assets folder publicly accessible
+app.use('/assets', express.static(__dirname + '/assets'));
+
 app.listen(port, () => console.log(`compsigh listening on port ${port}!`));
