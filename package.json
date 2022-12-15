@@ -1,6 +1,6 @@
 {
   "name": "compsigh",
-  "author": "Edward Shturman",
+  "author": "compsigh",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "description": "Website for compsigh.so",
@@ -12,13 +12,13 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edwardshturman/compsigh.git"
+    "url": "git+https://github.com/compsigh/compsigh.git"
   },
   "bugs": {
-    "url": "https://github.com/edwardshturman/compsigh/issues"
+    "url": "https://github.com/compsigh/compsigh/issues"
   },
   "private": true,
-  "homepage": "https://github.com/edwardshturman/compsigh#readme",
+  "homepage": "https://github.com/compsigh/compsigh#readme",
   "eslintConfig": {
     "rules": {
       "indent": [
