@@ -19,6 +19,10 @@ app.get('/event', (req, res) => {
   res.sendFile(__dirname + '/event.html');
 });
 
+app.get('/leadership', (req, res) => {
+  res.sendFile(__dirname + '/leadership.html');
+});
+
 // Make the assets folder publicly accessible
 app.use('/assets', express.static(__dirname + '/assets'));
 
