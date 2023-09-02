@@ -9,28 +9,26 @@
     "type": "git",
     "url": "git+https://github.com/compsigh/web.git"
   },
-  "bugs": {
-    "url": "https://github.com/compsigh/web/issues"
-  },
-  "homepage": "https://github.com/compsigh/web#readme",
-  "eslintConfig": {
-    "rules": {
-      "semi": [
-        "error",
-        "always"
-      ]
-    }
-  },
+  "bugs": "https://github.com/compsigh/web/issues",
+  "homepage": "https://compsigh.so",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "rm -rf ./next && next dev",
+    "build": "rm -rf ./next && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react": "^18.0.38",
+    "@vercel/kv": "^0.2.2",
     "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "latest",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
     "next": "13.4.19",
+    "next-auth": "^0.0.0-manual.d0952342",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
