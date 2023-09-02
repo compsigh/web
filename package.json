@@ -1,37 +1,37 @@
 {
-  "name": "compsigh",
+  "name": "compsigh-web",
   "author": "compsigh",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "description": "Website for compsigh.so",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "type": "module",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/compsigh/compsigh.git"
+    "url": "git+https://github.com/compsigh/web.git"
   },
   "bugs": {
-    "url": "https://github.com/compsigh/compsigh/issues"
+    "url": "https://github.com/compsigh/web/issues"
   },
-  "private": true,
-  "homepage": "https://github.com/compsigh/compsigh#readme",
+  "homepage": "https://github.com/compsigh/web#readme",
   "eslintConfig": {
     "rules": {
-      "indent": [
-        "error",
-        4
-      ],
       "semi": [
         "error",
         "always"
       ]
     }
   },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "express": "^4.18.2"
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
