@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+
+const Tape = dynamic(() => import('@/components/Tape').then((mod) => mod.Tape), { ssr: false })
 
 const Delko = localFont({
   src: [{
@@ -70,7 +73,6 @@ const TXA = localFont({
 })
 
 import './globals.css'
-import { Tape } from '@/components/Tape'
 
 let metadataBase: URL
 if (process.env.VERCEL_URL) metadataBase = new URL('https://compsigh.club')
