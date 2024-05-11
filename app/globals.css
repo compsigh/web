@@ -49,6 +49,12 @@ h6 {
   line-height: 1.2;
 }
 
+h1 {
+  font-family: var(--font-header);
+  line-height: 155%;
+  font-size: 3rem;
+}
+
 a {
   color: unset;
   font-weight: bold;
