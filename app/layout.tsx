@@ -70,6 +70,7 @@ const TXA = localFont({
 })
 
 import './globals.css'
+import { Tape } from '@/components/Tape'
 
 let metadataBase: URL
 if (process.env.VERCEL_URL) metadataBase = new URL('https://compsigh.club')
@@ -95,14 +96,17 @@ export default function RootLayout({
       className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable}`}
     >
       <body>
-        <Image
-          unoptimized
-          src="/assets/compsigh-logo.png"
-          alt="compsigh logo"
-          width={100}
-          height={100}
-        />
-        <main>{children}</main>
+        <main>
+          <Image
+            unoptimized
+            src="/assets/compsigh-logo.png"
+            alt="compsigh logo"
+            width={100}
+            height={100}
+          />
+          {children}
+        </main>
+        <Tape />
       </body>
     </html>
   )
