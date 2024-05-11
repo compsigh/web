@@ -1,0 +1,12 @@
+div.label {
+  width: fit-content;
+  padding: 0 26px;
+  border-radius: 6px;
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
