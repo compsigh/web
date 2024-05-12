@@ -1,0 +1,26 @@
+button.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  padding: 4px 26px;
+  border-radius: 6px;
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 180%;
+
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  transition: all 0.2s ease;
+}
+
+button.button:hover {
+  color: var(--color-compsigh);
+}
+
+button.button:active {
+  color: var(--color-dark);
+  background-color: var(--color-compsigh);
+}
