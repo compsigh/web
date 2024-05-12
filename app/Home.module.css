@@ -7,8 +7,6 @@ img.logo {
 }
 
 p.description {
-  width: 100vw;
-
   font-family: var(--font-subtitle);
   font-size: 1.5rem;
   line-height: 155%;

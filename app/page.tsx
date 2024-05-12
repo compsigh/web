@@ -26,9 +26,7 @@ export default function Home() {
           <h1 className={styles.title}>compsigh</h1>
           </Grid>
         <p className={styles.description}>
-          compsigh is a social computer science club for meeting cool people and building cool things.
-          <br />
-          We host high-quality, low-stakes events, and engage in a vibrant, family-like community.
+          compsigh is a social computer science club for meeting cool people and building cool things. We host high-quality, low-stakes events, and engage in a vibrant, family-like community.
         </p>
       </header>
       <Spacer size={32} />
