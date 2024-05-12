@@ -30,101 +30,111 @@ export default function Home() {
         </p>
       </header>
       <Spacer size={32} />
-      <Grid
-        columns={3}
-        style={{ placeItems: 'center' }}
-      >
-        <Image
-          src="/assets/vectors/E3.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/E1.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/H4.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-      </Grid>
-      <Spacer size={10} />
-      <Grid
-        columns={3}
-        style={{ placeItems: 'center' }}
-      >
-        <Image
-          src="/assets/vectors/B3.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/E4.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/C4.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-      </Grid>
-      <Spacer size={10} />
-      <Grid
-        columns={3}
-        style={{ placeItems: 'center' }}
-      >
-        <Image
-          src="/assets/vectors/C1.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/A2.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/F4.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-      </Grid>
-      <Spacer size={10} />
-      <Grid
-        columns={3}
-        style={{ placeItems: 'center' }}
-      >
-        <Image
-          src="/assets/vectors/H1.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/D1.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-        <Image
-          src="/assets/vectors/H3.svg"
-          alt=""
-          width={20}
-          height={20}
-        />
-      </Grid>
+      <section className={styles.vectors}>
+        <Grid
+          columns={3}
+          style={{ placeItems: 'center' }}
+        >
+          <Image
+            src="/assets/vectors/E3.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.start}
+          />
+          <Image
+            src="/assets/vectors/E1.svg"
+            alt=""
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/assets/vectors/H4.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.end}
+          />
+        </Grid>
+        <Spacer size={10} />
+        <Grid
+          columns={3}
+          style={{ placeItems: 'center' }}
+        >
+          <Image
+            src="/assets/vectors/B3.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.start}
+          />
+          <Image
+            src="/assets/vectors/E4.svg"
+            alt=""
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/assets/vectors/C4.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.end}
+          />
+        </Grid>
+        <Spacer size={10} />
+        <Grid
+          columns={3}
+          style={{ placeItems: 'center' }}
+        >
+          <Image
+            src="/assets/vectors/C1.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.start}
+          />
+          <Image
+            src="/assets/vectors/A2.svg"
+            alt=""
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/assets/vectors/F4.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.end}
+          />
+        </Grid>
+        <Spacer size={10} />
+        <Grid
+          columns={3}
+          style={{ placeItems: 'center' }}
+        >
+          <Image
+            src="/assets/vectors/H1.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.start}
+          />
+          <Image
+            src="/assets/vectors/D1.svg"
+            alt=""
+            width={20}
+            height={20}
+          />
+          <Image
+            src="/assets/vectors/H3.svg"
+            alt=""
+            width={20}
+            height={20}
+            className={styles.end}
+          />
+        </Grid>
+      </section>
       <Spacer size={32} />
     </>
   )
