@@ -1,0 +1,43 @@
+nav.navbar {
+  align-self: center;
+}
+
+nav.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.navbar ul li {
+  margin: 0;
+}
+
+nav.navbar ul li::before {
+  content: "";
+}
+
+nav.navbar ul li a {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  padding: 4px 26px;
+  border-radius: 6px;
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 180%;
+
+  color: var(--color-dark);
+  transition: all 0.2s ease;
+}
+
+nav.navbar ul li a:hover {
+  background-color: var(--color-gray);
+}
+
+nav.navbar ul li a:active {
+  background-color: var(--color-compsigh);
+}
