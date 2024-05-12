@@ -51,14 +51,18 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-header);
   margin: 1.5em 0 1em;
   line-height: 1.2;
 }
 
 h1 {
-  font-family: var(--font-header);
   line-height: 155%;
   font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 h1.title {
