@@ -1,6 +1,4 @@
 footer.footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 32px 0;
   font-family: var(--font-mono);
