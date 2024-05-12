@@ -36,3 +36,9 @@ div.text {
     transform: translateX(calc(-200% + var(--start-offset)));
   }
 }
+
+@media (max-width: 700px) {
+  div.container {
+    overflow: hidden;
+  }
+}
