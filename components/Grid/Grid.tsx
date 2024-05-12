@@ -5,12 +5,14 @@ export function Grid(
     children,
     columns,
     columnSizeDistribution,
+    gap,
     style
   }:
   {
     children: React.ReactNode,
     columns?: number,
     columnSizeDistribution?: string[],
+    gap?: string,
     style?: React.CSSProperties
   }
 ) {
@@ -25,7 +27,7 @@ export function Grid(
       style={{
         display: 'grid',
         gridTemplateColumns,
-        gap: '32px',
+        gap: gap || '32px',
         ...style
       }}
     >

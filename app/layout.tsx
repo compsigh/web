@@ -99,13 +99,6 @@ export default function RootLayout({
     >
       <body>
         <main>
-          <Image
-            unoptimized
-            src="/assets/compsigh-logo.png"
-            alt="compsigh logo"
-            width={100}
-            height={100}
-          />
           {children}
         </main>
         <Tape />
