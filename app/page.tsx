@@ -8,27 +8,9 @@ import styles from './Home.module.css'
 export default function Home() {
   return (
     <>
-      <header>
-        <Spacer size={32} />
-        <Grid
-          columns={2}
-          columnSizeDistribution={['0fr', '0fr']}
-          gap='32px'
-        >
-          <Image
-            unoptimized
-            src="/assets/compsigh-logo.svg"
-            alt="compsigh logo"
-            width={40}
-            height={40}
-            className={styles.logo}
-          />
-          <h1 className={styles.title}>compsigh</h1>
-          </Grid>
-        <p className={styles.description}>
-          compsigh is a social computer science club for meeting cool people and building cool things. We host high-quality, low-stakes events, and engage in a vibrant, family-like community.
-        </p>
-      </header>
+      <p className={styles.description}>
+        compsigh is a social computer science club for meeting cool people and building cool things. We host high-quality, low-stakes events, and engage in a vibrant, family-like community.
+      </p>
       <Spacer size={32} />
       <section className={styles.vectors}>
         <Grid
@@ -135,7 +117,7 @@ export default function Home() {
           />
         </Grid>
       </section>
-      <Spacer size={32} />
+      <Spacer size={`20vh`} />
     </>
   )
 }

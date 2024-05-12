@@ -1,8 +1,12 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { Grid } from '@/components/Grid'
+import { Spacer } from '@/components/Spacer'
+import { Navbar } from '@/components/Navbar'
 const Tape = dynamic(() => import('@/components/Tape').then((mod) => mod.Tape), { ssr: false })
 
 const Delko = localFont({
@@ -98,6 +102,29 @@ export default function RootLayout({
       className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable}`}
     >
       <body>
+        <header>
+          <Spacer size={32} />
+          <Grid columns={2}>
+            <Link href={`/`}>
+              <Grid
+                columns={2}
+                columnSizeDistribution={['0fr', '0fr']}
+                gap='32px'
+              >
+                <Image
+                  unoptimized
+                  src="/assets/compsigh-logo.svg"
+                  alt="compsigh logo"
+                  width={40}
+                  height={40}
+                  className="logo"
+                />
+                <h1 className="title">compsigh</h1>
+              </Grid>
+            </Link>
+            <Navbar />
+          </Grid>
+        </header>
         <main>
           {children}
         </main>

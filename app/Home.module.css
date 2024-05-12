@@ -1,16 +1,13 @@
-h1.title {
-  margin: 0;
-}
-
-img.logo {
-  align-self: center;
-}
-
 p.description {
   font-family: var(--font-subtitle);
   font-size: 1.5rem;
   line-height: 155%;
   letter-spacing: -0.02em;
+}
+
+section.vectors {
+  pointer-events: none;
+  user-select: none;
 }
 
 section.vectors img.start {
