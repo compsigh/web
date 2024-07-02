@@ -70,6 +70,17 @@ const TXA = localFont({
   variable: '--font-txa'
 })
 
+const TronicaMono = localFont({
+  src: [
+    {
+      path: '../public/fonts/TronicaMono.woff',
+      weight: '400',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-tronica-mono'
+})
+
 import './globals.css'
 
 let metadataBase: URL
@@ -93,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable}`}
+      className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable} ${TronicaMono.variable}`}
     >
       <body>
         <Header />
