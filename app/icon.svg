@@ -1,4 +1,5 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1024" height="1024" rx="512" fill="#060505"/>
 <g filter="url(#filter0_d_1699_2)">
 <circle cx="512" cy="512" r="375" stroke="#FFA200" stroke-width="50"/>
 </g>
