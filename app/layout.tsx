@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { Header } from '@/components/Header'
-
 const Delko = localFont({
   src: [{
     path: '../public/fonts/Delko-Regular.woff',
@@ -107,7 +105,6 @@ export default function RootLayout({
       className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable} ${TronicaMono.variable}`}
     >
       <body>
-        <Header />
         <main>
           {children}
         </main>
