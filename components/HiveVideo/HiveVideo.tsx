@@ -13,7 +13,6 @@ export function HiveVideo() {
       const { innerWidth, innerHeight } = window
       const offsetX = ((clientX / innerWidth) - 0.5) * -2
       const offsetY = ((clientY / innerHeight) - 0.5) * -2
-      console.log(offsetX, offsetY)
 
       if (videoRef.current)
         videoRef.current.style.transform = `translate(${-50 + offsetX * 5}%, ${-50 + offsetY * 5}%)`
