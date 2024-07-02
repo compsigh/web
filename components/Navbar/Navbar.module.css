@@ -30,12 +30,12 @@ nav.navbar ul li a {
   font-weight: 600;
   line-height: 180%;
 
-  color: var(--color-dark);
+  color: var(--color-light);
   transition: all 0.2s ease;
 }
 
 nav.navbar ul li a:hover {
-  background-color: var(--color-gray);
+  background-color: var(--color-compsigh-20);
 }
 
 nav.navbar ul li a:active {
