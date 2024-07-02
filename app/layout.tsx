@@ -7,7 +7,6 @@ import localFont from 'next/font/local'
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { Navbar } from '@/components/Navbar'
-import { Footer } from '@/components/Footer'
 const Tape = dynamic(() => import('@/components/Tape').then((mod) => mod.Tape), { ssr: false })
 
 const Delko = localFont({
@@ -130,7 +129,6 @@ export default function RootLayout({
           {children}
         </main>
         <Tape />
-        <Footer />
       </body>
     </html>
   )
