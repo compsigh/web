@@ -8,7 +8,7 @@ import styles from './Home.module.css'
 export default function Home() {
   return (
     <>
-      <header className={styles.header}>
+      <div className={styles.content}>
         <Link href={`/`}>
           <h1 className={styles.title}>compsigh</h1>
         </Link>
@@ -18,8 +18,10 @@ export default function Home() {
         <nav className={styles.navbar}>
           <NavItems />
         </nav>
-      </header>
-      <HiveVideo />
+      </div>
+      <div className={styles.background}>
+        <HiveVideo />
+      </div>
     </>
   )
 }

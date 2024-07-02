@@ -1,4 +1,13 @@
-header.header {
+div.background {
+  pointer-events: none;
+  user-select: none;
+  animation: fadeIn 2s ease forwards;
+  z-index: -1;
+  will-change: opacity;
+}
+
+div.content {
+  z-index: 1;
   position: fixed;
   top: calc(30% + 32px);
   right: 50px;
@@ -69,4 +78,13 @@ nav.navbar ul li a:hover {
 
 nav.navbar ul li a:active {
   background-color: var(--color-compsigh-60);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
