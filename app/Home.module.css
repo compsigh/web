@@ -4,23 +4,3 @@ p.description {
   line-height: 155%;
   letter-spacing: -0.02em;
 }
-
-section.vectors {
-  pointer-events: none;
-  user-select: none;
-}
-
-section.vectors img.start {
-  justify-self: self-start;
-}
-
-section.vectors img.end {
-  justify-self: self-end;
-}
-
-@media (max-width: 700px) {
-  section.vectors img.start,
-  section.vectors img.end {
-    justify-self: unset;
-  }
-}
