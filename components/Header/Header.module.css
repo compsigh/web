@@ -1,0 +1,15 @@
+header.header {
+  max-width: var(--max-width);
+  margin: var(--margin);
+}
+
+h1.title {
+  margin: 0;
+  color: var(--color-compsigh);
+}
+
+img.logo {
+  align-self: center;
+  pointer-events: none;
+  user-select: none;
+}

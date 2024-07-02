@@ -5,10 +5,12 @@ import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { Navbar } from '@/components/Navbar'
 
+import styles from './Header.module.css'
+
 export function Header() {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <Spacer size={32} />
         <Grid columns={2}>
           <Link href={`/`}>
@@ -23,9 +25,9 @@ export function Header() {
                 alt="compsigh logo"
                 width={40}
                 height={40}
-                className="logo"
+                className={styles.logo}
               />
-              <h1 className="title">compsigh</h1>
+              <h1 className={styles.title}>compsigh</h1>
             </Grid>
           </Link>
           <Navbar />
