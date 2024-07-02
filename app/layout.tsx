@@ -1,8 +1,6 @@
-import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-const Tape = dynamic(() => import('@/components/Tape').then((mod) => mod.Tape), { ssr: false })
 import { Header } from '@/components/Header'
 
 const Delko = localFont({
@@ -102,7 +100,6 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Tape />
       </body>
     </html>
   )
