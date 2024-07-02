@@ -6,6 +6,11 @@ header.header {
 h1.title {
   margin: 0;
   color: var(--color-compsigh);
+  text-shadow: 0 0 10px var(--color-compsigh-60);
+}
+
+h1.title:hover {
+  text-shadow: 0 0 10px var(--color-compsigh);
 }
 
 img.logo {
