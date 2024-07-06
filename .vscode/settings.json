@@ -1,0 +1,7 @@
+{
+  "markdownlint.config": {
+    "MD025": false, // Multiple top level headers in the same document
+    "MD033": false, // Inline HTML
+    "MD034": false, // Bare URLs for `GalleryCard` usage
+  }
+}
