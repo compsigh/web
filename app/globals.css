@@ -68,7 +68,7 @@ li {
 
 li::before,
 li::marker {
-  color: var(--color-dark);
+  color: var(--color-light-50);
 }
 
 ul > li {
