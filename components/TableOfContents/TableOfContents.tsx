@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+import styles from './TableOfContents.module.css'
+
 export function TableOfContents() {
   const [entries, setEntries] = useState<string[]>([])
 
@@ -13,7 +15,7 @@ export function TableOfContents() {
 
   return (
     <>
-      <nav>
+      <nav className={styles["table-of-contents"]}>
         <ul>
           {entries.map((entry, index) => (
             <li key={index}>

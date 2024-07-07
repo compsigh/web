@@ -1,0 +1,8 @@
+nav.table-of-contents {
+  font-family: var(--font-tronica-mono);
+  color: var(--color-compsigh);
+}
+
+nav.table-of-contents > ul > li {
+  margin: 8px 0;
+}
