@@ -13,6 +13,8 @@ import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { TableOfContents } from '@/components/TableOfContents'
 
+import './Page.css'
+
 async function readPage(slug: string[]) {
   try {
     const filePath = path.join(process.cwd(), 'app', ...slug) + '.md'
@@ -116,12 +118,15 @@ export default async function Page(
   { params }:
   { params: { slug: string[] } }
 ) {
-  const { content } = await readPage(params.slug)
+  const { content, frontmatter } = await readPage(params.slug)
 
   return (
     <Suspense>
       <TableOfContents />
-      {content}
+      <article>
+        <h1>{frontmatter.title}</h1>
+        {content}
+      </article>
     </Suspense>
   )
 }
