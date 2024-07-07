@@ -1,4 +1,4 @@
-@media (max-width: 700px) {
+@media (max-width: var(--max-width)) {
   .responsive-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
