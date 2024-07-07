@@ -11,6 +11,7 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
+import { TableOfContents } from '@/components/TableOfContents'
 
 async function readPage(slug: string[]) {
   try {
@@ -119,6 +120,7 @@ export default async function Page(
 
   return (
     <Suspense>
+      <TableOfContents />
       {content}
     </Suspense>
   )
