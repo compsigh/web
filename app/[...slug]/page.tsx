@@ -1,5 +1,4 @@
 import path from 'node:path'
-import Link from 'next/link'
 import { Suspense } from 'react'
 import fs from 'node:fs/promises'
 import { type Metadata } from 'next'
@@ -11,6 +10,7 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
+import { Author } from '@/components/Author'
 import { Sidebar } from '@/components/Sidebar'
 
 import './Page.css'
@@ -25,16 +25,22 @@ async function readPage(slug: string[]) {
       theme: vercelTheme as any
     }
 
+    type Author = {
+      name: string
+      avatar: string
+    }
+
     type Frontmatter = {
       title: string
       description: string
       published: boolean
+      authors: Author[]
       og_image?: string
     }
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Link, Spacer },
+      components: { Grid, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
@@ -124,6 +130,9 @@ export default async function Page(
     <Suspense>
       <article>
         <h1>{frontmatter.title}</h1>
+        {frontmatter.authors.map((author, index) => (
+          <Author key={index} {...author} />
+        ))}
         <div className="content">
           <Sidebar />
           {content}

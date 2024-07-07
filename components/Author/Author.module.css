@@ -1,0 +1,34 @@
+span.wrapper {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+span.container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+span.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img#avatar {
+  position: absolute;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+}
+
+span.name {
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--color-compsigh-60);
+  letter-spacing: -0.02em;
+}
+
+span.name::before {
+  content: "@";
+  color: var(--color-light-50);
+}

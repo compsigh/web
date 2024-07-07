@@ -13,6 +13,7 @@ h1 {
   letter-spacing: -0.02em;
   color: var(--color-compsigh);
   text-shadow: 0px 0px 10px var(--color-compsigh-60);
+  margin-bottom: 32px;
 }
 
 h2 {
