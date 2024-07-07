@@ -133,6 +133,7 @@ export default async function Page(
         {frontmatter.authors.map((author, index) => (
           <Author key={index} {...author} />
         ))}
+        <Spacer size={32} />
         <div className="content">
           <Sidebar />
           {content}
