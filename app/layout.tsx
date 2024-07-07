@@ -36,22 +36,6 @@ const ProtoMono = localFont({
   variable: '--font-proto-mono'
 })
 
-const InstrumentSerif = localFont({
-  src: [
-    {
-      path: '../public/fonts/InstrumentSerif-Regular.woff2',
-      weight: '400',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/InstrumentSerif-Italic.woff2',
-      weight: '400',
-      style: 'italic'
-    }
-  ],
-  variable: '--font-instrument-serif'
-})
-
 const TXA = localFont({
   src: [
     {
@@ -79,6 +63,102 @@ const TronicaMono = localFont({
   variable: '--font-tronica-mono'
 })
 
+const IosevkaAile = localFont({
+  src: [
+    {
+      path: '../public/fonts/IosevkaAile-Thin.woff2',
+      weight: '100',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-ThinItalic.woff2',
+      weight: '100',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-ExtraLight.woff2',
+      weight: '200',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-ExtraLightItalic.woff2',
+      weight: '200',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Light.woff2',
+      weight: '300',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-LightItalic.woff2',
+      weight: '300',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Regular.woff2',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Italic.woff2',
+      weight: '400',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Medium.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-MediumItalic.woff2',
+      weight: '500',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-SemiBold.woff2',
+      weight: '600',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-SemiBoldItalic.woff2',
+      weight: '600',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Bold.woff2',
+      weight: '700',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-BoldItalic.woff2',
+      weight: '700',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-ExtraBold.woff2',
+      weight: '800',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-ExtraBoldItalic.woff2',
+      weight: '800',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-Heavy.woff2',
+      weight: '900',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/IosevkaAile-HeavyItalic.woff2',
+      weight: '900',
+      style: 'italic'
+    }
+  ],
+  variable: '--font-iosevka-aile'
+})
+
 import './globals.css'
 
 let metadataBase: URL
@@ -102,7 +182,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${Delko.variable} ${ProtoMono.variable} ${InstrumentSerif.variable} ${TXA.variable} ${TronicaMono.variable}`}
+      className={`${Delko.variable} ${ProtoMono.variable} ${TXA.variable} ${TronicaMono.variable} ${IosevkaAile.variable}`}
     >
       <body>
         <main>

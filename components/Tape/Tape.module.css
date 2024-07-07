@@ -10,7 +10,7 @@ div.container {
   pointer-events: none;
   user-select: none;
 
-  font-family: var(--font-decorative);
+  font-family: var(--font-txa);
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 155%;

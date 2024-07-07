@@ -25,7 +25,7 @@ nav.navbar ul li a {
   padding: 4px 26px;
   border-radius: 6px;
 
-  font-family: var(--font-mono);
+  font-family: var(--font-proto-mono);
   font-size: 1rem;
   font-weight: 600;
   line-height: 180%;
