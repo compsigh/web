@@ -11,7 +11,7 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
-import { TableOfContents } from '@/components/TableOfContents'
+import { Sidebar } from '@/components/Sidebar'
 
 import './Page.css'
 
@@ -122,10 +122,12 @@ export default async function Page(
 
   return (
     <Suspense>
-      <TableOfContents />
       <article>
         <h1>{frontmatter.title}</h1>
-        {content}
+        <div className="content">
+          <Sidebar />
+          {content}
+        </div>
       </article>
     </Suspense>
   )

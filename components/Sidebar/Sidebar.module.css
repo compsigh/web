@@ -1,0 +1,22 @@
+aside.sidebar {
+  max-width: 200px;
+  position: absolute;
+  margin-left: -280px;
+  margin-top: -14px;
+}
+
+hr.line {
+  border: 1px solid hsla(000deg, 000%, 100%, 0.3);
+}
+
+p.nav-edu {
+  font-family: var(--font-tronica-mono);
+  color: var(--color-light-50);
+}
+
+p.nav-edu > kbd {
+  font-family: var(--font-tronica-mono);
+  border: 1px solid var(--color-light-50);
+  border-radius: 4px;
+  padding: 2px 4px 1px 4px;
+}

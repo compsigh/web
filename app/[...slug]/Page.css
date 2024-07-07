@@ -3,6 +3,10 @@ article {
   margin: var(--margin);
 }
 
+div.content {
+  position: relative;
+}
+
 h1 {
   font-family: var(--font-tronica-mono);
   font-weight: 400;

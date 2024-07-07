@@ -1,18 +1,8 @@
-'use client'
-
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 import styles from './TableOfContents.module.css'
 
-export function TableOfContents() {
-  const [entries, setEntries] = useState<string[]>([])
-
-  useEffect(() => {
-    const headings = document.querySelectorAll('h2, h3')
-    setEntries(Array.from(headings).map(heading => heading.textContent || ''))
-  }, [])
-
+export function TableOfContents({ entries }: { entries: string[] }) {
   return (
     <>
       <nav className={styles["table-of-contents"]}>
