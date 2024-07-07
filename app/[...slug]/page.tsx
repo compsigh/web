@@ -11,9 +11,27 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
-import { Sidebar } from '@/components/Sidebar'
+import { ArticleWrapper } from '@/components/ArticleWrapper'
 
-import './Page.css'
+import './Post.css'
+
+type Author = {
+  name: string
+  avatar: string
+}
+
+type Frontmatter = {
+  title: string
+  description: string
+  published: boolean
+  authors: Author[]
+  og_image?: string
+}
+
+export type PostProps = {
+  content: React.ReactElement<any, string | React.JSXElementConstructor<any>>,
+  frontmatter: Frontmatter
+}
 
 async function readPage(slug: string[]) {
   try {
@@ -23,19 +41,6 @@ async function readPage(slug: string[]) {
     const vercelTheme = await import('./vercel-theme.json')
     const rehypePrettyCodeOptions: Options = {
       theme: vercelTheme as any
-    }
-
-    type Author = {
-      name: string
-      avatar: string
-    }
-
-    type Frontmatter = {
-      title: string
-      description: string
-      published: boolean
-      authors: Author[]
-      og_image?: string
     }
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
@@ -125,20 +130,9 @@ export default async function Page(
   { params: { slug: string[] } }
 ) {
   const { content, frontmatter } = await readPage(params.slug)
-
   return (
     <Suspense>
-      <article>
-        <h1>{frontmatter.title}</h1>
-        {frontmatter.authors.map((author, index) => (
-          <Author key={index} {...author} />
-        ))}
-        <Spacer size={32} />
-        <div className="content">
-          <Sidebar />
-          {content}
-        </div>
-      </article>
+      <ArticleWrapper content={content} frontmatter={frontmatter} />
     </Suspense>
   )
 }

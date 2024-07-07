@@ -3,6 +3,10 @@ article {
   margin: var(--margin);
 }
 
+div.authors-and-content {
+  animation: fadeIn 1s ease forwards;
+}
+
 div.content {
   position: relative;
 }
@@ -21,4 +25,15 @@ h2 {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--color-light-50);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
