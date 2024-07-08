@@ -1,1 +1,0 @@
-export { ArticleWrapper } from './ArticleWrapper'

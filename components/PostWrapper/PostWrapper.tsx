@@ -23,7 +23,7 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
   )
 }
 
-export function ArticleWrapper({ content, frontmatter }: PostProps) {
+export function PostWrapper({ content, frontmatter }: PostProps) {
   const [typewriterDone, setTypewriterDone] = useState(false)
   return (
     <>
@@ -32,7 +32,7 @@ export function ArticleWrapper({ content, frontmatter }: PostProps) {
           as={'h1'}
           options={{
             cursor: '_',
-            delay: 70,
+            delay: 30,
             }}
           string={frontmatter.title}
           handleDone={() => setTypewriterDone(true)}

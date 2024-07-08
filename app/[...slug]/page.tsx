@@ -11,7 +11,7 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
-import { ArticleWrapper } from '@/components/ArticleWrapper'
+import { PostWrapper } from '@/components/PostWrapper'
 
 import './Post.css'
 
@@ -132,7 +132,7 @@ export default async function Page(
   const { content, frontmatter } = await readPage(params.slug)
   return (
     <Suspense>
-      <ArticleWrapper content={content} frontmatter={frontmatter} />
+      <PostWrapper content={content} frontmatter={frontmatter} />
     </Suspense>
   )
 }

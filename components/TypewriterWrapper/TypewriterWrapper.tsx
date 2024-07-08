@@ -17,7 +17,6 @@ export function TypewriterWrapper(
       options={options}
       onInit={(typewriter) => {
         typewriter
-          .pauseFor(1000)
           .start()
           .typeString(string)
           .callFunction(() => {
