@@ -20,3 +20,17 @@ p.nav-edu > kbd {
   border-radius: 4px;
   padding: 2px 4px 1px 4px;
 }
+
+@media (max-width: 81.25rem) {
+  aside.sidebar {
+    max-width: unset;
+    position: unset;
+    margin-left: unset;
+    margin-top: unset;
+    margin-bottom: 48px;
+  }
+
+  hr.line {
+    display: none;
+  }
+}
