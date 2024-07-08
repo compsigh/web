@@ -1,16 +1,3 @@
-article {
-  max-width: var(--max-width);
-  margin: var(--margin);
-}
-
-div.authors-and-content {
-  animation: fadeIn 1s ease forwards;
-}
-
-div.content {
-  position: relative;
-}
-
 h1 {
   font-family: var(--font-tronica-mono);
   font-weight: 400;
@@ -25,15 +12,4 @@ h2 {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--color-light-50);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

@@ -1,6 +1,7 @@
 export function Spacer(
-  { size }:
-  { size: number | string }
+  { size, axis = 'vertical' }:
+  { size: number | string, axis?: 'vertical' | 'horizontal' }
 ) {
+  if (axis === 'horizontal') return <div style={{ width: size }} />
   return <div style={{ height: size }} />
 }
