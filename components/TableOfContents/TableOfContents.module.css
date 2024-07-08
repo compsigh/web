@@ -6,3 +6,7 @@ nav.table-of-contents {
 nav.table-of-contents > ul > li {
   margin: 8px 0;
 }
+
+nav.table-of-contents > ul > li::before {
+  content: "";
+}
