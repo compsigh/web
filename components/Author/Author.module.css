@@ -24,8 +24,9 @@ img#avatar {
 
 span.name {
   font-weight: 700;
-  text-shadow: 0 0 10px var(--color-compsigh-60);
   letter-spacing: -0.02em;
+  text-transform: lowercase;
+  text-shadow: 0 0 10px var(--color-compsigh-60);
 }
 
 span.name::before {
