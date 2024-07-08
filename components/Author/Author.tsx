@@ -81,5 +81,5 @@ export function Author({ name, avatar }: { name: string, avatar: string }) {
         </span>
       </span>
     </>
-  );
+  )
 }

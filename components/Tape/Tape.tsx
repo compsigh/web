@@ -23,17 +23,19 @@ export function Tape() {
   }, [tapeCount])
 
   return (
-    <div className={styles.container}>
-      {offsets.map((offset, i) => (
-        // @ts-ignore
-        <div key={i} className={styles.tape} style={{'--start-offset': `${offset}%`}}>
-          {repeatedTexts.map((text, j) => (
-            <div key={j} className={styles.text}>
-              {text}
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className={styles.container}>
+        {offsets.map((offset, i) => (
+          // @ts-ignore
+          <div key={i} className={styles.tape} style={{'--start-offset': `${offset}%`}}>
+            {repeatedTexts.map((text, j) => (
+              <div key={j} className={styles.text}>
+                {text}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   )
 }

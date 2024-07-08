@@ -131,8 +131,10 @@ export default async function Page(
 ) {
   const { content, frontmatter } = await readPage(params.slug)
   return (
-    <Suspense>
-      <PostWrapper content={content} frontmatter={frontmatter} />
-    </Suspense>
+    <>
+      <Suspense>
+        <PostWrapper content={content} frontmatter={frontmatter} />
+      </Suspense>
+    </>
   )
 }

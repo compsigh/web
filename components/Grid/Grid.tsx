@@ -22,16 +22,18 @@ export function Grid(
     : defaultColumnTemplate
 
   return (
-    <div
-      className={styles["responsive-grid"]}
-      style={{
-        display: 'grid',
-        gridTemplateColumns,
-        gap: gap || '32px',
-        ...style
-      }}
-    >
-      {children}
-    </div>
+    <>
+      <div
+        className={styles["responsive-grid"]}
+        style={{
+          display: 'grid',
+          gridTemplateColumns,
+          gap: gap || '32px',
+          ...style
+        }}
+      >
+        {children}
+      </div>
+    </>
   )
 }

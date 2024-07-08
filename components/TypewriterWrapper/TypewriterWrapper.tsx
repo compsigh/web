@@ -12,17 +12,19 @@ export function TypewriterWrapper(
   }
 ) {
   return (
-    <TypewriterComponent
-      component={as}
-      options={options}
-      onInit={(typewriter) => {
-        typewriter
-          .start()
-          .typeString(string)
-          .callFunction(() => {
-            if (handleDone) handleDone()
-          })
-      }}
-    />
+    <>
+      <TypewriterComponent
+        component={as}
+        options={options}
+        onInit={(typewriter) => {
+          typewriter
+            .start()
+            .typeString(string)
+            .callFunction(() => {
+              if (handleDone) handleDone()
+            })
+        }}
+      />
+    </>
   )
 }

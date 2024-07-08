@@ -15,10 +15,12 @@ export function Sidebar() {
   }, [])
 
   return (
-    <aside className={styles.sidebar}>
-      <TableOfContents entries={entries} />
-      {entries.length > 0 && <hr className={styles.line} /> }
-      <p className={styles["nav-edu"]}>Type <kbd>/</kbd> to navigate the platform!</p>
-    </aside>
+    <>
+      <aside className={styles.sidebar}>
+        <TableOfContents entries={entries} />
+        {entries.length > 0 && <hr className={styles.line} /> }
+        <p className={styles["nav-edu"]}>Type <kbd>/</kbd> to navigate the platform!</p>
+      </aside>
+    </>
   )
 }
