@@ -92,6 +92,7 @@ nav.navbar ul li a:active {
 @media (max-width: 700px) {
   div.content {
     right: 0;
+    top: 30%;
     margin: 0 40px;
     align-items: unset;
   }
