@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { Spacer } from '@/components/Spacer'
+
 const Delko = localFont({
   src: [{
     path: '../public/fonts/Delko-Regular.woff',
@@ -188,6 +190,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Spacer size={`20vh`} />
       </body>
     </html>
   )
