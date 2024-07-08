@@ -27,8 +27,6 @@ body {
   line-height: 180%;
 }
 
-/* TODO: mobile styles */
-
 h1 {
   font-family: var(--font-delko);
   font-size: 3rem;

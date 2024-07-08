@@ -88,3 +88,21 @@ nav.navbar ul li a:active {
     opacity: 1;
   }
 }
+
+@media (max-width: 700px) {
+  div.content {
+    right: 0;
+    margin: 0 40px;
+    align-items: unset;
+  }
+
+  p.description {
+    text-align: left;
+  }
+
+  nav.navbar ul {
+    align-items: unset;
+    margin-right: unset;
+    margin-left: -26px;
+  }
+}
