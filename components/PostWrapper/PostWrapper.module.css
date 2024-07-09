@@ -19,10 +19,15 @@ article.post > div.sidebar-placeholder {
 
 article.post > div.sidebar-wrapper,
 article.post > div.content > div.authors-and-content {
-  animation: fadeIn 1s ease forwards;
+  animation: fadeInFromBelow 1s ease forwards;
 }
 
-@keyframes fadeIn {
+article.post > div.content > div.breadcrumbs-wrapper,
+article.post > div.content > div.breadcrumbs-placeholder {
+  display: none;
+}
+
+@keyframes fadeInFromBelow {
   from {
     opacity: 0;
     transform: translateY(24px);
@@ -33,7 +38,18 @@ article.post > div.content > div.authors-and-content {
   }
 }
 
-@media (max-width: 1420px /* 1260px + 80px + 80px */) {
+@keyframes fadeInFromAbove {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1420px /* 80px + 200px + 80px + 700px + 80px + 200px + 80px */) {
   article.post {
     max-width: var(--max-width);
     margin: var(--margin);
@@ -42,6 +58,21 @@ article.post > div.content > div.authors-and-content {
   article.post > div.sidebar-wrapper,
   article.post > div.sidebar-placeholder {
     display: none;
+  }
+
+  article.post > div.content > div.breadcrumbs-wrapper,
+  article.post > div.content > div.breadcrumbs-placeholder {
+    display: revert;
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+
+  article.post > div.content > div.breadcrumbs-wrapper {
+    animation: fadeInFromAbove 1s ease forwards;
+  }
+
+  article.post > div.content > div.breadcrumbs-placeholder {
+    opacity: 0;
   }
 }
 

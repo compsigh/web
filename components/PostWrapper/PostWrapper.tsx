@@ -6,6 +6,7 @@ import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
 import { Sidebar } from '@/components/Sidebar'
 import { type PostProps } from '@/app/[...slug]/page'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
 import styles from './PostWrapper.module.css'
@@ -53,6 +54,18 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             </div>
         }
         <div className={styles.content}>
+          {
+            !typewriterDone &&
+              <div className={styles["breadcrumbs-placeholder"]}>
+                <Breadcrumbs />
+              </div>
+          }
+          {
+            typewriterDone &&
+              <div className={styles["breadcrumbs-wrapper"]}>
+                <Breadcrumbs />
+              </div>
+          }
           <TypewriterWrapper
             as={'h1'}
             options={{
