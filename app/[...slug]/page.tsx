@@ -8,6 +8,7 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import rehypeSlug from 'rehype-slug'
 import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
+import { Mic } from '@/components/Mic'
 import { Grid } from '@/components/Grid'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
@@ -45,7 +46,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Spacer },
+      components: { Grid, Mic, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {

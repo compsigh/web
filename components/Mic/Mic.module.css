@@ -1,0 +1,11 @@
+span.container {
+  position: absolute;
+  left: -70px;
+}
+
+@media (max-width: 860px /* 80px + 700px + 80px */) {
+  span.container {
+    position: unset;
+    left: unset;
+  }
+}

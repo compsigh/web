@@ -45,7 +45,7 @@ article.post > div.content > div.authors-and-content {
   }
 }
 
-@media (max-width: 860px /* 700px + 80px + 80px */) {
+@media (max-width: 860px /* 80px + 700px + 80px */) {
   article.post > div.content {
     margin: 0 40px;
   }

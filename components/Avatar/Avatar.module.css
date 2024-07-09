@@ -1,0 +1,12 @@
+span.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img#avatar {
+  position: absolute;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+}
