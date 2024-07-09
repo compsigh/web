@@ -3,10 +3,20 @@ nav.table-of-contents {
   color: var(--color-compsigh);
 }
 
+nav.table-of-contents > ul {
+  margin-top: 8px;
+}
+
 nav.table-of-contents > ul > li {
   margin: 8px 0;
 }
 
 nav.table-of-contents > ul > li::before {
   content: "";
+}
+
+p.jump-to {
+  font-family: var(--font-tronica-mono);
+  color: var(--color-light-50);
+  margin-bottom: 8px;
 }
