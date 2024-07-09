@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
@@ -24,6 +24,19 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
 
 export function PostWrapper({ content, frontmatter }: PostProps) {
   const [typewriterDone, setTypewriterDone] = useState(false)
+  const CURSOR_WIDTH = 1
+  const MAX_LENGTH_MOBILE = 11 - CURSOR_WIDTH
+  const MAX_LENGTH_TABLET = 20 - CURSOR_WIDTH
+  const MAX_LENGTH_DESKTOP = 23 - CURSOR_WIDTH
+  const [maxStringLength, setMaxStringLength] = useState(MAX_LENGTH_DESKTOP)
+  useEffect(() => {
+    function calculateMaxStringLength() {
+      if (window.innerWidth < 768) return MAX_LENGTH_MOBILE
+      if (window.innerWidth < 1024) return MAX_LENGTH_TABLET
+      return MAX_LENGTH_DESKTOP
+    }
+    setMaxStringLength(calculateMaxStringLength())
+  }, [MAX_LENGTH_MOBILE, MAX_LENGTH_TABLET, MAX_LENGTH_DESKTOP])
   return (
     <>
       <article className={styles.post}>
@@ -44,9 +57,10 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             as={'h1'}
             options={{
               cursor: '_',
-              delay: 30,
+              delay: 50,
               }}
-            string={frontmatter.title}
+            strings={frontmatter.title.split(' ')}
+            maxLength={maxStringLength}
             handleDone={() => setTypewriterDone(true)}
           />
           {typewriterDone && <AuthorsAndContent content={content} frontmatter={frontmatter} />}
