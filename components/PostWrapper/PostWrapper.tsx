@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
@@ -29,7 +29,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
   const MAX_LENGTH_TABLET = 20 - CURSOR_WIDTH
   const MAX_LENGTH_DESKTOP = 23 - CURSOR_WIDTH
   const [maxStringLength, setMaxStringLength] = useState(MAX_LENGTH_DESKTOP)
-  useEffect(() => {
+  useLayoutEffect(() => {
     function calculateMaxStringLength() {
       if (window.innerWidth < 768) return MAX_LENGTH_MOBILE
       if (window.innerWidth < 1024) return MAX_LENGTH_TABLET
