@@ -27,4 +27,5 @@ nav#breadcrumbs ol li::after {
 
 nav#breadcrumbs ol li a {
   color: var(--color-compsigh);
+  text-shadow: 0px 0px 10px var(--color-compsigh-60);
 }
