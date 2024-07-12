@@ -32,6 +32,7 @@ export function HiveVideo() {
           autoPlay
           loop
           muted
+          playsInline
         />
       </div>
     </>
