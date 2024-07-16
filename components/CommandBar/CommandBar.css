@@ -1,0 +1,88 @@
+[cmdk-dialog] {
+  width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  transition: transform 100ms ease;
+  outline: none;
+}
+
+[cmdk-input] {
+  border: none;
+  padding: 8px 8px 16px 8px;
+  margin-bottom: 16px;
+  background: transparent;
+  color: var(--color-light);
+  font-family: var(--font-iosevka-aile);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+[cmdk-item] {
+  content-visibility: auto;
+
+  cursor: pointer;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  color: var(--color-light);
+  user-select: none;
+  will-change: background, color;
+  transition: all 150ms ease;
+  transition-property: none;
+
+  &[data-selected="true"] {
+    background: var(--color-compsigh-10);
+  }
+
+  &[data-disabled="true"] {
+    color: var(--color-light-30);
+    cursor: not-allowed;
+  }
+
+  &:active {
+    transition-property: background;
+    background: var(--color-compsigh-20);
+  }
+
+  & + [cmdk-item] {
+    margin-top: 4px;
+  }
+}
+
+[cmdk-list] {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+[cmdk-separator] {
+  height: 1px;
+  width: 100%;
+  background: var(--color-light-30);
+  margin: 4px 0;
+}
+
+*:not([hidden]) + [cmdk-group] {
+  margin-top: 8px;
+}
+
+[cmdk-group-heading] {
+  user-select: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-light-50);
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+[cmdk-empty] {
+  font-size: 0.875rem;
+  height: 48px;
+  color: var(--color-light-50);
+}
