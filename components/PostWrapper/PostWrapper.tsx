@@ -9,6 +9,7 @@ import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { Decorations } from '@/components/Decorations'
+import { Emote } from '@/components/Decorations/Emote'
 import { ContribIcon } from '@/components/Decorations/ContribIcon'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
@@ -57,12 +58,34 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Sound sound="skill-issue" />
               </Decorations>
               <Decorations layout="right">
-                <ContribIcon icon="random" />
-                <ContribIcon icon="random" />
-                <ContribIcon icon="random" />
-                <ContribIcon icon="random" />
-                <ContribIcon icon="random" />
-                <ContribIcon icon="random" />
+                <ContribIcon icon="none" />
+                <ContribIcon icon="low" />
+                <ContribIcon icon="medium-low" />
+                <ContribIcon icon="medium-high" />
+                <ContribIcon icon="high" />
+              </Decorations>
+              <Decorations layout="right">
+                <Emote emote="compsighLogo" />
+                <Emote emote="hive" />
+                <Emote emote="bensonstare" />
+                <Emote emote="buildingBlocks" />
+                <Emote emote="calendar" />
+                <Emote emote="cascade" />
+                <Emote emote="cue" />
+                <Emote emote="heart" />
+                <Emote emote="mehmote" />
+                <Emote emote="moon" />
+                <Emote emote="nextjs" />
+                <Emote emote="notepad" />
+                <Emote emote="openBook" />
+                <Emote emote="philmote" />
+                <Emote emote="picnic" />
+                <Emote emote="playingCards" />
+                <Emote emote="repost" />
+                <Emote emote="rust" />
+                <Emote emote="sunflowers" />
+                <Emote emote="taoFedora" />
+                <Emote emote="vercel" />
               </Decorations>
             </DelayWrapper>
         }

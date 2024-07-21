@@ -1,0 +1,1 @@
+export { Emote } from './Emote'

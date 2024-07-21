@@ -1,0 +1,40 @@
+<svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_94_782)">
+<g filter="url(#filter0_d_94_782)">
+<circle cx="225" cy="25" r="25" fill="#FFA200"/>
+<circle cx="225" cy="125" r="25" fill="#FFA200"/>
+<circle cx="225" cy="225" r="25" fill="#FFA200"/>
+<circle cx="225" cy="325" r="25" fill="#FFA200"/>
+<circle cx="225" cy="425" r="25" fill="#FFA200"/>
+<circle cx="315" cy="75" r="25" fill="#FFA200"/>
+<circle cx="315" cy="175" r="25" fill="#FFA200"/>
+<circle cx="315" cy="275" r="25" fill="#FFA200"/>
+<circle cx="135" cy="75" r="25" fill="#FFA200"/>
+<circle cx="135" cy="175" r="25" fill="#FFA200"/>
+<circle cx="135" cy="275" r="25" fill="#FFA200"/>
+<circle cx="45" cy="125" r="25" fill="#FFA200"/>
+<circle cx="45" cy="225" r="25" fill="#FFA200"/>
+<circle cx="45" cy="325" r="25" fill="#FFA200"/>
+<circle cx="135" cy="375" r="25" fill="#FFA200"/>
+<circle cx="315" cy="375" r="25" fill="#FFA200"/>
+<circle cx="405" cy="125" r="25" fill="#FFA200"/>
+<circle cx="405" cy="225" r="25" fill="#FFA200"/>
+<circle cx="405" cy="325" r="25" fill="#FFA200"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_94_782" x="-80" y="-100" width="610" height="650" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="50"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.992157 0 0 0 0 0.733333 0 0 0 0 0.188235 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_94_782"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_94_782" result="shape"/>
+</filter>
+<clipPath id="clip0_94_782">
+<rect width="450" height="450" fill="white"/>
+</clipPath>
+</defs>
+</svg>
