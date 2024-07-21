@@ -5,8 +5,10 @@ import { useLayoutEffect, useState } from 'react'
 import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
 import { Sidebar } from '@/components/Sidebar'
+import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { Decorations } from '@/components/Decorations'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
 import styles from './PostWrapper.module.css'
@@ -41,6 +43,20 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
   return (
     <>
       <article className={styles.post}>
+        {
+          typewriterDone &&
+            <DelayWrapper>
+              <Decorations>
+                <Sound sound="brainrot-1" />
+                <Sound sound="brainrot-2" />
+                <Sound sound="dude" />
+                <Sound sound="have-you-tried-gdb" />
+                <Sound sound="noti" />
+                <Sound sound="petemob" />
+                <Sound sound="skill-issue" />
+              </Decorations>
+            </DelayWrapper>
+        }
         {
           !typewriterDone &&
             <div className={styles["sidebar-placeholder"]} style={{ opacity: 0 }}>
@@ -81,4 +97,12 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
       </article>
     </>
   )
+}
+
+function DelayWrapper({ children }: { children: React.ReactNode }) {
+  const [show, setShow] = useState(false)
+  useLayoutEffect(() => {
+    setTimeout(() => setShow(true), 1000)
+  }, [])
+  return <>{show && children}</>
 }
