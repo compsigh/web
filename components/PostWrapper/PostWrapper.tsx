@@ -10,7 +10,7 @@ import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { Decorations } from '@/components/Decorations'
 import { Emote } from '@/components/Decorations/Emote'
-import { RandomQuote } from '@/components/Decorations/Quote'
+import { Quote, quotes } from '@/components/Decorations/Quote'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
 import styles from './PostWrapper.module.css'
@@ -77,7 +77,12 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Emote emote="sunflowers" />
                 <Emote emote="taoFedora" />
                 <Emote emote="vercel" />
-                <RandomQuote />
+                <Quote quote={quotes[0]} />
+                <Quote quote={quotes[1]} />
+                <Quote quote={quotes[2]} />
+                <Quote quote={quotes[3]} />
+                <Quote quote={quotes[4]} />
+                <Quote quote={quotes[5]} />
               </Decorations>
             </DelayWrapper>
         }

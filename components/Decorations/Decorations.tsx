@@ -34,6 +34,14 @@ export function Decorations({
     return () => window.removeEventListener('resize', handleResize)
   }, [children, layout])
 
+  const decorations = Array.from(children)
+  function pickDecoration() {
+    const randomIndex = Math.floor(Math.random() * decorations.length)
+    const randomChild = decorations[randomIndex]
+    decorations.splice(randomIndex, 1)
+    return randomChild
+  }
+
   if (!display) return <></>
   return (
     <div
@@ -90,7 +98,7 @@ export function Decorations({
               pointerEvents: 'auto'
             }}
           >
-            {children[Math.floor(Math.random() * children.length)]}
+            {pickDecoration()}
           </div>
         </div>
       ))}

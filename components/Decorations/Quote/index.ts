@@ -1,1 +1,1 @@
-export { Quote, RandomQuote } from './Quote'
+export { Quote, quotes, RandomQuote } from './Quote'

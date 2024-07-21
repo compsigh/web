@@ -5,7 +5,7 @@ type Quote = {
   author: string
 }
 
-const quotes: Quote[] = [
+export const quotes: Quote[] = [
   {
     quote: 'I could not be more powered by AI right now',
     author: 'Jet'
