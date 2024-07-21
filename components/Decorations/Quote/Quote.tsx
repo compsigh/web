@@ -35,7 +35,13 @@ const quotes: Quote[] = [
 export function Quote({ quote }: { quote: Quote }) {
   return (
     <>
-      <div id={styles["quote-container"]}>
+      <div
+        id={styles["quote-container"]}
+        style={{
+          // Random rotation between -10 and 10 degrees
+          rotate: `${Math.random() * 20 - 10}deg`
+        }}
+      >
         <blockquote>
           <p id={styles.quote}>{quote.quote}</p>
         </blockquote>
