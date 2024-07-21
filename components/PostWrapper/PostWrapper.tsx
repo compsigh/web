@@ -46,7 +46,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         {
           typewriterDone &&
             <DelayWrapper>
-              <Decorations>
+              <Decorations layout="right">
                 <Sound sound="brainrot-1" />
                 <Sound sound="brainrot-2" />
                 <Sound sound="dude" />

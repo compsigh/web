@@ -4,7 +4,13 @@ import { useEffect, useState } from 'react'
 
 import styles from './Decorations.module.css'
 
-export function Decorations({ children }: { children: React.ReactNode[] }) {
+export function Decorations({
+  children,
+  layout
+}: {
+  children: React.ReactNode[],
+  layout: 'full-width' | 'right'
+}) {
   const [display, setDisplay] = useState(true)
   const [positions, setPositions] = useState<{x: number, y: number, childIndex: number}[]>([])
 
@@ -29,9 +35,9 @@ export function Decorations({ children }: { children: React.ReactNode[] }) {
           y = Math.random() * documentHeight
         }
         while
-            ((x < (innerWidth / 2 + 350))  // Avoid center
-          || (x + 200 > innerWidth)        // Avoid right overflow
-          || (y + 100 > documentHeight))   // Avoid bottom overflow
+          (( (layout === 'right' && x < (innerWidth / 2 + 350)))  // Avoid center
+          || (layout === 'right' && x + 200 > innerWidth)         // Avoid right overflow
+          || (layout === 'right' && y + 100 > documentHeight))    // Avoid bottom overflow
         positions.push({ x, y, childIndex })
       }
       setPositions(positions)
@@ -41,7 +47,7 @@ export function Decorations({ children }: { children: React.ReactNode[] }) {
     function handleResize() { generateRandomPositions() }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [children])
+  }, [children, layout])
 
   if (!display) return <></>
   return (
