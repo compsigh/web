@@ -9,6 +9,7 @@ import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { Decorations } from '@/components/Decorations'
+import { ContribIcon } from '@/components/Decorations/ContribIcon'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
 import styles from './PostWrapper.module.css'
@@ -54,6 +55,14 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Sound sound="noti" />
                 <Sound sound="petemob" />
                 <Sound sound="skill-issue" />
+              </Decorations>
+              <Decorations layout="right">
+                <ContribIcon icon="random" />
+                <ContribIcon icon="random" />
+                <ContribIcon icon="random" />
+                <ContribIcon icon="random" />
+                <ContribIcon icon="random" />
+                <ContribIcon icon="random" />
               </Decorations>
             </DelayWrapper>
         }

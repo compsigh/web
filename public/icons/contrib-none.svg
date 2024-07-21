@@ -1,0 +1,26 @@
+<svg
+  width="128"
+  height="128"
+  viewBox="0 0 128 128"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    x="14.7693"
+    y="14.7695"
+    width="98.4615"
+    height="98.4615"
+    rx="29.5385"
+    fill="#060505"
+  />
+  <rect
+    x="19.6924"
+    y="19.6926"
+    width="88.6154"
+    height="88.6154"
+    rx="24.6154"
+    stroke="#FFECCC"
+    stroke-opacity="0.1"
+    stroke-width="9.84615"
+  />
+</svg>
