@@ -9,42 +9,27 @@ export function Decorations({
   layout
 }: {
   children: React.ReactNode[],
-  layout: 'full-width' | 'right'
+  layout: { left: boolean, right: boolean }
 }) {
   const [display, setDisplay] = useState(true)
-  const [positions, setPositions] = useState<{x: number, y: number, childIndex: number}[]>([])
+  const [numberOfElements, setNumberOfElements] = useState(0)
 
   useEffect(() => {
-    function generateRandomPositions() {
+    function setElementsBasedOnHeight() {
       const { innerWidth } = window
       const documentHeight = document.body.getBoundingClientRect().height
-      const NUMBER_OF_ELEMENTS = Math.floor(documentHeight / 200)
+      const DENSITY = 100 // Place an element every x pixels on the y-axis
+      setNumberOfElements(Math.floor(documentHeight / DENSITY))
 
       if (innerWidth < 1420) {
         setDisplay(false)
         return
       }
       else setDisplay(true)
-
-      const positions = []
-      for (let i = 0; i < NUMBER_OF_ELEMENTS; i++) {
-        let x, y, childIndex
-        do {
-          childIndex = Math.floor(Math.random() * children.length)
-          x = Math.random() * innerWidth
-          y = Math.random() * documentHeight
-        }
-        while
-          (( (layout === 'right' && x < (innerWidth / 2 + 350)))  // Avoid center
-          || (layout === 'right' && x + 200 > innerWidth)         // Avoid right overflow
-          || (layout === 'right' && y + 100 > documentHeight))    // Avoid bottom overflow
-        positions.push({ x, y, childIndex })
-      }
-      setPositions(positions)
     }
-    generateRandomPositions()
+    setElementsBasedOnHeight()
 
-    function handleResize() { generateRandomPositions() }
+    function handleResize() { setElementsBasedOnHeight() }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [children, layout])
@@ -57,23 +42,56 @@ export function Decorations({
         position: 'absolute',
         top: 0,
         left: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
         width: '100vw',
         height: document.body.getBoundingClientRect().height,
         pointerEvents: 'none',
         overflow: 'hidden'
       }}
     >
-      {positions.map((pos, index) => (
+      {Array.from({ length: numberOfElements }, (_, index) => (
         <div
           key={index}
           style={{
-            position: 'absolute',
-            left: `${pos.x}px`,
-            top: `${pos.y}px`,
-            pointerEvents: 'auto'
+            alignSelf: `${
+              layout.left && layout.right
+                ? index % 2 === 0
+                  ? 'flex-start'
+                  : 'flex-end'
+                : layout.left
+                  ? 'flex-start'
+                  : 'flex-end'
+            }`,
+            margin: '0 60px'
           }}
         >
-          {children[pos.childIndex]}
+          <div
+            style={{
+              marginRight: `${
+                layout.left && layout.right
+                  ? index % 2 === 0
+                    ? '0'
+                    : `${Math.random() * 70 - 10}px`
+                  : layout.left
+                    ? '0'
+                    : `${Math.random() * 70 - 10}px`
+              }`,
+              marginLeft: `${
+                layout.left && layout.right
+                  ? index % 2 === 0
+                    ? `${Math.random() * 70 - 10}px`
+                    : '0'
+                  : layout.left
+                    ? `${Math.random() * 70 - 10}px`
+                    :'0'
+              }`,
+              pointerEvents: 'auto'
+            }}
+          >
+            {children[Math.floor(Math.random() * children.length)]}
+          </div>
         </div>
       ))}
     </div>

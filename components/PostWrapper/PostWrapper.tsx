@@ -48,7 +48,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         {
           typewriterDone &&
             <DelayWrapper>
-              <Decorations layout="right">
+              <Decorations layout={{ left: false, right: true }}>
                 <Sound sound="brainrot-1" />
                 <Sound sound="brainrot-2" />
                 <Sound sound="dude" />
@@ -56,8 +56,6 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Sound sound="noti" />
                 <Sound sound="petemob" />
                 <Sound sound="skill-issue" />
-              </Decorations>
-              <Decorations layout="right">
                 <Emote emote="compsighLogo" />
                 <Emote emote="hive" />
                 <Emote emote="bensonstare" />
@@ -79,9 +77,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Emote emote="sunflowers" />
                 <Emote emote="taoFedora" />
                 <Emote emote="vercel" />
-              </Decorations>
-              <Decorations layout="right">
-                {[<RandomQuote key={0} />]}
+                <RandomQuote />
               </Decorations>
             </DelayWrapper>
         }
