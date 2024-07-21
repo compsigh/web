@@ -6,4 +6,10 @@ button.sound {
   font-family: var(--font-tronica-mono);
   font-size: 0.875rem;
   color: var(--color-light-50);
+
+  transition: color 0.2s ease;
+}
+
+button.sound:hover {
+  color: var(--color-light);
 }
