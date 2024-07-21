@@ -1,0 +1,20 @@
+div#quote-container {
+  max-width: 250px;
+}
+
+div#quote-container p {
+  font-family: var(--font-tronica-mono);
+  font-size: 0.875rem;
+  color: var(--color-light-50);
+  margin: 8px 0;
+  line-height: 150%;
+  transition: color 0.2s ease;
+}
+
+div#quote-container > p#author::before {
+  content: "— ";
+}
+
+div#quote-container:hover p {
+  color: var(--color-light);
+}
