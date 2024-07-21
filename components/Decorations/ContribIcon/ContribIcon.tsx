@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
@@ -55,7 +53,8 @@ export function ContribIcon({ icon }: { icon: Icon }) {
           alt=""
           style={{
             animation: 'fluctuateOpacity 2s ease infinite',
-            animationDelay: `${Math.random() * 2}s`
+            animationDelay: `${Math.random() * 2}s`,
+            pointerEvents: 'none'
           }}
         />
       </div>

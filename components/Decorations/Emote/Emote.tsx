@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
@@ -147,18 +145,17 @@ export function Emote({ emote }: { emote: Emote }) {
   }
 
   return (
-    <div>
-      <Image
-        src={selectedEmote}
-        width={24}
-        height={24}
-        alt=""
-        style={{
-          opacity: 0.5,
-          animation: 'rotate 2s linear infinite',
-          animationDelay: `${Math.random() * 2}s`
-        }}
-      />
-    </div>
+    <Image
+      src={selectedEmote}
+      width={24}
+      height={24}
+      alt=""
+      style={{
+        opacity: 0.5,
+        animation: 'rotate 2s linear infinite',
+        animationDelay: `${Math.random() * 2}s`,
+        pointerEvents: 'none'
+      }}
+    />
   )
 }

@@ -1,5 +1,6 @@
 div#container {
   animation: fadeIn 1s ease forwards;
+  user-select: none;
 }
 
 @keyframes fadeIn {
