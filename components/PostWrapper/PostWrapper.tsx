@@ -10,7 +10,6 @@ import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { Decorations } from '@/components/Decorations'
 import { Emote } from '@/components/Decorations/Emote'
-import { ContribIcon } from '@/components/Decorations/ContribIcon'
 import { TypewriterWrapper } from '@/components/TypewriterWrapper'
 
 import styles from './PostWrapper.module.css'
@@ -56,13 +55,6 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Sound sound="noti" />
                 <Sound sound="petemob" />
                 <Sound sound="skill-issue" />
-              </Decorations>
-              <Decorations layout="right">
-                <ContribIcon icon="none" />
-                <ContribIcon icon="low" />
-                <ContribIcon icon="medium-low" />
-                <ContribIcon icon="medium-high" />
-                <ContribIcon icon="high" />
               </Decorations>
               <Decorations layout="right">
                 <Emote emote="compsighLogo" />
