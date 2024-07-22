@@ -2,6 +2,7 @@
   --color-black:       hsla(038deg, 000%, 000%, 1.0);
   --color-white:       hsla(038deg, 100%, 100%, 1.0);
   --color-dark:        hsla(038deg, 010%, 002%, 1.0);
+  --color-dark-10:     hsla(038deg, 010%, 002%, 0.1);
   --color-light:       hsla(038deg, 100%, 090%, 1.0);
   --color-light-30:    hsla(038deg, 100%, 090%, 0.3);
   --color-light-50:    hsla(038deg, 100%, 090%, 0.5);

@@ -15,6 +15,10 @@ article.post > div.sidebar-placeholder {
   width: 200px;
   position: sticky;
   top: 30%;
+  background: var(--color-dark-10);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 80px 30px var(--color-dark);
 }
 
 article.post > div.sidebar-wrapper,

@@ -48,7 +48,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         {
           typewriterDone &&
             <DelayWrapper>
-              <Decorations layout={{ left: false, right: true }}>
+              <Decorations layout={{ left: true, right: true }}>
                 <Sound sound="brainrot-1" />
                 <Sound sound="brainrot-2" />
                 <Sound sound="dude" />
