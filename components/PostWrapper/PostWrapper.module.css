@@ -12,7 +12,7 @@ article.post > div.content {
 
 article.post > div.sidebar-wrapper,
 article.post > div.sidebar-placeholder {
-  max-width: 200px;
+  width: 200px;
   position: sticky;
   top: 30%;
 }

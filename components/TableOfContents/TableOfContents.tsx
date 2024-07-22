@@ -5,7 +5,7 @@ import styles from './TableOfContents.module.css'
 export function TableOfContents({ entries }: { entries: string[] }) {
   return (
     <>
-      <p className={styles["jump-to"]}>Jump to:</p>
+      {entries.length > 0 && <p className={styles["jump-to"]}>Jump to:</p>}
       <nav className={styles["table-of-contents"]}>
         <ul>
           {entries.map((entry, index) => (
