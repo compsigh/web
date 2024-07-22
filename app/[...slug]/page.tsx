@@ -26,6 +26,7 @@ type Frontmatter = {
   description: string
   authors: Author[]
   og_image?: string
+  decorations?: boolean
 }
 
 export type PostProps = {
@@ -127,6 +128,7 @@ export default async function Page(
   { params: { slug: string[] } }
 ) {
   const { content, frontmatter } = await readPage(params.slug)
+  if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (
     <>
       <Suspense>
