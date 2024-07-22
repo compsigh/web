@@ -3,9 +3,10 @@ import Link from 'next/link'
 import styles from './TableOfContents.module.css'
 
 export function TableOfContents({ entries }: { entries: string[] }) {
+  if (entries.length === 0) return <></>
   return (
     <>
-      {entries.length > 0 && <p className={styles["jump-to"]}>Jump to:</p>}
+      <p className={styles["jump-to"]}>Jump to:</p>
       <nav className={styles["table-of-contents"]}>
         <ul>
           {entries.map((entry, index) => (
