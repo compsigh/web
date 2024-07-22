@@ -1,7 +1,6 @@
 ---
 title: "Introducing the compsigh Web Platform"
 description: "Building a home to bring together our events calendar, members' projects, and all things compsigh"
-published: true
 authors: [
   { name: "Edward", avatar: "/avatars/edward.png" },
   { name: "Gursh", avatar: "/avatars/gursh.png" },

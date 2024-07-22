@@ -1,7 +1,6 @@
 ---
 title: "compsigh values"
 description: "Core values that make compsigh who we are"
-published: true
 authors: []
 ---
 

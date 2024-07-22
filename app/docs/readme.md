@@ -1,7 +1,6 @@
 ---
 title: "compsigh README"
 description: "Why we're here"
-published: true
 authors: []
 ---
 

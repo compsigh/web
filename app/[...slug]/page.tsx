@@ -24,7 +24,6 @@ type Author = {
 type Frontmatter = {
   title: string
   description: string
-  published: boolean
   authors: Author[]
   og_image?: string
 }
