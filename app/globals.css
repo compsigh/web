@@ -52,8 +52,7 @@ h6 {
 }
 
 a {
-  color: unset;
-  font-weight: bold;
+  color: var(--color-compsigh);
   text-decoration: none;
 }
 
