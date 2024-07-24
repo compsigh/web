@@ -25,7 +25,7 @@ body {
   overflow-x: hidden;
   color: var(--color-light);
   background-color: var(--color-dark);
-  font-family: var(--font-iosevka-aile), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-ia-writer-quattro), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   line-height: 180%;
 }
@@ -38,7 +38,7 @@ h1 {
 
 h2,
 h3 {
-  font-family: var(--font-iosevka-aile);
+  font-family: var(--font-ia-writer-quattro);
 }
 
 h1,

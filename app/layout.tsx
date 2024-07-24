@@ -65,100 +65,56 @@ const TronicaMono = localFont({
   variable: '--font-tronica-mono'
 })
 
-const IosevkaAile = localFont({
+const iAWriterQuattro = localFont({
   src: [
     {
-      path: '../public/fonts/IosevkaAile-Thin.woff2',
-      weight: '100',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-ThinItalic.woff2',
-      weight: '100',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-ExtraLight.woff2',
-      weight: '200',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-ExtraLightItalic.woff2',
-      weight: '200',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-Light.woff2',
-      weight: '300',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-LightItalic.woff2',
-      weight: '300',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-Regular.woff2',
+      path: '../public/fonts/iAWriterQuattroS-Regular.woff2',
       weight: '400',
       style: 'normal'
     },
     {
-      path: '../public/fonts/IosevkaAile-Italic.woff2',
+      path: '../public/fonts/iAWriterQuattroS-Italic.woff2',
       weight: '400',
       style: 'italic'
     },
     {
-      path: '../public/fonts/IosevkaAile-Medium.woff2',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-MediumItalic.woff2',
-      weight: '500',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-SemiBold.woff2',
+      path: '../public/fonts/iAWriterQuattroS-Bold.woff2',
       weight: '600',
       style: 'normal'
     },
     {
-      path: '../public/fonts/IosevkaAile-SemiBoldItalic.woff2',
+      path: '../public/fonts/iAWriterQuattroS-BoldItalic.woff2',
       weight: '600',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-Bold.woff2',
-      weight: '700',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-BoldItalic.woff2',
-      weight: '700',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-ExtraBold.woff2',
-      weight: '800',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-ExtraBoldItalic.woff2',
-      weight: '800',
-      style: 'italic'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-Heavy.woff2',
-      weight: '900',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/IosevkaAile-HeavyItalic.woff2',
-      weight: '900',
       style: 'italic'
     }
   ],
-  variable: '--font-iosevka-aile'
+  variable: '--font-ia-writer-quattro'
+})
+
+const iAWriterMono = localFont({
+  src: [
+    {
+      path: '../public/fonts/iAWriterMonoS-Regular.woff2',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/iAWriterMonoS-Italic.woff2',
+      weight: '400',
+      style: 'italic'
+    },
+    {
+      path: '../public/fonts/iAWriterMonoS-Bold.woff2',
+      weight: '600',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/iAWriterMonoS-BoldItalic.woff2',
+      weight: '600',
+      style: 'italic'
+    }
+  ],
+  variable: '--font-ia-writer-mono'
 })
 
 import './globals.css'
@@ -184,7 +140,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${Delko.variable} ${ProtoMono.variable} ${TXA.variable} ${TronicaMono.variable} ${IosevkaAile.variable}`}
+      className={`${Delko.variable} ${ProtoMono.variable} ${TXA.variable} ${TronicaMono.variable} ${iAWriterMono.variable} ${iAWriterQuattro.variable}`}
     >
       <body>
         <main>
