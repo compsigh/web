@@ -14,7 +14,6 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Mic } from '@/components/Mic'
 import { Grid } from '@/components/Grid'
-import { Media } from '@/components/Media'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
 import { PostWrapper } from '@/components/PostWrapper'
