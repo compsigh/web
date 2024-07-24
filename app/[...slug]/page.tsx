@@ -6,7 +6,10 @@ import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
 
+import '@/app/katex.min.css'
+import remarkMath from 'remark-math'
 import rehypeSlug from 'rehype-slug'
+import rehypeKatex from 'rehype-katex'
 import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Mic } from '@/components/Mic'
@@ -52,9 +55,11 @@ async function readPage(slug: string[]) {
       options: {
         parseFrontmatter: true,
         mdxOptions: {
+          remarkPlugins: [remarkMath],
           rehypePlugins: [
             [rehypePrettyCode as any, rehypePrettyCodeOptions],
-            rehypeSlug
+            rehypeSlug,
+            rehypeKatex as any
           ]
         }
       }
