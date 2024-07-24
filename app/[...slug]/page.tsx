@@ -1,4 +1,5 @@
 import path from 'node:path'
+import Link from 'next/link'
 import { Suspense } from 'react'
 import fs from 'node:fs/promises'
 import { type Metadata } from 'next'
@@ -10,6 +11,7 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Mic } from '@/components/Mic'
 import { Grid } from '@/components/Grid'
+import { Media } from '@/components/Media'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
 import { PostWrapper } from '@/components/PostWrapper'
@@ -46,7 +48,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Mic, Spacer },
+      components: { Grid, Link, Media, Mic, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
