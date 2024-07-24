@@ -78,15 +78,12 @@ export async function generateMetadata(
     }
   }
 
-  // TODO: dynamic OG generation
-  /*
   metadata.openGraph!.images = [{
     url: `api/og?title=${frontmatter.title}`,
     width: 1200,
     height: 630,
     alt: ''
   }]
-  */
 
   if (frontmatter.og_image)
     metadata.openGraph!.images = [{
