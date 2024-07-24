@@ -5,6 +5,7 @@ authors: [
   { name: "Edward", avatar: "/avatars/edward.png" },
   { name: "Sanju", avatar: "/avatars/sanju.jpeg" }
 ]
+og_image: "/og/cue.png"
 ---
 
 Cue is a minimalist active recall study app focused on helping students ask the right questions. Transform your notes into actionable study cards for easy pasting back into Google Docs or Notion, or export to Anki.
