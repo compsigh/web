@@ -26,12 +26,19 @@ type Author = {
   avatar: string
 }
 
+type Reference = {
+  text: string
+  link: string
+}
+
 type Frontmatter = {
   title: string
   description: string
   authors: Author[]
   og_image?: string
   decorations?: boolean
+  previous?: Reference
+  next?: Reference
 }
 
 export type PostProps = {

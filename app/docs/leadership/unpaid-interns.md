@@ -2,6 +2,7 @@
 title: "compsigh leadership: unpaid interns"
 description: "The mission & methods of club leadership"
 authors: []
+next: { text: "Joining the unpaid interns", link: "/docs/leadership/joining-the-team" }
 ---
 
 every day, members of the club contribute their time and ideas to making our community awesome. several of our events — like **clone** workshops & **demos** — are organized by these passionate and generous people. some even make food for events! <span style={{ color: 'var(--color-light-50)' }}>shoutout Tao \<3</span>

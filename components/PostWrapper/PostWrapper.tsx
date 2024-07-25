@@ -5,6 +5,7 @@ import { useLayoutEffect, useState } from 'react'
 import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
 import { Sidebar } from '@/components/Sidebar'
+import { LinkBar } from '@/components/LinkBar'
 import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
@@ -23,6 +24,28 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
       ))}
       <Spacer size={32} />
       {content}
+      {frontmatter.previous &&
+        <>
+          <Spacer size={32} />
+          <LinkBar
+            type="previous"
+            href={frontmatter.previous.link}
+          >
+            {frontmatter.previous.text}
+          </LinkBar>
+        </>
+      }
+      {frontmatter.next &&
+        <>
+          <Spacer size={32} />
+          <LinkBar
+            type="next"
+            href={frontmatter.next.link}
+          >
+            {frontmatter.next.text}
+          </LinkBar>
+        </>
+      }
     </div>
   )
 }

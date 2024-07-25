@@ -2,6 +2,7 @@
 title: "Joining the compsigh unpaid interns"
 description: "How to get invited, and what the process looks like"
 authors: []
+previous: { text: "About the unpaid interns", link: "/docs/leadership/unpaid-interns" }
 ---
 
 the club doesn't run applications for leadership. instead, members are invited by unpaid interns to join.
