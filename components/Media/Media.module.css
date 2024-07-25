@@ -1,0 +1,27 @@
+div#media-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+div#media-container figure img,
+div#media-container figure video {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 0.2rem;
+}
+
+div#media-container figure figcaption {
+  margin-top: 1.5rem;
+  color: var(--color-light);
+}
+
+div#media-container figure div#description {
+  color: var(--color-light-50);
+  margin: 0.8rem 0;
+}
+
+div#media-container figure p#cta {
+  margin: 0;
+  margin-top: 0.8rem;
+}
