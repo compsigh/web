@@ -26,7 +26,7 @@ export type Emote
   | 'vercel'
 
 export const emoteSrcs: Record<Emote, string> = {
-  compsighLogo: '/emotes/compsigh-logo.svg',
+  compsighLogo: '/assets/compsigh-logo.svg',
   hive: '/icons/hive.svg',
   bensonstare: '/emotes/bensonstare.png',
   buildingBlocks: '/emotes/building-blocks.svg',
