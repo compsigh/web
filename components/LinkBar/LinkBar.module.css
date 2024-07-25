@@ -1,0 +1,34 @@
+div#container {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: var(--font-tronica-mono);
+}
+
+div#container.previous {
+  flex-direction: row-reverse;
+}
+
+div#container div#arrow {
+  font-size: 64px;
+  margin: 6px 24px 0 24px;
+}
+
+div#container div#bar {
+  position: absolute;
+  width: 100%;
+  height: 64px;
+  background-color: var(--color-compsigh);
+  transition: clip-path 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+div#container:hover div#bar {
+  clip-path: inset(0 0 0 0);
+  mix-blend-mode: difference;
+}
+
+div#container:not(:hover) div#bar {
+  clip-path: inset(0 100% 0 0);
+}
