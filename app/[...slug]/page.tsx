@@ -51,7 +51,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Link, Mic, Spacer },
+      components: { Grid, Link, Media, Mic, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
