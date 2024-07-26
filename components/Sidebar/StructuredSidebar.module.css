@@ -1,0 +1,60 @@
+nav#structured-sidebar {
+  font-family: var(--font-tronica-mono);
+}
+
+nav#structured-sidebar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--font-tronica-mono);
+  font-size: 1rem;
+  line-height: 180%;
+  color: var(--color-compsigh-60);
+}
+
+nav#structured-sidebar button span#arrow {
+  transition: transform 0.2s ease;
+}
+
+nav#structured-sidebar button span#arrow.collapsed {
+  transform: rotate(0deg);
+}
+
+nav#structured-sidebar button span#arrow.expanded {
+  transform: rotate(90deg);
+}
+
+nav#structured-sidebar ul {
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+nav#structured-sidebar ul li {
+  margin: 8px 0;
+}
+
+nav#structured-sidebar ul li::before {
+  content: "";
+}
+
+nav#structured-sidebar ul li ul {
+  margin-left: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
