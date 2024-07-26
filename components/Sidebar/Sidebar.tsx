@@ -82,6 +82,9 @@ function SidebarItem({ entry }: SidebarItemProps) {
 }
 
 export function Sidebar() {
+  const pathName = usePathname()
+  if (pathName.startsWith('/docs'))
+    return StructuredSidebar({ entries: docs })
   return (
     <>
       <aside>
