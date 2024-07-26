@@ -1,8 +1,17 @@
+'use client'
+
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 import styles from './TableOfContents.module.css'
 
-export function TableOfContents({ entries }: { entries: string[] }) {
+export function TableOfContents() {
+  const [entries, setEntries] = useState<string[]>([])
+  useEffect(() => {
+    const headings = document.querySelectorAll('h2, h3')
+    setEntries(Array.from(headings).map(heading => heading.textContent || ''))
+  }, [])
+
   if (entries.length === 0) return <></>
   return (
     <>
