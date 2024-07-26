@@ -2,6 +2,7 @@
 title: "compsigh README"
 description: "Why we're here"
 authors: []
+next: { text: "compsigh values", link: "/docs/values" }
 ---
 
 today, many computer science students feel pressured to follow the script of getting a job in tech because it pays well, keeping their head down and grinding the technical interview, and end up dissolving their curiosity, problem-solving, and ideas about the world along the way

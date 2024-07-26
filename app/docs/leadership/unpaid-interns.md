@@ -2,6 +2,7 @@
 title: "compsigh leadership: unpaid interns"
 description: "The mission & methods of club leadership"
 authors: []
+previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Joining the unpaid interns", link: "/docs/leadership/joining-the-team" }
 ---
 
