@@ -1,11 +1,11 @@
 ---
-title: "Joining the compsigh unpaid interns"
+title: "Joining compsigh leadership"
 description: "How to get invited, and what the process looks like"
 authors: []
-previous: { text: "About the unpaid interns", link: "/docs/leadership/unpaid-interns" }
+previous: { text: "About compsigh leadership", link: "/docs/leadership/about" }
 ---
 
-the club doesn't run applications for leadership. instead, members are invited by unpaid interns to join.
+instead of running applications for leadership, members are invited to join.
 
 an invited club member is:
 
@@ -16,9 +16,9 @@ an invited club member is:
 
 here's what a typical invite process looks like:
 
-1. unpaid interns notices the engagement and contributions of a club member
+1. leadership notices the engagement and contributions of a club member
 2. a recommendation is made, and the team discusses internally
 3. if the president approves, the club member is invited
 4. if the club member accepts, they are onboarded
 
-unpaid interns join the team on a rolling basis, and have no "term limits"
+members join the team on a rolling basis, and have no "term limits"

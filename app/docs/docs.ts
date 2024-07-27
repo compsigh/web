@@ -11,15 +11,15 @@ export const docs: StructuredSidebarProps =
     link: '/docs/values'
   },
   {
-    name: 'unpaid interns',
+    name: 'leadership',
     entries: [
       {
-        text: 'Intro',
-        link: '/docs/leadership/unpaid-interns'
+        text: 'About',
+        link: '/docs/leadership/about'
       },
       {
-        text: 'Joining the team',
-        link: '/docs/leadership/joining-the-team'
+        text: 'Joining',
+        link: '/docs/leadership/joining'
       }
     ]
   }
