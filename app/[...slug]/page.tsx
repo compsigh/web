@@ -14,9 +14,11 @@ import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 
 import { Mic } from '@/components/Mic'
 import { Grid } from '@/components/Grid'
+import { Note } from '@/components/Note'
 import { Media } from '@/components/Media'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
+import { LinkBar } from '@/components/LinkBar'
 import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
 
@@ -59,7 +61,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Link, Media, Mic, Playground, Spacer },
+      components: { Grid, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {

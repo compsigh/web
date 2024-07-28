@@ -11,7 +11,7 @@ export const docs: StructuredSidebarProps =
     link: '/docs/values'
   },
   {
-    name: 'leadership',
+    name: 'Leadership',
     entries: [
       {
         text: 'About',
@@ -20,6 +20,15 @@ export const docs: StructuredSidebarProps =
       {
         text: 'Joining',
         link: '/docs/leadership/joining'
+      }
+    ]
+  },
+  {
+    name: 'Web Platform',
+    entries: [
+      {
+        text: 'Publishing',
+        link: '/docs/web-platform/publishing'
       }
     ]
   }
