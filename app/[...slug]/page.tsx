@@ -17,6 +17,7 @@ import { Grid } from '@/components/Grid'
 import { Media } from '@/components/Media'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
+import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
 
 import './Post.css'
@@ -58,7 +59,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Link, Media, Mic, Spacer },
+      components: { Grid, Link, Media, Mic, Playground, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
