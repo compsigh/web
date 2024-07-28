@@ -27,8 +27,12 @@ export const docs: StructuredSidebarProps =
     name: 'Web Platform',
     entries: [
       {
-        text: 'Publishing',
-        link: '/docs/web-platform/publishing'
+        text: 'Why publish',
+        link: '/docs/web-platform/why-publish'
+      },
+      {
+        text: 'How to publish',
+        link: '/docs/web-platform/how-to-publish'
       }
     ]
   }
