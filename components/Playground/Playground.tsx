@@ -1,6 +1,6 @@
 export function Playground(
-  { editable, children }:
-  { editable: boolean, children: React.ReactNode }
+  { editable = false, children }:
+  { editable?: boolean, children: React.ReactNode }
 ) {
   return (
     <>
@@ -8,7 +8,6 @@ export function Playground(
         contentEditable={editable}
         suppressContentEditableWarning
         style={{
-          maxWidth: '700px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
