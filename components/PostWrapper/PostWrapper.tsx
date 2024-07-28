@@ -1,7 +1,9 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { useLayoutEffect, useState } from 'react'
 
+import { docs } from '@/app/docs/docs'
 import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
 import { Sidebar } from '@/components/Sidebar'
@@ -65,6 +67,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
     }
     setMaxStringLength(calculateMaxStringLength())
   }, [MAX_LENGTH_MOBILE, MAX_LENGTH_TABLET, MAX_LENGTH_DESKTOP])
+  const pathName = usePathname()
   return (
     <>
       <article className={styles.post}>
@@ -122,13 +125,19 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         {
           !typewriterDone &&
             <div className={styles["sidebar-placeholder"]} style={{ opacity: 0 }}>
-              <Sidebar />
+              <Sidebar
+                structured={pathName.startsWith('/docs')}
+                entries={docs}
+              />
             </div>
         }
         {
           typewriterDone &&
             <div className={styles["sidebar-wrapper"]}>
-              <Sidebar />
+              <Sidebar
+                structured={pathName.startsWith('/docs')}
+                entries={docs}
+              />
             </div>
         }
         <div className={styles.content}>
@@ -156,6 +165,18 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
           />
           {typewriterDone && <AuthorsAndContent content={content} frontmatter={frontmatter} />}
         </div>
+        {
+          !typewriterDone && pathName.startsWith('/docs') &&
+            <div className={styles["sidebar-placeholder"]} style={{ opacity: 0 }}>
+              <Sidebar structured={false} />
+            </div>
+        }
+        {
+          typewriterDone && pathName.startsWith('/docs') &&
+            <div className={styles["sidebar-wrapper"]}>
+              <Sidebar structured={false} />
+            </div>
+        }
       </article>
     </>
   )

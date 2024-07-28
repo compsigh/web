@@ -2,9 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
 
-import { docs } from '@/app/docs/docs'
 import { TableOfContents } from '@/components/TableOfContents'
 
 import styles from './StructuredSidebar.module.css'
@@ -81,10 +79,13 @@ function SidebarItem({ entry }: SidebarItemProps) {
   )
 }
 
-export function Sidebar() {
-  const pathName = usePathname()
-  if (pathName.startsWith('/docs'))
-    return StructuredSidebar({ entries: docs })
+export function Sidebar({
+  structured, entries
+}: {
+  structured?: boolean, entries?: StructuredSidebarProps
+}) {
+  if (structured && entries)
+    return StructuredSidebar({ entries })
   return (
     <>
       <aside>
