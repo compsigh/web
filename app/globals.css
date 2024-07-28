@@ -10,6 +10,8 @@
   --color-compsigh-10: hsla(038deg, 100%, 050%, 0.1);
   --color-compsigh-20: hsla(038deg, 100%, 050%, 0.2);
   --color-compsigh-60: hsla(038deg, 100%, 050%, 0.6);
+  --color-diff-add:    hsla(120deg, 100%, 025%, 0.2);
+  --color-diff-remove: hsla(360deg, 100%, 050%, 0.2);
 
   --max-width: 700px;
   --margin: 40px auto;
@@ -84,4 +86,65 @@ ul > li::before {
 
 ul ul > li {
   margin-left: 1em;
+}
+
+code {
+  font-family: var(--font-ia-writer-mono);
+  counter-reset: line;
+}
+
+:not(pre) > code {
+  box-shadow: 0 0 0 1px var(--color-light-50);
+  padding: 0.1em 0.4em;
+  border-radius: 0.4em;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem 0;
+  font-size: 0.8em;
+}
+
+pre [data-line] {
+  padding: 0 1rem;
+}
+
+pre > code[data-line-numbers] > [data-line]::before {
+  content: counter(line);
+  counter-increment: line;
+  display: inline-block;
+  width: 2em;
+  margin-right: 2em;
+  text-align: right;
+  color: var(--color-light-50);
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+pre > code[data-line-numbers] > [data-line]:hover::before {
+  color: var(--color-light);
+}
+
+pre
+  > code[data-line-numbers][data-line-numbers-max-digits="2"]
+  > [data-line]::before {
+  width: 2em;
+}
+
+pre
+  > code[data-line-numbers][data-line-numbers-max-digits="3"]
+  > [data-line]::before {
+  width: 3em;
+}
+
+span[data-highlighted-line] {
+  background-color: var(--color-compsigh-20);
+}
+
+span[data-highlighted-line-id="add"] {
+  background-color: var(--color-diff-add);
+}
+
+span[data-highlighted-line-id="remove"] {
+  background-color: var(--color-diff-remove);
 }
