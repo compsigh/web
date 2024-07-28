@@ -47,6 +47,14 @@ nav#structured-sidebar ul li ul {
   margin-left: 16px;
 }
 
+nav#structured-sidebar ul li a {
+  transition: color 0.2s ease;
+}
+
+nav#structured-sidebar ul li a:hover {
+  color: var(--color-light);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

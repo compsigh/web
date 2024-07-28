@@ -1,21 +1,33 @@
-nav.table-of-contents {
+nav#table-of-contents {
   font-family: var(--font-tronica-mono);
   color: var(--color-compsigh);
 }
 
-nav.table-of-contents > ul {
-  margin-top: 8px;
+nav#table-of-contents ul {
+  margin: 0;
 }
 
-nav.table-of-contents > ul > li {
+nav#table-of-contents ul li {
   margin: 8px 0;
 }
 
-nav.table-of-contents > ul > li::before {
+nav#table-of-contents ul li::before {
   content: "";
 }
 
-p.jump-to {
+nav#table-of-contents ul li ul {
+  margin-left: 16px;
+}
+
+nav#table-of-contents ul li a {
+  transition: color 0.2s ease;
+}
+
+nav#table-of-contents ul li a:hover {
+  color: var(--color-light);
+}
+
+p#jump-to {
   font-family: var(--font-tronica-mono);
   color: var(--color-light-50);
   margin-bottom: 8px;

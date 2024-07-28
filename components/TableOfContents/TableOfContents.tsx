@@ -5,26 +5,52 @@ import { useState, useEffect } from 'react'
 
 import styles from './TableOfContents.module.css'
 
+type Heading = {
+  id: string
+  text: string
+  level: number
+}
+
 export function TableOfContents() {
-  const [entries, setEntries] = useState<string[]>([])
+  const [headings, setHeadings] = useState<Heading[]>([])
+
   useEffect(() => {
-    const headings = document.querySelectorAll('h2, h3')
-    setEntries(Array.from(headings).map(heading => heading.textContent || ''))
+    const headingElements = document.querySelectorAll('h2, h3')
+    const headingsArray = Array.from(headingElements).map(heading => ({
+      id: heading.id || heading.textContent?.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '-') || '',
+      text: heading.textContent || '',
+      level: heading.tagName === 'H2' ? 2 : 3
+    }))
+    setHeadings(headingsArray)
   }, [])
 
-  if (entries.length === 0) return <></>
+  if (headings.length === 0) return <></>
   return (
     <>
-      <p className={styles["jump-to"]}>Jump to:</p>
-      <nav className={styles["table-of-contents"]}>
-        <ul>
-          {entries.map((entry, index) => (
-            <li key={index}>
-              <Link href={`#${entry.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s/g, '-')}`}>
-                {entry}
-              </Link>
-            </li>
-          ))}
+      <p id={styles["jump-to"]}>Jump to:</p>
+      <nav id={styles["table-of-contents"]}>
+      <ul>
+          {headings.map((heading, index) => {
+            if (heading.level === 3) return null
+            const subHeadings = []
+            for (let i = index + 1; i < headings.length && headings[i].level !== 2; i++)
+              if (headings[i].level === 3)
+                subHeadings.push(headings[i])
+            return (
+              <li key={heading.id}>
+                <Link href={`#${heading.id}`}>{heading.text}</Link>
+                {subHeadings.length > 0 && (
+                  <ul>
+                    {subHeadings.map(subheading => (
+                      <li key={subheading.id}>
+                        <Link href={`#${subheading.id}`}>{subheading.text}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </>
