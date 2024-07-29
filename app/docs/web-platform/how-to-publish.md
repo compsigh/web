@@ -351,3 +351,113 @@ example:
   cta="View live demo"
 />
 ```
+
+<Spacer size={16} />
+
+### `Mic`
+
+for multi-authored posts, it sometimes helps to know whose words you're reading. with `Mic`, you can indicate when you're "handing the mic" to a specific author:
+
+```plaintext showLineNumbers
+<Mic name="Edward" avatar="/avatars/edward.png" />
+
+what's good y'all?
+
+here's Gursh with some insightful words
+
+<Mic name="Gursh" avatar="/avatars/gursh.png" />
+
+yo ✌🏽
+
+Jet wsp
+
+<Mic name="Jet" avatar="/avatars/jet.png" />
+
+this page is getting kinda long bruh
+
+lunch anyone?
+```
+
+<Mic name="Edward" avatar="/avatars/edward.png" />
+
+what's good y'all?
+
+here's Gursh with some insightful words
+
+<Mic name="Gursh" avatar="/avatars/gursh.png" />
+
+yo ✌🏽
+
+Jet wsp
+
+<Mic name="Jet" avatar="/avatars/jet.png" />
+
+this page is getting kinda long bruh
+
+lunch anyone?
+
+<Spacer size={16} />
+
+### `Note`
+
+useful for "good to know" type comments:
+
+```tsx
+<Note>
+  compsigh is a social computer science club for meeting cool people & building cool things
+</Note>
+```
+
+<Note>
+  compsigh is a social computer science club for meeting cool people & building cool things
+</Note>
+
+<Spacer size={16} />
+
+### `Playground`
+
+useful for examples, or showcases that can't be used in `Media`:
+
+```tsx
+<Playground>
+  this content is not editable
+</Playground>
+```
+
+<Playground>
+  this content is not editable
+</Playground>
+
+<Spacer size={16} />
+
+```tsx
+<Playground editable>
+  this content is editable *(click me!)*
+</Playground>
+```
+
+<Playground editable>
+  this content is editable *(click me!)*
+</Playground>
+
+<Spacer size={32} />
+
+### `Spacer`
+
+add vertical space anywhere:
+
+```tsx
+these two paragraphs could use some space
+
+<Spacer size={16} />
+
+these two paragraphs could use some space
+```
+
+<Playground>
+  these two paragraphs could use some space
+
+  <Spacer size={16} />
+
+  these two paragraphs could use some space
+</Playground>
