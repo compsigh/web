@@ -14,3 +14,8 @@ h3 {
   text-transform: uppercase;
   font-family: var(--font-tronica-mono);
 }
+
+h2 code,
+h3 code {
+  text-transform: none;
+}
