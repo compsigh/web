@@ -102,6 +102,7 @@ details > summary::before {
   margin-left: -22px;
   content: '>';
   font-family: var(--font-proto-mono);
+  color: var(--color-compsigh);
 }
 
 details[open] > summary::before {
