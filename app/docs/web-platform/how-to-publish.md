@@ -287,7 +287,75 @@ Things that will get your post flagged:
 ## Components
 
 <details>
-<summary>Markdown is awesome, but sometimes we want to make our content more visual or interactive. For this, we made some fun custom components you can embed!</summary>
+<summary><CasePreserver>Markdown</CasePreserver> is great, but with the power of <CasePreserver>React</CasePreserver>, we can make our content more visual and interactive.</summary>
+
+<Note>
+First, it will help to know a bit about <CasePreserver>React</CasePreserver>.
+
+[<CasePreserver>React</CasePreserver>](https://react.dev) is a <CasePreserver>JavaScript</CasePreserver> framework for crafting *composable* <CasePreserver>UI</CasePreserver>s. Before the "component era" of web development, developers had to manually place elements *on each page they appeared.* Can you imagine writing a sidebar 10+ times? <CasePreserver>React</CasePreserver> and other frameworks like it allow developers to "componentize" <CasePreserver>UI</CasePreserver> so that it can be reused across our application.
+
+For example, you might have an application where each page greets the user. Here is a simplified example:
+
+<Playground>
+  <div style={{ padding: '16px' }}>
+    <Grid columns={2}>
+      <div>
+        ```html showLineNumbers
+        <h1>Hi there!</h1>
+        <p>Welcome to the About page</p>
+        ```
+        `about.html`
+      </div>
+      <div>
+        ```html showLineNumbers
+        <h1>Hi there!</h1>
+        <p>Welcome to the Events page</p>
+        ```
+        `events.html`
+      </div>
+    </Grid>
+  </div>
+</Playground>
+
+What happens if you want to change the greeting, perhaps from "<CasePreserver>Hi there!</CasePreserver>" to "<CasePreserver>Hey!</CasePreserver>"? You'd have to update `about.html`, `events.html`, and every other page where that greeting exists.
+
+Let's use the power of <CasePreserver>React</CasePreserver> to componentize the greeting:
+
+```jsx showLineNumbers
+function Greeting() {
+  return <h1>Hi there!</h1>
+}
+```
+
+That's it — this is the *Hello World* of <CasePreserver>React</CasePreserver>! This looks very similar to <CasePreserver>HTML</CasePreserver>: it's called <CasePreserver>JSX</CasePreserver>, or "<CasePreserver>JavaScript XML</CasePreserver>".
+
+**A React component is a function that returns JSX.**
+
+Let's update our application to use our new `Greeting` component.
+
+<Playground>
+  <div style={{ padding: '16px' }}>
+    <Grid columns={2}>
+      <div>
+        ```jsx showLineNumbers
+        <Greeting />
+        <p>Welcome to the About page</p>
+        ```
+        `about.jsx`
+      </div>
+      <div>
+        ```jsx showLineNumbers
+        <Greeting />
+        <p>Welcome to the Events page</p>
+        ```
+        `events.jsx`
+      </div>
+    </Grid>
+  </div>
+</Playground>
+
+Note that if a React component doesn't take children (like how that `<p>` takes a string of text as a child), it can self-close, like in the example above.
+</Note>
 
 <Spacer size={16} />
 
