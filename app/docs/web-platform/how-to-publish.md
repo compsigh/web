@@ -7,7 +7,8 @@ previous: { text: "Why share your work on the compsigh web platform", link: "/do
 
 ## Getting set up
 
-the [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo! if you've never used React, Next.js, or Node.js before, no worries; you won't need to know any of those for writing content. get started by forking & cloning a local copy, and opening it up in your editor of choice.
+<details>
+<summary>the [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo! if you've never used React, Next.js, or Node.js before, no worries; you won't need to know any of those for writing content. get started by forking & cloning a local copy, and opening it up in your editor of choice.</summary>
 
 <Note>
 I personally edit all notes directly in VS Code with [my minimalist setup](https://edward.so/notes/vs-code). there are tons of helpful extensions to build on top of this, even Grammarly!
@@ -16,10 +17,12 @@ I personally edit all notes directly in VS Code with [my minimalist setup](https
 next, run `npm install` to install dependencies.
 
 finally, run `npm run dev` to run the dev server and preview your changes locally (hit `^C` to stop it). I would have this up while you're writing just to get the vibes of how it looks on the page early on.
+</details>
 
 ## Markdown primer
 
-every post in the community tab is written in Markdown, the same text formatting language GitHub, Discord, and many other platforms use. it allows for simple, inline formatting of text:
+<details>
+<summary>every post in the community tab is written in Markdown, the same text formatting language GitHub, Discord, and many other platforms use. it allows for simple, inline formatting of text:</summary>
 
 ```plaintext showLineNumbers
 hi!
@@ -56,6 +59,7 @@ plus embedding images, headings, and several other features you'd see on a rich 
 </Playground>
 
 you can read the [Markdown guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
+</details>
 
 ## Frontmatter
 
@@ -73,7 +77,8 @@ hi!
 in a Markdown file, we can...
 ```
 
-for the compsigh web platform, there are specific frontmatter properties that impact how content is presented. let's take a look:
+<details>
+<summary>for the compsigh web platform, there are specific frontmatter properties that impact how content is presented. let's take a look:</summary>
 
 <Spacer size={16} />
 
@@ -217,13 +222,17 @@ slug: "/events/my-workshop/getting-started"
 
 an improper use of `slug` would be to, for example, reroute your team project page to under the root route, from `compsigh.club/community/cue` to `compsigh.club/cue`. let's be fair :)
 </Note>
+</details>
 
 ## Encouragements & asks
 
 things that are encouraged:
 
-- **hack around & experiment:** you just cloned the whole codebase! have an idea for a cool React component? ship it yo 😎
-- **modify styles:** as partial as I am to the ones we have lol, it's totally ok for you to change as much or as little as you want. here's an example:
+- 🏗️ **hack around & experiment:** you just cloned the whole codebase! have an idea for a cool React component? ship it yo 😎
+- 🎨 **modify styles:** as partial as I am to the ones we have lol, it's totally ok for you to change as much or as little as you want.
+
+<details>
+<summary>here's an example:</summary>
 
 <Grid columns={2}>
   <div>
@@ -250,6 +259,7 @@ faadil ipsum fortnite general relativity obsidian petemob twitter dudududududude
     </div>
   </Playground>
 </Grid>
+</details>
 
 things that will probably get your post flagged:
 
@@ -258,7 +268,8 @@ things that will probably get your post flagged:
 
 ## Components
 
-Markdown is awesome, but sometimes we want to make our content more visual or interactive. for this, we made some fun custom components you can embed!
+<details>
+<summary>Markdown is awesome, but sometimes we want to make our content more visual or interactive. for this, we made some fun custom components you can embed!</summary>
 
 <Spacer size={16} />
 
@@ -281,7 +292,7 @@ override the default even-division behavior to create custom layouts like 1:2:1
 
 example:
 
-```tsx
+```tsx showLineNumbers
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
   <Media video={true} src="/assets/cue-invite-cards.mp4" />
   <div>
@@ -341,7 +352,7 @@ a description of the media, for accessibility
 
 example:
 
-```tsx
+```tsx showLineNumbers
 <Media
   title="compsigh landing page"
   description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
@@ -402,7 +413,7 @@ lunch anyone?
 
 useful for "good to know" type comments:
 
-```tsx
+```tsx showLineNumbers
 <Note>
   compsigh is a social computer science club for meeting cool people & building cool things
 </Note>
@@ -418,7 +429,7 @@ useful for "good to know" type comments:
 
 useful for examples, or showcases that can't be used in `Media`:
 
-```tsx
+```tsx showLineNumbers
 <Playground>
   this content is not editable
 </Playground>
@@ -430,7 +441,7 @@ useful for examples, or showcases that can't be used in `Media`:
 
 <Spacer size={16} />
 
-```tsx
+```tsx showLineNumbers
 <Playground editable>
   this content is editable *(click me!)*
 </Playground>
@@ -446,7 +457,7 @@ useful for examples, or showcases that can't be used in `Media`:
 
 add vertical space anywhere:
 
-```tsx
+```tsx showLineNumbers
 these two paragraphs could use some space
 
 <Spacer size={16} />
@@ -461,3 +472,4 @@ these two paragraphs could use some space
 
   these two paragraphs could use some space
 </Playground>
+</details>
