@@ -65,7 +65,7 @@ ol {
 }
 
 li {
-  margin: 0.25em 0;
+  margin: 0.5em 0;
 }
 
 li::before,
@@ -82,6 +82,10 @@ ul > li::before {
   margin-left: -22px;
   margin-top: -1px;
   content: '-';
+}
+
+ul ul {
+  margin: unset;
 }
 
 ul ul > li {

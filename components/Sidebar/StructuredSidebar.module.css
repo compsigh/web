@@ -35,16 +35,8 @@ nav#structured-sidebar ul {
   animation: fadeIn 0.3s ease;
 }
 
-nav#structured-sidebar ul li {
-  margin: 8px 0;
-}
-
 nav#structured-sidebar ul li::before {
   content: "";
-}
-
-nav#structured-sidebar ul li ul {
-  margin-left: 16px;
 }
 
 nav#structured-sidebar ul li a {

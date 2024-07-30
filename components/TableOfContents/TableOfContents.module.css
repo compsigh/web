@@ -7,16 +7,8 @@ nav#table-of-contents ul {
   margin: 0;
 }
 
-nav#table-of-contents ul li {
-  margin: 8px 0;
-}
-
 nav#table-of-contents ul li::before {
   content: "";
-}
-
-nav#table-of-contents ul li ul {
-  margin-left: 16px;
 }
 
 nav#table-of-contents ul li a {
