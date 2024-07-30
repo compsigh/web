@@ -31,10 +31,10 @@ Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal 
 Finally, run `npm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
 </details>
 
-## Markdown primer
+## Markdown
 
 <details>
-<summary>Every post in the community tab is written in <CasePreserver>Markdown</CasePreserver>, the same text formatting language <CasePreserver>GitHub</CasePreserver>, <CasePreserver>Discord</CasePreserver>, and many other platforms use. It allows for simple, inline formatting of text:</summary>
+<summary>Every post in the community tab is written in <CasePreserver>Markdown</CasePreserver>, the same text formatting language <CasePreserver>GitHub</CasePreserver>, <CasePreserver>Discord</CasePreserver>, and many other platforms use.</summary>
 
 ```plaintext showLineNumbers
 In a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
@@ -45,7 +45,7 @@ We can also make lists:
 - Item 2
 - Item 3
 
-Plus embedding images, headings, and much more.
+Plus embed images, headings, and more.
 ```
 
 <Playground>
@@ -64,19 +64,22 @@ We can also make lists:
 - Item 2
 - Item 3
 
-Plus embedding images, headings, and much more.
+Plus embed images, headings, and more.
     </CasePreserver>
   </div>
 </Playground>
 
-You can read the [<CasePreserver>Markdown</CasePreserver> guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
+Check out the [<CasePreserver>Markdown</CasePreserver> guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
 </details>
 
-## Frontmatter
+## Metadata
 
-There's one component of <CasePreserver>Markdown</CasePreserver> that's important for writing on the web platform specifically: *frontmatter*. Frontmatter is metadata — a series of key-value pairs — placed at the top of the page. Each property can be represented by one of several data types.
+<details>
+<summary>Each <CasePreserver>Markdown</CasePreserver> file has a metadata block — a series of key-value pairs — at the top of it, separated by three dashes. For the web platform, there are specific metadata fields that impact how content is presented.</summary>
 
-```plaintext showLineNumbers {1-5}#add
+Here is an example of a metadata block:
+
+```plaintext showLineNumbers {1-5}
 ---
 title: "What can we do in a Markdown file?"
 published: true
@@ -86,10 +89,11 @@ date: 2024-07-27
 In a Markdown file, we can...
 ```
 
-<details>
-<summary>For the compsigh web platform, there are specific frontmatter properties that impact how content is presented. Let's take a look:</summary>
+<Spacer size={8} />
 
-<Spacer size={16} />
+Here are the required and optional fields you can use when writing posts on the web platform:
+
+<Spacer size={8} />
 
 ### `title`
 
@@ -120,7 +124,7 @@ This doesn't show up on the page itself, but like `title`, is used in the Commun
 This shows up at the top of the page, as well as in the Community tab.
 
 - `name` can be whatever you want — *most put their <CasePreserver>Discord</CasePreserver> username to keep with the theme :)*
-- `avatar` represents a filepath relative to the `public/` directory to the image displayed next to your name
+- `avatar` represents a filepath, relative to the `public/` directory, to the image displayed next to your name
 
 Example:
 
@@ -146,9 +150,9 @@ og_image: "/og/cue.png"
 
 <p style={{ color: 'var(--color-light-50)' }}>Default: generated based on `title` and `authors`</p>
 
-"og" stands for opengraph, a standard for metadata across the Web. The `og_image` is a filepath relative to the `public/` directory to an image that'll be used when you share a link to your post (like the image on a <CasePreserver>Discord</CasePreserver> embed).
+"og" stands for opengraph, a standard for metadata across the Web. The `og_image` is a filepath, relative to the `public/` directory, to an image that'll be used when you share a link to your post (like the image on a <CasePreserver>Discord</CasePreserver> embed).
 
-If you do upload one *(encouraged!)*, please ensure it is `1200 × 630` pixels. This is the standard and will guarantee your image looks good on all platforms (<CasePreserver>LinkedIn</CasePreserver>, <CasePreserver>Discord</CasePreserver>, <CasePreserver>Slack</CasePreserver>, <CasePreserver>Twitter</CasePreserver>, etc.).
+If you do upload one *(encouraged!)*, if possible, please ensure it is `1200 × 630` pixels. This is the standard and will guarantee your image looks good on all platforms (<CasePreserver>LinkedIn</CasePreserver>, <CasePreserver>Discord</CasePreserver>, <CasePreserver>Slack</CasePreserver>, <CasePreserver>Twitter</CasePreserver>, etc.).
 
 <Spacer size={16} />
 
@@ -211,9 +215,9 @@ next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 
 <p style={{ color: 'var(--color-light-50)' }}>Default: based on the location of your file</p>
 
-The web platform uses **filesystem routing:** your post's <CasePreserver>URL</CasePreserver> directly maps to where it is on the repo. e.g. a file at `app/docs/leadership/about.md` becomes `compsigh.club/docs/leadership/about`.
+The web platform uses **filesystem routing:** your post's <CasePreserver>URL</CasePreserver> directly maps to where it is on the repo. e.g. a file at `app/docs/leadership/about.md` becomes `https://compsigh.club/docs/leadership/about`.
 
-If you want to bind your post to a route other than where your file is located, you can specify a `slug` relative to the root route (`compsigh.club`).
+If you want to bind your post to a route other than where your file is located, you can specify a `slug` relative to the root route (the `app/` directory).
 
 An appropriate use case would be where you have an ordered list of posts for your compsigh clone workshop, structured like this:
 
@@ -225,7 +229,7 @@ If the numbers help you stay organized in the repo, but you don't want them to s
 
 Example for a file at `/events/my-workshop/01-getting-started.md`:
 
-```plaintext showLineNumbers
+```plaintext showLineNumbers {3}
 ---
 title: "My workshop: Getting started"
 slug: "/events/my-workshop/getting-started"
