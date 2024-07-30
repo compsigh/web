@@ -21,6 +21,7 @@ import { Author } from '@/components/Author'
 import { LinkBar } from '@/components/LinkBar'
 import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
+import { CasePreserver } from '@/components/CasePreserver'
 
 import './Post.css'
 
@@ -61,7 +62,7 @@ async function readPage(slug: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { Grid, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
+      components: { CasePreserver, Grid, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {

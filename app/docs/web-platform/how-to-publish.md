@@ -8,33 +8,32 @@ previous: { text: "Why share your work on the compsigh web platform", link: "/do
 ## Getting set up
 
 <details>
-<summary>the [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo! if you've never used React, Next.js, or Node.js before, no worries; you won't need to know any of those for writing content. get started by forking & cloning a local copy, and opening it up in your editor of choice.</summary>
+<summary>The [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo! If you've never used <CasePreserver>React</CasePreserver>, <CasePreserver>Next.js</CasePreserver>, or <CasePreserver>Node.js</CasePreserver> before, no worries; you won't need to know any of those for writing content. Get started by forking & cloning a local copy, and opening it up in your editor of choice.</summary>
 
 <Note>
-I personally edit all notes directly in VS Code with [my minimalist setup](https://edward.so/notes/vs-code). there are tons of helpful extensions to build on top of this, even Grammarly!
+I personally edit all notes directly in <CasePreserver>VS Code</CasePreserver> with [my minimalist setup](https://edward.so/notes/vs-code). There are tons of helpful extensions to build on top of this, even <CasePreserver>Grammarly</CasePreserver>!
 </Note>
 
-next, run `npm install` to install dependencies.
+Next, run `npm install` to install dependencies.
 
-finally, run `npm run dev` to run the dev server and preview your changes locally (hit `^C` to stop it). I would have this up while you're writing just to get the vibes of how it looks on the page early on.
+Finally, run `npm run dev` to run the dev server and preview your changes locally (hit `^C` to stop it). I would have this up while you're writing just to get the vibes of how it looks on the page early on.
 </details>
 
 ## Markdown primer
 
 <details>
-<summary>every post in the community tab is written in Markdown, the same text formatting language GitHub, Discord, and many other platforms use. it allows for simple, inline formatting of text:</summary>
+<summary>Every post in the community tab is written in <CasePreserver>Markdown</CasePreserver>, the same text formatting language <CasePreserver>GitHub</CasePreserver>, <CasePreserver>Discord</CasePreserver>, and many other platforms use. It allows for simple, inline formatting of text:</summary>
 
 ```plaintext showLineNumbers
-hi!
+In a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
 
-in a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
+We can also make lists:
 
-we can also make lists:
-- item 1
-- item 2
-- item 3
+- Item 1
+- Item 2
+- Item 3
 
-plus embedding images, headings, and several other features you'd see on a rich text page :)
+Plus embedding images, headings, and much more.
 ```
 
 <Playground>
@@ -44,26 +43,26 @@ plus embedding images, headings, and several other features you'd see on a rich 
       padding: '8px 32px'
     }}
   >
-hi!
+    <CasePreserver>
+In a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
 
-in a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
+We can also make lists:
 
-we can also make lists:
+- Item 1
+- Item 2
+- Item 3
 
-- item 1
-- item 2
-- item 3
-
-plus embedding images, headings, and several other features you'd see on a rich text page :)
+Plus embedding images, headings, and much more.
+    </CasePreserver>
   </div>
 </Playground>
 
-you can read the [Markdown guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
+You can read the [<CasePreserver>Markdown</CasePreserver> guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
 </details>
 
 ## Frontmatter
 
-there's one component of Markdown that's important for writing on the web platform specifically: *frontmatter*. frontmatter is metadata — a series of key-value pairs — placed at the top of the page. each property can be represented by one of several data types.
+There's one component of <CasePreserver>Markdown</CasePreserver> that's important for writing on the web platform specifically: *frontmatter*. Frontmatter is metadata — a series of key-value pairs — placed at the top of the page. Each property can be represented by one of several data types.
 
 ```plaintext showLineNumbers {1-5}#add
 ---
@@ -72,13 +71,11 @@ published: true
 date: 2024-07-27
 ---
 
-hi!
-
-in a Markdown file, we can...
+In a Markdown file, we can...
 ```
 
 <details>
-<summary>for the compsigh web platform, there are specific frontmatter properties that impact how content is presented. let's take a look:</summary>
+<summary>For the compsigh web platform, there are specific frontmatter properties that impact how content is presented. Let's take a look:</summary>
 
 <Spacer size={16} />
 
@@ -86,9 +83,9 @@ in a Markdown file, we can...
 
 `string`
 
-<p style={{color: 'red' }}>(required)</p>
+<p style={{color: 'red' }}>(Required)</p>
 
-this will show up at the top of the page, in the community tab, in search engines, and when you share a link to your post.
+This will show up at the top of the page, in the Community tab, in search engines, and when you share a link to your post.
 
 <Spacer size={16} />
 
@@ -96,9 +93,9 @@ this will show up at the top of the page, in the community tab, in search engine
 
 `string`
 
-<p style={{color: 'red' }}>(required)</p>
+<p style={{color: 'red' }}>(Required)</p>
 
-this doesn't show up on the page itself, but like `title`, is used in the community tab, search engines, and elsewhere when shared.
+This doesn't show up on the page itself, but like `title`, is used in the Community tab, search engines, and elsewhere when shared.
 
 <Spacer size={16} />
 
@@ -106,14 +103,14 @@ this doesn't show up on the page itself, but like `title`, is used in the commun
 
 `{ name: string, avatar: string }[]`
 
-<p style={{color: 'red' }}>(required)</p>
+<p style={{color: 'red' }}>(Required)</p>
 
-this shows up at the top of the page, as well as in the community tab.
+This shows up at the top of the page, as well as in the Community tab.
 
-- `name` can be whatever you want — *most put their Discord username to keep with the theme :)*
+- `name` can be whatever you want — *most put their <CasePreserver>Discord</CasePreserver> username to keep with the theme :)*
 - `avatar` represents a filepath relative to the `public/` directory to the image displayed next to your name
 
-an example:
+Example:
 
 ```plaintext showLineNumbers {4-7}
 ---
@@ -133,13 +130,13 @@ og_image: "/og/cue.png"
 
 `string`
 
-<p style={{ color: 'var(--color-light-50)' }}>(optional)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
-"og" stands for opengraph, a standard for metadata across the Web. the `og_image` is a filepath relative to the `public/` directory to an image that'll be used when you share a link to your post (like the image on a Discord embed).
+<p style={{ color: 'var(--color-light-50)' }}>Default: generated based on `title` and `authors`</p>
 
-if you do upload one *(encouraged!)*, please ensure it is `1200 × 630` pixels, as this is the standard and ensures it looks good on all platforms (LinkedIn, Discord, Slack, Twitter, etc.).
+"og" stands for opengraph, a standard for metadata across the Web. The `og_image` is a filepath relative to the `public/` directory to an image that'll be used when you share a link to your post (like the image on a <CasePreserver>Discord</CasePreserver> embed).
 
-if you don't include one, the web platform will generate one for you :)
+If you do upload one *(encouraged!)*, please ensure it is `1200 × 630` pixels. This is the standard and will guarantee your image looks good on all platforms (<CasePreserver>LinkedIn</CasePreserver>, <CasePreserver>Discord</CasePreserver>, <CasePreserver>Slack</CasePreserver>, <CasePreserver>Twitter</CasePreserver>, etc.).
 
 <Spacer size={16} />
 
@@ -147,9 +144,11 @@ if you don't include one, the web platform will generate one for you :)
 
 `boolean`
 
-<p style={{ color: 'var(--color-light-50)' }}>(optional)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
-if you have a display 1420px or wider, you'll see the decorations strewn across the margins of the page. as fun as they are, I totally get it if you want to hide them, especially when sending to a potential employer. you can do so by writing `decorations: false` (it's set to `true` by default, so you don't have to specify it if you're cool with them staying).
+<p style={{ color: 'var(--color-light-50)' }}>Default: `true`</p>
+
+If you have a display of `1420px` or wider, you'll see the decorations strewn across the margins of the page. As fun as they are, I totally get it if you want to hide them, especially when sending to a potential employer. You can do so by specifying `decorations: false`.
 
 <Spacer size={16} />
 
@@ -157,9 +156,9 @@ if you have a display 1420px or wider, you'll see the decorations strewn across 
 
 `{ text: string, link: string }`
 
-<p style={{ color: 'var(--color-light-50)' }}>(optional)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
-if you're writing a series of posts (for example, clone workshop notes), this is a great way to link them together. it will display a link for each at the bottom of the page. an example from [compsigh leadership](/docs/leadership/about):
+If you're writing a series of posts (for example, clone workshop notes), this is a great way to link them together. It will display a link for each at the bottom of the page. An example from [compsigh leadership](/docs/leadership/about):
 
 ```plaintext showLineNumbers {5,6}
 ---
@@ -196,22 +195,23 @@ next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 
 `string`
 
-<p style={{ color: 'var(--color-light-50)' }}>(optional)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
-the web platform uses **filesystem routing:** the location of your file on the repo directly maps to its URL. e.g. `app/docs/leadership/about.md` → `compsigh.club/docs/leadership/about`.
+<p style={{ color: 'var(--color-light-50)' }}>Default: based on the location of your file</p>
 
-if you want to bind your post to a route other than where your file is located, you can use `slug`, relative to the root route (`compsigh.club`).
+The web platform uses **filesystem routing:** your post's <CasePreserver>URL</CasePreserver> directly maps to where it is on the repo. e.g. a file at `app/docs/leadership/about.md` becomes `compsigh.club/docs/leadership/about`.
 
-<Note>
-**note:** please be mindful of how you use `slug`!
+If you want to bind your post to a route other than where your file is located, you can specify a `slug` relative to the root route (`compsigh.club`).
 
-a solid use case might be where you have an ordered list of posts for your compsigh clone workshop, structured like this:
+An appropriate use case would be where you have an ordered list of posts for your compsigh clone workshop, structured like this:
 
 - `/events/my-workshop/01-getting-started.md`
 - `/events/my-workshop/02-installing.md`
 - `/events/my-workshop/03-building.md`
 
-if the numbers help you stay organized in the repo, but you don't want them to show up in the URL, you can use `slug` to remove them:
+If the numbers help you stay organized in the repo, but you don't want them to show up in the <CasePreserver>URL</CasePreserver>, you can use `slug` to remove them.
+
+Example for a file at `/events/my-workshop/01-getting-started.md`:
 
 ```plaintext showLineNumbers
 ---
@@ -220,19 +220,17 @@ slug: "/events/my-workshop/getting-started"
 ---
 ```
 
-an improper use of `slug` would be to, for example, reroute your team project page to under the root route, from `compsigh.club/community/cue` to `compsigh.club/cue`. let's be fair :)
-</Note>
 </details>
 
-## Encouragements & asks
+## Dos & don'ts
 
-things that are encouraged:
+Things that are encouraged:
 
-- 🏗️ **hack around & experiment:** you just cloned the whole codebase! have an idea for a cool React component? ship it yo 😎
-- 🎨 **modify styles:** as partial as I am to the ones we have lol, it's totally ok for you to change as much or as little as you want.
+- 🏗️ **Hack around & experiment:** You have access to not just posts, but the whole codebase! Have an idea for a cool <CasePreserver>React</CasePreserver> component? Ship it ⚛️
+- 🎨 **Modify styles:** As partial as I am to the ones we have :) it's totally ok for you to change as much or as little as you want.
 
 <details>
-<summary>here's an example:</summary>
+<summary>Here's an example:</summary>
 
 <Grid columns={2}>
   <div>
@@ -261,36 +259,40 @@ faadil ipsum fortnite general relativity obsidian petemob twitter dudududududude
 </Grid>
 </details>
 
-things that will probably get your post flagged:
+Things that will get your post flagged:
 
-- **embedding third-party content:** e.g. instead of loading an image from a URL, it's preferred you upload it to the `public/assets/` directory. "third-party content" especially includes scripts or `<iframe>`s, but I promise it'll be case-by-case. for example, your data vis project might use Tableau. totally valid! but some sketchy CDN prolly isn't 😭
-- **irrelevant, defamatory, or generally uncool content:** compsigh is pro-free speech — we have very minimal content policies, and as a club we think it's important to stoke thought-provoking discussion. in most cases, content will get greenlit. but there's a time & place for everything :p
+- 🖼 **Embedding third-party content:** e.g. instead of loading an image from a <CasePreserver>URL</CasePreserver>, it's preferred you upload it to the `public/assets/` directory. "Third-party content" especially includes scripts or suspicious `<iframe>`s. But, for example, your data vis project might use <CasePreserver>Tableau</CasePreserver>; that's totally fine!
+- 🚫 **Content that violates the club's content policies:** compsigh is strongly pro-free speech, and as a club we think it's important to stoke thought-provoking discussion. But there's a time & place for everything. :) Please avoid including content that could be considered:
+  - <CasePreserver>NSFW</CasePreserver>
+  - Defamatory
+  - Overly political
+  - Illegal or promoting illegal activity
 
 ## Components
 
 <details>
-<summary>Markdown is awesome, but sometimes we want to make our content more visual or interactive. for this, we made some fun custom components you can embed!</summary>
+<summary>Markdown is awesome, but sometimes we want to make our content more visual or interactive. For this, we made some fun custom components you can embed!</summary>
 
 <Spacer size={16} />
 
 ### `Grid`
 
-the `Grid` component lets you split from the default single-column layout of the page.
+The `Grid` component lets you split from the default single-column layout of the page.
 
-for example, let's say you have a screenshot from your phone. in the single-column layout, images are resized such that their width fills the page (`700px`), and their height is adjusted to maintain aspect ratio. that screenshot would be stupid tall lol. with the `Grid` component you can put it to the side of some text, which makes for a much better reading experience.
+For example, let's say you have a screenshot from your phone. In the single-column layout, images are resized such that their width fills the page (`700px`), and their height is adjusted to maintain aspect ratio. That screenshot would be stupid tall lol. With the `Grid` component you can put it to the side of some text, which makes for a much better reading experience.
 
-props:
+Props:
 
 - `columns: number` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-divides all children of `Grid` by this number
+Divides all children of `Grid` by this number
 - `columnSizeDistribution: string[]` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-override the default even-division behavior to create custom layouts like 1:2:1
+Override the default even-division behavior to create custom layouts like 1:2:1
 
 <Note>
-**good to know:** `Grid` divides "top-level" children. this means if you want to treat a group of text as one, you'll want to wrap it with a parent element, such as a `<div>`.
+**Good to know:** `Grid` divides "top-level" children. This means if you want to treat a group of text as one, you'll want to wrap it with a parent element, such as a `<div>`.
 </Note>
 
-example:
+Example:
 
 ```tsx showLineNumbers
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
@@ -315,6 +317,7 @@ example:
         src="/assets/cue-invite-cards.mp4"
       />
       <div>
+        <CasePreserver>
 We really liked the idea of invites, and we went all out, because why not?
 
 We produced a set of 50 *physical* invite cards, each with their own unique invite linked via QR code.
@@ -322,6 +325,7 @@ We produced a set of 50 *physical* invite cards, each with their own unique invi
 Invites had conditions like `no-invite` (invited students can't also +1) to help us scale reasonably.
 
 We also gave these out at Destination USF.
+        </CasePreserver>
       </div>
     </Grid>
   </div>
@@ -331,26 +335,26 @@ We also gave these out at Destination USF.
 
 ### `Media`
 
-Markdown has a native way to embed images, but the web platform uses our optimized component instead, which also lets us nicely add captions or links
+Markdown has a native way to embed images, but the web platform uses our optimized component instead, which also lets us nicely add captions or links.
 
-props:
+Props:
 
 - `src: string` <span style={{ color: 'red' }}>(required)</span><br />
-a filepath relative to the `public/` directory to the image or video to embed
+A filepath relative to the `public/` directory to the image or video to embed
 - `video: boolean` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-set to `true` if the media content is a video
+Set to `true` if the media content is a video
 - `title: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-a caption placed directly under the image
+A caption placed directly under the image
 - `description: string | React.ReactElement` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-a more subtle caption, if additional context would help
+A more subtle caption, if additional context would help
 - `cta: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-"call to action"; displays under the title or description if present, would be something like "Watch video"
+"Call to action"; displays under the title or description if present, would be something like "Watch video"
 - `link: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-clicking on the image, title, or `cta` will take the reader to this URL
+Clicking on the image, title, or `cta` will take the reader to this <CasePreserver>URL</CasePreserver>
 - `alt: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-a description of the media, for accessibility
+A description of the media, for accessibility
 
-example:
+Example:
 
 ```tsx showLineNumbers
 <Media
@@ -367,7 +371,7 @@ example:
 
 ### `Mic`
 
-for multi-authored posts, it sometimes helps to know whose words you're reading. with `Mic`, you can indicate when you're "handing the mic" to a specific author:
+For multi-authored posts, it sometimes helps to know whose words you're reading. With `Mic`, you can indicate when you're "handing the mic" to a specific author:
 
 ```plaintext showLineNumbers
 <Mic name="Edward" avatar="/avatars/edward.png" />
@@ -389,6 +393,7 @@ this page is getting kinda long bruh
 lunch anyone?
 ```
 
+<CasePreserver>
 <Mic name="Edward" avatar="/avatars/edward.png" />
 
 what's good y'all?
@@ -406,12 +411,13 @@ Jet wsp
 this page is getting kinda long bruh
 
 lunch anyone?
+</CasePreserver>
 
 <Spacer size={16} />
 
 ### `Note`
 
-useful for "good to know" type comments:
+Useful for "good to know" type comments:
 
 ```tsx showLineNumbers
 <Note>
@@ -427,7 +433,7 @@ useful for "good to know" type comments:
 
 ### `Playground`
 
-useful for examples, or showcases that can't be used in `Media`:
+Useful for examples, or showcases that can't be used in `Media`:
 
 ```tsx showLineNumbers
 <Playground>
@@ -443,33 +449,33 @@ useful for examples, or showcases that can't be used in `Media`:
 
 ```tsx showLineNumbers
 <Playground editable>
-  this content is editable *(click me!)*
+  This content is editable *(click me!)*
 </Playground>
 ```
 
 <Playground editable>
-  this content is editable *(click me!)*
+  This content is editable *(click me!)*
 </Playground>
 
 <Spacer size={32} />
 
 ### `Spacer`
 
-add vertical space anywhere:
+Add vertical space anywhere:
 
 ```tsx showLineNumbers
-these two paragraphs could use some space
+These two paragraphs could use some space
 
 <Spacer size={16} />
 
-these two paragraphs could use some space
+These two paragraphs could use some space
 ```
 
 <Playground>
-  these two paragraphs could use some space
+  These two paragraphs could use some space
 
   <Spacer size={16} />
 
-  these two paragraphs could use some space
+  These two paragraphs could use some space
 </Playground>
 </details>
