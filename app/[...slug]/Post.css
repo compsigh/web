@@ -10,5 +10,7 @@ h1 {
 h2,
 h3 {
   font-weight: 400;
-  color: var(--color-light-50);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-family: var(--font-tronica-mono);
 }
