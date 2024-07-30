@@ -31,4 +31,5 @@ div#container:hover div#bar {
 
 div#container:not(:hover) div#bar {
   clip-path: inset(0 100% 0 0);
+  mix-blend-mode: difference;
 }
