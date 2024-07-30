@@ -5,6 +5,16 @@ authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
 ---
 
+<Note>
+Hi! 👋
+
+This beginner-friendly guide covers everything you need to know to start publishing on the compsigh web platform. It includes the basics on writing in <CasePreserver>Markdown</CasePreserver> and using the custom <CasePreserver>React</CasePreserver> components the web platform provides, and suggests resources for learning more about both <CasePreserver>Markdown</CasePreserver> and <CasePreserver>React</CasePreserver>.
+
+You can also choose which parts of the process to learn more about, at your own pace, by clicking the toggleable <span style={{ fontFamily: 'var(--font-proto-mono)', color: 'var(--color-compsigh)' }}>&gt;</span> icon at each section.
+
+I recommend you read through the guide, but if you'd rather just get going with a template to copy and remix, [check out the Cue post on GitHub](https://github.com/compsigh/web/blob/main/app/projects/cue.md?plain=1)!
+</Note>
+
 ## Getting set up
 
 <details>
