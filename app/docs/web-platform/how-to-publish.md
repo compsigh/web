@@ -290,11 +290,12 @@ Things that will get your post flagged:
 <summary><CasePreserver>Markdown</CasePreserver> is great, but with the power of <CasePreserver>React</CasePreserver>, we can make our content more visual and interactive.</summary>
 
 <Note>
-First, it will help to know a bit about <CasePreserver>React</CasePreserver>.
+<details>
+<summary style={{ margin: '16px 0' }}>First, it will help to know a bit about <CasePreserver>React</CasePreserver>.</summary>
 
 [<CasePreserver>React</CasePreserver>](https://react.dev) is a <CasePreserver>JavaScript</CasePreserver> framework for crafting *composable* <CasePreserver>UI</CasePreserver>s. Before the "component era" of web development, developers had to manually place elements *on each page they appeared.* Can you imagine writing a sidebar 10+ times? <CasePreserver>React</CasePreserver> and other frameworks like it allow developers to "componentize" <CasePreserver>UI</CasePreserver> so that it can be reused across our application.
 
-For example, you might have an application where each page greets the user. Here is a simplified example:
+Let's take a look at a simplified example. You might have an application where each page greets the user:
 
 <Playground>
   <div style={{ padding: '16px' }}>
@@ -329,7 +330,7 @@ function Greeting() {
 
 That's it — this is the *Hello World* of <CasePreserver>React</CasePreserver>! This looks very similar to <CasePreserver>HTML</CasePreserver>: it's called <CasePreserver>JSX</CasePreserver>, or "<CasePreserver>JavaScript XML</CasePreserver>".
 
-**A React component is a function that returns JSX.**
+**A <CasePreserver>React</CasePreserver> component is a function that returns JSX.**
 
 Let's update our application to use our new `Greeting` component.
 
@@ -354,7 +355,8 @@ Let's update our application to use our new `Greeting` component.
   </div>
 </Playground>
 
-Note that if a React component doesn't take children (like how that `<p>` takes a string of text as a child), it can self-close, like in the example above.
+Note that if a <CasePreserver>React</CasePreserver> component doesn't take children (like how that `<p>` takes a string of text as a child), it can self-close, like in the example above.
+</details>
 </Note>
 
 <Spacer size={16} />
