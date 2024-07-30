@@ -24,6 +24,30 @@ export function TableOfContents() {
     setHeadings(headingsArray)
   }, [])
 
+  function HeadingDetailsWrapper({
+    heading, subheadings, children
+  }: {
+    heading: Heading, subheadings: Heading[], children: React.ReactNode
+  }) {
+    if (subheadings.length > 0)
+      return (
+        <>
+          <details>
+            <summary>
+              <Link href={`#${heading.id}`}>{heading.text}</Link>
+            </summary>
+            {children}
+          </details>
+        </>
+      )
+    return (
+      <>
+        <Link href={`#${heading.id}`}>{heading.text}</Link>
+        {children}
+      </>
+    )
+  }
+
   if (headings.length === 0) return <></>
   return (
     <>
@@ -38,7 +62,7 @@ export function TableOfContents() {
                 subHeadings.push(headings[i])
             return (
               <li key={heading.id}>
-                <Link href={`#${heading.id}`}>{heading.text}</Link>
+                <HeadingDetailsWrapper heading={heading} subheadings={subHeadings}>
                 {subHeadings.length > 0 && (
                   <ul>
                     {subHeadings.map(subheading => (
@@ -48,6 +72,7 @@ export function TableOfContents() {
                     ))}
                   </ul>
                 )}
+                </HeadingDetailsWrapper>
               </li>
             )
           })}

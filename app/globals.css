@@ -92,6 +92,22 @@ ul ul > li {
   margin-left: 1em;
 }
 
+details > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details > summary::before {
+  position: absolute;
+  margin-left: -22px;
+  content: '>';
+  font-family: var(--font-proto-mono);
+}
+
+details[open] > summary::before {
+  rotate: 90deg;
+}
+
 code {
   font-family: var(--font-ia-writer-mono);
   counter-reset: line;

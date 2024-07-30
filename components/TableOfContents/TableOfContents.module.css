@@ -19,6 +19,10 @@ nav#table-of-contents ul li a:hover {
   color: var(--color-light);
 }
 
+nav#table-of-contents details summary::before {
+  font-family: var(--font-tronica-mono);
+}
+
 p#jump-to {
   font-family: var(--font-tronica-mono);
   color: var(--color-light-50);
