@@ -18,15 +18,17 @@ I recommend you read through the guide, but if you'd rather just get going with 
 ## Getting set up
 
 <details>
-<summary>The [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo! If you've never used <CasePreserver>React</CasePreserver>, <CasePreserver>Next.js</CasePreserver>, or <CasePreserver>Node.js</CasePreserver> before, no worries; you won't need to know any of those for writing content. Get started by forking & cloning a local copy, and opening it up in your editor of choice.</summary>
+<summary>The [web platform is open source](https://github.com/compsigh/web), and all contributions take place on our repo. Get started by forking & cloning a local copy, and opening it up in your editor of choice. If you're new to the process, check out [GitHub's resources for contributing to another project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).</summary>
 
 <Note>
 I personally edit all notes directly in <CasePreserver>VS Code</CasePreserver> with [my minimalist setup](https://edward.so/notes/vs-code). There are tons of helpful extensions to build on top of this, even <CasePreserver>Grammarly</CasePreserver>!
 </Note>
 
-Next, run `npm install` to install dependencies.
+Before we continue, you'll want to make sure you have [<CasePreserver>Node.js</CasePreserver>](https://nodejs.org) installed, at least version `v20.0.0`.
 
-Finally, run `npm run dev` to run the dev server and preview your changes locally (hit `^C` to stop it). I would have this up while you're writing just to get the vibes of how it looks on the page early on.
+Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `npm install` to install the dependencies.
+
+Finally, run `npm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
 </details>
 
 ## Markdown primer
