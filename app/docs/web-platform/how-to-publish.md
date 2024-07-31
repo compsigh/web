@@ -356,6 +356,41 @@ Let's update our application to use our new `Greeting` component.
 </Playground>
 
 Note that if a <CasePreserver>React</CasePreserver> component doesn't take children (like how that `<p>` takes a string of text as a child), it can self-close, like in the example above.
+
+Just like <CasePreserver>HTML</CasePreserver> elements can take attributes, so too can <CasePreserver>React</CasePreserver> components take "props": a set of key-value pairs that influences the look and/or behavior of the component.
+
+For example, our greeting isn't very personal. Let's make it so:
+
+```jsx showLineNumbers
+function Greeting(props) {
+  return <h1>Hi {props.name}!</h1>
+}
+```
+
+<Playground>
+  <div style={{ padding: '16px' }}>
+    <Grid columns={2}>
+      <div>
+        ```jsx showLineNumbers
+        <Greeting name="Edward" />
+        <p>Welcome to the Events page</p>
+        ```
+        `events.jsx`
+      </div>
+      <div>
+        ```html showLineNumbers
+        <h1>Hi Edward!</h1>
+        <p>Welcome to the Events page</p>
+        ```
+        Rendered <CasePreserver>HTML</CasePreserver>
+      </div>
+    </Grid>
+  </div>
+</Playground>
+
+I think that should be enough context for us here.
+
+This mini intro was intentionally minimal — there is so much more to <CasePreserver>React</CasePreserver>, and I recommend [the <CasePreserver>React</CasePreserver> docs](https://react.dev) if you're interested in learning more. It's a good time to be a web dev. :)
 </details>
 </Note>
 
@@ -453,6 +488,19 @@ Example:
 />
 ```
 
+<Playground>
+  <div style={{ padding: '0 32px' }}>
+    <Media
+      title="compsigh landing page"
+      description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
+      video={true}
+      src="/assets/compsigh-landing-page.mp4"
+      link="https://compsigh.club"
+      cta="View live demo"
+    />
+  </div>
+</Playground>
+
 <Spacer size={16} />
 
 ### `Mic`
@@ -523,12 +571,12 @@ Useful for examples, or showcases that can't be used in `Media`:
 
 ```tsx showLineNumbers
 <Playground>
-  this content is not editable
+  This content is not editable
 </Playground>
 ```
 
 <Playground>
-  this content is not editable
+  This content is not editable
 </Playground>
 
 <Spacer size={16} />
