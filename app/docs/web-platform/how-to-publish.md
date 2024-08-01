@@ -3,6 +3,7 @@ title: "How to publish on the compsigh web platform"
 description: "Guidelines & tips on getting your work out there and shared by the club"
 authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
+decorations: false
 ---
 
 <Note>
@@ -567,7 +568,7 @@ Useful for "good to know" type comments:
 
 ### `Playground`
 
-Useful for examples, or showcases that can't be used in `Media`:
+Useful for code examples and other showcases:
 
 ```tsx showLineNumbers
 <Playground>
