@@ -28,6 +28,10 @@ export const docs: StructuredSidebarProps =
       {
         text: 'Joining',
         link: '/docs/leadership/joining'
+      },
+      {
+        text: 'Team',
+        link: '/docs/leadership/team'
       }
     ]
   },
