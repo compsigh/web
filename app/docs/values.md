@@ -3,7 +3,7 @@ title: "compsigh values"
 description: "Core values that make compsigh who we are"
 authors: []
 previous: { text: "compsigh README", link: "/docs/readme" }
-next: { text: "About compsigh leadership", link: "/docs/leadership/about" }
+next: { text: "Code of Conduct", link: "/docs/code-of-conduct" }
 ---
 
 ## It's an ✨ event ✨
