@@ -27,6 +27,8 @@ I personally edit all notes directly in <CasePreserver>VS Code</CasePreserver> w
 
 Before we continue, you'll want to make sure you have [<CasePreserver>Node.js</CasePreserver>](https://nodejs.org) installed, at least version `v20.0.0`.
 
+For Windows, I recommend following the prerequisites of [<CasePreserver>Microsoft</CasePreserver>'s guide to setting up <CasePreserver>WSL</CasePreserver> for <CasePreserver>Next.js</CasePreserver>](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nextjs-on-wsl).
+
 Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `npm install` to install the dependencies.
 
 Finally, run `npm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
