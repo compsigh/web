@@ -1,7 +1,6 @@
 ---
 title: "compsigh leadership"
 description: "The mission & methods of club leadership"
-authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 slug: "docs/leadership/about"

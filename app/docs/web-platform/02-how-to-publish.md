@@ -123,7 +123,7 @@ This doesn't show up on the page itself, but like `title`, is used in the Commun
 
 `{ name: string, avatar: string }[]`
 
-<p style={{color: 'red' }}>(Required)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
 This shows up at the top of the page, as well as in the Community tab.
 
@@ -184,7 +184,6 @@ If you're writing a series of posts (for example, clone workshop notes), this is
 ---
 title: "compsigh leadership"
 description: "The mission & methods of club leadership"
-authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 ---

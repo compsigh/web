@@ -38,7 +38,7 @@ type Reference = {
 type Frontmatter = {
   title: string
   description: string
-  authors: Author[]
+  authors?: Author[]
   og_image?: string
   decorations?: boolean
   previous?: Reference

@@ -21,7 +21,7 @@ import styles from './PostWrapper.module.css'
 function AuthorsAndContent({ content, frontmatter }: PostProps) {
   return (
     <div className={styles["authors-and-content"]}>
-      {frontmatter.authors.map((author, index) => (
+      {frontmatter.authors && frontmatter.authors.map((author, index) => (
         <Author key={index} {...author} />
       ))}
       <Spacer size={32} />

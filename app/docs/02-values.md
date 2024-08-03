@@ -1,7 +1,6 @@
 ---
 title: "compsigh values"
 description: "Core values that make compsigh who we are"
-authors: []
 previous: { text: "compsigh README", link: "/docs/readme" }
 next: { text: "Code of Conduct", link: "/docs/code-of-conduct" }
 slug: "docs/values"

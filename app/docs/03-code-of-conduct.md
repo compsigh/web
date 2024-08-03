@@ -1,7 +1,6 @@
 ---
 title: "compsigh Code of Conduct"
 description: "uhm— have you read the #rules 🤓"
-authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Friends of compsigh", link: "/docs/friends" }
 slug: "docs/code-of-conduct"

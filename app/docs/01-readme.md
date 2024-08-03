@@ -1,7 +1,6 @@
 ---
 title: "compsigh README"
 description: "Why we're here"
-authors: []
 next: { text: "compsigh values", link: "/docs/values" }
 slug: "docs/readme"
 ---
