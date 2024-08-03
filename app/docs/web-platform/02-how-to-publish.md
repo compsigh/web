@@ -4,6 +4,7 @@ description: "Guidelines & tips on getting your work out there and shared by the
 authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
 decorations: false
+slug: "docs/web-platform/how-to-publish"
 ---
 
 <Note>
@@ -224,18 +225,18 @@ If you want to bind your post to a route other than where your file is located, 
 
 An appropriate use case would be where you have an ordered list of posts for your compsigh clone workshop, structured like this:
 
-- `/events/my-workshop/01-getting-started.md`
-- `/events/my-workshop/02-installing.md`
-- `/events/my-workshop/03-building.md`
+- `events/my-workshop/01-getting-started.md`
+- `events/my-workshop/02-installing.md`
+- `events/my-workshop/03-building.md`
 
 If the numbers help you stay organized in the repo, but you don't want them to show up in the <CasePreserver>URL</CasePreserver>, you can use `slug` to remove them.
 
-Example for a file at `/events/my-workshop/01-getting-started.md`:
+Example for a file at `events/my-workshop/01-getting-started.md`:
 
 ```plaintext showLineNumbers {3}
 ---
 title: "My workshop: Getting started"
-slug: "/events/my-workshop/getting-started"
+slug: "events/my-workshop/getting-started"
 ---
 ```
 
@@ -464,7 +465,7 @@ Markdown has a native way to embed images, but the web platform uses our optimiz
 Props:
 
 - `src: string` <span style={{ color: 'red' }}>(required)</span><br />
-A filepath relative to the `public/` directory to the image or video to embed
+A filepath, relative to the `public/` directory, to the image or video to embed
 - `video: boolean` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
 Set to `true` if the media content is a video
 - `title: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />

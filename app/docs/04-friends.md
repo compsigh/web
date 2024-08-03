@@ -4,6 +4,7 @@ description: "Clubs we love working with"
 authors: []
 previous: { text: "Code of Conduct", link: "/docs/code-of-conduct" }
 next: { text: "About compsigh leadership", link: "/docs/leadership/about" }
+slug: "docs/friends"
 ---
 
 - Game Design Club (GDC)

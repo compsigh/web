@@ -4,6 +4,7 @@ description: "compsigh teams from Fall 2022 to now"
 authors: []
 previous: { text: "Joining compsigh leadership", link: "/docs/leadership/joining" }
 next: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
+slug: "docs/leadership/team"
 ---
 
 ## Spring 2024

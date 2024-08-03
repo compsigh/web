@@ -4,6 +4,7 @@ description: "Sharing our work is one of the best ways to increase discoverabili
 authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Current and past leadership teams", link: "/docs/leadership/team" }
 next: { text: "How to publish on the compsigh web platform", link: "/docs/web-platform/how-to-publish" }
+slug: "docs/web-platform/why-publish"
 ---
 
 One of the timeless struggles we face as <CasePreserver>CS</CasePreserver> majors is *getting our projects out there.* Sharing our work is one of the best ways to increase discoverability, hireability, and serendipity for new opportunities.

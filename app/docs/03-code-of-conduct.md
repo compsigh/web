@@ -4,6 +4,7 @@ description: "uhm— have you read the #rules 🤓"
 authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Friends of compsigh", link: "/docs/friends" }
+slug: "docs/code-of-conduct"
 ---
 
 This Code of Conduct establishes expectations for online and offline interaction in club spaces. *(We assume a reasonable baseline of respect and civility.)* We don't take ourselves too seriously, but we are committed to maintaining a welcoming space to chill with friends after a long week of school. `vibes >>>`

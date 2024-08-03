@@ -4,6 +4,7 @@ description: "The mission & methods of club leadership"
 authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Joining leadership", link: "/docs/leadership/joining" }
+slug: "docs/leadership/about"
 ---
 
 Every day, members of the club contribute their time and ideas to making our community awesome. Several of our events — like **clone** workshops & **demos** — are organized by these passionate and generous people. Some even make food for events! <span style={{ color: 'var(--color-light-50)' }}>Shoutout Tao \<3</span>
