@@ -12,11 +12,10 @@ export interface MediaProps extends Omit<ImageProps, 'alt'> {
   link?: Route
   cta?: string
   alt?: string
-  video?: boolean
 }
 
 export async function Media(
-  { title, description, link, cta, alt, video, ...props }:
+  { title, description, link, cta, alt, ...props }:
   MediaProps
 ) {
   async function processImage(src: string) {
@@ -25,6 +24,7 @@ export async function Media(
     return { base64, metadata }
   }
   let imageData
+  const video = props.src.toString().endsWith('.mp4')
   if (!video) imageData = await processImage(`public${props.src}`)
   const isGif = props.src.toString().endsWith('.gif')
 

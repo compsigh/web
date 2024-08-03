@@ -420,7 +420,7 @@ Example:
 
 ```tsx showLineNumbers
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-  <Media video={true} src="/assets/cue-invite-cards.mp4" />
+  <Media src="/assets/cue-invite-cards.mp4" />
   <div>
     We really liked the idea of invites, and we went all out, because why not?
 
@@ -436,10 +436,7 @@ Example:
 <Playground>
   <div style={{ padding: '16px 32px' }}>
     <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-      <Media
-        video={true}
-        src="/assets/cue-invite-cards.mp4"
-      />
+      <Media src="/assets/cue-invite-cards.mp4" />
       <div>
         <CasePreserver>
 We really liked the idea of invites, and we went all out, because why not?
@@ -465,8 +462,6 @@ Props:
 
 - `src: string` <span style={{ color: 'red' }}>(required)</span><br />
 A filepath, relative to the `public/` directory, to the image or video to embed
-- `video: boolean` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-Set to `true` if the media content is a video
 - `title: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
 A caption placed directly under the image
 - `description: string | React.ReactElement` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
@@ -484,7 +479,6 @@ Example:
 <Media
   title="compsigh landing page"
   description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-  video={true}
   src="/assets/compsigh-landing-page.mp4"
   link="https://compsigh.club"
   cta="View live demo"
@@ -496,7 +490,6 @@ Example:
     <Media
       title="compsigh landing page"
       description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-      video={true}
       src="/assets/compsigh-landing-page.mp4"
       link="https://compsigh.club"
       cta="View live demo"
