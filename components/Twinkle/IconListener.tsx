@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from 'react'
 
-export function IconListener({ children }: { children: React.ReactNode }) {
+export function IconListener({
+  scale, children
+}: {
+  scale: number, children: React.ReactNode
+}) {
   const iconRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -18,18 +22,15 @@ export function IconListener({ children }: { children: React.ReactNode }) {
       const distanceX = clientX - centerX
       const distanceY = clientY - centerY
 
-      const randomFactorX = Math.random() * 0.2 + 0.9
-      const randomFactorY = Math.random() * 0.2 + 0.9
-
-      const offsetX = (distanceX / innerWidth) * 100 + randomFactorX
-      const offsetY = (distanceY / innerHeight) * 100 + randomFactorY
+      const offsetX = (distanceX / innerWidth) * scale * 500
+      const offsetY = (distanceY / innerHeight) * scale * 500
 
       icon.style.transform = `translate(${offsetX}%, ${offsetY}%)`
     }
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-}, [])
+}, [scale])
 
   return (
     <div ref={iconRef}>

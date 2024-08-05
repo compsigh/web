@@ -12,7 +12,7 @@ import { Icon, type Icon as IconType } from './Icon'
  * ✔︎ Each icon has a fluctuating opacity, as well as a random offset of scale
  * ✔︎ The further down the container, the less baseline opacity icons have
  * ✔︎ When the mouse moves, each icon moves with a subtle, random offset in the direction of the mouse
- *   □ The closer the icon is to the mouse, the more it moves
+ *   ✔︎ The closer the icon is to the mouse, the more it moves
  * ✔︎ Hide on smaller viewports
  */
 export function Twinkle() {
@@ -54,6 +54,12 @@ export function Twinkle() {
     return randomIcon
   }
 
+  let scale = 1
+  function randomScale() {
+    scale = Math.random() * 0.5 + 0.5
+    return scale
+  }
+
   if (!display) return <></>
   return (
     <>
@@ -92,11 +98,11 @@ export function Twinkle() {
                   alignItems: 'center',
                   width: '24px',
                   height: '24px',
-                  transform: `scale(${Math.random() * 0.5 + 0.5}) translate(${Math.random() * 24 - 12}px, ${Math.random() * 24 - 12}px)`,
+                  transform: `scale(${randomScale()}) translate(${Math.random() * 24 - 12}px, ${Math.random() * 24 - 12}px)`,
                   pointerEvents: 'none',
                 }}
               >
-                <IconListener>
+                <IconListener scale={randomScale()}>
                   <Icon icon={pickIcon()} />
                 </IconListener>
               </div>
