@@ -13,13 +13,16 @@ export function Decorations({
 }) {
   const [display, setDisplay] = useState(true)
   const [numberOfElements, setNumberOfElements] = useState(0)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
     function setElementsBasedOnHeight() {
-      const { innerWidth } = window
+      const { innerWidth, innerHeight } = window
       const documentHeight = document.body.getBoundingClientRect().height
-      const DENSITY = 100 // Place an element every x pixels on the y-axis
-      setNumberOfElements(Math.floor(documentHeight / DENSITY))
+      const largestHeight = Math.max(documentHeight, innerHeight)
+      setHeight(largestHeight)
+      const DENSITY = 100 // For every x pixels on the y-axis, add a Decoration
+      setNumberOfElements(Math.floor(largestHeight / DENSITY))
 
       if (innerWidth < 1420) {
         setDisplay(false)
@@ -54,7 +57,7 @@ export function Decorations({
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         width: '100vw',
-        height: document.body.getBoundingClientRect().height,
+        height: height,
         pointerEvents: 'none',
         overflow: 'hidden'
       }}
