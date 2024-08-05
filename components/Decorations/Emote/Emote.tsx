@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import './Emote.css'
 
-export type Emote
+type Emote
   = 'bensonstare'
   | 'c'
   | 'calendar'
@@ -48,7 +48,7 @@ export type Emote
   | 'vscode'
   | 'warp'
 
-export const emoteSrcs: Record<Emote, string> = {
+const emoteSrcs: Record<Emote, string> = {
   bensonstare: '/emotes/bensonstare.png',
   c: '/emotes/c.svg',
   calendar: '/emotes/calendar.svg',
