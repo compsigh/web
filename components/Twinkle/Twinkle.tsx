@@ -5,31 +5,17 @@ import { useEffect, useState } from 'react'
 import { IconListener } from './IconListener'
 import { Icon, type Icon as IconType } from './Icon'
 
-/**
- * Strategy:
- * ✔︎ Like `Decorations`, render a container div of full width and height
- * ✔︎ Render icons at a specified density, in a grid, but with random offsets
- * ✔︎ Each icon has a fluctuating opacity, as well as a random offset of scale
- * ✔︎ The further down the container, the less baseline opacity icons have
- * ✔︎ When the mouse moves, each icon moves with a subtle, random offset in the direction of the mouse
- *   ✔︎ The closer the icon is to the mouse, the more it moves
- * ✔︎ Hide on smaller viewports
- */
 export function Twinkle() {
   const [display, setDisplay] = useState(true)
-  const [documentHeight, setDocumentHeight] = useState(0)
   const [rows, setRows] = useState(0)
   const [columns, setColumns] = useState(0)
 
   useEffect(() => {
     function setElementsBasedOnHeight() {
-      const { innerWidth } = window
-      const documentHeight = document.body.getBoundingClientRect().height
-      setDocumentHeight(documentHeight)
-
       const DENSITY = 50
+      const { innerWidth, innerHeight } = window
       setColumns(Math.floor((innerWidth / DENSITY) * 1.2))
-      setRows(Math.floor(documentHeight / DENSITY))
+      setRows(Math.floor((innerHeight / 2 / DENSITY) * 1.2))
 
       if (innerWidth < 860) {
         setDisplay(false)
@@ -68,7 +54,7 @@ export function Twinkle() {
         top: -100,
         left: -100,
         width: '120vw',
-        height: documentHeight,
+        height: '50vh',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
@@ -85,8 +71,7 @@ export function Twinkle() {
             style={{
               display: 'flex',
               gap: '24px',
-              justifyContent: 'center',
-              opacity: 1 - index / rows
+              justifyContent: 'center'
             }}
           >
             {Array.from({ length: columns }, (_, index) => (
@@ -110,6 +95,16 @@ export function Twinkle() {
           </div>
         ))}
       </div>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '50vh',
+        overflow: 'hidden',
+        pointerEvents: 'none',
+        backgroundImage: 'linear-gradient(to bottom, var(--color-invisible), var(--color-dark) 40vh)'
+      }} />
     </>
   )
 }
