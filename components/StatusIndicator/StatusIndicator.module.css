@@ -1,0 +1,38 @@
+div#wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+div#status-indicator {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-compsigh);
+  box-shadow: 0px 0px 10px var(--color-compsigh-60);
+}
+
+div#status-indicator-ping {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-compsigh-60);
+  box-shadow: 0px 0px 10px var(--color-compsigh-60);
+  animation: ping 2s ease infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
