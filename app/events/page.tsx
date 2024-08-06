@@ -28,17 +28,9 @@ async function getEvents() {
       throw new Error(`Event ${slug.join('/')} is missing event_details.cover_image`)
     if (!frontmatter.event_details.start)
       throw new Error(`Event ${slug.join('/')} is missing event_details.start`)
-    if (!frontmatter.event_details.end) {
-      // Set to midnight in Pacific Time of the night of the event
-      const startTimestampUTC = new Date(frontmatter.event_details.start * 1000)
-      const startDatePT = new Date(startTimestampUTC.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }))
-      const offsetMs = startDatePT.getTimezoneOffset() * 60000
-      const endDatePT = new Date(startTimestampUTC.getTime() + 24 * 60 * 60 * 1000 - offsetMs)
-      endDatePT.setHours(0, 0, 0, 0)
-      const endTimestampUTC = Math.floor(endDatePT.getTime() / 1000)
-      frontmatter.event_details.end = endTimestampUTC
-      console.log(`Event ${slug.join('/')} end set to ${endTimestampUTC}`)
-    }
+    if (!frontmatter.event_details.end)
+      // By default, events end 6 hours after they start
+      frontmatter.event_details.end = frontmatter.event_details.start + 6 * 60 * 60
     if (frontmatter.event_details.end && (frontmatter.event_details.end < frontmatter.event_details.start))
       throw new Error(`Event ${slug.join('/')} has event_details.end (${frontmatter.event_details.end}) before event_details.start (${frontmatter.event_details.start})`)
     events.push(frontmatter)
