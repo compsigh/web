@@ -35,7 +35,22 @@ type Reference = {
   link: string
 }
 
-type Frontmatter = {
+type Activity = {
+  title: string
+  time_offset: number
+}
+
+export type EventDetails = {
+  start: number
+  end?: number
+  location?: string
+  cover_image: string
+  activities?: Activity[]
+  pictures?: string[]
+  link?: string | null
+}
+
+export type Frontmatter = {
   title: string
   description: string
   authors?: Author[]
@@ -44,6 +59,7 @@ type Frontmatter = {
   previous?: Reference
   next?: Reference
   slug?: string
+  event_details?: EventDetails
 }
 
 export type PostProps = {
