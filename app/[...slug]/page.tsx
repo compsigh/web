@@ -38,11 +38,12 @@ type Reference = {
 type Frontmatter = {
   title: string
   description: string
-  authors: Author[]
+  authors?: Author[]
   og_image?: string
   decorations?: boolean
   previous?: Reference
   next?: Reference
+  slug?: string
 }
 
 export type PostProps = {
@@ -50,9 +51,15 @@ export type PostProps = {
   frontmatter: Frontmatter
 }
 
-async function readPage(slug: string[]) {
+/**
+ * Given a route served by the Next.js App Router, read the Markdown file associated with the route.
+ *
+ * @param {string[]} segments - A route served by the Next.js App Router. The last element in the array is the filename, and each preceding element is a parent directory.
+ * @example readMarkdownFileAtRoute(['docs', 'about']) // Reads `app/docs/about.md`
+ */
+async function readMarkdownFileAtRoute(segments: string[]) {
   try {
-    const filePath = path.join(process.cwd(), 'app', ...slug) + '.md'
+    const filePath = path.join(process.cwd(), 'app', ...segments) + '.md'
     const page = await fs.readFile(filePath, 'utf8')
 
     const vercelTheme = await import('./vercel-theme.json')
@@ -77,6 +84,16 @@ async function readPage(slug: string[]) {
     })
     return { content, frontmatter }
   } catch (error) {
+    // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
+    // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
+    if ((error as any).code === 'ENOENT') {
+      const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+      for (const { slug } of slugs) {
+        const { frontmatter } = await readMarkdownFileAtRoute(slug)
+        if (frontmatter.slug === segments.join('/'))
+          return readMarkdownFileAtRoute(slug)
+      }
+    }
     notFound()
   }
 }
@@ -85,7 +102,7 @@ export async function generateMetadata(
   { params }:
   { params: { slug: string[] } }
 ) {
-  const { frontmatter } = await readPage(params.slug)
+  const { frontmatter } = await readMarkdownFileAtRoute(params.slug)
   const metadata: Metadata = {
     title: frontmatter.title,
     description: frontmatter.description,
@@ -112,29 +129,46 @@ export async function generateMetadata(
   return metadata
 }
 
-export const dynamicParams = false
-export async function generateStaticParams() {
-  async function getMdSlugs(folder: string) {
-    const entries = await fs.readdir(folder, { withFileTypes: true })
-    const files = entries.filter((file) => file.isFile())
-    const directories = entries.filter((file) => file.isDirectory())
-    let slugs = files
-      .filter((file) => file.name.endsWith('.md'))
-      .map((file) => file.name.replace(/\.md$/, ''))
-      .map((slug) => path.join(folder, slug))
-      .map((slug) => slug.split('/'))
-      .map((slug) => slug.slice(1))
-      .map((slug) => ({ slug }))
+/**
+ * Recursively generate a list of slugs for Next.js' `generateStaticParams()` from all Markdown files in a folder and its subfolders. The slugs are relative to the `app/` directory. Does not modify the slug regardless of frontmatter; that is done in `generateStaticParams()`.
+ *
+ * @param {string} folder - The folder from where to scan for Markdown files.
+ * @example generateUnmodifiedSlugsFromMarkdownFiles('app') // Returns [{ slug: ['docs', '01-about'] }, { slug: ['docs', '02-values'] }, ...]
+ */
+async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
+  const folderContents = await fs.readdir(folder, { withFileTypes: true })
+  const files = folderContents.filter((file) => file.isFile())
+  const directories = folderContents.filter((file) => file.isDirectory())
+  let slugs = files
+    .filter((file) => file.name.endsWith('.md'))
+    .map((file) => file.name.replace(/\.md$/, ''))
+    .map((slug) => path.join(folder, slug))
+    .map((slug) => slug.split('/'))
+    .map((slug) => slug.slice(1))
+    .map((slug) => ({ slug }))
 
-    for (const directory of directories) {
-      const nestedSlugs = await getMdSlugs(path.join(folder, directory.name))
-      slugs = slugs.concat(nestedSlugs)
-    }
-
-    return slugs
+  for (const directory of directories) {
+    const nestedSlugs = await generateUnmodifiedSlugsFromMarkdownFiles(path.join(folder, directory.name))
+    slugs = slugs.concat(nestedSlugs)
   }
 
-  const slugs = await getMdSlugs('app')
+  return slugs
+}
+
+export const dynamicParams = false
+export async function generateStaticParams() {
+  const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+
+  // For each file:
+  // 1. Read it
+  // 2. Parse its Markdown frontmatter
+  // 3. Determine if it has a `slug` key
+  // 4. If it does, replace the entry in `slugs` with the new slug
+  for (const [index, { slug: route }] of slugs.entries()) {
+    const { frontmatter } = await readMarkdownFileAtRoute(route)
+    if (frontmatter.slug)
+      slugs[index] = { slug: frontmatter.slug.split('/') }
+  }
   return slugs
 }
 
@@ -142,7 +176,7 @@ export default async function Page(
   { params }:
   { params: { slug: string[] } }
 ) {
-  const { content, frontmatter } = await readPage(params.slug)
+  const { content, frontmatter } = await readMarkdownFileAtRoute(params.slug)
   if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (
     <>

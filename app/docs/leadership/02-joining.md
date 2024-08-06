@@ -1,8 +1,9 @@
 ---
 title: "Joining compsigh leadership"
 description: "How to get invited, and what the process looks like"
-authors: []
 previous: { text: "About compsigh leadership", link: "/docs/leadership/about" }
+next: { text: "Current and past leadership teams", link: "/docs/leadership/team" }
+slug: "docs/leadership/joining"
 ---
 
 Instead of running applications for leadership, members are invited to join.

@@ -3,6 +3,8 @@ title: "How to publish on the compsigh web platform"
 description: "Guidelines & tips on getting your work out there and shared by the club"
 authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
+decorations: false
+slug: "docs/web-platform/how-to-publish"
 ---
 
 <Note>
@@ -25,6 +27,8 @@ I personally edit all notes directly in <CasePreserver>VS Code</CasePreserver> w
 </Note>
 
 Before we continue, you'll want to make sure you have [<CasePreserver>Node.js</CasePreserver>](https://nodejs.org) installed, at least version `v20.0.0`.
+
+For Windows, I recommend following the prerequisites of [<CasePreserver>Microsoft</CasePreserver>'s guide to setting up <CasePreserver>WSL</CasePreserver> for <CasePreserver>Next.js</CasePreserver>](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nextjs-on-wsl).
 
 Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `npm install` to install the dependencies.
 
@@ -119,7 +123,7 @@ This doesn't show up on the page itself, but like `title`, is used in the Commun
 
 `{ name: string, avatar: string }[]`
 
-<p style={{color: 'red' }}>(Required)</p>
+<p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
 This shows up at the top of the page, as well as in the Community tab.
 
@@ -180,7 +184,6 @@ If you're writing a series of posts (for example, clone workshop notes), this is
 ---
 title: "compsigh leadership"
 description: "The mission & methods of club leadership"
-authors: []
 previous: { text: "compsigh values", link: "/docs/values" }
 next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 ---
@@ -221,18 +224,18 @@ If you want to bind your post to a route other than where your file is located, 
 
 An appropriate use case would be where you have an ordered list of posts for your compsigh clone workshop, structured like this:
 
-- `/events/my-workshop/01-getting-started.md`
-- `/events/my-workshop/02-installing.md`
-- `/events/my-workshop/03-building.md`
+- `events/my-workshop/01-getting-started.md`
+- `events/my-workshop/02-installing.md`
+- `events/my-workshop/03-building.md`
 
 If the numbers help you stay organized in the repo, but you don't want them to show up in the <CasePreserver>URL</CasePreserver>, you can use `slug` to remove them.
 
-Example for a file at `/events/my-workshop/01-getting-started.md`:
+Example for a file at `events/my-workshop/01-getting-started.md`:
 
 ```plaintext showLineNumbers {3}
 ---
 title: "My workshop: Getting started"
-slug: "/events/my-workshop/getting-started"
+slug: "events/my-workshop/getting-started"
 ---
 ```
 
@@ -417,7 +420,7 @@ Example:
 
 ```tsx showLineNumbers
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-  <Media video={true} src="/assets/cue-invite-cards.mp4" />
+  <Media src="/assets/cue-invite-cards.mp4" />
   <div>
     We really liked the idea of invites, and we went all out, because why not?
 
@@ -433,10 +436,7 @@ Example:
 <Playground>
   <div style={{ padding: '16px 32px' }}>
     <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-      <Media
-        video={true}
-        src="/assets/cue-invite-cards.mp4"
-      />
+      <Media src="/assets/cue-invite-cards.mp4" />
       <div>
         <CasePreserver>
 We really liked the idea of invites, and we went all out, because why not?
@@ -461,9 +461,7 @@ Markdown has a native way to embed images, but the web platform uses our optimiz
 Props:
 
 - `src: string` <span style={{ color: 'red' }}>(required)</span><br />
-A filepath relative to the `public/` directory to the image or video to embed
-- `video: boolean` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-Set to `true` if the media content is a video
+A filepath, relative to the `public/` directory, to the image or video to embed
 - `title: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
 A caption placed directly under the image
 - `description: string | React.ReactElement` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
@@ -481,7 +479,6 @@ Example:
 <Media
   title="compsigh landing page"
   description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-  video={true}
   src="/assets/compsigh-landing-page.mp4"
   link="https://compsigh.club"
   cta="View live demo"
@@ -493,7 +490,6 @@ Example:
     <Media
       title="compsigh landing page"
       description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-      video={true}
       src="/assets/compsigh-landing-page.mp4"
       link="https://compsigh.club"
       cta="View live demo"
@@ -567,7 +563,7 @@ Useful for "good to know" type comments:
 
 ### `Playground`
 
-Useful for examples, or showcases that can't be used in `Media`:
+Useful for code examples and other showcases:
 
 ```tsx showLineNumbers
 <Playground>

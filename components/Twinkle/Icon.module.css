@@ -1,3 +1,8 @@
+img.icon {
+  animation: fluctuateOpacity 2s ease infinite;
+  pointer-events: none;
+}
+
 @keyframes fluctuateOpacity {
   0% {
     opacity: 1;

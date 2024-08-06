@@ -12,6 +12,7 @@
   --color-compsigh-60: hsla(038deg, 100%, 050%, 0.6);
   --color-diff-add:    hsla(120deg, 100%, 025%, 0.2);
   --color-diff-remove: hsla(360deg, 100%, 050%, 0.2);
+  --color-invisible:   hsla(038deg, 000%, 000%, 0.0);
 
   --max-width: 700px;
   --margin: 40px auto;

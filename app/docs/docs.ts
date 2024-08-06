@@ -11,6 +11,14 @@ export const docs: StructuredSidebarProps =
     link: '/docs/values'
   },
   {
+    text: 'Code of Conduct',
+    link: '/docs/code-of-conduct'
+  },
+  {
+    text: 'Friends of compsigh',
+    link: '/docs/friends'
+  },
+  {
     name: 'Leadership',
     entries: [
       {
@@ -20,6 +28,10 @@ export const docs: StructuredSidebarProps =
       {
         text: 'Joining',
         link: '/docs/leadership/joining'
+      },
+      {
+        text: 'Team',
+        link: '/docs/leadership/team'
       }
     ]
   },

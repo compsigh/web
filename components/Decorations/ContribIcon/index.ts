@@ -1,1 +1,0 @@
-export { ContribIcon } from './ContribIcon'
