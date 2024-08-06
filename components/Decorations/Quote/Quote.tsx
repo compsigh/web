@@ -29,6 +29,14 @@ export const quotes: Quote[] = [
   {
     quote: "idk I think I'm fucked",
     author: 'Eric'
+  },
+  {
+    quote: '"iteration velocity" is us committing tax fraud by the end of next week',
+    author: 'Jet'
+  },
+  {
+    quote: 'just core dumped in my pants a bit',
+    author: 'Jet'
   }
 ]
 
