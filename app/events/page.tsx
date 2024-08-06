@@ -30,14 +30,18 @@ async function getEvents() {
       throw new Error(`Event ${slug.join('/')} is missing event_details.start`)
     if (!frontmatter.event_details.end) {
       // Set to midnight in Pacific Time of the night of the event
+      console.log(`Event ${slug.join('/')} is missing event_details.end, setting to midnight of the night of the event`)
       const start = new Date(frontmatter.event_details.start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })
+      console.log(`Event ${slug.join('/')} starts at ${start}`)
       const endDate = new Date(start).setDate(new Date(start).getDate() + 1)
       const endTimestampMidnight = new Date(new Date(endDate).setHours(0, 0, 0, 0))
+      console.log(`Setting to midnight of ${endTimestampMidnight.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })}`)
       const end = Math.floor(endTimestampMidnight.getTime() / 1000)
       frontmatter.event_details.end = end
+      console.log(`Event ${slug.join('/')} end set to ${end}`)
     }
     if (frontmatter.event_details.end && (frontmatter.event_details.end < frontmatter.event_details.start))
-      throw new Error(`Event ${slug.join('/')} has event_details.end before event_details.start`)
+      throw new Error(`Event ${slug.join('/')} has event_details.end (${frontmatter.event_details.end}) before event_details.start (${frontmatter.event_details.start})`)
     events.push(frontmatter)
   }
   return events as EventFrontmatter[]
