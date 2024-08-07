@@ -53,10 +53,10 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
     <>
       <div style={{
         position: 'absolute',
-        top: -100,
-        left: -100,
-        width: position === 'top' ? '120vw' : '50vw',
-        height: position === 'top' ? '50vh' : '120vh',
+        top: 0,
+        left: 0,
+        width: position === 'top' ? '100vw' : '50vw',
+        height: position === 'top' ? '50vh' : '100vh',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
