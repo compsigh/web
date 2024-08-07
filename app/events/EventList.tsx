@@ -46,19 +46,21 @@ export function EventList({
     if (!container) return
 
     const handleScroll = () => {
-      const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, h2, hr`)
+      requestAnimationFrame(() => {
+        const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, h2, hr`)
 
-      eventElements.forEach((event, index) => {
-        const htmlElement = event as HTMLElement
-        const elementPosition = htmlElement.getBoundingClientRect().top + htmlElement.clientHeight / 2
-        const containerPosition = container.getBoundingClientRect().top
-        const distance = Math.abs((elementPosition - containerPosition) - (container.clientHeight / 2))
+        eventElements.forEach((event, index) => {
+          const htmlElement = event as HTMLElement
+          const elementPosition = htmlElement.getBoundingClientRect().top + htmlElement.clientHeight / 2
+          const containerPosition = container.getBoundingClientRect().top
+          const distance = Math.abs((elementPosition - containerPosition) - (container.clientHeight / 2))
 
-        const scale = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.1
-        const opacity = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.8
+          const scale = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.1
+          const opacity = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.8
 
-        htmlElement.style.transform = `scale(${scale})`
-        htmlElement.style.opacity = `${opacity}`
+          htmlElement.style.transform = `scale(${scale})`
+          htmlElement.style.opacity = `${opacity}`
+        })
       })
     }
 
