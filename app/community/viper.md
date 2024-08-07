@@ -35,3 +35,24 @@ While many Discord bots enhance servers by playing music, generating AI response
 
 Our team consisted of Jake, Tao, Yiyu, and myself (Andrew). Unfortunately, Tao came down with COVID, so it was just the three of us on campus for the hackathon, while Tao participated remotely. Despite being at home, Tao was instrumental in our progress and provided invaluable help whenever we hit a roadblock.
 
+### Day One
+
+That Saturday felt like one of the longest and most grueling days of my life. This wasn’t my first hackathon, so I knew how crucial it was to stay focused and dedicated throughout the day. Jake, Yiyu, and I spent the entire morning and afternoon hunkered down in an empty room at the [Gleeson Library](https://library.usfca.edu/home).
+
+<Media
+  description="To make or break -- that is the question."
+  src="/assets/viper/gleeson.png"
+  alt="A front view of the Gleeson Library."
+/>
+
+We brainstormed design ideas, did some whiteboarding, and quickly started incremental development. The process went more smoothly than I anticipated, and I believe that early testing success played a crucial role in helping us complete the app in time.
+
+As twilight approached, we ordered some [Super Duper Burger](https://www.superduperburgers.com/) and wrapped up our day at one of the workspaces in K-Hall. We faced several challenges along the way, but fortunately, our team’s support for one another helped us overcome them.
+
+<Media
+  description="yum yum"
+  src="/assets/viper/superduper.png"
+  alt="A tasty shot of a Super Duper Burger."
+/>
+
+Just before heading home, I whipped up the landing page for Viper in about an hour, marking my first experience with GitHub Pages. I was relieved to find that it was simple to work with, thanks to Markdown.
