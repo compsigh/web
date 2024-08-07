@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 
+import { Spacer } from '@/components/Spacer'
+
 import styles from './Events.module.css'
 
 export function EventList({
@@ -82,6 +84,7 @@ export function EventList({
               </div>
             )
         ))}
+        <Spacer size="20vh" />
       </div>
     </>
   )

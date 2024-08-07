@@ -202,7 +202,7 @@ export default async function Page(
     <>
       <Suspense>
         <PostWrapper content={content} frontmatter={frontmatter} />
-        <Spacer size={`20vh`} />
+        <Spacer size="20vh" />
       </Suspense>
     </>
   )
