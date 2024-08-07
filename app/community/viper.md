@@ -85,3 +85,13 @@ Looking back, I think we won because we all pushed ourselves to the fullest, emb
   />
 </Grid>
 
+## Features
+
+Before diving into the features, let’s first review the tech stack:
+
+- [Python 3](https://www.python.org/downloads/): The primary programming language powering the project.
+- [Discord API](https://discord.com/developers/docs/intro): Enables integration with Discord for bot functionalities.
+- [Yake](https://liaad.github.io/yake/): Used for keyword extraction.
+
+We aimed to keep things as simple as possible, prioritizing the core problems we need to solve: keyword extraction and question detection without getting too caught up with scalability.
+
