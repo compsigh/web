@@ -23,7 +23,7 @@ import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
 import { CasePreserver } from '@/components/CasePreserver'
 
-import './Post.css'
+import './Typography.css'
 
 type Author = {
   name: string
@@ -35,7 +35,26 @@ type Reference = {
   link: string
 }
 
-type Frontmatter = {
+type Activity = {
+  title: string
+  time_offset: number
+}
+
+export const locationIcons = {
+  'hive': '/emotes/hive.svg'
+}
+
+export type EventDetails = {
+  start: number
+  end?: number
+  location?: string
+  cover_image: string
+  activities?: Activity[]
+  pictures?: string[]
+  link?: string | null
+}
+
+export type Frontmatter = {
   title: string
   description: string
   authors?: Author[]
@@ -44,6 +63,7 @@ type Frontmatter = {
   previous?: Reference
   next?: Reference
   slug?: string
+  event_details?: EventDetails
 }
 
 export type PostProps = {
@@ -57,7 +77,7 @@ export type PostProps = {
  * @param {string[]} segments - A route served by the Next.js App Router. The last element in the array is the filename, and each preceding element is a parent directory.
  * @example readMarkdownFileAtRoute(['docs', 'about']) // Reads `app/docs/about.md`
  */
-async function readMarkdownFileAtRoute(segments: string[]) {
+export async function readMarkdownFileAtRoute(segments: string[]) {
   try {
     const filePath = path.join(process.cwd(), 'app', ...segments) + '.md'
     const page = await fs.readFile(filePath, 'utf8')
@@ -135,7 +155,7 @@ export async function generateMetadata(
  * @param {string} folder - The folder from where to scan for Markdown files.
  * @example generateUnmodifiedSlugsFromMarkdownFiles('app') // Returns [{ slug: ['docs', '01-about'] }, { slug: ['docs', '02-values'] }, ...]
  */
-async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
+export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
   const folderContents = await fs.readdir(folder, { withFileTypes: true })
   const files = folderContents.filter((file) => file.isFile())
   const directories = folderContents.filter((file) => file.isDirectory())

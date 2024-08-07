@@ -1,0 +1,21 @@
+h1 {
+  font-family: var(--font-tronica-mono);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-compsigh);
+  text-shadow: 0px 0px 10px var(--color-compsigh-60);
+  margin-bottom: 32px;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-family: var(--font-tronica-mono);
+}
+
+h2 code,
+h3 code {
+  text-transform: none;
+}
