@@ -162,10 +162,10 @@ export default async function Events() {
         <div id={styles["twinkle-wrapper"]}>
           <Twinkle position="top" />
         </div>
-        <div id={styles.content}>
           <div id={styles["breadcrumbs-wrapper"]}>
             <Breadcrumbs />
           </div>
+        <div id={styles.content}>
           <h1 id={styles.title}>Events</h1>
           <EventList events={events} />
         </div>

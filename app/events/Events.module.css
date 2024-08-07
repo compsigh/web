@@ -13,16 +13,16 @@ div#page > div#twinkle-wrapper {
   animation: fade-in 1s ease forwards;
 }
 
-div#page > div#content > div#breadcrumbs-wrapper {
+div#page > div#breadcrumbs-wrapper {
   display: none;
-}
-
-div#page > div#content > div.events > div.event {
-  margin: 48px 0;
 }
 
 div#page > div#content > h2 {
   margin: 3em 0 1em;
+}
+
+div#page > div#content > div.events > div.event {
+  margin: 48px 0;
 }
 
 div#page > div#content > div.events > div.event > p.date {
@@ -87,13 +87,9 @@ div#page > div#content > div#now-header {
     margin: 0 40px;
   }
 
-  div#page > div#content > div#breadcrumbs-wrapper {
+  div#page > div#breadcrumbs-wrapper {
     display: revert;
-    margin-top: 40px;
-    margin-bottom: -40px;
-}
-
-  div#page > div#content > div#breadcrumbs-wrapper {
+    margin: 40px 40px -40px 40px;
     animation: fade-in-from-above 1s ease forwards;
   }
 }
