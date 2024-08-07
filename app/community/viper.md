@@ -56,3 +56,32 @@ As twilight approached, we ordered some [Super Duper Burger](https://www.superdu
 />
 
 Just before heading home, I whipped up the landing page for Viper in about an hour, marking my first experience with GitHub Pages. I was relieved to find that it was simple to work with, thanks to Markdown.
+
+### Day Two
+
+<Grid columns={2} columnSizeDistribution={["1fr", "1fr"]}>
+  <Media
+    src="/assets/viper/spongebob.png"
+    style={{
+      marginTop: 'unset'
+    }}
+  />
+  <div>
+    <p>Right before our presentation on Sunday, we settled on the ultimate walk-on song: <a href="https://www.youtube.com/watch?v=4A2ygNnUMGY" target="_blank">a SpongeBob OST</a>. I still remember the audience laughing heartily as we took the stage. Our presentation went surprisingly well, and to our delight, we miraculously snagged 2nd place!</p>
+  </div>
+</Grid>
+
+Looking back, I think we won because we all pushed ourselves to the fullest, embraced the joy of learning something new, and, most importantly, let each other cook in our own ways.
+
+<Grid columns={2} columnSizeDistribution={["1fr", "1fr"]}>
+  <div>
+    <p>That night, the whole squad rolled out for an epic celebration—dinner at a bomb Thai restaurant followed by some ice cream. Come to think of it, I learned more in those two days than I ever have in any other two-day stretch this semester. All the struggles, bug fixes, mentoring, being mentored, and successful compiles—I loved every second of it. That day and night was truly a massive W for the club and definitely my favorite compsigh event so far. It's a day I will not forget.</p>
+  </div>
+  <Media
+    src="/assets/viper/dinner.png"
+    style={{
+      marginTop: 'unset'
+    }}
+  />
+</Grid>
+
