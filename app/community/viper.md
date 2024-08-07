@@ -1,6 +1,6 @@
 ---
 title: "compsigh DEPLOY/23 project: viper"
-description: "TODO."
+description: "Looking back at my first ever hackathon W"
 authors: [
   { name: "Andrew", avatar: "/avatars/andrew.png" },
 ]
@@ -16,7 +16,7 @@ viper is a Discord bot designed to reference answers from past conversations, st
 
 ## Inspiration
 
-viper was conceived at DEPLOY/23, the Fall 2023 hackathon hosted by compsigh (the best club at USF).
+viper was conceived at DEPLOY/23, the Fall 2023 hackathon hosted by [compsigh (the best club at USF)](https://compsigh.club/).
 
 By then, it was clear that many hackathon projects were revolving around ChatGPT wrappers. We aimed to steer clear of that trend, but we still wanted to incorporate LLMs, given their power and efficiency in handling backend tasks, which was perfect for a time constrained project.
 
@@ -24,4 +24,10 @@ Just days before the hackathon kicked off, I set up a Discord call with my team 
 
 I'm a big fan of Discord and had always wanted to build a Discord bot, so I proposed that we create a Q&A bot for Discord. This idea was ideal because it allowed us to focus solely on the backend, with Discord covering the frontend. It turned out to be a solid plan to DEPLOY.
 
+<Media
+  src="/assets/viper/discord.gif"
+  alt="A gif of discord."
+/>
+
 While many Discord bots enhance servers by playing music, generating AI responses, or managing server admin tasks, none offered the capability to read entire conversations and store messages for future reference. That’s where we saw the perfect opportunity: to build a Discord bot that reads messages in a channel and uses an LLM to identify future questions that previous answers might relate to.
+
