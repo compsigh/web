@@ -118,3 +118,8 @@ A picture is worth a thousand words, so check out the visuals below to see a dem
   />
 </Grid>
 
+### Moving Forward
+
+I’m thrilled that we had the core features of the app up and running by the presentation, but there's still room for improvement. There’s definitely more to be done, and I hope to have the opportunity to refine it further in the future.
+
+In the meantime, you can explore Viper's [landing page](https://viper-deploy2023.github.io/), and check out the [source code](https://github.com/viper-Deploy2023/viper).
