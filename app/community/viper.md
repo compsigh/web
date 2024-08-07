@@ -95,3 +95,26 @@ Before diving into the features, let’s first review the tech stack:
 
 We aimed to keep things as simple as possible, prioritizing the core problems we need to solve: keyword extraction and question detection without getting too caught up with scalability.
 
+### Screenshots
+
+Our Discord bot is designed to detect when a user asks a question in a server channel. It then digs through the channel's past messages to find common answers that might address the user’s query. Think of it as a mini search engine, but instead of scraping web pages, it’s diving into Discord messages.
+
+This approach has a key advantage over ChatGPT wrappers: it delivers specific, direct answers based on the content already within the Discord server itself—information that isn’t available on the web.
+
+A picture is worth a thousand words, so check out the visuals below to see a demo:
+
+<Grid columns={2} columnSizeDistribution={["1fr", "1fr"]}>
+  <Media
+    src="/assets/viper/demo1.png"
+    style={{
+      marginTop: 'unset'
+    }}
+  />
+  <Media
+    src="/assets/viper/demo2.png"
+    style={{
+      marginTop: 'unset'
+    }}
+  />
+</Grid>
+
