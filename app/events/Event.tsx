@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { EventFrontmatter } from './page'
 import { locationIcons } from '@/app/[...slug]/page'
@@ -48,9 +49,10 @@ export function Event({ event }: { event: EventFrontmatter }) {
         <ul className={styles.activities}>
           {event.event_details.activities.map((activity, index) => {
             const activityTime = new Date((start + activity.time_offset) * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' })
+            const LinkWrapper = ({ children }: { children: React.ReactNode }) => activity.link ? <Link href={activity.link}>{children}</Link> : children
             return (
               <li key={index}>
-                <span className={styles["activity-title"]}>{activity.title}</span>
+                <LinkWrapper><span className={styles["activity-title"]}>{activity.title}</span></LinkWrapper>
                 <span className={styles["activity-time"]}>{activityTime}</span>
               </li>
             )

@@ -38,6 +38,7 @@ type Reference = {
 type Activity = {
   title: string
   time_offset: number
+  link?: string
 }
 
 export const locationIcons = {
