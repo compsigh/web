@@ -160,7 +160,7 @@ export default async function Events() {
     <>
       <div id={styles.page}>
         <div id={styles["twinkle-wrapper"]}>
-          <Twinkle />
+          <Twinkle position="top" />
         </div>
         <div id={styles.content}>
           <div id={styles["breadcrumbs-wrapper"]}>

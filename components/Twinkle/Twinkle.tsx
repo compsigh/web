@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { IconListener } from './IconListener'
 import { Icon, type Icon as IconType } from './Icon'
 
-export function Twinkle() {
+export function Twinkle({ position }: { position: 'top' | 'left' }) {
   const [display, setDisplay] = useState(true)
   const [rows, setRows] = useState(0)
   const [columns, setColumns] = useState(0)
@@ -14,8 +14,10 @@ export function Twinkle() {
     function setElementsBasedOnHeight() {
       const DENSITY = 50
       const { innerWidth, innerHeight } = window
-      setColumns(Math.floor((innerWidth / DENSITY) * 1.2))
-      setRows(Math.floor((innerHeight / 2 / DENSITY) * 1.2))
+      const columnLogic = position === 'top' ? Math.floor((innerWidth / DENSITY) * 1.2) : Math.floor((innerHeight / DENSITY) * 1.2)
+      const rowLogic = position === 'top' ? Math.floor((innerHeight / 2 / DENSITY) * 1.2) : Math.floor((innerWidth / DENSITY) * 1.2)
+      setColumns(columnLogic)
+      setRows(rowLogic)
 
       if (innerWidth < 860) {
         setDisplay(false)
@@ -28,7 +30,7 @@ export function Twinkle() {
     function handleResize() { setElementsBasedOnHeight() }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [position])
 
   const icons: IconType[] = ['none', 'low', 'medium-low', 'medium-high', 'high']
   function pickIcon() {
@@ -53,8 +55,8 @@ export function Twinkle() {
         position: 'absolute',
         top: -100,
         left: -100,
-        width: '120vw',
-        height: '50vh',
+        width: position === 'top' ? '120vw' : '50vw',
+        height: position === 'top' ? '50vh' : '120vh',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
@@ -99,11 +101,11 @@ export function Twinkle() {
         position: 'absolute',
         top: 0,
         left: 0,
-        width: '100vw',
-        height: '50vh',
+        width: position === 'top' ? '100vw' : '50vw',
+        height: position === 'top' ? '50vh' : '100vh',
         overflow: 'hidden',
         pointerEvents: 'none',
-        backgroundImage: 'linear-gradient(to bottom, var(--color-invisible), var(--color-dark) 40vh)'
+        backgroundImage: position === 'top' ? 'linear-gradient(to bottom, var(--color-invisible), var(--color-dark) 40vh)' : 'linear-gradient(to right, var(--color-invisible), var(--color-dark) 40vw)'
       }} />
     </>
   )
