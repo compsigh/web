@@ -128,7 +128,7 @@ export const metadata: Metadata = {
   title: 'compsigh',
   description: 'A social computer science club for meeting cool people and building cool things at the University of San Francisco',
   openGraph: {
-    images: '/assets/og-image.png'
+    images: '/og/root.png'
   }
 }
 

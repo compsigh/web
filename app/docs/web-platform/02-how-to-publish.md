@@ -5,6 +5,7 @@ authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
 decorations: false
 slug: "docs/web-platform/how-to-publish"
+# TODO: uploading images; PR workflow
 ---
 
 <Note>
@@ -280,7 +281,7 @@ faadil ipsum fortnite general relativity obsidian petemob twitter dudududududude
 
 Things that will get your post flagged:
 
-- 🖼 **Embedding third-party content:** e.g. instead of loading an image from a <CasePreserver>URL</CasePreserver>, it's preferred you upload it to the `public/assets/` directory. "Third-party content" especially includes scripts or suspicious `<iframe>`s. But, for example, your data vis project might use <CasePreserver>Tableau</CasePreserver>; that's totally fine!
+- 🖼 **Embedding third-party content:** This especially includes scripts or suspicious `<iframe>`s. But, for example, your data vis project might use <CasePreserver>Tableau</CasePreserver>; that's totally fine!
 - 🚫 **Content that violates the club's content policies:** compsigh is strongly pro-free speech, and as a club we think it's important to stoke thought-provoking discussion. But there's a time & place for everything. :) Please avoid including content that could be considered:
   - <CasePreserver>NSFW</CasePreserver>
   - Defamatory
@@ -420,7 +421,7 @@ Example:
 
 ```tsx showLineNumbers
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-  <Media src="/assets/cue-invite-cards.mp4" />
+  <Media src="/community/cue/invite-cards.mp4" />
   <div>
     We really liked the idea of invites, and we went all out, because why not?
 
@@ -436,7 +437,7 @@ Example:
 <Playground>
   <div style={{ padding: '16px 32px' }}>
     <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
-      <Media src="/assets/cue-invite-cards.mp4" />
+      <Media src="/community/cue/invite-cards.mp4" />
       <div>
         <CasePreserver>
 We really liked the idea of invites, and we went all out, because why not?
@@ -479,7 +480,7 @@ Example:
 <Media
   title="compsigh landing page"
   description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-  src="/assets/compsigh-landing-page.mp4"
+  src="/docs/web-platform/compsigh-landing-page.mp4"
   link="https://compsigh.club"
   cta="View live demo"
 />
@@ -490,7 +491,7 @@ Example:
     <Media
       title="compsigh landing page"
       description="Work in progress on a new web platform for compsigh, the computer science club at the University of San Francisco"
-      src="/assets/compsigh-landing-page.mp4"
+      src="/docs/web-platform/compsigh-landing-page.mp4"
       link="https://compsigh.club"
       cta="View live demo"
     />

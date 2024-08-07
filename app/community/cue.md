@@ -5,13 +5,13 @@ authors: [
   { name: "Edward", avatar: "/avatars/edward.png" },
   { name: "Sanju", avatar: "/avatars/sanju.jpeg" }
 ]
-og_image: "/og/cue.png"
+og_image: "/community/cue/og.png"
 ---
 
 Cue is a minimalist active recall study app focused on helping students ask the right questions. Transform your notes into actionable study cards for easy pasting back into Google Docs or Notion, or export to Anki.
 
 <Media
-  src="/og/cue.png"
+  src="/community/cue/og.png"
   alt="Cue wordmark banner"
 />
 
@@ -46,7 +46,7 @@ Around this time, I was also getting into UI design, and I wanted to push myself
 
 <Media
   title="Cue icon set"
-  src="/assets/cue-icons.png"
+  src="/community/cue/icons.png"
 />
 
 The vibes were great:
@@ -54,13 +54,13 @@ The vibes were great:
 <Media
   title="compsigh teams at Dons Hack 2023"
   description="Even though we were all competing, we knew a win for any team from the club was a win for all of us. So, we worked together in one room and helped each other out."
-  src="/assets/cue-donshack-compsigh-teams.JPG"
+  src="/community/cue/donshack-compsigh-teams.JPG"
 />
 
 <Media
   title="Edward's Saturday night desk setup"
   description="It was time to lock in"
-  src="/assets/cue-donshack-latenight.JPG"
+  src="/community/cue/donshack-latenight.JPG"
   alt="Edward's desk setup on Saturday night. Pictured is his dual-monitor setup (code on one, API docs and live preview on the other) and a cup of tea."
 />
 
@@ -74,8 +74,7 @@ Its primary function is to take your study notes, and return the most relevant q
 
 <Media
   title="Cue beta demo from May 2023, not long after the hackathon"
-  video={true}
-  src="/assets/cue-may2023-beta-demo.mp4"
+  src="/community/cue/may2023-beta-demo.mp4"
 />
 
 We're happy to say we continued working on Cue after Dons Hack, and shipped some pretty cool features.
@@ -85,14 +84,12 @@ We're happy to say we continued working on Cue after Dons Hack, and shipped some
 <Media
   title="In-app invites"
   description={<>From day one, we made the app open to all USF students for free, but we wanted an invite system for our friends &amp; family elsewhere. Here we hooked up Typeform to an API that would generate an invite code like <code>gaius-julius-caesar</code>.</>}
-  video={true}
-  src="/assets/cue-invite-demo.mp4"
+  src="/community/cue/invite-demo.mp4"
 />
 
 <Grid columns={2} columnSizeDistribution={["1fr", "3fr"]}>
   <Media
-    video={true}
-    src="/assets/cue-invite-cards.mp4"
+    src="/community/cue/invite-cards.mp4"
     style={{
       marginTop: 'unset'
     }}
@@ -111,8 +108,7 @@ Edward [posted about Cue on X](https://x.com/edwardshturman/status/1662181707955
 
 <Media
   title="Waitlist invite email"
-  video={true}
-  src="/assets/cue-waitlist-email.mp4"
+  src="/community/cue/waitlist-email.mp4"
 />
 
 Since then, we've put development on pause as we push through a heavy junior year in computer science. We hope to return shortly thereafter!

@@ -5,7 +5,7 @@ og_image: "/og/compsigh-night.png"
 event_details: {
   start: 1708736400,
   location: "Lo Schiavo Getty Study",
-  cover_image: "/assets/compsigh-night-2024-02-23.jpeg",
+  cover_image: "/events/2024-02-23/compsigh-night.jpeg",
   pictures: [],
   link: null
 }
