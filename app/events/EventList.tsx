@@ -42,30 +42,29 @@ export function EventList({
   }, [])
 
   useEffect(() => {
+    const page = document.querySelector(`#${styles.page}`)
+    if (!page) return
     const container = containerRef.current
     if (!container) return
 
     const handleScroll = () => {
-      requestAnimationFrame(() => {
-        const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, h2, hr`)
+      const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, h2, hr`)
 
-        eventElements.forEach((event, index) => {
-          const htmlElement = event as HTMLElement
-          const elementPosition = htmlElement.getBoundingClientRect().top + htmlElement.clientHeight / 2
-          const containerPosition = container.getBoundingClientRect().top
-          const distance = Math.abs((elementPosition - containerPosition) - (container.clientHeight / 2))
+      eventElements.forEach((event, index) => {
+        const htmlElement = event as HTMLElement
+        const elementPosition = htmlElement.getBoundingClientRect().top + page.scrollTop + htmlElement.clientHeight / 2
+        const distance = Math.abs((elementPosition - (window.innerHeight / 2 + page.scrollTop)))
 
-          const scale = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.1
-          const opacity = 1 - Math.min(distance / (container.clientHeight / 2), 1) * 0.8
+        const scale = 1 - Math.min(distance / (window.innerHeight / 2), 1) * 0.1
+        const opacity = 1 - Math.min(distance / (window.innerHeight / 2), 1) * 0.8
 
-          htmlElement.style.transform = `scale(${scale})`
-          htmlElement.style.opacity = `${opacity}`
-        })
+        htmlElement.style.transform = `scale(${scale})`
+        htmlElement.style.opacity = `${opacity}`
       })
     }
 
-    container.addEventListener('scroll', handleScroll)
-    return () => container.removeEventListener('scroll', handleScroll)
+    page.addEventListener('scroll', handleScroll)
+    return () => page.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (

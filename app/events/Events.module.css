@@ -1,6 +1,8 @@
 div#page {
   margin: 0 auto;
   max-width: calc(var(--max-width) * 2);
+  max-height: 100vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
 }
@@ -11,6 +13,11 @@ div#page > div#content {
   justify-content: space-between;
   align-items: center;
   animation: fade-in 1s ease forwards;
+}
+
+div#page > div#content > h1 {
+  position: fixed;
+  top: 30%;
 }
 
 div#page > div#twinkle-wrapper {
@@ -24,8 +31,7 @@ div#page > div#breadcrumbs-wrapper {
 div#page > div#content > div.event-list-container {
   padding: 40px;
   max-width: calc(var(--max-width) + (40px * 2));
-  max-height: 100vh;
-  overflow-y: scroll;
+  margin-left: auto;
   scrollbar-width: none;
 }
 
