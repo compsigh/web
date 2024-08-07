@@ -36,6 +36,7 @@ export async function Media(
           alt={alt || ''}
           placeholder={`${isGif ? 'empty' : 'blur'}`}
           blurDataURL={imageData?.base64}
+          sizes='(max-width: 860px) 100vw - 80px, 700px'
           width={imageData?.metadata.width}
           height={imageData?.metadata.height}
           {...props}

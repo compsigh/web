@@ -35,7 +35,7 @@ div#page > div#content > div.event-list-container {
   scrollbar-width: none;
 }
 
-div#page > div#content > div.event-list-container > h2 {
+div#page > div#content > div.event-list-container > p.heading {
   font-family: var(--font-proto-mono);
   font-size: 1em;
   color: var(--color-light-50);
@@ -51,7 +51,7 @@ div#page > div#content > div.event-list-container > h2 {
   }
 }
 
-div#page > div#content > div.event-list-container > div#past-upcoming-divider > h2 {
+div#page > div#content > div.event-list-container > div#past-upcoming-divider > p.heading {
   font-family: var(--font-proto-mono);
   font-size: 1em;
   color: var(--color-light-50);
@@ -85,15 +85,17 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   align-items: baseline;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > h3 {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p.title {
   margin: 0;
+  font-family: var(--font-tronica-mono);
   font-size: 2rem;
   color: var(--color-compsigh);
   text-shadow: 0 0 10px var(--color-compsigh-60);
-  text-transform: unset;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p.time {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }

@@ -20,9 +20,9 @@ export function Event({ event }: { event: EventFrontmatter }) {
   return (
     <>
       <p className={styles.date}>{startDate}</p>
-      <Media src={event.event_details.cover_image} alt={event.title} />
+      <Media src={event.event_details.cover_image} alt={event.title} priority={isEventHappeningNow(start, end)} />
       <div className={styles["title-and-time"]}>
-        <h3>{event.title}</h3>
+        <p className={styles.title}>{event.title}</p>
         {
           isEventHappeningNow(start, end)
             ?
@@ -31,7 +31,7 @@ export function Event({ event }: { event: EventFrontmatter }) {
                 <span>Now</span>
               </div>
             :
-              <p>{startTime}</p>
+              <p className={styles.time}>{startTime}</p>
         }
       </div>
       {

@@ -17,10 +17,10 @@ export function EventList({
 
   const combinedEvents = [
     ...past.map((event, index) => ({ type: 'event', element: <div key={index} className={`${styles.event} ${styles["past-event"]}`}>{event}</div> })),
-    ...past.length > 0 ? [{ type: 'header', element: <h2 key={styles.past} id={styles.past} style={{ display: now.length === 0 ? 'none' : ''}}>Past</h2> }] : [],
+    ...past.length > 0 ? [{ type: 'heading', element: <p key={styles.past} id={styles.past} className={styles.heading} style={{ display: now.length === 0 ? 'none' : ''}}>Past</p> }] : [],
     ...now.map((event, index) => ({ type: 'event', element: <div key={index} className={`${styles.event} ${styles["now-event"]}`}>{event}</div> })),
-    ...now.length === 0 ? [{ type: 'header', element: <div key={styles["past-upcoming-divider"]} id={styles["past-upcoming-divider"]}><h2>Past</h2><hr /><h2>Upcoming</h2></div> }] : [],
-    ...upcoming.length > 0 ? [{ type: 'header', element: <h2 key={styles.upcoming} id={styles.upcoming} style={{ display: now.length === 0 ? 'none' : ''}}>Upcoming</h2> }] : [],
+    ...now.length === 0 ? [{ type: 'heading', element: <div key={styles["past-upcoming-divider"]} id={styles["past-upcoming-divider"]}><p className={styles.heading}>Past</p><hr /><p className={styles.heading}>Upcoming</p></div> }] : [],
+    ...upcoming.length > 0 ? [{ type: 'heading', element: <p key={styles.upcoming} id={styles.upcoming} className={styles.heading} style={{ display: now.length === 0 ? 'none' : ''}}>Upcoming</p> }] : [],
     ...upcoming.map((event, index) => ({ type: 'event', element: <div key={index} className={`${styles.event} ${styles["upcoming-event"]}`}>{event}</div> }))
   ]
 
@@ -48,7 +48,7 @@ export function EventList({
     if (!container) return
 
     const handleScroll = () => {
-      const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, h2, hr`)
+      const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, p.${styles.heading}, hr`)
 
       eventElements.forEach((event, index) => {
         const htmlElement = event as HTMLElement
@@ -74,7 +74,7 @@ export function EventList({
         className={styles["event-list-container"]}
       >
         {combinedEvents.map((item, index) => (
-          item.type === 'header'
+          item.type === 'heading'
             ? item.element
             : (
               <div
