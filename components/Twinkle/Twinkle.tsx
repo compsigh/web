@@ -14,8 +14,8 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
     function setElementsBasedOnHeight() {
       const DENSITY = 50
       const { innerWidth, innerHeight } = window
-      const columnLogic = position === 'top' ? Math.floor((innerWidth / DENSITY) * 1.2) : Math.floor((innerHeight / DENSITY) * 1.2)
-      const rowLogic = position === 'top' ? Math.floor((innerHeight / 2 / DENSITY) * 1.2) : Math.floor((innerWidth / DENSITY) * 1.2)
+      const columnLogic = position === 'top' ? Math.floor((innerWidth / DENSITY) * 1.2) : Math.floor((innerWidth / 2 / DENSITY) * 1.2)
+      const rowLogic = position === 'top' ? Math.floor((innerHeight / 2 / DENSITY) * 1.2) : Math.floor((innerHeight / DENSITY) * 1.2)
       setColumns(columnLogic)
       setRows(rowLogic)
 
