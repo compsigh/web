@@ -146,7 +146,6 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Spacer size={`20vh`} />
       </body>
     </html>
   )

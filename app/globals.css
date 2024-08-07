@@ -170,3 +170,8 @@ span[data-highlighted-line-id="add"] {
 span[data-highlighted-line-id="remove"] {
   background-color: var(--color-diff-remove);
 }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-light-30);
+}

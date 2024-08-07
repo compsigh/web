@@ -1,12 +1,16 @@
 div#page {
-  margin: var(--margin);
-  max-width: var(--max-width);
+  margin: 0 auto;
+  max-width: calc(var(--max-width) * 2);
   display: flex;
   flex-direction: column;
 }
 
 div#page > div#content {
-  animation: fade-in-from-below 1s ease forwards;
+  margin: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fade-in 1s ease forwards;
 }
 
 div#page > div#twinkle-wrapper {
@@ -17,26 +21,64 @@ div#page > div#breadcrumbs-wrapper {
   display: none;
 }
 
-div#page > div#content > h2 {
-  margin: 3em 0 1em;
+div#page > div#content > div.event-list-container {
+  padding: 40px;
+  max-width: calc(var(--max-width) + (40px * 2));
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
-div#page > div#content > div.events > div.event {
+div#page > div#content > div.event-list-container > h2 {
+  font-family: var(--font-proto-mono);
+  font-size: 1em;
+  color: var(--color-light-50);
+
+  &#upcoming {
+    padding-top: 8px;
+    border-top: 1px solid var(--color-light-30);
+  }
+
+  &#past {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-light-30);
+  }
+}
+
+div#page > div#content > div.event-list-container > div#past-upcoming-divider > h2 {
+  font-family: var(--font-proto-mono);
+  font-size: 1em;
+  color: var(--color-light-50);
+
+  &:first-of-type {
+    margin-bottom: 0;
+    padding-bottom: 8px;
+  }
+
+  &:last-of-type {
+    margin-top: 0;
+    padding-top: 8px;
+  }
+}
+
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event.past-event,
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event.now-event,
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event.upcoming-event {
   margin: 48px 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-div#page > div#content > div.events > div.event > p.date {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > p.date {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.events > div.event > div.title-and-time {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-div#page > div#content > div.events > div.event > div.title-and-time > h3 {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > h3 {
   margin: 0;
   font-size: 2rem;
   color: var(--color-compsigh);
@@ -44,42 +86,48 @@ div#page > div#content > div.events > div.event > div.title-and-time > h3 {
   text-transform: unset;
 }
 
-div#page > div#content > div.events > div.event > div.title-and-time > p {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.events > div.event > div.location {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-div#page > div#content > div.events > div.event > div.location > p {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now > span {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.events > div.event > ul.activities > li {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.location {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.location > p {
+  font-family: var(--font-proto-mono);
+  color: var(--color-light-50);
+}
+
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li {
+  position: relative;
   display: flex;
   justify-content: space-between;
   font-family: var(--font-proto-mono);
 }
 
-div#page > div#content > div.events > div.event > ul.activities > li::before {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li::before {
   content: ">";
   margin-top: unset;
   color: unset;
 }
 
-div#page > div#content > div.events > div.event > ul.activities > li > span.activity-time {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li > span.activity-time {
   color: var(--color-light-50);
-}
-
-div#page > div#content > div#now-header {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
 }
 
 @media (max-width: 860px /* 80px + 700px + 80px */) {
