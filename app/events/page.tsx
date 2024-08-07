@@ -74,12 +74,15 @@ function Event({ event }: { event: EventFrontmatter }) {
         <h3>{event.title}</h3>
         <p>{startTime}</p>
       </div>
-      <div className={styles.location}>
-        {event.event_details.location === 'The Hive' &&
-          <Image src={locationIcons['hive']} alt="Hive" width={20} height={20} />
-        }
-        <p>{event.event_details.location}</p>
-      </div>
+      {
+        event.event_details.location &&
+          <div className={styles.location}>
+            {event.event_details.location === 'The Hive' &&
+              <Image src={locationIcons['hive']} alt="Hive" width={20} height={20} />
+            }
+            <p>{event.event_details.location}</p>
+          </div>
+      }
       <p>{event.description}</p>
       {event.event_details.activities &&
         <ul className={styles.activities}>
