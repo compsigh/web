@@ -26,6 +26,7 @@ div#page > div#content > div.event-list-container {
   max-width: calc(var(--max-width) + (40px * 2));
   max-height: 100vh;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 div#page > div#content > div.event-list-container > h2 {
