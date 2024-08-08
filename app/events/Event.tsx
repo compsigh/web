@@ -39,7 +39,31 @@ export function Event({ event }: { event: EventFrontmatter }) {
         event.event_details.location &&
           <div className={styles.location}>
             {event.event_details.location === 'The Hive' &&
-              <Image src={locationIcons['hive']} alt="Hive" width={20} height={20} />
+              <Image src={locationIcons.hive} alt={event.event_details.location} width={20} height={20} />
+            }
+            {((event.event_details.location === 'LS 103') || (event.event_details.location === 'LS 210')) &&
+              <Image src={locationIcons.classroom} alt={event.event_details.location} width={30} height={30} />
+            }
+            {((event.event_details.location === 'HR 411') || (event.event_details.location === 'HR 413')) &&
+              <Image src={locationIcons['cs-labs']} alt={event.event_details.location} width={30} height={30} />
+            }
+            {event.event_details.location === 'KA 499' &&
+              <Image src={locationIcons['ka-499']} alt="KA 499" width={20} height={20} />
+            }
+            {event.event_details.location === 'Lucky Strike San Francisco' &&
+              <Image src={locationIcons['lucky-strike']} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location === 'Lo Schiavo Getty Study' &&
+              <Image src={locationIcons['getty-study']} alt={event.event_details.location} width={30} height={30} />
+            }
+            {event.event_details.location === 'Escape Game San Francisco' &&
+              <Image src={locationIcons['escape-game']} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location === 'Family Billiards San Francisco' &&
+              <Image src={locationIcons.billiards} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location.includes('Golden Gate Park') &&
+              <Image src={locationIcons.ggp} alt={event.event_details.location} width={24} height={24} />
             }
             <p>{event.event_details.location}</p>
           </div>

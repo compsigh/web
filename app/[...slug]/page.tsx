@@ -42,7 +42,15 @@ type Activity = {
 }
 
 export const locationIcons = {
-  'hive': '/emotes/hive.svg'
+  'hive': '/emotes/hive.svg',
+  'classroom': '/emotes/classroom.png',
+  'ka-499': '/emotes/ka-499.png',
+  'lucky-strike': '/emotes/lucky-strike.png',
+  'getty-study': '/emotes/getty-study.png',
+  'cs-labs': '/emotes/cs-labs.png',
+  'escape-game': '/emotes/escape-game.png',
+  'billiards': '/emotes/billiards.png',
+  'ggp': '/emotes/ggp.png'
 }
 
 export type EventDetails = {

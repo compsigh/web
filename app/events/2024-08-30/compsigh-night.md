@@ -1,7 +1,6 @@
 ---
 title: "compsigh night"
 description: "The second compsigh night of the Fall 2024 semester. We'll be running our first compsigh clone workshop this week!"
-og_image: "/og/compsigh-night.png"
 event_details: {
   start: 1725066000,
   location: "The Hive",

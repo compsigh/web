@@ -54,13 +54,13 @@ The vibes were great:
 <Media
   title="compsigh teams at Dons Hack 2023"
   description="Even though we were all competing, we knew a win for any team from the club was a win for all of us. So, we worked together in one room and helped each other out."
-  src="/community/cue/donshack-compsigh-teams.JPG"
+  src="/community/cue/donshack-compsigh-teams.jpeg"
 />
 
 <Media
   title="Edward's Saturday night desk setup"
   description="It was time to lock in"
-  src="/community/cue/donshack-latenight.JPG"
+  src="/community/cue/donshack-latenight.jpeg"
   alt="Edward's desk setup on Saturday night. Pictured is his dual-monitor setup (code on one, API docs and live preview on the other) and a cup of tea."
 />
 

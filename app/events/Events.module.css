@@ -98,6 +98,7 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
 div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p.time {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
+  white-space: nowrap;
 }
 
 div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now {

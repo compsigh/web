@@ -1,7 +1,6 @@
 ---
 title: "compsigh night"
 description: "compsigh night 3: clone AND demos 1 ???"
-og_image: "/og/compsigh-night.png"
 event_details: {
   start: 1725670800,
   location: "The Hive",
