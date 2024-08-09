@@ -4,14 +4,14 @@ description: "Looking back at my first ever hackathon W"
 authors: [
   { name: "Andrew", avatar: "/avatars/andrew.png" },
 ]
-og_image: "/og/viper.png"
+og_image: "/community/viper/og.png"
 ---
 
 Viper is a Discord bot for referencing info from past conversations. It proactively chimes in when you ask a question that's already been answered, when you're looking for info on a topic that's been discussed, or just need to recall that one thing a friend said last week.
 
 <Media
-  src="/og/viper.png"
-  alt="viper logo"
+  src="/community/viper/og.png"
+  alt="Viper logo"
 />
 
 ## Inspiration
