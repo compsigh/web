@@ -26,7 +26,7 @@ I'm a big fan of Discord and had always wanted to build a Discord bot, so I prop
 
 <Media
   src="/assets/viper/discord.gif"
-  alt="A gif of discord."
+  alt="An illustration of the Discord loading animation"
 />
 
 While many Discord bots enhance servers by playing music, generating AI responses, or managing server admin tasks, none offered the capability to read entire conversations and store messages for future reference. That’s where we saw the perfect opportunity: to build a Discord bot that reads messages in a channel and uses an LLM to identify future questions that previous answers might relate to.
