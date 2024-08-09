@@ -1,5 +1,5 @@
 ---
-title: "compsigh DEPLOY/23 project: viper"
+title: "compsigh DEPLOY/23 project: Viper"
 description: "Looking back at my first ever hackathon W"
 authors: [
   { name: "Andrew", avatar: "/avatars/andrew.png" },
@@ -7,7 +7,7 @@ authors: [
 og_image: "/og/viper.png"
 ---
 
-viper is a Discord bot designed to reference answers from past conversations, streamlining user interactions and improving the overall chat experience.
+Viper is a Discord bot for referencing answers from past conversations. It proactively chimes in when you ask a question that's already been answered, when you're looking for info on a topic that's been discussed, or just need to recall that one thing a friend said last week.
 
 <Media
   src="/og/viper.png"
@@ -16,28 +16,30 @@ viper is a Discord bot designed to reference answers from past conversations, st
 
 ## Inspiration
 
-viper was conceived at DEPLOY/23, the Fall 2023 hackathon hosted by [compsigh (the best club at USF)](https://compsigh.club/).
+Viper was conceived by me and my friends Jake, Yiyu, and Tao, at DEPLOY/23, compsigh's Fall 2023 hackathon.
 
-By then, it was clear that many hackathon projects were revolving around ChatGPT wrappers. We aimed to steer clear of that trend, but we still wanted to incorporate LLMs, given their power and efficiency in handling backend tasks, which was perfect for a time constrained project.
+With AI still being all the rage, we knew many hackathon projects would be wrappers of ChatGPT in some way or another. When brainstorming an idea for the event, we were excited about a real-world product integration that could be enhanced by large language models. Early concepts included a Q&A app and integrations with the university Canvas LMS or Campuswire, a class discussion board software used in many USF CS courses.
 
-Just days before the hackathon kicked off, I set up a Discord call with my team at LS G12, right before my CS 272 (Software Development) class, to brainstorm project ideas. We tossed around concepts, including a Q&A app and potential integrations with Canvas (our class/grades dashboard) or Campuswire (the modern-day Piazza). However, these ideas seemed too large scale for a hackathon, especially given that two of our team members were participating in their first hackathon. Our experience level was already a bit limited.
+We chose a Discord bot, which was ideal because:
 
-I'm a big fan of Discord and had always wanted to build a Discord bot, so I proposed that we create a Q&A bot for Discord. This idea was ideal because it allowed us to focus solely on the backend, with Discord covering the frontend. It turned out to be a solid plan to DEPLOY.
+- We're all fans of Discord and are familiar with its interface (and how Discord bots work)
+- It's more feasible and convenient to develop in a hackathon setting, since the frontend *is* Discord
+- It met our criteria of integrating LLMs in a way that would be familiar to people, while still presenting new use cases
 
 <Media
   src="/assets/viper/discord.gif"
   alt="An illustration of the Discord loading animation"
 />
 
-While many Discord bots enhance servers by playing music, generating AI responses, or managing server admin tasks, none offered the capability to read entire conversations and store messages for future reference. That’s where we saw the perfect opportunity: to build a Discord bot that reads messages in a channel and uses an LLM to identify future questions that previous answers might relate to.
+While many Discord bots enhance servers by playing music or helping admins moderate chat, none offered the capability to read entire conversations and store messages for future reference. That's where we saw the perfect opportunity: to build a Discord bot that reads messages in a channel, and use an LLM to identify future questions that previous answers might relate to.
 
 ## Hackathon
 
-Our team consisted of Jake, Tao, Yiyu, and myself (Andrew). Unfortunately, Tao came down with COVID, so it was just the three of us on campus for the hackathon, while Tao participated remotely. Despite being at home, Tao was instrumental in our progress and provided invaluable help whenever we hit a roadblock.
+Unfortunately, Tao came down with COVID, so it was just the three of us on campus for the hackathon, while Tao participated remotely. Despite being at home, Tao was instrumental in our progress and provided invaluable help whenever we hit a roadblock.
 
-### Day One
+### Dev Day
 
-That Saturday felt like one of the longest and most grueling days of my life. This wasn’t my first hackathon, so I knew how crucial it was to stay focused and dedicated throughout the day. Jake, Yiyu, and I spent the entire morning and afternoon hunkered down in an empty room at the [Gleeson Library](https://library.usfca.edu/home).
+That Saturday felt like one of the longest and most grueling days of my life. This wasn't my first hackathon, so I knew how crucial it was to stay focused and dedicated throughout the day. Jake, Yiyu, and I spent the entire morning and afternoon hunkered down in an empty room at Gleeson Library.
 
 <Media
   description="To make or break -- that is the question."
@@ -45,19 +47,13 @@ That Saturday felt like one of the longest and most grueling days of my life. Th
   alt="A front view of the Gleeson Library."
 />
 
-We brainstormed design ideas, did some whiteboarding, and quickly started incremental development. The process went more smoothly than I anticipated, and I believe that early testing success played a crucial role in helping us complete the app in time.
+We brainstormed design ideas, did some whiteboarding, and quickly started incremental development. The process went more smoothly than I anticipated, and I believe that early testing success played a crucial role in helping us complete the bot in time.
 
-As twilight approached, we ordered some [Super Duper Burger](https://www.superduperburgers.com/) and wrapped up our day at one of the workspaces in K-Hall. We faced several challenges along the way, but fortunately, our team’s support for one another helped us overcome them.
+As twilight approached, we ordered some Super Duper Burger and wrapped up our day in Kalmanovitz Hall. We faced several challenges along the way, but our team's support for one another helped us overcome them.
 
-<Media
-  description="yum yum"
-  src="/assets/viper/superduper.png"
-  alt="A tasty shot of a Super Duper Burger."
-/>
+Just before heading home, I whipped up the [landing page for Viper](https://viper-deploy2023.github.io) in about an hour, marking my first experience with GitHub Pages. I was relieved to find that it was simple to work with, thanks to Markdown.
 
-Just before heading home, I whipped up the landing page for Viper in about an hour, marking my first experience with GitHub Pages. I was relieved to find that it was simple to work with, thanks to Markdown.
-
-### Day Two
+### Presentation Day
 
 <Grid columns={2} columnSizeDistribution={["1fr", "1fr"]}>
   <Media
