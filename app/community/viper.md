@@ -27,7 +27,7 @@ We chose a Discord bot, which was ideal because:
 - It met our criteria of integrating LLMs in a way that would be familiar to people, while still presenting new use cases
 
 <Media
-  src="/assets/viper/discord.gif"
+  src="/community/viper/discord.gif"
   alt="An illustration of the Discord loading animation"
 />
 
@@ -41,7 +41,7 @@ Unfortunately, Tao came down with COVID, so it was just the three of us on campu
 
 <Media
   description="To make or break — that is the question."
-  src="/assets/viper/gleeson.png"
+  src="/community/viper/gleeson.png"
   alt="A front view of the Gleeson Library"
 />
 
@@ -65,7 +65,7 @@ For example, Viper can detect when a user asks a question in a channel. It then 
 
 This approach has a key advantage over ChatGPT wrappers: it delivers specific, direct answers based on the content already within the Discord server itself — information that isn't available on the web.
 
-<Media src="/assets/viper/demo.mp4" />
+<Media src="/community/viper/demo.mp4" />
 
 ## Presentation Day
 
@@ -76,7 +76,7 @@ Looking back, I think we won because we all pushed ourselves to the fullest, emb
 <Grid columns={2}>
   That night, the whole squad rolled out for an epic celebration — dinner at a bomb Thai restaurant followed by some ice cream. Come to think of it, I learned more in those two days than I ever have in any other two-day stretch this semester. All the struggles, bug fixes, mentoring, being mentored, and successful compiles — I loved every second of it. That day and night was truly a massive W for the club and definitely my favorite compsigh event so far. It's a day I will not forget.
   <Media
-    src="/assets/viper/dinner.png"
+    src="/community/viper/dinner.png"
     style={{
       marginTop: 'unset'
     }}
