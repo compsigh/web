@@ -37,6 +37,10 @@ export const quotes: Quote[] = [
   {
     quote: 'just core dumped in my pants a bit',
     author: 'Jet'
+  },
+  {
+    quote: 'I watched a documentary about it',
+    author: 'Faadil'
   }
 ]
 
