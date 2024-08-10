@@ -37,7 +37,7 @@ div.text {
   }
 }
 
-@media (max-width: var(--max-width)) {
+@media (max-width: 700px) {
   div.container {
     overflow: hidden;
   }
