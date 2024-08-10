@@ -57,9 +57,13 @@ export type EventDetails = {
   start: number
   end?: number
   location?: string
-  cover_image: string
+  // `cover_image` can be empty, but must be explicitly specified
+  cover_image: string | null
   activities?: Activity[]
   pictures?: string[]
+  // If there's no `link`, clicking the event will open the event page
+  // If link === null, clicking the event will do nothing
+  // If link is a string, clicking the event will open the link
   link?: string | null
 }
 

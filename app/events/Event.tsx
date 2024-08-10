@@ -21,7 +21,7 @@ export function Event({ event }: { event: EventFrontmatter }) {
   return (
     <>
       <p className={styles.date}>{startDate}</p>
-      <Media src={event.event_details.cover_image} alt={event.title} priority={isEventHappeningNow(start, end)} />
+      {event.event_details.cover_image && <Media src={event.event_details.cover_image} alt={event.title} priority={isEventHappeningNow(start, end)} />}
       <div className={styles["title-and-time"]}>
         <p className={styles.title}>{event.title}</p>
         {
