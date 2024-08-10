@@ -4,7 +4,7 @@ description: "the final compsigh night of the Spring 2024 semester! come chill a
 event_details: {
   start: 1714784400,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2024-05-03/compsigh-night.jpeg",
   pictures: [],
   link: null
 }

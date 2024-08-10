@@ -50,7 +50,10 @@ export const locationIcons = {
   'cs-labs': '/emotes/cs-labs.png',
   'escape-game': '/emotes/escape-game.png',
   'billiards': '/emotes/billiards.png',
-  'ggp': '/emotes/ggp.png'
+  'ggp': '/emotes/ggp.png',
+  'undercaf': '/emotes/undercaf.png',
+  'uc-4': '/emotes/uc-4.png',
+  'mclaren': '/emotes/mclaren.png'
 }
 
 export type EventDetails = {

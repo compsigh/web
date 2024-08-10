@@ -5,7 +5,7 @@ event_details: {
   start: 1715374800,
   end: 1715382000,
   location: "Golden Gate Park: Dahlia Dell Picnic Area",
-  cover_image: "/events/2024-05-10/cs-department-picnic.jpeg",
+  cover_image: "/events/2024-05-10/cs-department-picnic.png",
   pictures: [],
   link: null
 }

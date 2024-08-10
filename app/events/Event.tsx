@@ -43,7 +43,7 @@ export function Event({ event }: { event: EventFrontmatter }) {
             {event.event_details.location === 'The Hive' &&
               <Image src={locationIcons.hive} alt={event.event_details.location} width={20} height={20} />
             }
-            {((event.event_details.location === 'LS 103') || (event.event_details.location === 'LS 210')) &&
+            {((event.event_details.location === 'LS 103') || (event.event_details.location === 'LS 209') || (event.event_details.location === 'LS 210')) &&
               <Image src={locationIcons.classroom} alt={event.event_details.location} width={30} height={30} />
             }
             {((event.event_details.location === 'HR 411') || (event.event_details.location === 'HR 413')) &&
@@ -66,6 +66,15 @@ export function Event({ event }: { event: EventFrontmatter }) {
             }
             {event.event_details.location.includes('Golden Gate Park') &&
               <Image src={locationIcons.ggp} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location.includes('Undercaf') &&
+              <Image src={locationIcons.undercaf} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location.includes('UC 4th Floor Lounge') &&
+              <Image src={locationIcons['uc-4']} alt={event.event_details.location} width={24} height={24} />
+            }
+            {event.event_details.location.includes('McLaren Conference Center') &&
+              <Image src={locationIcons.mclaren} alt={event.event_details.location} width={24} height={24} />
             }
             <p>{event.event_details.location}</p>
           </div>
