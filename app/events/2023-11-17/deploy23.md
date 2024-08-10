@@ -5,7 +5,7 @@ event_details: {
   start: 1700272800,
   end: 1700438400,
   location: "The Hive",
-  cover_image: "/events/2023-11-17/deploy23.png",
+  cover_image: "/events/2023-11-17/deploy23.jpeg",
   pictures: [],
   link: "https://deploy.compsigh.club"
 }
