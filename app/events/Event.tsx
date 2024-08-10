@@ -10,7 +10,9 @@ import styles from './Events.module.css'
 
 export function Event({ event }: { event: EventFrontmatter }) {
   const { start, end } = event.event_details
-  const startDate = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: '2-digit' })
+  const currentYear = new Date().getFullYear()
+  const year = new Date(start * 1000).getFullYear()
+  const startDate = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: '2-digit', year: year === currentYear ? undefined : 'numeric' }).replace(',', '')
   const startTime = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' })
 
   const currentUnixTimestamp = Math.floor(Date.now() / 1000)
