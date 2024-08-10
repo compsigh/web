@@ -73,6 +73,7 @@ export function EventList({
         ref={containerRef}
         className={styles["event-list-container"]}
       >
+        <Spacer size="20vh" />
         {combinedEvents.map((item, index) => (
           item.type === 'heading'
             ? item.element
