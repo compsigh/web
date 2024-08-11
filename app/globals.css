@@ -122,9 +122,10 @@ code {
 }
 
 pre {
-  overflow-x: auto;
   padding: 1rem 0;
   font-size: 0.8em;
+  overflow-x: auto;
+  white-space: pre-wrap;
 }
 
 pre [data-line] {
