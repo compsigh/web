@@ -7,6 +7,6 @@ event_details: {
   location: "LS 210",
   cover_image: null,
   pictures: [],
-  link: "https://youtu.be/fLlz6CMZDoo"
+  link: null
 }
 ---
