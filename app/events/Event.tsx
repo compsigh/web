@@ -20,12 +20,28 @@ export function Event({ event }: { event: EventFrontmatter }) {
     return start < currentUnixTimestamp && end > currentUnixTimestamp
   }
 
+  function LinkWrapper({ children, link }: { children: React.ReactNode, link?: string }) {
+    return link ? <Link href={link}>{children}</Link> : <>{children}</>
+  }
+
   return (
     <>
       <p className={styles.date}>{startDate}</p>
-      {event.event_details.cover_image && <Media src={event.event_details.cover_image} alt={event.title} priority={isEventHappeningNow(start, end)} />}
+      {
+        event.event_details.cover_image &&
+          <Media
+            src={event.event_details.cover_image}
+            link={event.event_details.link ? event.event_details.link : undefined}
+            alt={event.title}
+            priority={isEventHappeningNow(start, end)}
+          />
+      }
       <div className={styles["title-and-time"]}>
-        <p className={styles.title}>{event.title}</p>
+        <p className={styles.title}>
+          <LinkWrapper link={event.event_details.link ? event.event_details.link : undefined}>
+            {event.title}
+          </LinkWrapper>
+        </p>
         {
           isEventHappeningNow(start, end)
             ?
@@ -84,10 +100,11 @@ export function Event({ event }: { event: EventFrontmatter }) {
         <ul className={styles.activities}>
           {event.event_details.activities.map((activity, index) => {
             const activityTime = new Date((start + activity.time_offset) * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' })
-            const LinkWrapper = ({ children }: { children: React.ReactNode }) => activity.link ? <Link href={activity.link}>{children}</Link> : children
             return (
               <li key={index}>
-                <LinkWrapper><span className={styles["activity-title"]}>{activity.title}</span></LinkWrapper>
+                <LinkWrapper link={activity.link}>
+                  <span className={styles["activity-title"]}>{activity.title}</span>
+                </LinkWrapper>
                 <span className={styles["activity-time"]}>{activityTime}</span>
               </li>
             )

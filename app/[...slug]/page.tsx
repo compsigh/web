@@ -64,9 +64,9 @@ export type EventDetails = {
   cover_image: string | null
   activities?: Activity[]
   pictures?: string[]
-  // If there's no `link`, clicking the event will open the event page
   // If link === null, clicking the event will do nothing
   // If link is a string, clicking the event will open the link
+  // If link === undefined, clicking the event will open the event page
   link?: string | null
 }
 

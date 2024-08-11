@@ -12,7 +12,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 import styles from './Events.module.css'
 
-type CompleteEventDetails = EventDetails & { end: number }
+type CompleteEventDetails = EventDetails & { end: number, link: string | null }
 export type EventFrontmatter = Omit<Frontmatter, 'event_details'> & { event_details: CompleteEventDetails }
 
 async function getEvents() {
@@ -31,6 +31,8 @@ async function getEvents() {
       frontmatter.event_details.end = frontmatter.event_details.start + 6 * 60 * 60
     if (frontmatter.event_details.end && (frontmatter.event_details.end < frontmatter.event_details.start))
       throw new Error(`Event ${slug.join('/')} has event_details.end (${frontmatter.event_details.end}) before event_details.start (${frontmatter.event_details.start})`)
+    if (frontmatter.event_details.link === undefined)
+      frontmatter.event_details.link = slug.join('/')
     events.push(frontmatter)
   }
   return events as EventFrontmatter[]
