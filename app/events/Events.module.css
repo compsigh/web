@@ -29,8 +29,7 @@ div#page > div#breadcrumbs-wrapper {
 }
 
 div#page > div#content > div.event-list-container {
-  padding: 40px;
-  max-width: calc(var(--max-width) + (40px * 2));
+  max-width: var(--max-width);
   margin-left: auto;
   scrollbar-width: none;
 }
@@ -99,6 +98,7 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
   white-space: nowrap;
+  margin-left: 16px;
 }
 
 div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now {
@@ -138,17 +138,32 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
 
 div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li > span.activity-time {
   color: var(--color-light-50);
+  white-space: nowrap;
+  margin-left: 16px;
 }
 
 @media (max-width: 860px /* 80px + 700px + 80px */) {
-  div#page > div#content {
-    margin: 0 40px;
-  }
-
   div#page > div#breadcrumbs-wrapper {
     display: revert;
     margin: 40px 40px -40px 40px;
     animation: fade-in-from-above 1s ease forwards;
+  }
+}
+
+@media (max-width: 1160px) {
+  div#page > div#content {
+    flex-direction: column;
+    margin: 0 40px;
+  }
+
+  div#page > div#content > h1 {
+    position: unset;
+    top: unset;
+    margin-bottom: -10vh;
+  }
+
+  div#page > div#content > div.event-list-container {
+    margin-left: unset;
   }
 }
 

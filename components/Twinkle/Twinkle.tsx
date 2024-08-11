@@ -19,7 +19,7 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
       setColumns(columnLogic)
       setRows(rowLogic)
 
-      if (innerWidth < 860) {
+      if (innerWidth < 1160) {
         setDisplay(false)
         return
       }
