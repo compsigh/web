@@ -13,10 +13,12 @@ nav#table-of-contents ul li::before {
 
 nav#table-of-contents ul li a {
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 nav#table-of-contents ul li a:hover {
   color: var(--color-light);
+  background-color: unset;
 }
 
 nav#table-of-contents details summary::before {

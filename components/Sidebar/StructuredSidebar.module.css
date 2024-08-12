@@ -40,11 +40,13 @@ nav#structured-sidebar ul li::before {
 }
 
 nav#structured-sidebar ul li a {
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 nav#structured-sidebar ul li a:hover {
   color: var(--color-light);
+  background-color: unset;
 }
 
 @keyframes fadeIn {

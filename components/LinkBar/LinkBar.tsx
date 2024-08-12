@@ -9,17 +9,17 @@ interface LinkBarProps extends LinkProps {
 
 export function LinkBar({ children, type = 'next', ...props }: LinkBarProps) {
   return (
-    <>
+    <div id={styles["link-container"]}>
       <Link {...props}>
         <div
           id={styles.container}
           className={type === 'next' ? styles.next : styles.previous}
         >
           <div id={styles.bar} />
-          <div id={styles.content}>{children}</div>
+          <div>{children}</div>
           <div id={styles.arrow}>{type === 'next' ? '>' : '<'}</div>
         </div>
       </Link>
-    </>
+    </div>
   )
 }
