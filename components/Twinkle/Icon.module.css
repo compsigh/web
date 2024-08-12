@@ -1,4 +1,4 @@
-img.icon {
+div.icon {
   animation: fluctuateOpacity 2s ease infinite;
   pointer-events: none;
 }

@@ -12,7 +12,7 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
 
   useEffect(() => {
     function setElementsBasedOnHeight() {
-      const DENSITY = 50
+      const DENSITY = 70
       const { innerWidth, innerHeight } = window
       const columnLogic = position === 'top' ? Math.floor((innerWidth / DENSITY) * 1.2) : Math.floor((innerWidth / 2 / DENSITY) * 1.2)
       const rowLogic = position === 'top' ? Math.floor((innerHeight / 2 / DENSITY) * 1.2) : Math.floor((innerHeight / DENSITY) * 1.2)
@@ -32,10 +32,10 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
     return () => window.removeEventListener('resize', handleResize)
   }, [position])
 
-  const icons: IconType[] = ['none', 'low', 'medium-low', 'medium-high', 'high']
+  const icons: IconType[] = ['low', 'medium-low', 'medium-high', 'high']
   function pickIcon() {
     if (icons.length === 0)
-      icons.push('none', 'low', 'medium-low', 'medium-high', 'high')
+      icons.push('low', 'medium-low', 'medium-high', 'high')
     const randomIndex = Math.floor(Math.random() * icons.length)
     const randomIcon = icons[randomIndex]
     icons.splice(randomIndex, 1)
@@ -54,7 +54,7 @@ export function Twinkle({ position }: { position: 'top' | 'left' }) {
       <div style={{
         position: 'absolute',
         top: 0,
-        left: 0,
+        left: position === 'top' ? 0 : '-150px',
         width: position === 'top' ? '100vw' : '50vw',
         height: position === 'top' ? '50vh' : '100vh',
         overflow: 'hidden',
