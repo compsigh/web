@@ -5,6 +5,9 @@ div#page {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 div#page > div#content {
@@ -31,7 +34,6 @@ div#page > div#breadcrumbs-wrapper {
 div#page > div#content > div.event-list-container {
   max-width: var(--max-width);
   margin-left: auto;
-  scrollbar-width: none;
 }
 
 div#page > div#content > div.event-list-container > p.heading {
