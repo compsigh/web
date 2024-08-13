@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
 
 import '@/app/katex.min.css'
+import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeSlug from 'rehype-slug'
 import rehypeKatex from 'rehype-katex'
@@ -109,11 +110,11 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
       options: {
         parseFrontmatter: true,
         mdxOptions: {
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [remarkGfm, remarkMath],
           rehypePlugins: [
-            [rehypePrettyCode as any, rehypePrettyCodeOptions],
+            [rehypePrettyCode, rehypePrettyCodeOptions],
             rehypeSlug,
-            rehypeKatex as any
+            rehypeKatex
           ]
         }
       }
