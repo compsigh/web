@@ -116,6 +116,10 @@ details[open] > summary::before {
   transform: rotate(90deg);
 }
 
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 code {
   font-family: var(--font-ia-writer-mono);
   counter-reset: line;
