@@ -126,47 +126,75 @@ code {
   border-radius: 0.4em;
 }
 
+figure[data-rehype-pretty-code-figure] {
+  margin: 1em 0;
+}
+
 pre {
-  padding: 1rem 0;
+  padding: 1em 0;
+  border: 1px dashed var(--color-compsigh-60);
+  border-radius: 6px;
   font-size: 0.8em;
   overflow-x: auto;
   white-space: pre-wrap;
 }
 
-pre [data-line] {
-  padding: 0 1rem;
+pre > code > span[data-line] {
+  padding: 0 1em;
 }
 
-pre > code[data-line-numbers] > [data-line]::before {
+pre > code[data-line-numbers] > span[data-line]::before {
+  position: absolute;
+  margin-left: -5.5em;
+  width: 3em;
   content: counter(line);
   counter-increment: line;
-  display: inline-block;
-  width: 2em;
-  margin-right: 2em;
   text-align: right;
   color: var(--color-light-50);
   user-select: none;
   font-variant-numeric: tabular-nums;
 }
 
-pre > code[data-line-numbers] > [data-line]:hover::before {
+pre > code[data-line-numbers] > span[data-line]:hover::before {
   color: var(--color-light);
 }
 
-pre
-  > code[data-line-numbers][data-line-numbers-max-digits="2"]
-  > [data-line]::before {
-  width: 2em;
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  font-family: var(--font-tronica-mono);
+  font-size: 0.9em;
+  color: var(--color-compsigh-60);
+
+  width: fit-content;
+  padding: 0.2em 0.8em;
+  border: 1px dashed var(--color-compsigh-60);
+  border-bottom: 1px solid var(--color-dark);
+  border-radius: 6px 6px 0px 0px;
+
+  margin-left: 2em;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 2;
 }
 
-pre
-  > code[data-line-numbers][data-line-numbers-max-digits="3"]
-  > [data-line]::before {
-  width: 3em;
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-caption] {
+  font-size: 0.9em;
+  color: var(--color-compsigh-60);
+
+  width: fit-content;
+  padding: 0.2em 0.8em;
+  border: 1px dashed var(--color-compsigh-60);
+  border-top: 1px solid var(--color-dark);
+  border-radius: 0px 0px 6px 6px;
+
+  margin-left: auto;
+  margin-right: 2em;
+  margin-top: -1px;
+  position: relative;
+  z-index: 2;
 }
 
 span[data-highlighted-line] {
-  background-color: var(--color-compsigh-20);
+  background-color: var(--color-compsigh-10);
 }
 
 span[data-highlighted-line-id="add"] {
