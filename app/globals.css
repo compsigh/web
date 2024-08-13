@@ -182,3 +182,25 @@ hr {
   border: 0;
   border-top: 1px solid var(--color-light-30);
 }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em 0;
+  width: 100%;
+}
+
+tr {
+  border-top: 1px solid var(--color-compsigh-20);
+  border-bottom: 1px solid var(--color-compsigh-20);
+}
+
+th {
+  font-weight: 400;
+  background-color: var(--color-compsigh-10);
+}
+
+th,
+td {
+  padding: 0.4em 0.8em;
+}
