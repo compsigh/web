@@ -5,7 +5,6 @@ authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
 previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
 decorations: false
 slug: "docs/web-platform/how-to-publish"
-# TODO: PR workflow
 ---
 
 <Note>
@@ -47,7 +46,7 @@ The web platform uses **filesystem routing:** your post's <CasePreserver>URL</Ca
 | `app/docs/readme.md` | docs/readme |
 | `app/docs/leadership/about.md` | docs/leadership/about |
 
-You can override this behavior by using the [Metadata](#metadata) `slug` parameter.
+You can override this behavior by using the [Metadata](#metadata) `slug` field.
 
 Get started by creating a file based on where you want it to be available online.
 
@@ -183,6 +182,13 @@ This mini intro was intentionally minimal — there is so much more to <CasePres
 
 And so on.
 
+*If possible, please compress your media!* We want to be courteous to everyone that has the repo cloned; let's not bloat it. Here are a couple strategies to reduce filesize:
+
+- If your media is a non-transparent image, convert it to JPEG
+  - On Mac, right-click the image, go to Quick Actions, then click Convert Image
+  - On Windows, you can open the image in MS Paint, hit File, then Save as, then JPEG picture
+- Downscale: media is always rendered at a maximum width of `700px` anyway
+
 Normally, media can be embedded in Markdown like so:
 
 ```markdown title="example.md"
@@ -269,10 +275,14 @@ Markdown uses "code fences" — three backticks (\`\`\`) — around a snippet to
 </Playground>
 </details>
 
+### Authoring your post
+
+You can use the [Metadata](#metadata) `authors` field to add your name to the top of the page. Add a square (`1:1` aspect ratio) image to the `public/avatars/` directory and reference it in the `avatar` property of your author object.
+
 ### Writing multi-authored posts
 
 <details>
-<summary>You can add multiple authors to a post via [Metadata](#metadata). For these kinds of posts, it can help to know whose words you're reading. With `Mic`, you can indicate when you're "handing the mic" to a specific author:</summary>
+<summary>You can use the [Metadata](#metadata) `authors` field to add multiple authors to the top of a page. For these kinds of posts, it can help to know whose words one is reading. With `Mic`, you can indicate when you're "handing the mic" to a specific author:</summary>
 
 ```mdx showLineNumbers title="example.md"
 <Mic name="Edward" avatar="/avatars/edward.png" />
@@ -550,4 +560,20 @@ slug: "events/my-workshop/getting-started"
 ---
 ```
 
+</details>
+
+## Publishing your post
+
+<details>
+<summary>Once you're ready, go ahead and open a PR to merge your fork into the `main` branch of the web platform. Here's what happens next:</summary>
+
+When you open the PR, it'll prefill the description. Please make sure you double-check before submitting:
+
+- You've previewed your post locally with `npm run dev` and are happy with it
+- You've confirmed `npm run build` runs successfully
+- You've made sure all media is in a folder mirroring your post's URL in the `public/` directory
+
+Also, you're asked to what degree you're open to feedback, if any. Feedback will most likely come in the form of suggestions directly on the PR. Each change will have an option to accept the suggestion, reject it, or batch it along with others to accept as one commit.
+
+Once the PR is opened, the platforms team will review it and give feedback to the degree you mentioned. Assuming all checks out and the PR gets merged, congrats! It's live and ready to share.
 </details>
