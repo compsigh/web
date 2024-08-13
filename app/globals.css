@@ -56,7 +56,6 @@ h6 {
 
 a {
   color: var(--color-compsigh);
-  text-decoration-style: dashed;
 }
 
 a:hover {
