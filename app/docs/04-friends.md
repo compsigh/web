@@ -1,11 +1,14 @@
 ---
 title: "Friends of compsigh"
-description: "Clubs we love working with"
-previous: { text: "Code of Conduct", link: "/docs/code-of-conduct" }
-next: { text: "About compsigh leadership", link: "/docs/leadership/about" }
+description: "Shoutout to these departments and clubs for being awesome to work with"
 slug: "docs/friends"
 ---
 
+Shoutout to these departments and clubs for being awesome to work with:
+
+- CS Department
+- Engineering Department
 - Game Design Club (GDC)
 - Anime, Culture, and Video Games (ACV)
-- Organization for Research and Communication of Applied Mathematics (ORCA)
+
+We're looking to add to this list! :)
