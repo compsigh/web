@@ -194,17 +194,21 @@ export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
 
 export const dynamicParams = false
 export async function generateStaticParams() {
-  const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+  let slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
 
   // For each file:
   // 1. Read it
   // 2. Parse its Markdown frontmatter
   // 3. Determine if it has a `slug` key
   // 4. If it does, replace the entry in `slugs` with the new slug
+  // 5. If it's an event, determine if it has a `link` key
+  // 6. If it does, skip building the page
   for (const [index, { slug: route }] of slugs.entries()) {
     const { frontmatter } = await readMarkdownFileAtRoute(route)
     if (frontmatter.slug)
       slugs[index] = { slug: frontmatter.slug.split('/') }
+    if (frontmatter.event_details?.link !== undefined)
+      slugs = slugs.filter((slug) => slug.slug.join('/') !== route.join('/'))
   }
   return slugs
 }
