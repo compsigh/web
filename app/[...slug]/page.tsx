@@ -99,9 +99,9 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
     const filePath = path.join(process.cwd(), 'app', ...segments) + '.md'
     const page = await fs.readFile(filePath, 'utf8')
 
-    const vercelTheme = await import('./vercel-theme.json')
+    const compsighTheme = await import('./compsigh-theme.json')
     const rehypePrettyCodeOptions: Options = {
-      theme: vercelTheme as any
+      theme: JSON.parse(JSON.stringify(compsighTheme))
     }
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
