@@ -51,7 +51,7 @@ export function Quote({ quote }: { quote: Quote }) {
         id={styles["quote-container"]}
         style={{
           // Random rotation between -10 and 10 degrees
-          rotate: `${Math.random() * 20 - 10}deg`
+          transform: `rotate(${Math.random() * 20 - 10}deg)`
         }}
       >
         <blockquote>
