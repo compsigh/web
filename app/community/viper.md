@@ -1,6 +1,7 @@
 ---
 title: "compsigh DEPLOY/23 project: Viper"
 description: "Looking back at my first ever hackathon W"
+post_date: 1723236660
 authors: [
   { name: "Andrew", avatar: "/avatars/andrew.png" },
 ]

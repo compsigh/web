@@ -463,6 +463,18 @@ This doesn't show up on the page itself, but like `title`, is used in the Commun
 
 <Spacer size={16} />
 
+### `post_date`
+
+`number`
+
+<p style={{color: 'red' }}>(Required)</p>
+
+The date and time of when your post is considered published, in UNIX time (seconds after the epoch of January 1st, 1970). You can get the current UNIX time from your Terminal by running `date + '%s'` or by using an online tool like the [Epoch Converter](https://unixtimestamp.com).
+
+This is mainly for proper ordering in the Community tab. You don't have to actually sync `post_date` with when you expect your post to go live.
+
+<Spacer size={16} />
+
 ### `authors`
 
 `{ name: string, avatar: string }[]`

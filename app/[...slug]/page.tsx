@@ -76,6 +76,7 @@ export type Frontmatter = {
   description: string
   authors?: Author[]
   og_image?: string
+  post_date?: string
   decorations?: boolean
   previous?: Reference
   next?: Reference
