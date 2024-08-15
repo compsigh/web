@@ -1,10 +1,14 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
+
+import { Moon } from '@/components/Moon'
+
 import styles from './NeonSunsetVideo.module.css'
 
 export function NeonSunsetVideo() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const moonRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     function handleMouseMove(event: MouseEvent) {
@@ -15,6 +19,8 @@ export function NeonSunsetVideo() {
 
       if (videoRef.current)
         videoRef.current.style.transform = `translate(${-50 + offsetX * 5}%, ${-50 + offsetY * 5}%)`
+      if (moonRef.current)
+        moonRef.current.style.transform = `translate(${offsetX * 10}vw, ${offsetY * 50}px)`
     }
 
     window.addEventListener('mousemove', handleMouseMove)
@@ -23,26 +29,25 @@ export function NeonSunsetVideo() {
 
   return (
     <>
-      <div className={styles.container}>
-        <video
-          ref={videoRef}
-          className={styles.video}
-          src="/assets/neon-sunset.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '56%',
-          overflow: 'hidden',
-          pointerEvents: 'none',
-          backgroundImage: 'linear-gradient(to top, var(--color-invisible), var(--color-dark) 10%)'
-        }} />
+      <div id={styles.container}>
+        <div id={styles.layer}>
+          <video
+            ref={videoRef}
+            id={styles.video}
+            src="/assets/neon-sunset.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div id={styles["video-mask"]} />
+          <div
+            ref={moonRef}
+            id={styles["moon-wrapper"]}
+          >
+            <Moon />
+          </div>
+        </div>
       </div>
     </>
   )

@@ -1,0 +1,27 @@
+div.circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
+div.circle-line {
+  height: 16px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-top: 2px solid var(--color-compsigh);
+  border-bottom: 2px solid var(--color-compsigh);
+  animation: lines-up 2s linear infinite;
+}
+
+@keyframes lines-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-34px);
+  }
+}

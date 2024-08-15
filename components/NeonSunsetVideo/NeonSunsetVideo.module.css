@@ -1,4 +1,4 @@
-.container {
+div#container {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,14 +9,43 @@
   background-color: var(--color-dark);
 }
 
-.video {
+div#layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+video#video {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 120%;
   height: 120%;
+  z-index: 1;
   object-fit: cover;
   transform: translate(-50%, -50%);
   opacity: 0.4;
-  filter: grayscale(100%);
+  filter: sepia(100%) saturate(300%);
+}
+
+div#video-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56%;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+  background-image: linear-gradient(to top, var(--color-invisible), var(--color-dark) 10%);
+}
+
+div#moon-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  z-index: 3;
+  scale: 0.6;
 }

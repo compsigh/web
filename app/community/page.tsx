@@ -31,12 +31,14 @@ export default async function Community() {
   return (
     <>
       <div id={styles.page}>
-        <NeonSunsetVideo />
         <div id={styles["breadcrumbs-wrapper"]}>
           <Breadcrumbs />
         </div>
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
+        </div>
+        <div id={styles.background}>
+          <NeonSunsetVideo />
         </div>
       </div>
     </>
