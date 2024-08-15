@@ -1,9 +1,40 @@
+div#page-dimmer {
+  background: var(--color-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+div#terminal-container {
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  width: 50vw;
+  z-index: 2;
+}
+
 [cmdk-dialog] {
-  width: 100%;
+  background: var(--color-dark);
+  border-top: 1px solid var(--color-light-30);
+  border-left: 1px solid var(--color-light-30);
+  border-right: 1px solid var(--color-light-30);
+  border-radius: 8px 8px 0 0;
+  padding: 16px;
+  animation: slide-in 0.2s ease forwards;
+}
+
+div#terminal-path {
   margin-top: 16px;
-  overflow: hidden;
-  transition: transform 100ms ease;
-  outline: none;
+  padding-left: 8px;
+  font-family: var(--font-ia-writer-mono);
+  font-size: 0.875rem;
+  color: var(--color-light-50);
 }
 
 [cmdk-input] {
@@ -85,4 +116,13 @@
   font-size: 0.875rem;
   height: 48px;
   color: var(--color-light-50);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { Spacer } from '@/components/Spacer'
+import { Terminal } from '@/components/Terminal'
 
 const Delko = localFont({
   src: [{
@@ -145,6 +145,7 @@ export default function RootLayout({
       <body>
         <main>
           {children}
+          <Terminal />
         </main>
       </body>
     </html>
