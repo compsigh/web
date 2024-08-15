@@ -275,6 +275,10 @@ Markdown uses "code fences" — three backticks (\`\`\`) — around a snippet to
 </Playground>
 </details>
 
+### Adding expandable sections
+
+To wrap content in a toggleable section like those you see on this page, you can use the native [<CasePreserver>HTML</CasePreserver> `<details>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details).
+
 ### Authoring your post
 
 You can use the [Metadata](#metadata) `authors` field to add your name to the top of the page. Add a square (`1:1` aspect ratio) image to the `public/avatars/` directory and reference it in the `avatar` property of your author object.
