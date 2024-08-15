@@ -19,16 +19,13 @@ div#page > div#content {
 }
 
 div#page > div#content > h1#title {
-  color: var(--color-dark);
-  -webkit-text-stroke: 1px var(--color-compsigh);
-  text-shadow: none;
   width: fit-content;
 }
 
 div#page > div#content > h1#title:hover {
-  color: var(--color-compsigh);
-  -webkit-text-stroke: unset;
-  text-shadow: 0px 0px 10px var(--color-compsigh-60);
+  color: var(--color-dark);
+  -webkit-text-stroke: 1px var(--color-compsigh);
+  text-shadow: none;
 }
 
 div#page > div#content > ul {
