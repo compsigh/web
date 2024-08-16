@@ -15,47 +15,22 @@ export async function GET(request: Request) {
     return new Response('Missing description', { status: 400 })
 
   // Bandaid solution: hardcoding the avatars for now since a dynamic fetch() doesn't work
-  // Will likely want to switch to another og_image solution; way too many limitations
-  const andrew = await fetch(
-    new URL('../../../public/avatars/andrew.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const antoinette = await fetch(
-    new URL('../../../public/avatars/antoinette.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const calvin = await fetch(
-    new URL('../../../public/avatars/calvin.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const edward = await fetch(
-    new URL('../../../public/avatars/edward.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const gursh = await fetch(
-    new URL('../../../public/avatars/gursh.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const jet = await fetch(
-    new URL('../../../public/avatars/jet.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const quinn = await fetch(
-    new URL('../../../public/avatars/quinn.png', import.meta.url))
-    .then((res) => res.arrayBuffer())
-  const sanju = await fetch(
-    new URL('../../../public/avatars/sanju.jpeg', import.meta.url))
-    .then((res) => res.arrayBuffer())
-
-  const authorAvatarFilenamesToBuffers: Map<string, ArrayBuffer> = new Map([
-    ['/avatars/andrew.png', andrew],
-    ['/avatars/antoinette.png', antoinette],
-    ['/avatars/calvin.png', calvin],
-    ['/avatars/edward.png', edward],
-    ['/avatars/gursh.png', gursh],
-    ['/avatars/jet.png', jet],
-    ['/avatars/quinn.png', quinn],
-    ['/avatars/sanju.jpeg', sanju]
+  // Will likely switch to raw Satori; way too many limitations with Edge Functions
+  const authorAvatarFilenamesToPermalinks: Map<string, string> = new Map([
+    ['/avatars/andrew.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/andrew.png'],
+    ['/avatars/antoinette.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/antoinette.png'],
+    ['/avatars/calvin.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/calvin.png'],
+    ['/avatars/edward.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/edward.png'],
+    ['/avatars/gursh.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/gursh.png'],
+    ['/avatars/jet.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/jet.png'],
+    ['/avatars/quinn.png', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/quinn.png'],
+    ['/avatars/sanju.jpeg', 'https://raw.githubusercontent.com/compsigh/web/main/public/avatars/sanju.jpeg']
   ])
 
   const authorNamesParam = searchParams.getAll('author')
   const authorAvatarsParam = searchParams.getAll('avatar')
   const authors = authorNamesParam.map((authorName, index) => {
-    const authorAvatar = authorAvatarFilenamesToBuffers.get(authorAvatarsParam[index])
+    const authorAvatar = authorAvatarFilenamesToPermalinks.get(authorAvatarsParam[index])
     return {
       name: authorName,
       avatar: authorAvatar
@@ -235,7 +210,7 @@ export async function GET(request: Request) {
                     pointerEvents: 'none',
                     userSelect: 'none'
                   }}
-                  src={author.avatar as any}
+                  src={author.avatar}
                   alt={author.name}
                   width={30}
                   height={30}
