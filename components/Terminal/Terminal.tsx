@@ -10,18 +10,52 @@ export function Terminal() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const container = useRef<HTMLDivElement | null>(null)
+  const [displayTerminalEdu, setDisplayTerminalEdu] = useState(false)
+  const [terminalEduStyle, setTerminalEduStyle] = useState<'subtle' | 'full'>('full')
 
   useEffect(() => {
+    const hasOpenedTerminal = () => {
+      return localStorage.getItem('opened-terminal')
+    }
+
     const showTerminalListener = (e: KeyboardEvent) => {
       if (e.key === '/') {
         e.preventDefault()
+        if (!hasOpenedTerminal())
+          localStorage.setItem('opened-terminal', 'true')
         setOpen(true)
+        setDisplayTerminalEdu(false)
       }
     }
 
+    const resetTerminalEduStyle = () => {
+      const opened = hasOpenedTerminal()
+      if (opened)
+        setTerminalEduStyle('subtle')
+      else
+        setTerminalEduStyle('full')
+    }
+
+    const hideTerminalEduOnSmallerScreens = () => {
+      if (window.innerWidth < 860)
+        setDisplayTerminalEdu(false)
+    }
+
+    const hideSubtleTerminalEduAfterDelay = () => {
+      if (hasOpenedTerminal())
+        setTimeout(() => setDisplayTerminalEdu(false), 3200)
+    }
+
+    resetTerminalEduStyle()
+    setDisplayTerminalEdu(true)
+    hideSubtleTerminalEduAfterDelay()
     document.addEventListener('keydown', showTerminalListener)
-    return () => document.removeEventListener('keydown', showTerminalListener)
-  }, [])
+    window.addEventListener('resize', hideTerminalEduOnSmallerScreens)
+    return () => {
+      document.removeEventListener('keydown', showTerminalListener)
+      window.removeEventListener('resize', hideTerminalEduOnSmallerScreens)
+    }
+  }, [terminalEduStyle, pathname])
 
   function Items() {
     const router = useRouter()
@@ -113,6 +147,19 @@ export function Terminal() {
         ref={container}
         id="terminal-container"
       >
+        {displayTerminalEdu &&
+            <div
+              id="terminal-edu"
+              className={terminalEduStyle}
+            >
+              <span>&gt;</span>
+              <span>
+                {terminalEduStyle === 'full' && <>Hit <kbd>/</kbd> to pull up the Terminal</>}
+                {terminalEduStyle === 'subtle' && <><kbd>/</kbd> to navigate</>}
+              </span>
+              <span>&gt;</span>
+            </div>
+          }
         <Command.Dialog
           container={container.current ?? undefined}
           open={open}

@@ -19,6 +19,51 @@ div#terminal-container {
   z-index: 2;
 }
 
+div#terminal-edu {
+  background: var(--color-dark);
+  border-top: 1px solid var(--color-light-30);
+  border-left: 1px solid var(--color-light-30);
+  border-right: 1px solid var(--color-light-30);
+  border-radius: 8px 8px 0 0;
+  padding: 16px;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-proto-mono);
+  color: var(--color-light-50);
+  animation: slide-in 0.2s ease forwards;
+}
+
+div#terminal-edu > span:nth-child(even) > kbd {
+  border: 1px solid var(--color-light-30);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+}
+
+div#terminal-edu.subtle > span:nth-child(odd) {
+  display: none;
+}
+
+div#terminal-edu.subtle {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-light-30);
+  border-radius: 8px;
+
+  /* Since chevrons are hidden */
+  justify-content: center;
+
+  animation: slide-in 0.2s ease forwards, slide-out 0.2s ease forwards;
+  animation-delay: 0s, 3s;
+}
+
+div#terminal-edu.full > span:nth-child(odd) {
+  rotate: 90deg;
+  animation: spin 2s linear infinite;
+}
+
 [cmdk-dialog] {
   background: var(--color-dark);
   border-top: 1px solid var(--color-light-30);
@@ -124,5 +169,24 @@ div#terminal-path {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+    margin-bottom: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
   }
 }

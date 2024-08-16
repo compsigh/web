@@ -145,8 +145,8 @@ export default function RootLayout({
       <body>
         <main>
           {children}
-          <Terminal />
         </main>
+        <Terminal />
       </body>
     </html>
   )
