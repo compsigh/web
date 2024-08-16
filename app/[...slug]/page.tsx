@@ -145,12 +145,16 @@ export async function generateMetadata(
     title: frontmatter.title,
     description: frontmatter.description,
     openGraph: {
-      siteName: "compsigh",
+      siteName: 'compsigh'
     }
   }
 
+  const url = `api/og?title=${frontmatter.title}`
+  if (frontmatter.authors)
+    for (const author of frontmatter.authors)
+      url.concat(`&author=${author.name}&avatar=${author.avatar}`)
   metadata.openGraph!.images = [{
-    url: `api/og?title=${frontmatter.title}`,
+    url: url,
     width: 1200,
     height: 630,
     alt: ''
