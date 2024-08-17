@@ -34,6 +34,7 @@ p#description {
   font-family: var(--font-tronica-mono);
   text-transform: lowercase;
   text-align: right;
+  margin-bottom: 0;
 }
 
 nav#navbar ul {
@@ -43,7 +44,6 @@ nav#navbar ul {
 
   list-style: none;
   padding: 0;
-  margin: 0;
   margin-right: -26px;
 }
 
