@@ -48,6 +48,7 @@ export function Terminal() {
 
     resetTerminalEduStyle()
     setDisplayTerminalEdu(true)
+    hideTerminalEduOnSmallerScreens()
     hideSubtleTerminalEduAfterDelay()
     document.addEventListener('keydown', showTerminalListener)
     window.addEventListener('resize', hideTerminalEduOnSmallerScreens)
