@@ -149,7 +149,7 @@ export async function generateMetadata(
     }
   }
 
-  const url = `api/og?title=${frontmatter.title}`
+  const url = `api/og?title=${frontmatter.title}&description=${frontmatter.description}`
   if (frontmatter.authors)
     for (const author of frontmatter.authors)
       url.concat(`&author=${author.name}&avatar=${author.avatar}`)
