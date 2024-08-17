@@ -9,7 +9,6 @@ import { TextStream } from '@/components/TextStream'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
-import '@/app/[...slug]/Typography.css'
 import styles from './Community.module.css'
 
 export type PostFrontmatter = Frontmatter & { post_date: number }

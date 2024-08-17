@@ -33,25 +33,31 @@ body {
   line-height: 180%;
 }
 
-h1 {
-  font-family: var(--font-delko);
-  font-size: 3rem;
+h1,
+h2,
+h3 {
+  font-family: var(--font-tronica-mono);
   font-weight: 400;
+  margin: 1.5em 0 1em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-compsigh);
+  text-shadow: 0 0 10px var(--color-compsigh-60);
+  margin-bottom: 32px;
 }
 
 h2,
 h3 {
-  font-family: var(--font-ia-writer-quattro);
+  text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1.5em 0 1em;
-  line-height: 1.2;
+h2 code,
+h3 code {
+  text-transform: none;
 }
 
 a {

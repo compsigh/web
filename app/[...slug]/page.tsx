@@ -24,8 +24,6 @@ import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
 import { CasePreserver } from '@/components/CasePreserver'
 
-import './Typography.css'
-
 type Author = {
   name: string
   avatar: string

@@ -1,12 +1,12 @@
-div.background {
+div#background {
   pointer-events: none;
   user-select: none;
-  animation: fadeIn 2s ease forwards;
+  animation: fade-in 2s ease forwards;
   z-index: -1;
   will-change: opacity;
 }
 
-div.content {
+div#content {
   z-index: 1;
   position: fixed;
   top: calc(30% + 32px);
@@ -20,23 +20,23 @@ div.content {
   align-items: flex-end;
 }
 
-h1.title {
+h1#title {
+  font-family: var(--font-delko);
+  letter-spacing: 0.04em;
   margin: 0;
-  color: var(--color-compsigh);
-  text-shadow: 0 0 10px var(--color-compsigh-60);
 }
 
-h1.title:hover {
+h1#title:hover {
   text-shadow: 0 0 10px var(--color-compsigh);
 }
 
-p.description {
+p#description {
   font-family: var(--font-tronica-mono);
   text-transform: lowercase;
   text-align: right;
 }
 
-nav.navbar ul {
+nav#navbar ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -47,15 +47,15 @@ nav.navbar ul {
   margin-right: -26px;
 }
 
-nav.navbar ul li {
+nav#navbar ul li {
   margin: 0;
 }
 
-nav.navbar ul li::before {
+nav#navbar ul li::before {
   content: "";
 }
 
-nav.navbar ul li a {
+nav#navbar ul li a {
   display: inline-block;
   width: fit-content;
   cursor: pointer;
@@ -73,15 +73,15 @@ nav.navbar ul li a {
   transition: all 0.2s ease;
 }
 
-nav.navbar ul li a:hover {
+nav#navbar ul li a:hover {
   background-color: var(--color-compsigh-20);
 }
 
-nav.navbar ul li a:active {
+nav#navbar ul li a:active {
   background-color: var(--color-compsigh-60);
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -91,18 +91,18 @@ nav.navbar ul li a:active {
 }
 
 @media (max-width: 700px) {
-  div.content {
+  div#content {
     right: 0;
     top: 30%;
     margin: 0 40px;
     align-items: unset;
   }
 
-  p.description {
+  p#description {
     text-align: left;
   }
 
-  nav.navbar ul {
+  nav#navbar ul {
     align-items: unset;
     margin-right: unset;
     margin-left: -26px;
