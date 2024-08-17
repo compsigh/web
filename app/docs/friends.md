@@ -1,7 +1,6 @@
 ---
 title: "Friends of compsigh"
 description: "Shoutout to these departments and clubs for being awesome to work with"
-slug: "docs/friends"
 ---
 
 Shoutout to these departments and clubs for being awesome to work with:
