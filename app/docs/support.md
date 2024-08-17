@@ -1,6 +1,6 @@
 ---
 title: "Support compsigh"
-description: "compsigh is an entirely student-bootstrapped club. By donating, you're supporting everything from events, club member projects, to creative freedom."
+description: "compsigh is an entirely student-bootstrapped club. By donating, you're supporting everything from hosting events, to shipping club member projects, to maintaining the club's creative freedom."
 previous: { text: "compsigh README", link: "/docs/readme" }
 ---
 
