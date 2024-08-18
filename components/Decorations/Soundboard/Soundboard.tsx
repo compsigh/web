@@ -14,7 +14,7 @@ export type Sound
   | 'skill-issue'
 
 export function Sound({ sound }: { sound: Sound }) {
-  const [play] = useSound(`/sounds/${sound}.mp3`)
+  const [play] = useSound(`/sounds/${sound}.mp3`, { interrupt: true })
 
   function handlePlay() {
     play()

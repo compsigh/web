@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { NavItems } from '@/components/NavItems'
 import { HiveVideo } from '@/components/HiveVideo'
 
