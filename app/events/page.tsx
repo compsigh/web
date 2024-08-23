@@ -62,7 +62,7 @@ function designateEvents(events: EventFrontmatter[]) {
   return { now, upcoming, past }
 }
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic' // Bandaid solution: dynamic rendering for detecting whether an event is now, upcoming, or past
 export default async function Events() {
   const events = await getEvents()
   const { now, upcoming, past } = designateEvents(events)
