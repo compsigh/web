@@ -1,5 +1,5 @@
 ---
-title: "Introducing the compsigh Web Platform"
+title: "Introducing the compsigh web platform"
 description: "Building a home to bring together our events calendar, members' projects, and all things compsigh"
 post_date: 1724461200
 authors: [

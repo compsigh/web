@@ -40,7 +40,7 @@ export const docs: StructuredSidebarProps =
     ]
   },
   {
-    name: 'Web Platform',
+    name: 'Web platform',
     entries: [
       {
         text: 'Why publish',
