@@ -4,7 +4,7 @@ description: "the first compsigh night of the Fall 2024 semester! compsigh night
 event_details: {
   start: 1724461200,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2024-08-23/compsigh-night.jpeg",
   activities: [
     { title: "Welcome Presentation", time_offset: 1800 }
   ],
