@@ -111,7 +111,7 @@ export function Terminal() {
           <Item
             onSelect={() => {
               setOpen(false)
-              window.open('https://instagram.com/compsigh_')
+              window.open('https://instagram.com/compsigh.club')
             }}
           >
             Instagram
