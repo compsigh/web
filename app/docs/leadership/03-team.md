@@ -5,6 +5,14 @@ previous: { text: "Joining compsigh leadership", link: "/docs/leadership/joining
 slug: "docs/leadership/team"
 ---
 
+## Fall 2024
+
+- Jet Pham
+- Andrew Diep
+- Gurshan Singh
+- Quinn Brockmyre
+- Edward Shturman
+
 ## Spring 2024
 
 - Jet Pham
