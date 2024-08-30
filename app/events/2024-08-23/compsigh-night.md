@@ -6,7 +6,16 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2024-08-23/compsigh-night.jpeg",
   activities: [
-    { title: "Welcome Presentation", time_offset: 1800 }
+    {
+      title: "CS Major Orientation Recap",
+      time_offset: 1800,
+      link: "https://www.figma.com/design/2yYA3pG4NcCPUcgcMPyei9/2024-CS-Major-Orientation?node-id=0-1&t=CjeZMduOYKPWhD5J-1"
+    },
+    {
+      title: "Welcome Presentation",
+      time_offset: 3600,
+      link: "https://www.figma.com/design/m8UkKgzhQPz9fRW0A3ixUx/2024-compsigh-night-welcome?node-id=0-1&t=a90oZK47sSsCJaJ4-1"
+    }
   ],
   pictures: [],
   link: null
