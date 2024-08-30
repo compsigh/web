@@ -5,9 +5,7 @@ event_details: {
   start: 1725066000,
   location: "The Hive",
   cover_image: "/banners/compsigh-night.png",
-  activities: [
-    { title: "compsigh clone: React & Next.js", time_offset: 3600 }
-  ],
+  activities: [{ title: "Tie dye shirt making", time_offset: 900 }],
   pictures: [],
   link: null
 }
