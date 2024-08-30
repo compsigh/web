@@ -67,6 +67,7 @@ export type EventDetails = {
   // If link is a string, clicking the event will open the link
   // If link === undefined, clicking the event will open the event page
   link?: string | null
+  ignore?: string
 }
 
 export type Frontmatter = {
