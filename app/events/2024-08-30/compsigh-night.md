@@ -4,7 +4,7 @@ description: "compsigh nights — every Friday at 6pm in the Social Hive. there'
 event_details: {
   start: 1725066000,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2024-08-30/compsigh-night-tie-dye-shirt-making.png",
   activities: [{ title: "Tie dye shirt making", time_offset: 900 }],
   pictures: [],
   link: null
