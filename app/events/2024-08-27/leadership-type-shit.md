@@ -13,6 +13,7 @@ event_details: {
   end: 1724806800,
   location: "The Hive"
 }
+next: { text: "DEPLOY/24 first meeting", link: "/events/2024-09-03/deploy24-meeting" }
 ---
 
 Priorities this semester:

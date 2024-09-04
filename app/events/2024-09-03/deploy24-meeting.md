@@ -13,6 +13,7 @@ event_details: {
   end: 1725411600,
   location: "The Hive"
 }
+previous: { text: "Leadership type shit", link: "/events/2024-08-27/leadership-type-shit" }
 ---
 
 with guests Faadil and Alex lol
@@ -25,6 +26,7 @@ with guests Faadil and Alex lol
 
 - Update from Gursh on `compsigh clone: get git`
 - Update from Edward and Jet on `nonprofit status`
+  - For now, we're putting the nonprofit idea on the backburner; if it gets rough re: money, we'll reconsider
 - Update from Edward and Jet on sponsors
   - CS Department
   - GitHub
@@ -39,7 +41,6 @@ with guests Faadil and Alex lol
 
 - Gursh will send rest of leadership a playbook on the workshop soon™
 - Gursh will reach out to Elias and figure out the USFConnect SSH thing before the workshop
-- For now, we're putting the nonprofit idea on the backburner; if it gets rough re: money, we'll reconsider
 - Edward will reach out to Chris, Ellen, and Jocelyn re: funding
 - Edward will CC the invite to the next Club Coalition meeting to leadership
 - Quinn will reach out to his profs to invite for DEPLOY/24 judging
