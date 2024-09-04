@@ -8,7 +8,7 @@ authors: [
   { name: "Andrew", avatar: "/avatars/andrew.png" }
 ]
 event_details: {
-  ignore: true,
+  hide_on_timeline: true,
   start: 1725408000,
   end: 1725411600,
   location: "The Hive"

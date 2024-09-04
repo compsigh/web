@@ -22,7 +22,7 @@ async function getEvents() {
     const { frontmatter } = await readMarkdownFileAtRoute(slug)
     if (!frontmatter.event_details)
       throw new Error(`Event ${slug.join('/')} is missing event_details`)
-    if (frontmatter.event_details.ignore)
+    if (frontmatter.event_details.hide_on_timeline)
       continue
     if (frontmatter.event_details.cover_image === undefined)
       throw new Error(`Event ${slug.join('/')} is missing event_details.cover_image`)
