@@ -5,7 +5,11 @@ event_details: {
   start: 1725670800,
   location: "The Hive",
   cover_image: "/events/2024-09-06/compsigh-clone-get-git.png",
-  activities: [{ title: "compsigh clone: get git", time_offset: 3600 }],
+  activities: [
+    { title: "Getting everyone set up with SSH", time_offset: 0 },
+    { title: "compsigh clone: get git", time_offset: 7200 },
+    { title: "Group picture", time_offset: 10800 }
+  ],
   pictures: [],
   link: null
 }
