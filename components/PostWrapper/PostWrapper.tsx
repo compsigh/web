@@ -134,6 +134,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Quote quote={quotes[5]} />
                 <Quote quote={quotes[6]} />
                 <Quote quote={quotes[7]} />
+                <Quote quote={quotes[8]} />
               </Decorations>
             </DelayWrapper>
         }
