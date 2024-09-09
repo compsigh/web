@@ -30,6 +30,7 @@ export function EventList({
 
     const nowEvents = container.querySelectorAll(`.${styles["now-event"]}`)
     const upcomingEvents = container.querySelectorAll(`.${styles["upcoming-event"]}`)
+    const pastEvents = container.querySelectorAll(`.${styles["past-event"]}`)
 
     if (nowEvents.length > 0) {
       const firstNowEvent = nowEvents[0] as HTMLElement
@@ -38,6 +39,10 @@ export function EventList({
     else if (upcomingEvents.length > 0) {
       const firstUpcomingEvent = upcomingEvents[0] as HTMLElement
       firstUpcomingEvent.scrollIntoView({ behavior: 'instant', block: 'center' })
+    }
+    else if (pastEvents.length > 0) {
+      const mostRecentEvent = pastEvents[pastEvents.length - 1] as HTMLElement
+      mostRecentEvent.scrollIntoView({ behavior: 'instant', block: 'center' })
     }
   }, [])
 
