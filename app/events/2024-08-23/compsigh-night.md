@@ -1,5 +1,5 @@
 ---
-title: "compsigh night"
+title: "compsigh night v2024.08.23"
 description: "the first compsigh night of the Fall 2024 semester! compsigh nights take place every Friday at 6pm in the Social Hive. there's something new each week: come for a workshop, hyping each other up with project demos, or just chill, have some dinner, and play card & board games with us."
 event_details: {
   start: 1724461200,
