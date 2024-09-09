@@ -16,7 +16,7 @@ This beginner-friendly guide covers everything you need to know to start publish
 
 You can also choose which parts of the process to learn more about, at your own pace, by clicking the toggleable <span style={{ fontFamily: 'var(--font-proto-mono)', color: 'var(--color-compsigh)' }}>&gt;</span> icon at each section.
 
-I recommend you read through the guide, but if you'd rather just get going with a template to copy and remix, [check out the Cue post on GitHub](https://github.com/compsigh/web/blob/main/app/projects/cue.md?plain=1)!
+I recommend you read through the guide, but if you'd rather just get going with a template to copy and remix, [check out the Cue post on GitHub](https://github.com/compsigh/web/blob/main/app/community/cue.md?plain=1)!
 </Note>
 
 ## Getting set up
