@@ -171,7 +171,7 @@ This mini intro was intentionally minimal — there is so much more to <CasePres
 ### Adding media
 
 <details>
-<summary>You can upload any media — images, videos, etc. — related to your post to the `public/` folder, with a filepath that mirrors its URL:</summary>
+<summary>You can upload any media related to your post — images, videos, etc. — to the `public/` folder, with a filepath that mirrors its URL:</summary>
 
 | If your post is accessible at compsigh.club/ | Your post's media should be in |
 | :- | :- |
@@ -463,7 +463,7 @@ This will show up at the top of the page, in the Community tab, in search engine
 
 <p style={{color: 'red' }}>(Required)</p>
 
-This doesn't show up on the page itself, but like `title`, is used in the Community tab, search engines, and elsewhere when shared.
+This doesn't show up on a page itself, but like `title`, is used in search engines, and elsewhere when shared.
 
 <Spacer size={16} />
 
@@ -485,10 +485,12 @@ This is mainly for proper ordering in the Community tab. You don't have to actua
 
 <p style={{ color: 'var(--color-light-50)' }}>(Optional)</p>
 
-This shows up at the top of the page, as well as in the Community tab.
+Authors are rendered at the top of the page.
 
 - `name` can be whatever you want — *most put their <CasePreserver>Discord</CasePreserver> username to keep with the theme :)*
 - `avatar` represents a filepath, relative to the `public/` directory, to the image displayed next to your name
+
+Examples:
 
 ```markdown showLineNumbers {4-7} title="community/cue.md"
 ---
@@ -499,6 +501,18 @@ authors: [
   { name: "Sanju", avatar: "/avatars/sanju.jpeg" }
 ]
 og_image: "/og/cue.png"
+---
+```
+
+```markdown showLineNumbers {5-7} title="community/viper.md"
+---
+title: "compsigh DEPLOY/23 project: Viper"
+description: "Looking back at my first ever hackathon W"
+post_date: 1723236660
+authors: [
+  { name: "Andrew", avatar: "/avatars/andrew.png" },
+]
+og_image: "/community/viper/og.png"
 ---
 ```
 
