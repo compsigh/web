@@ -2,6 +2,7 @@
 title: "compsigh clone: get git"
 description: "join us for our first compsigh clone workshop, and get good at Git with Gursh! part one of a two-workshop series where you'll get help with your dev setup, learn Git commands, and practice the workflow teams use in the real world. you'll be more than prepared for not only all your USF CS classes, but well on your way to becoming a professional software dev!"
 authors: [{ name: "Gursh", avatar: "/avatars/gursh.png" }]
+og_image: "/events/2024-09-06/compsigh-clone-get-git-og.png"
 event_details: {
   hide_on_timeline: true,
   start: 1725678000,
