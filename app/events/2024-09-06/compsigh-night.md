@@ -7,7 +7,11 @@ event_details: {
   cover_image: "/events/2024-09-06/compsigh-clone-get-git.png",
   activities: [
     { title: "SSH setup", time_offset: 0 },
-    { title: "compsigh clone: get git", time_offset: 7200 },
+    {
+      title: "compsigh clone: get git",
+      time_offset: 7200,
+      link: "/events/2024-09-06/compsigh-clone-get-git"
+    },
   ],
   pictures: [],
   link: null
