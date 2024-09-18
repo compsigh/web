@@ -4,7 +4,7 @@ description: "double the clone today! we've got Gursh back for get git part two,
 event_details: {
   start: 1727485200,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2024-09-27/compsigh-clone-linux-mentioned.png",
   activities: [
     { title: "compsigh clone: get git(hub)", time_offset: 0 },
     { title: "compsigh clone: linux mentioned", time_offset: 3600 }
