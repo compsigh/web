@@ -4,7 +4,7 @@ description: "you can't spell \"Alex\" without \"AI\". well, actually you can. a
 event_details: {
   start: 1726880400,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2024-09-20/compsigh-clone-welcome-to-the-machine.png",
   activities: [
     { title: "compsigh clone: welcome to the machine", time_offset: 0 }
   ],
