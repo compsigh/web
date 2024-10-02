@@ -30,9 +30,9 @@ Also:
 
 - Organizers & ground team
 - Photo & video
+- [Request mention in the Phoenix](https://docs.google.com/forms/d/e/1FAIpQLScWKWlOVSR_ml85Y0-NKSXUdYFdP2S9aRZj1sUvhh_3z-FO1A/viewform)
 
-Idea from Edward and Gursh: if we do beginner/advanced
-categories type shit we should use different criteria for evaluation
+Idea from Edward and Gursh: if we do beginner/advanced categories type shit we should use different criteria for evaluation
 
 ## Links
 

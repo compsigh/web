@@ -6,7 +6,7 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2024-09-27/compsigh-clone-linux-mentioned.png",
   activities: [
-    { title: "compsigh clone: linux mentioned", time_offset: 1800 }
+    { title: "compsigh clone: linux mentioned", time_offset: 3600 }
   ],
   pictures: [],
   link: null
