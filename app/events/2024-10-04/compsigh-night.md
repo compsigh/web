@@ -5,6 +5,10 @@ event_details: {
   start: 1728090000,
   location: "The Hive",
   cover_image: "/events/2024-10-04/game-night.png",
+  activities: [
+    { title: "compsigh night", time_offset: 0 },
+    { title: "game night", time_offset: 3600 }
+  ],
   pictures: [],
   link: null
 }
