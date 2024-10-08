@@ -13,4 +13,3 @@ event_details: {
   link: null
 }
 ---
-
