@@ -2,10 +2,11 @@
 title: "compsigh clone: get GitHub"
 description: "get good at Git(Hub) with Gursh! part two of a two-workshop series where you'll get help with your dev setup, learn Git commands, and practice the workflow teams use in the real world. you'll be more than prepared for not only all your USF CS classes, but well on your way to becoming a professional software dev!"
 authors: [{ name: "Gursh", avatar: "/avatars/gursh.png" }]
+og_image: "/events/2024-09-06/compsigh-clone-get-git-og.png"
 event_details: {
   hide_on_timeline: true,
-  start: 1727485200,
-  end: 1727488800,
+  start: 1730512800,
+  end: 1730516400,
   location: "The Hive",
   cover_image: "/events/2024-09-06/compsigh-clone-get-git.png",
   pictures: []
