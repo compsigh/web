@@ -9,3 +9,24 @@ event_details: {
   link: null
 }
 ---
+
+## Fall decorations
+
+- [x] Decorative mesh
+- [x] Fall-colored flowers
+- [x] Fall baubles
+- [x] Ceramic cat
+- [x] Ceramic pumpkins
+- [x] Pumpkin lights
+- [x] Yellow/amber pebbles
+- [x] Candles
+- [x] Edward's design books
+- [x] Projecting a campfire
+- [ ] Drawings on the board
+
+## Snacks
+
+- Apple and orange slices / fruit salad type thing
+- PSLs lol
+- Pumpkin type shit
+- Apple cider

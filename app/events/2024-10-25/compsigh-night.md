@@ -12,18 +12,3 @@ event_details: {
   link: null
 }
 ---
-
-## Fall decorations
-
-- Fake Autumn string leaves
-- Edward's design books
-- Candles
-- Drawings on the board
-- Projecting a campfire
-
-## Snacks
-
-- Apple and orange slices / fruit salad type thing
-- PSLs lol
-- Pumpkin type shit
-- Apple cider
