@@ -11,6 +11,13 @@ event_details: {
 }
 ---
 
+## Agenda
+
+- Welcome, about compsigh, hype up Dons Hack / WiT & ACM
+- Introduction of panelists
+- Questions
+- Q&A from audience
+
 ## Panelists
 
 - Edward Shturman, 3rd year, Best App winner @ Dons Hack 2023, organizing team member for DEPLOY/23
@@ -20,3 +27,11 @@ event_details: {
 - Lidia Aperzyna, 4th year, People's Choice @ Dons Hack 2023
 
 Moderated by Antoinette de Lira Lopez
+
+## Questions
+
+- How did you go about choosing an idea? For Dons Hack, how did you work with the theme, and what was that like compared to no theme at DEPLOY/23?
+- How did your team goal-set and agree on what the objective of the weekend was? Was it sweaty or more laid-back?
+- How did your team allot time for different tasks or features of your project?
+- How did your team delegate roles and responsibilities for those tasks and features?
+- Presentation is an underrated component of a hackathon project. How did your team prioritize that delivery?
