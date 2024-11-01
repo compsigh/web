@@ -1,10 +1,14 @@
 ---
 title: "staging"
-description: "a night of mini-workshops in prep for DEPLOY/24! what do we build? how do we make a sick presentation? how do we keep our team's spirits up? hear answers to these questions and much more. winners from Dons Hack 2023, DEPLOY/23, and Dons Hack 2024 will share their success stories, how they got there, and how you can get there too."
+description: "new to hackathons? not sure who you want to team with for DEPLOY/24? come to staging, a chill team-building social and how-to-hackathon panel! grab your friends, hang out, form teams, and hear from previous hackathon winners about their experiences & mindsets. we'll also have food, Fall decorations, and the usual compsigh night vibes :)"
 event_details: {
   start: 1730509200,
   location: "The Hive",
   cover_image: "/events/2024-11-01/staging.png",
+  activities: [
+    { title: "staging", time_offset: 0 },
+    { title: "Awkward Silence: Deja Boo @ CO 107", time_offset: 10800 },
+  ],
   pictures: [],
   link: null
 }
