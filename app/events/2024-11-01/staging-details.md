@@ -23,8 +23,8 @@ event_details: {
 
 - Edward
 - Gursh
-- Andrew
-- Parsa
+- Alex
+- Jet
 
 Moderated by Nishil
 
