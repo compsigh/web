@@ -10,7 +10,7 @@ event_details: {
     { title: "Awkward Silence: Deja Boo @ CO 107", time_offset: 10800 },
   ],
   pictures: [],
-  link: null
+  link: "/events/2024-11-01/staging-details"
 }
 ---
 
