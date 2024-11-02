@@ -24,7 +24,7 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
       {frontmatter.authors && frontmatter.authors.map((author, index) => (
         <Author key={index} {...author} />
       ))}
-      <Spacer size={32} />
+      <Spacer size={frontmatter.authors ? 32 : 0} />
       {content}
       {frontmatter.previous &&
         <>
