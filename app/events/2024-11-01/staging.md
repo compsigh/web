@@ -17,20 +17,18 @@ event_details: {
 
 ### Agenda
 
-- Compsigh Night Hangout
-- Introduction of Panelists
-- Hackathon Questions
-- Q&A from Audience
-- DEPLOY/24 Format
+- Welcome & panelist intros
+- General hackathon questions
+- Open the floor to audience Q&A — general hackathon stuff, DEPLOY/24-specific questions, anything
 
 ### Panelists
 
-- Edward
-- Gursh
-- Alex
-- Jet
+- Edward Shturman; fourth year; SCU Hack for Humanity, Dons Hack 2023, Dons Hack 2024
+- Gurshan Singh; second year; Dons Hack 2024
+- Alex Peczon; third year; several UCM hackathons
+- Jet Pham; second year; DEPLOY/23, Dons Hack 2024
 
-Moderated by Nishil
+Moderated by Nishil Anand
 
 ### Questions
 
