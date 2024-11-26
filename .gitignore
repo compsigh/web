@@ -17,3 +17,4 @@ build/
 
 # TypeScript
 next-env.d.ts
+.env*.local
