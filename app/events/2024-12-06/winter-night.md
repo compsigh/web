@@ -1,5 +1,5 @@
 ---
-title: "winter night"
+title: "compsigh × ACV × Dons Esports: winter night"
 description: "the last compsigh night of Fall 2024! come by after your finals to send off our grads, get & give some gifts, and reign in the Winter vibes :)"
 event_details: {
   start: 1733536800,
