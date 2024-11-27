@@ -7,6 +7,10 @@ export async function getMarqueeEntry(id: string) {
   })
 }
 
+export async function getAllMarqueeEntries() {
+  return await prisma.marqueeEntry.findMany()
+}
+
 export async function newMarqueeEntry(marquee: MarqueeEntry) {
   return await prisma.marqueeEntry.create({
     data: marquee,

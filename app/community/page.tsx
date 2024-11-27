@@ -1,14 +1,18 @@
-import Link from 'next/link'
+// Functions
 import {
   type Frontmatter,
   generateUnmodifiedSlugsFromMarkdownFiles,
   readMarkdownFileAtRoute
 } from '@/app/[...slug]/page'
 
+// Components
+import Link from 'next/link'
+import { Marquee } from '@/components/Marquee'
 import { TextStream } from '@/components/TextStream'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
+// Styles
 import styles from './Community.module.css'
 
 export type PostFrontmatter = Frontmatter & { post_date: number }
@@ -32,6 +36,7 @@ export default async function Community() {
   return (
     <>
       <div id={styles.page}>
+        <Marquee />
         <div id={styles["breadcrumbs-wrapper"]}>
           <Breadcrumbs />
         </div>
