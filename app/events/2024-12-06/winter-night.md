@@ -51,11 +51,11 @@ Open to more
 ## Promo
 
 - [x] Web platform / Discord graphic
-- [ ] Post on Instagram with all three clubs as co-authors
+- [x] Post on Instagram with all three clubs as co-authors
 - [ ] Department email blast
-- [ ] compsigh Discord ping
-- [ ] ACV Discord ping
-- [ ] Dons Esports Discord ping
+- [x] compsigh Discord ping
+- [x] ACV Discord ping
+- [x] Dons Esports Discord ping
 
 Maybe adding some gift ideas for people
 
