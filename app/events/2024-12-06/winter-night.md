@@ -24,41 +24,34 @@ event_details: {
 - [x] Tree
 - [x] Tree skirt
 - [x] Ornaments
-- [ ] Lights
-- [x] (Fall-colored) flowers
+- [x] Lights
+- [x] Mason jars with lights
+- [x] Figma blanket
+- [x] Flowers
+- [x] Winter tree made out of pipe cleaners
 - [x] (Fall-colored) candles
 - [x] Edward's design books
 - [x] Projecting a campfire
 
-Open to more
-
 ### Food & drinks
 
-- [ ] Apple cider
-- [ ] Орешки со сгущёнкой
-- [ ] Маковый пирог
-- [ ] Ilce's pie
-
-Open to more
+- [x] Edward: Lindor
+- [x] Ilce: ponche
+- [x] Edward and Dave: various Russian snacks
 
 ### Materials
 
-- [ ] Gift wrap, bows, tape, scissors
-- [ ] Blank cards & pens
-
-Open to more
+- [x] Gift wrap, bows, tape, scissors
+- [x] Blank cards & pens
+- [x] From-to notecard cutouts
 
 ## Promo
 
 - [x] Web platform / Discord graphic
 - [x] Post on Instagram with all three clubs as co-authors
-- [ ] Department email blast
+- [x] Department email blast
 - [x] compsigh Discord ping
 - [x] ACV Discord ping
 - [x] Dons Esports Discord ping
 
 Maybe adding some gift ideas for people
-
-## Open questions
-
-- Should we have a "formal" process for gift exchange? Or just heavy encouragement?
