@@ -12,7 +12,7 @@ Common costs the club incurs:
 
 - Food for compsigh nights
 - Marketing materials (e.g. stickers, fonts, etc.)
-- SaaS fees for supporting leadership and club member projects (e.g. Framer, Vercel, Midjourney, etc.)
+- Supporting leadership operations and club member projects (e.g. Meta Verified, Midjourney, etc.)
 
 By donating to compsigh, you're supporting everything from hosting events, to shipping club member projects, to maintaining the club's creative freedom.
 
