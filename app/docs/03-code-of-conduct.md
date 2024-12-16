@@ -25,4 +25,6 @@ compsigh is a pretty chill place — you can largely say and do whatever you wan
 
 - Avoid sharing cracked, pirated, or otherwise illegal resources.
 - Sharing code is ok, though we highly recommend following your professor's rules. If you get caught, it's not on us! :p
-- You're welcome to self-promo *(we encourage it!)* but avoid sending unsolicited DMs of those nature to server members. People are more likely to disable this feature, which means less social opportunities / meaningful connections.
+- You're welcome to self-promo *(we encourage it!)* but avoid sending messages (including unsolicited DMs) that are:
+  - Spammy in nature; or
+  - Irrelevant advertisements, particularly when you don't send anything else.
