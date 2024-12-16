@@ -6,18 +6,14 @@ next: { text: "Code of Conduct", link: "/docs/code-of-conduct" }
 slug: "docs/values"
 ---
 
-## It's an ✨ event ✨
+## People first
 
-It's not a "meeting". It's an *event*.
+There's a reason `meet cool people` is first in our tagline: we believe getting together is a precursor to `building cool things`, as well as its own reward.
 
-This is a contrived example meant to convey that the language we use matters, and we reject typical college club corpo mumbo jumbo.
+## Keep it casual
+
+We don't need to concern ourselves with typical college club corporate nonsense. We take what we do *sincerely*, not too seriously.
 
 ## Open source
 
-We embrace building in public, and regularly engage with others for feedback. Everything — from workshop notes to the expense tracker — should be open source.
-
-## Go for it
-
-We <CasePreserver>CS</CasePreserver> majors are too used to following the script. We believe this is antithetical to the idea of college itself. In reality, this is *the best time* in our lives to try new things, make mistakes, learn from them, and make something great.
-
-Don't wait for permission. Go for it.
+We uphold a culture of documentation, learning & building in public, and feedback.
