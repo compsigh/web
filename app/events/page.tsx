@@ -8,7 +8,6 @@ import {
 import { Event } from './Event'
 import { EventList } from './EventList'
 import { Twinkle } from '@/components/Twinkle'
-import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 import styles from './Events.module.css'
 
@@ -84,9 +83,6 @@ export default async function Events() {
         <div id={styles["twinkle-wrapper"]}>
           <Twinkle position="left" />
         </div>
-          <div id={styles["breadcrumbs-wrapper"]}>
-            <Breadcrumbs />
-          </div>
         <div id={styles.content}>
           <h1 id={styles.title}>Events</h1>
           <EventList now={NowEvents} upcoming={UpcomingEvents} past={PastEvents} />

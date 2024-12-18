@@ -32,7 +32,7 @@ nav#structured-sidebar button span#arrow.expanded {
 
 nav#structured-sidebar ul {
   margin: 0;
-  animation: fadeIn 0.3s ease;
+  animation: fade-in 0.3s ease;
 }
 
 nav#structured-sidebar ul li::before {
@@ -49,7 +49,7 @@ nav#structured-sidebar ul li a:hover {
   background-color: unset;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(-8px);

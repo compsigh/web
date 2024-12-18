@@ -23,29 +23,13 @@ article.post > div.sidebar-placeholder {
 
 article.post > div.sidebar-wrapper,
 article.post > div.content > div.authors-and-content {
-  animation: fadeInFromBelow 1s ease forwards;
+  animation: fade-in-from-below 1s ease forwards;
 }
 
-article.post > div.content > div.breadcrumbs-wrapper,
-article.post > div.content > div.breadcrumbs-placeholder {
-  display: none;
-}
-
-@keyframes fadeInFromBelow {
+@keyframes fade-in-from-below {
   from {
     opacity: 0;
     transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInFromAbove {
-  from {
-    opacity: 0;
-    transform: translateY(-24px);
   }
   to {
     opacity: 1;
@@ -57,26 +41,21 @@ article.post > div.content > div.breadcrumbs-placeholder {
   article.post {
     max-width: var(--max-width);
     margin: var(--margin);
+    flex-direction: column-reverse;
   }
 
   article.post > div.sidebar-wrapper,
   article.post > div.sidebar-placeholder {
+    position: static;
+    width: 80vw;
+    margin: 0 40px;
+  }
+
+  /* "Secondary": any sidebar that's not fixed, e.g. a generated table of contents, */
+  /* WHEN there's a fixed sidebar present. */
+  article.post > div.sidebar-wrapper.secondary,
+  article.post > div.sidebar-placeholder.secondary {
     display: none;
-  }
-
-  article.post > div.content > div.breadcrumbs-wrapper,
-  article.post > div.content > div.breadcrumbs-placeholder {
-    display: revert;
-    margin-top: 40px;
-    margin-bottom: -40px;
-}
-
-  article.post > div.content > div.breadcrumbs-wrapper {
-    animation: fadeInFromAbove 1s ease forwards;
-  }
-
-  article.post > div.content > div.breadcrumbs-placeholder {
-    opacity: 0;
   }
 }
 

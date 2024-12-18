@@ -6,7 +6,6 @@ import {
 } from '@/app/[...slug]/page'
 
 import { TextStream } from '@/components/TextStream'
-import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
 import styles from './Community.module.css'
@@ -32,9 +31,6 @@ export default async function Community() {
   return (
     <>
       <div id={styles.page}>
-        <div id={styles["breadcrumbs-wrapper"]}>
-          <Breadcrumbs />
-        </div>
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
           <ul>

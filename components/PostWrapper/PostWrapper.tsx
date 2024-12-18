@@ -10,7 +10,6 @@ import { Sidebar } from '@/components/Sidebar'
 import { LinkBar } from '@/components/LinkBar'
 import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
-import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { Decorations } from '@/components/Decorations'
 import { Emote } from '@/components/Decorations/Emote'
 import { Quote, quotes } from '@/components/Decorations/Quote'
@@ -157,18 +156,6 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             </div>
         }
         <div className={styles.content}>
-          {
-            !typewriterDone &&
-              <div className={styles["breadcrumbs-placeholder"]}>
-                <Breadcrumbs />
-              </div>
-          }
-          {
-            typewriterDone &&
-              <div className={styles["breadcrumbs-wrapper"]}>
-                <Breadcrumbs />
-              </div>
-          }
           <TypewriterWrapper
             as={'h1'}
             options={{
@@ -183,13 +170,16 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         </div>
         {
           !typewriterDone && pathName.startsWith('/docs') &&
-            <div className={styles["sidebar-placeholder"]} style={{ opacity: 0 }}>
+            <div
+              className={`${styles["sidebar-placeholder"]} ${styles.secondary}`}
+              style={{ opacity: 0 }}
+            >
               <Sidebar structured={false} />
             </div>
         }
         {
           typewriterDone && pathName.startsWith('/docs') &&
-            <div className={styles["sidebar-wrapper"]}>
+            <div className={`${styles["sidebar-wrapper"]} ${styles.secondary}`}>
               <Sidebar structured={false} />
             </div>
         }

@@ -4,10 +4,6 @@ div#page {
   animation: fade-in 1s ease forwards;
 }
 
-div#page > div#breadcrumbs-wrapper {
-  display: none;
-}
-
 div#page > div#background {
   pointer-events: none;
   user-select: none;
@@ -48,12 +44,6 @@ div#page > div#content > ul > li.post > span:first-child {
 }
 
 @media (max-width: 860px /* 80px + 700px + 80px */) {
-  div#page > div#breadcrumbs-wrapper {
-    display: revert;
-    margin: 40px 40px -40px 40px;
-    animation: fade-in-from-above 1s ease forwards;
-  }
-
   div#page > div#content > ul > li.post {
     flex-direction: column;
     gap: 8px;
@@ -67,27 +57,5 @@ div#page > div#content > ul > li.post > span:first-child {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fade-in-from-below {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-from-above {
-  from {
-    opacity: 0;
-    transform: translateY(-24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
