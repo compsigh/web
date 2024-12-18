@@ -23,24 +23,13 @@ article.post > div.sidebar-placeholder {
 
 article.post > div.sidebar-wrapper,
 article.post > div.content > div.authors-and-content {
-  animation: fadeInFromBelow 1s ease forwards;
+  animation: fade-in-from-below 1s ease forwards;
 }
 
-@keyframes fadeInFromBelow {
+@keyframes fade-in-from-below {
   from {
     opacity: 0;
     transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInFromAbove {
-  from {
-    opacity: 0;
-    transform: translateY(-24px);
   }
   to {
     opacity: 1;
