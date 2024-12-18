@@ -27,10 +27,6 @@ div#page > div#twinkle-wrapper {
   animation: fade-in 1s ease forwards;
 }
 
-div#page > div#breadcrumbs-wrapper {
-  display: none;
-}
-
 div#page > div#content > div.event-list-container {
   max-width: var(--max-width);
   margin-left: auto;
@@ -144,14 +140,6 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   margin-left: 16px;
 }
 
-@media (max-width: 860px /* 80px + 700px + 80px */) {
-  div#page > div#breadcrumbs-wrapper {
-    display: revert;
-    margin: 40px 40px -40px 40px;
-    animation: fade-in-from-above 1s ease forwards;
-  }
-}
-
 @media (max-width: 1160px) {
   div#page > div#content {
     flex-direction: column;
@@ -175,27 +163,5 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fade-in-from-below {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-from-above {
-  from {
-    opacity: 0;
-    transform: translateY(-24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

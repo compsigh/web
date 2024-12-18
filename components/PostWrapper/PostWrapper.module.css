@@ -26,11 +26,6 @@ article.post > div.content > div.authors-and-content {
   animation: fadeInFromBelow 1s ease forwards;
 }
 
-article.post > div.content > div.breadcrumbs-wrapper,
-article.post > div.content > div.breadcrumbs-placeholder {
-  display: none;
-}
-
 @keyframes fadeInFromBelow {
   from {
     opacity: 0;
@@ -62,21 +57,6 @@ article.post > div.content > div.breadcrumbs-placeholder {
   article.post > div.sidebar-wrapper,
   article.post > div.sidebar-placeholder {
     display: none;
-  }
-
-  article.post > div.content > div.breadcrumbs-wrapper,
-  article.post > div.content > div.breadcrumbs-placeholder {
-    display: revert;
-    margin-top: 40px;
-    margin-bottom: -40px;
-}
-
-  article.post > div.content > div.breadcrumbs-wrapper {
-    animation: fadeInFromAbove 1s ease forwards;
-  }
-
-  article.post > div.content > div.breadcrumbs-placeholder {
-    opacity: 0;
   }
 }
 
