@@ -41,10 +41,20 @@ article.post > div.content > div.authors-and-content {
   article.post {
     max-width: var(--max-width);
     margin: var(--margin);
+    flex-direction: column-reverse;
   }
 
   article.post > div.sidebar-wrapper,
   article.post > div.sidebar-placeholder {
+    position: static;
+    width: 80vw;
+    margin: 0 40px;
+  }
+
+  /* "Secondary": any sidebar that's not fixed, e.g. a generated table of contents, */
+  /* WHEN there's a fixed sidebar present. */
+  article.post > div.sidebar-wrapper.secondary,
+  article.post > div.sidebar-placeholder.secondary {
     display: none;
   }
 }

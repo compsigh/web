@@ -170,13 +170,16 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
         </div>
         {
           !typewriterDone && pathName.startsWith('/docs') &&
-            <div className={styles["sidebar-placeholder"]} style={{ opacity: 0 }}>
+            <div
+              className={`${styles["sidebar-placeholder"]} ${styles.secondary}`}
+              style={{ opacity: 0 }}
+            >
               <Sidebar structured={false} />
             </div>
         }
         {
           typewriterDone && pathName.startsWith('/docs') &&
-            <div className={styles["sidebar-wrapper"]}>
+            <div className={`${styles["sidebar-wrapper"]} ${styles.secondary}`}>
               <Sidebar structured={false} />
             </div>
         }
