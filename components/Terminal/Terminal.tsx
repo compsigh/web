@@ -192,7 +192,10 @@ export function Terminal() {
           <div id="terminal-path">
             ~{pathname}
           </div>
-          <Command.Input autoFocus />
+          {
+            !displayToggle &&
+              <Command.Input autoFocus />
+          }
         </Command.Dialog>
       </div>
     </>
