@@ -1,0 +1,69 @@
+div#page {
+  display: flex;
+  animation: fade-in 1s ease forwards;
+}
+
+div#page > div#twinkle-wrapper {
+  z-index: -1;
+}
+
+div#page > div#content {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#page > div#content > div#cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+div#page > div#content > div#cover > h1#title {
+  margin: 0;
+  font-family: var(--font-delko);
+  font-size: 5rem;
+  letter-spacing: 0.02em;
+  color: var(--color-light);
+  text-shadow: 0 0 10px var(--color-light-50);
+  width: fit-content;
+}
+
+div#page > div#content > div#cover > p#subtitle {
+  font-family: var(--font-ia-writer-mono);
+}
+
+nav#structured-sidebar {
+  font-family: var(--font-ia-writer-mono);
+}
+
+nav#structured-sidebar ul li::before {
+  content: "";
+}
+
+nav#structured-sidebar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px 6px;
+  color: var(--color-light);
+  transition: all 0.2s ease;
+}
+
+nav#structured-sidebar ul li a:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
