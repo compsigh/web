@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Twinkle } from '@/components/Twinkle'
 
 // Styles
-import styles from './Manual.module.css'
+import styles from './Framework.module.css'
 
 function Entry(
   { entry }:
@@ -33,7 +33,7 @@ function TableOfContents(
   )
 }
 
-export default function Manual() {
+export default function Framework() {
   return (
     <>
       <div id={styles.page}>
@@ -47,16 +47,16 @@ export default function Manual() {
         </div>
         <div id={styles.content}>
           <div id={styles.cover}>
-            <h1 id={styles.title}>the manual</h1>
+            <h1 id={styles.title}>framework</h1>
             <p id={styles.subtitle}>
               <em>documenting the mission &amp; methods of compsigh leadership</em>
             </p>
             <TableOfContents
               entries={[
-                { text: 'preface', link: '/docs/manual/preface' },
-                { text: 'hosting events', link: '/docs/manual/hosting-events' },
-                { text: 'promoting events', link: '/docs/manual/promoting-events' },
-                { text: 'leadership structure', link: '/docs/manual/leadership-structure' },
+                { text: 'preface', link: '/docs/framework/preface' },
+                { text: 'hosting events', link: '/docs/framework/hosting-events' },
+                { text: 'promoting events', link: '/docs/framework/promoting-events' },
+                { text: 'leadership structure', link: '/docs/framework/leadership-structure' },
               ]}
             />
           </div>
