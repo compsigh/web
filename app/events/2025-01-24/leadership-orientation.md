@@ -24,6 +24,7 @@ Note: date/time a placeholder; we'll figure out based on our schedules what's be
 - Going over [framework](/docs/framework)
 - Reviewing + adjusting leadership roles & responsibilities [from last semester](/events/2024-08-27/leadership-type-shit)
 - Planning first compsigh night according to framework documentation
+- Discussion on opening up compsigh nights semi-privately to people our age in SF
 - Introducing & scaffolding a timeline for the big events: cascade, BLOOM (we should *announce* both at first compsigh night)
 - Planning for Spring Involvement Fair
 - Inaugurating Nish
