@@ -9,13 +9,11 @@ authors: [
 ]
 event_details: {
   hide_on_timeline: true,
-  start: 1737759600,
-  end: 1737763200,
+  start: 1737403200,
+  end: 1737406800,
   location: "The Hive"
 }
 ---
-
-Note: date/time a placeholder; we'll figure out based on our schedules what's best. Key is to meet before first compsigh night.
 
 ## Agenda
 
@@ -28,6 +26,7 @@ Note: date/time a placeholder; we'll figure out based on our schedules what's be
 - Introducing & scaffolding a timeline for the big events: cascade, BLOOM (we should *announce* both at first compsigh night)
 - Planning for Spring Involvement Fair
 - Inaugurating Nish
+- Disassembling the Winter night tree
 
 ## Radar
 
