@@ -53,10 +53,10 @@ export default function Framework() {
             </p>
             <TableOfContents
               entries={[
-                { text: 'preface', link: '/docs/framework/preface' },
-                { text: 'hosting events', link: '/docs/framework/hosting-events' },
-                { text: 'promoting events', link: '/docs/framework/promoting-events' },
-                { text: 'leadership structure', link: '/docs/framework/leadership-structure' },
+                { text: 'Preface', link: 'https://github.com/compsigh/framework/blob/main/01%20Preface.md' },
+                { text: 'Leadership structure', link: 'https://github.com/compsigh/framework/blob/main/02%20Leadership%20structure.md' },
+                { text: 'Leadership processes', link: 'https://github.com/compsigh/framework/blob/main/03%20Leadership%20processes.md' },
+                { text: 'Events', link: 'https://github.com/compsigh/framework/blob/main/04%20Events.md' },
               ]}
             />
           </div>
