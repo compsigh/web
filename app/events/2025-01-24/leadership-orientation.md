@@ -22,17 +22,18 @@ event_details: {
 - Going over [framework](/docs/framework)
 - Reviewing + adjusting leadership roles & responsibilities [from last semester](/events/2024-08-27/leadership-type-shit)
 - Planning first compsigh night according to framework documentation
-- Discussion on opening up compsigh nights semi-privately to people our age in SF
+- Discussing opening up compsigh nights semi-privately to people our age in SF
 - Introducing & scaffolding a timeline for the big events: cascade, BLOOM (we should *announce* both at first compsigh night)
 - Planning for Spring Involvement Fair
+- Going over ideas mentioned in [GitHub Issues](https://github.com/compsigh/web/issues)
 - Inaugurating Nish
 - Disassembling the Winter night tree
 
 ## Radar
 
 - compsigh LLC
-- Continuing to expand leadership
-- Leadership transition
+- Leadership transition — introing Jet to contacts
+- Should we be looking to continue expanding leadership this semester, given the gap that is Summer break?
 
 ## Notes
 
