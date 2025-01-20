@@ -32,6 +32,7 @@ event_details: {
 ## Radar
 
 - compsigh LLC
+- Culture pulse check
 - Leadership transition — introing Jet to contacts
 - Should we be looking to continue expanding leadership this semester, given the gap that is Summer break?
 
