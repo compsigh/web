@@ -23,14 +23,15 @@ Reminder to prefer depth > breadth and not rush through items
   - Everyone shares contact info
   - Calendar updates? (Jet, Quinn)
 - *Full* runthrough of [framework](/docs/framework)
+- Spring Involvement Fair check-in and tabling materials brainstorm
+  - Posters?
+- Scoping out the next couple compsigh nights (activities)
 - cascade
   - Review changes from v2
   - Timeline expectations: *Who's working on what?* *When should we get together?* Ideally getting started on some of these things
 - BLOOM
   - Update re: department blessing
   - Review todos and timeline expectations
-- Spring Involvement Fair check-in and tabling materials brainstorm
-  - Posters?
 - Time permitting, going over ideas mentioned in [GitHub Issues](https://github.com/compsigh/web/issues)
 - Next meeting date/time, ideally stable and reliable by now
 
