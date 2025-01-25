@@ -32,14 +32,54 @@ Reminder to prefer depth > breadth and not rush through items
 - BLOOM
   - Update re: department blessing
   - Review todos and timeline expectations
-- Time permitting, going over ideas mentioned in [GitHub Issues](https://github.com/compsigh/web/issues)
 - Next meeting date/time, ideally stable and reliable by now
 
 ## Notes
 
+- Jet still shifting classes around; should be solidified by next meeting
+- All good on sharing contact info in `#leadership`
+- framework runthrough good
+- Spring Involvement Fair
+  - Jet will draft a new poster design
+  - Quinn and Nish on candy
+  - Good tablecloth
+  - Demos of projects
+- Next couple compsigh nights
+  - 2025-01-31: Edward workshop
+  - Bring back technically speaking?
+  - Game night collab (ACV?)
+  - Demos (Dave?)
+- Reviewed [roadmap for cascade v3](https://github.com/compsigh/cascade/blob/main/ROADMAP.md)
+- Edward and Gursh jamming on cascade, but probably later, BLOOM takes priority
+- Next meeting: work sesh on BLOOM
+- Next meeting: 2025-01-31 4–5pm
+
 ## Todos
+
+### Spring Involvement Fair prep
+
+- Jet: poster draft
+- Quinn and Nish: candy
+- Edward: tablecloth
+- We decide what project(s) to demo at Spring Involvement Fair
+
+### Next compsigh nights
+
+- Edward preps workshop for compsigh night v2025.01.31
+- More discussion on bringing back technically speaking
+- Reach out to ACV re: game night collab
+
+### Promo
+
+- Reach out to professors for promoting compsigh nights in their classes
+- Gursh: photos from compsigh night v2025.01.24
+- Edward: compsigh night v2025.01.24 recap post on the web platform
+
+### BLOOM
+
+- Edward: poster drafts
 
 ## Next meeting outline
 
-- First compsigh night debrief
 - Spring Involvement Fair debrief
+- BLOOM work sesh
