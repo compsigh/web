@@ -57,6 +57,7 @@ export default function Framework() {
                 { text: 'Leadership structure', link: 'https://github.com/compsigh/framework/blob/main/02%20Leadership%20structure.md' },
                 { text: 'Leadership processes', link: 'https://github.com/compsigh/framework/blob/main/03%20Leadership%20processes.md' },
                 { text: 'Events', link: 'https://github.com/compsigh/framework/blob/main/04%20Events.md' },
+                { text: 'Relationships & contacts', link: 'https://github.com/compsigh/framework/blob/main/05%20Relationships%20%26%20contacts.md' }
               ]}
             />
           </div>

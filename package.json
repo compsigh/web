@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
+    "@vercel/edge-config": "^1.4.0",
     "cmdk": "^1.0.0",
     "next": "^14.2.15",
     "next-mdx-remote": "^5.0.0",
