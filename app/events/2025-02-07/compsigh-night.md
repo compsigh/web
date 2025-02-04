@@ -4,7 +4,7 @@ description: "from Twitter to job offer: a practical workshop on starting & docu
 event_details: {
   start: 1738980000,
   location: "The Hive",
-  cover_image: "/banners/compsigh-night.png",
+  cover_image: "/events/2025-01-24/compsigh-night-spring.jpeg",
   activities: [
     { title: "Share Your Work(shop) by Edward", time_offset: 900 },
   ],
