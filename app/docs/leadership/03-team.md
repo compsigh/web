@@ -9,6 +9,7 @@ slug: "docs/leadership/team"
 
 - Jet Pham
 - Nishil Anand
+- Kiana Yassini
 - Gurshan Singh
 - Quinn Brockmyre
 - Edward Shturman
