@@ -4,7 +4,7 @@ description: "The hackathon for the arts & sciences, join us for our first-ever 
 event_details: {
   start: 1740794400,
   location: "The Hive",
-  cover_image: "/events/2025-01-24/compsigh-night-spring.jpeg",
+  cover_image: "/events/2025-02-28/bloom.png",
   pictures: [],
   link: "https://bloom.build/"
 }
