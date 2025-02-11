@@ -6,7 +6,7 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2025-01-24/compsigh-night-spring.jpeg",
   activities: [
-    { title: "Gursh: git workshop part 2", time_offset: 900 },
+    { title: "Get Good at GitHub with Gursh", time_offset: 900 },
   ],
   pictures: [],
   link: null

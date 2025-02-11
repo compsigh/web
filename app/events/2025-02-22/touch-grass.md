@@ -1,5 +1,5 @@
 ---
-title: "Touch Grass"
+title: "compsigh × ACV: touch grass"
 description: "alright CS majors, time to get out of the dorm room. we go minigolf :)"
 event_details: {
   start: 1740276000,
