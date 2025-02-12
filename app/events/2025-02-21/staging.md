@@ -4,7 +4,7 @@ description: "new to hackathons? not sure who you want to team with for BLOOM? c
 event_details: {
   start: 1740189600,
   location: "The Hive",
-  cover_image: "/events/2025-01-24/compsigh-night-spring.jpeg",
+  cover_image: "/events/2025-02-21/staging-spring.png",
   pictures: [],
   link: null
 }
