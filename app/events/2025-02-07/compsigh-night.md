@@ -7,8 +7,7 @@ event_details: {
   cover_image: "/events/2025-02-07/share-your-workshop.png",
   activities: [
     { title: "Share Your Work(shop) by Edward", time_offset: 900 },
-    { title: "Headshots with Gursh", time_offset: 3600 },
-    { title: "Group project pitches", time_offset: 5400 }
+    { title: "Headshots with Gursh", time_offset: 3600 }
   ],
   pictures: [],
   link: null
