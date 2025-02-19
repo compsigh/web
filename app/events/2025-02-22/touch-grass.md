@@ -6,6 +6,6 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2025-02-22/touch-grass-golf.png",
   pictures: [],
-  link: null
+  link: "https://partiful.com/e/9MIaSlxKwG2CKtCOcYq7"
 }
 ---
