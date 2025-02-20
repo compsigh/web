@@ -15,3 +15,9 @@
     transform: rotate(0deg);
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .emote {
+    animation: rotate 2s linear infinite;
+  }
+}

@@ -98,13 +98,13 @@ const emoteSrcs: Record<Emote, string> = {
 export function Emote({ emote }: { emote: Emote }) {
   return (
     <Image
+      className='emoteImage'
       src={emoteSrcs[emote]}
       alt={emote}
       width={24}
       height={24}
       style={{
         opacity: 0.5,
-        animation: 'rotate 2s linear infinite',
         animationDelay: `${Math.random() * 2}s`,
         pointerEvents: 'none'
       }}
