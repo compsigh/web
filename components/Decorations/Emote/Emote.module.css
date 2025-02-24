@@ -1,3 +1,8 @@
+img.emote {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

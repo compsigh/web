@@ -103,11 +103,7 @@ export function Emote({ emote }: { emote: Emote }) {
       alt={emote}
       width={24}
       height={24}
-      style={{
-        opacity: 0.5,
-        animationDelay: `${Math.random() * 2}s`,
-        pointerEvents: 'none'
-      }}
+      style={{ animationDelay: `${Math.random() * 2}s` }}
     />
   )
 }
