@@ -8,7 +8,10 @@ export function HiveVideo() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches
+
     function handleMouseMove(event: MouseEvent) {
+      if (prefersReducedMotion) return
       const { clientX, clientY } = event
       const { innerWidth, innerHeight } = window
       const offsetX = ((clientX / innerWidth) - 0.5) * -2

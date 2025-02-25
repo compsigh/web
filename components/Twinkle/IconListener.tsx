@@ -10,7 +10,10 @@ export function IconListener({
   const iconRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches
+
     function handleMouseMove(event: MouseEvent) {
+      if (prefersReducedMotion) return
       const icon = iconRef.current
       if (!icon) return
 

@@ -1,3 +1,8 @@
+img.emote {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -13,5 +18,11 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emote {
+    animation: rotate 2s linear infinite;
   }
 }

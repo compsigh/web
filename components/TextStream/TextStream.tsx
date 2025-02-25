@@ -11,6 +11,8 @@ export function TextStream(
   const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?'.split('')
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches
+    if (prefersReducedMotion) return
     setIsLoaded(true)
   }, [])
 
@@ -25,5 +27,6 @@ export function TextStream(
           ignoreCharacterSet={[' ']}
         />
       </span>
-    : <></>
+    :
+      <span>{text}</span>
 }

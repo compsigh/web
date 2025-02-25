@@ -11,7 +11,12 @@ export function NeonSunsetVideo() {
   const moonRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches
+    if (prefersReducedMotion && videoRef.current)
+      videoRef.current.playbackRate = 0
+
     function handleMouseMove(event: MouseEvent) {
+      if (prefersReducedMotion) return
       const { clientX } = event
       const { innerWidth } = window
       const offsetX = ((clientX / innerWidth) - 0.5) * -2
