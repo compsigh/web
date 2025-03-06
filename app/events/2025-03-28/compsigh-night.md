@@ -4,7 +4,10 @@ description: "weekly compsigh nights, Fridays at 6pm in the Social Hive. come ch
 event_details: {
   start: 1743210000,
   location: "The Hive",
-  cover_image: "/events/2025-01-24/compsigh-night-spring.jpeg",
+  cover_image: "/events/2025-03-28/get-good-at-github.png",
+  activities: [
+    { title: "Get Good at GitHub with Gursh", time_offset: 900 },
+  ],
   pictures: [],
   link: null
 }
