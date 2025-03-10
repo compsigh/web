@@ -28,6 +28,9 @@ export function EventList({
     const container = containerRef.current
     if (!container) return
 
+    const hash = window.location.hash;
+    if (hash) return
+
     const nowEvents = container.querySelectorAll(`.${styles["now-event"]}`)
     const upcomingEvents = container.querySelectorAll(`.${styles["upcoming-event"]}`)
     const pastEvents = container.querySelectorAll(`.${styles["past-event"]}`)
