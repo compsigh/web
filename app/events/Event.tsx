@@ -1,3 +1,6 @@
+import path from 'node:path'
+import fs from 'fs'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { EventFrontmatter } from './page'
@@ -8,12 +11,23 @@ import { StatusIndicator } from '@/components/StatusIndicator'
 
 import styles from './Events.module.css'
 
+function readEventMarkdownFilename(date: string): string {
+  try {
+    const files = fs.readdirSync(path.join(process.cwd(), 'app/events', date))
+    return '-' + files[files.length-1].split('.')[0]
+  } catch {
+    return ''
+  }
+}
+
 export function Event({ event }: { event: EventFrontmatter }) {
   const { start, end } = event.event_details
   const currentYear = new Date().getFullYear()
   const year = new Date(start * 1000).getFullYear()
   const startDate = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: '2-digit', year: year === currentYear ? undefined : 'numeric' }).replace(',', '')
   const startTime = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' })
+  const idStartDate = new Date(start * 1000).toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles'})
+  const mdFilename = readEventMarkdownFilename(idStartDate)
 
   const currentUnixTimestamp = Math.floor(Date.now() / 1000)
   function isEventHappeningNow(start: number, end: number) {
@@ -26,7 +40,12 @@ export function Event({ event }: { event: EventFrontmatter }) {
 
   return (
     <>
-      <p className={styles.date}>{startDate}</p>
+      <p
+        id={`${idStartDate}${mdFilename}`}
+        className={styles.date}
+      >
+        {startDate}
+      </p>
       {
         event.event_details.cover_image &&
           <Media
