@@ -1,9 +1,6 @@
-// @ts-check
+import { type NextConfig } from 'next'
 
-/**
- * @type {import('next').NextConfig}
- **/
-const nextConfig = {
+const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   reactStrictMode: true,
   transpilePackages: ['next-mdx-remote']
