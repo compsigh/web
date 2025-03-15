@@ -11,7 +11,7 @@ datasource db {
 }
 
 model MarqueeEntry {
-  id       String @id @unique // discord id
-  nickname String // discord nickname
-  project  String // name of the project
+  id       String @id @unique // Discord user ID
+  nickname String // Discord server member nickname, or user display name if null
+  project  String
 }
