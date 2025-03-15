@@ -7,6 +7,7 @@ import {
 
 // Components
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { Marquee } from '@/components/Marquee'
 import { TextStream } from '@/components/TextStream'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
@@ -30,13 +31,15 @@ async function getPosts() {
   return posts
 }
 
-export const dynamic = "force-dynamic"
+export const experimental_ppr = true
 export default async function Community() {
   const posts = await getPosts()
   return (
     <>
       <div id={styles.page}>
-        <Marquee />
+        <Suspense fallback={<></>}>
+          <Marquee />
+        </Suspense>
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
           <ul>
