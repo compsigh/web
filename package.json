@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@prisma/client": "6.5.0",
-    "@vercel/edge-config": "^1.4.0",
+    "@vercel/edge-config": "1.4.0",
     "cmdk": "^1.0.0",
     "image-size": "^2.0.1",
     "next": "^14.2.15",
