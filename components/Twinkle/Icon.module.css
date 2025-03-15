@@ -1,9 +1,9 @@
 div.icon {
-  animation: fluctuateOpacity 2s ease infinite;
+  animation: fluctuate-opacity 2s ease infinite;
   pointer-events: none;
 }
 
-@keyframes fluctuateOpacity {
+@keyframes fluctuate-opacity {
   0% {
     opacity: 1;
   }

@@ -424,6 +424,31 @@ These two paragraphs could use some space
 </Playground>
 </details>
 
+### Hiding content
+
+<details>
+<summary>To hide some content and have it only render in your editor or GitHub preview, you can wrap it in `Hidden`:</summary>
+
+```mdx showLineNumbers title="staging.md"
+## Panel
+
+### Agenda
+
+### Panelists
+
+### Questions
+
+<Hidden>
+  ## Setup
+
+  ### Fall decorations
+
+  ### Snacks
+</Hidden>
+```
+
+</details>
+
 ## Metadata
 
 <details>

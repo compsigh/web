@@ -9,7 +9,6 @@ import {
 import Link from 'next/link'
 import { Marquee } from '@/components/Marquee'
 import { TextStream } from '@/components/TextStream'
-import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
 // Styles
@@ -37,9 +36,6 @@ export default async function Community() {
     <>
       <div id={styles.page}>
         <Marquee />
-        <div id={styles["breadcrumbs-wrapper"]}>
-          <Breadcrumbs />
-        </div>
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
           <ul>

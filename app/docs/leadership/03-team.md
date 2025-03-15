@@ -5,6 +5,15 @@ previous: { text: "Joining compsigh leadership", link: "/docs/leadership/joining
 slug: "docs/leadership/team"
 ---
 
+## Spring 2025
+
+- Jet Pham
+- Nishil Anand
+- Kiana Yassini
+- Gurshan Singh
+- Quinn Brockmyre
+- Edward Shturman
+
 ## Fall 2024
 
 - Jet Pham

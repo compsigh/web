@@ -10,6 +10,7 @@ export function Terminal() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const container = useRef<HTMLDivElement | null>(null)
+  const [displayToggle, setDisplayToggle] = useState(false)
   const [displayTerminalEdu, setDisplayTerminalEdu] = useState(false)
   const [terminalEduStyle, setTerminalEduStyle] = useState<'subtle' | 'full'>('full')
 
@@ -37,8 +38,10 @@ export function Terminal() {
     }
 
     const hideTerminalEduOnSmallerScreens = () => {
-      if (window.innerWidth < 860)
+      if (window.innerWidth < 860) {
         setDisplayTerminalEdu(false)
+        setDisplayToggle(true)
+      }
     }
 
     const hideSubtleTerminalEduAfterDelay = () => {
@@ -137,6 +140,17 @@ export function Terminal() {
     )
   }
 
+  function TerminalToggle() {
+    return (
+      <button
+        id="terminal-toggle"
+        onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: '/' }))}
+      >
+        <kbd>/</kbd>
+      </button>
+    )
+  }
+
   return (
     <>
       <div id="page-dimmer"
@@ -148,7 +162,8 @@ export function Terminal() {
         ref={container}
         id="terminal-container"
       >
-        {displayTerminalEdu &&
+        {
+          displayTerminalEdu &&
             <div
               id="terminal-edu"
               className={terminalEduStyle}
@@ -160,7 +175,11 @@ export function Terminal() {
               </span>
               <span>&gt;</span>
             </div>
-          }
+        }
+        {
+          displayToggle &&
+            <TerminalToggle />
+        }
         <Command.Dialog
           container={container.current ?? undefined}
           open={open}
@@ -173,7 +192,10 @@ export function Terminal() {
           <div id="terminal-path">
             ~{pathname}
           </div>
-          <Command.Input autoFocus />
+          {
+            !displayToggle &&
+              <Command.Input autoFocus />
+          }
         </Command.Dialog>
       </div>
     </>

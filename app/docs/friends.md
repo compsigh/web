@@ -5,6 +5,7 @@ description: "Shoutout to these departments and clubs for being awesome to work 
 
 Shoutout to these departments and clubs for being awesome to work with:
 
+- Dons Esports
 - CS Department
 - Engineering Department
 - Game Design Club (GDC)

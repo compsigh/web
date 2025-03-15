@@ -19,6 +19,7 @@ import { Note } from '@/components/Note'
 import { Media } from '@/components/Media'
 import { Spacer } from '@/components/Spacer'
 import { Author } from '@/components/Author'
+import { Hidden } from '@/components/Hidden'
 import { LinkBar } from '@/components/LinkBar'
 import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
@@ -106,7 +107,7 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
 
     const { content, frontmatter } = await compileMDX<Frontmatter>({
       source: page,
-      components: { CasePreserver, Grid, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
+      components: { CasePreserver, Grid, Hidden, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
