@@ -1,5 +1,6 @@
 'use client'
 
+import { type JSX } from 'react'
 import useSound from 'use-sound'
 
 import styles from './Soundboard.module.css'

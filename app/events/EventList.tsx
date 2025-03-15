@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { type JSX, useEffect, useRef } from 'react'
 
 import { Spacer } from '@/components/Spacer'
 
