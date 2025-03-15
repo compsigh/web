@@ -11,7 +11,7 @@
   },
   "private": true,
   "scripts": {
-    "predev": "npm install",
+    "predev": "npm install --force",
     "dev": "next dev --turbopack",
     "build": "next build",
     "postinstall": "prisma generate",
@@ -25,7 +25,7 @@
     "cmdk": "1.1.1",
     "image-size": "2.0.1",
     "next": "15.2.2",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-random-reveal": "^2.0.1",
