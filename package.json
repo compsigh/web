@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "predev": "npm install",
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "postinstall": "prisma generate",
     "start": "next start",
@@ -24,10 +24,10 @@
     "@vercel/edge-config": "1.4.0",
     "cmdk": "1.1.1",
     "image-size": "2.0.1",
-    "next": "^14.2.15",
+    "next": "15.2.2",
     "next-mdx-remote": "^5.0.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-random-reveal": "^2.0.1",
     "rehype-katex": "^7.0.1",
     "rehype-pretty-code": "^0.14.0",
@@ -42,10 +42,10 @@
   "devDependencies": {
     "@types/howler": "^2.2.12",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
     "eslint": "^8",
-    "eslint-config-next": "^14.2.15",
+    "eslint-config-next": "15.2.2",
     "prisma": "6.5.0",
     "typescript": "^5"
   }

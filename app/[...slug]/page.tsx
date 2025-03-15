@@ -137,9 +137,10 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
 }
 
 export async function generateMetadata(
-  { params }:
-  { params: { slug: string[] } }
+  props:
+  { params: Promise<{ slug: string[] }> }
 ) {
+  const params = await props.params
   const { frontmatter } = await readMarkdownFileAtRoute(params.slug)
   const metadata: Metadata = {
     title: frontmatter.title,
@@ -221,9 +222,10 @@ export async function generateStaticParams() {
 }
 
 export default async function Page(
-  { params }:
-  { params: { slug: string[] } }
+  props:
+  { params: Promise<{ slug: string[] }> }
 ) {
+  const params = await props.params
   const { content, frontmatter } = await readMarkdownFileAtRoute(params.slug)
   if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (
