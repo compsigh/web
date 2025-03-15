@@ -20,13 +20,12 @@
     "migrate": "dotenv -e .env.local prisma migrate dev"
   },
   "dependencies": {
-    "@plaiceholder/next": "^3.0.0",
     "@prisma/client": "^5.22.0",
     "@vercel/edge-config": "^1.4.0",
     "cmdk": "^1.0.0",
+    "image-size": "^2.0.1",
     "next": "^14.2.15",
     "next-mdx-remote": "^5.0.0",
-    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-random-reveal": "^2.0.1",
