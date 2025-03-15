@@ -22,7 +22,7 @@
   "dependencies": {
     "@prisma/client": "6.5.0",
     "@vercel/edge-config": "1.4.0",
-    "cmdk": "^1.0.0",
+    "cmdk": "1.1.1",
     "image-size": "^2.0.1",
     "next": "^14.2.15",
     "next-mdx-remote": "^5.0.0",
