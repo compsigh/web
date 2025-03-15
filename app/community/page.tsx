@@ -1,13 +1,17 @@
-import Link from 'next/link'
+// Functions
 import {
   type Frontmatter,
   generateUnmodifiedSlugsFromMarkdownFiles,
   readMarkdownFileAtRoute
 } from '@/app/[...slug]/page'
 
+// Components
+import Link from 'next/link'
+import { Marquee } from '@/components/Marquee'
 import { TextStream } from '@/components/TextStream'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
+// Styles
 import styles from './Community.module.css'
 
 export type PostFrontmatter = Frontmatter & { post_date: number }
@@ -26,11 +30,13 @@ async function getPosts() {
   return posts
 }
 
+export const dynamic = "force-dynamic"
 export default async function Community() {
   const posts = await getPosts()
   return (
     <>
       <div id={styles.page}>
+        <Marquee />
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
           <ul>
