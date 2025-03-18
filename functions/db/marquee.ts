@@ -24,7 +24,7 @@ export async function updateMarqueeEntry(marquee: MarqueeEntry) {
   })
 }
 
-export async function deleteMarqueeEntry(id: string) {
+export async function deleteMarqueeEntries(id: string) {
   const result = await prisma.marqueeEntry.deleteMany({
     where: { id }
   })

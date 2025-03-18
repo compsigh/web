@@ -2,7 +2,7 @@ import {
   getMarqueeEntry,
   newMarqueeEntry,
   updateMarqueeEntry,
-  deleteMarqueeEntry
+  deleteMarqueeEntries
 } from '@/functions/db/marquee'
 
 export async function POST(request: Request) {
@@ -22,7 +22,9 @@ export async function POST(request: Request) {
 
 export async function DELETE(request: Request) {
   const body = await request.json()
-  const numDeleted = await deleteMarqueeEntry(body.id);
+  if (!body.id)
+    return Response.json({ error: 'Missing required fields' }, { status: 400 })
 
-  return Response.json({ numDeleted });
+  const numDeleted = await deleteMarqueeEntries(body.id)
+  return Response.json({ count: numDeleted })
 }
