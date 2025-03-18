@@ -23,3 +23,10 @@ export async function updateMarqueeEntry(marquee: MarqueeEntry) {
     data: marquee
   })
 }
+
+export async function deleteMarqueeEntries(id: string) {
+  const result = await prisma.marqueeEntry.deleteMany({
+    where: { id }
+  })
+  return result.count
+}
