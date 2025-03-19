@@ -1,3 +1,5 @@
+import { connection } from 'next/server'
+
 // Functions
 import { getAllMarqueeEntries } from '@/functions/db/marquee'
 
@@ -5,6 +7,7 @@ import { getAllMarqueeEntries } from '@/functions/db/marquee'
 import styles from './Marquee.module.css'
 
 export async function Marquee() {
+  await connection()
   const marqueeEntries = await getAllMarqueeEntries()
   return (
     <>
