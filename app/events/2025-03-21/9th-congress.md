@@ -23,6 +23,7 @@ event_details: {
 - Edward: status update on [BLOOM prizes](https://github.com/compsigh/compsigh/issues/44)
 - Gursh & Kiana: status update on [compsigh night v2025.02.14 – v2025.02.21 recap post](https://github.com/compsigh/compsigh/issues/39)
 - Gursh: status update on BLOOM pictures
+- Gursh: status update on GitHub workshop
 - Gursh: status update on [cascade](https://github.com/compsigh/compsigh/issues/46) platform
 - Jet: status update on cascade riddles
 
