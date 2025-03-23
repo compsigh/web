@@ -53,5 +53,5 @@ event_details: {
     - Stickers
     - A demo of a member's project (but make it accessible — see debrief notes from Involvement Fair)
     - A cutesy slideshow/montage of compsigh nights / BLOOM / DEPLOY photos
-- cascade scheduled for
+- cascade scheduled for April 25th
 - Generally, we will pick up the pace a bit over the next couple weeks
