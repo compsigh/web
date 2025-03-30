@@ -71,18 +71,18 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > p.date {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event p.date {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.title-and-time {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p.title {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.title-and-time > p.title {
   margin: 0;
   font-family: var(--font-tronica-mono);
   font-size: 2rem;
@@ -92,49 +92,49 @@ div#page > div#content > div.event-list-container > div.event-wrapper > div.even
   line-height: 1.2;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > p.time {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.title-and-time > p.time {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
   white-space: nowrap;
   margin-left: 16px;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.title-and-time > div.now {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.title-and-time > div.now > span {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.title-and-time > div.now > span {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.location {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.location {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > div.location > p {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event div.location > p {
   font-family: var(--font-proto-mono);
   color: var(--color-light-50);
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event ul.activities > li {
   position: relative;
   display: flex;
   justify-content: space-between;
   font-family: var(--font-proto-mono);
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li::before {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event ul.activities > li::before {
   content: ">";
   margin-top: unset;
   color: unset;
 }
 
-div#page > div#content > div.event-list-container > div.event-wrapper > div.event > ul.activities > li > span.activity-time {
+div#page > div#content > div.event-list-container > div.event-wrapper > div.event ul.activities > li > span.activity-time {
   color: var(--color-light-50);
   white-space: nowrap;
   margin-left: 16px;

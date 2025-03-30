@@ -47,11 +47,8 @@ export function Event({ event }: { event: EventFrontmatter }) {
   }
 
   return (
-    <>
-      <p
-        id={id}
-        className={styles.date}
-      >
+    <div id={id}>
+      <p className={styles.date}>
         {startDate}
       </p>
       {
@@ -138,6 +135,6 @@ export function Event({ event }: { event: EventFrontmatter }) {
           })}
         </ul>
       }
-    </>
+    </div>
   )
 }
