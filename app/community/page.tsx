@@ -45,8 +45,6 @@ export default async function Community() {
           <ul>
             {
               Object.entries(posts).map(([slug, post], index) => {
-                const currentYear = new Date().getFullYear()
-                const year = new Date(post.post_date * 1000).getFullYear()
                 const formattedPostDate = new Date(post.post_date * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: '2-digit', year: 'numeric' }).replace(',', '')
                 return (
                   <li key={index} className={styles.post}>

@@ -79,7 +79,7 @@ export async function GET(request: Request) {
         {/* Noise */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={noise as any}
+          src={noise as unknown as string}
           alt=""
           style={{
             position: 'absolute',
@@ -106,7 +106,7 @@ export async function GET(request: Request) {
           <img
             width={40}
             height={40}
-            src={compsighLogo as any}
+            src={compsighLogo as unknown as string}
             alt=""
           />
           <div

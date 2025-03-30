@@ -16,7 +16,7 @@ export type EventFrontmatter = Omit<Frontmatter, 'event_details'> & { event_deta
 
 async function getEvents() {
   const markdownFiles = await generateUnmodifiedSlugsFromMarkdownFiles('app/events')
-  let events: Frontmatter[] = []
+  const events: Frontmatter[] = []
   for (const { slug } of markdownFiles) {
     const { frontmatter } = await readMarkdownFileAtRoute(slug)
     if (!frontmatter.event_details)
@@ -40,9 +40,9 @@ async function getEvents() {
 }
 
 function designateEvents(events: EventFrontmatter[]) {
-  let now = []
-  let upcoming = []
-  let past = []
+  const now = []
+  const upcoming = []
+  const past = []
 
   const currentUnixTimestamp = Math.floor(Date.now() / 1000)
   function isEventHappeningNow(start: number, end: number) {

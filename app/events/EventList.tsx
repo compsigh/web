@@ -55,7 +55,7 @@ export function EventList({
     const handleScroll = () => {
       const eventElements = container.querySelectorAll(`.${styles["event-wrapper"]}, p.${styles.heading}, hr`)
 
-      eventElements.forEach((event, index) => {
+      eventElements.forEach(event => {
         const htmlElement = event as HTMLElement
         const elementPosition = htmlElement.getBoundingClientRect().top + page.scrollTop + htmlElement.clientHeight / 2
         const distance = Math.abs((elementPosition - (window.innerHeight / 2 + page.scrollTop)))

@@ -18,7 +18,7 @@ export function TypewriterWrapper(
         component={as}
         options={options}
         onInit={(typewriter) => {
-          let processedStrings: string[] = []
+          const processedStrings: string[] = []
           let currentLength = 0
           strings.forEach((string, index) => {
             if (currentLength + string.length > maxLength && index !== 0) {
