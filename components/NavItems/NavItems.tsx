@@ -14,7 +14,7 @@ export function NavItems() {
           <Link href="/community">Community</Link>
         </li>
         <li>
-          <Link href="/docs/support">Support</Link>
+          <Link href="/support">Support</Link>
         </li>
       </ul>
       <ul>

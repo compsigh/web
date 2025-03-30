@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { type Route } from 'next'
-import fs from 'node:fs/promises'
-import { getPlaiceholder } from 'plaiceholder'
 import Image, { type ImageProps } from 'next/image'
+import { imageSizeFromFile } from 'image-size/fromFile'
 
 import styles from './Media.module.css'
 
@@ -19,9 +18,8 @@ export async function Media(
   MediaProps
 ) {
   async function processImage(src: string) {
-    const file = await fs.readFile(src)
-    const { base64, metadata } = await getPlaiceholder(file)
-    return { base64, metadata }
+    const dimensions = imageSizeFromFile(src)
+    return dimensions
   }
   let imageData
   const video = props.src.toString().endsWith('.mp4')
@@ -34,11 +32,10 @@ export async function Media(
         <Image
           unoptimized={isGif}
           alt={alt || ''}
-          placeholder={`${isGif ? 'empty' : 'blur'}`}
-          blurDataURL={imageData?.base64}
-          sizes='(max-width: 860px) 100vw - 80px, 700px'
-          width={imageData?.metadata.width}
-          height={imageData?.metadata.height}
+          placeholder="empty"
+          sizes="(max-width: 860px) 100vw - 80px, 700px"
+          width={imageData?.width}
+          height={imageData?.height}
           {...props}
         />
       }

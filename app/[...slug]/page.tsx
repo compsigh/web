@@ -90,7 +90,7 @@ export type Frontmatter = {
 }
 
 export type PostProps = {
-  content: React.ReactElement<any, string | React.JSXElementConstructor<any>>,
+  content: React.ReactElement,
   frontmatter: Frontmatter
 }
 
@@ -142,7 +142,7 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
   }
 
   catch (error) {
-    if ((error as any).code === 'ENOENT') {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
       // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
       // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
       // TODO: this is scuffed and should be redone; perhaps using a map of slugs to file paths
@@ -158,9 +158,10 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
 }
 
 export async function generateMetadata(
-  { params }:
-  { params: { slug: string[] } }
+  props:
+  { params: Promise<{ slug: string[] }> }
 ) {
+  const params = await props.params
   const { frontmatter } = await readMarkdownFileAtRoute(params.slug)
   const metadata: Metadata = {
     title: frontmatter.title,
@@ -242,9 +243,10 @@ export async function generateStaticParams() {
 }
 
 export default async function Page(
-  { params }:
-  { params: { slug: string[] } }
+  props:
+  { params: Promise<{ slug: string[] }> }
 ) {
+  const params = await props.params
   const { content, frontmatter } = await readMarkdownFileAtRoute(params.slug)
   if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (

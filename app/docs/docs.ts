@@ -16,7 +16,7 @@ export const docs: StructuredSidebarProps =
   },
   {
     text: 'Support the club',
-    link: '/docs/support'
+    link: '/support'
   },
   {
     text: 'Friends of compsigh',
