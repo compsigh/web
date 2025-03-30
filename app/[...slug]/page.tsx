@@ -25,6 +25,11 @@ import { Playground } from '@/components/Playground'
 import { PostWrapper } from '@/components/PostWrapper'
 import { CasePreserver } from '@/components/CasePreserver'
 
+/**
+ * Contents of a Markdown file.
+ */
+type Markdown = string
+
 type Author = {
   name: string
   avatar: string
@@ -90,7 +95,35 @@ export type PostProps = {
 }
 
 /**
- * Given a route served by the Next.js App Router, read the Markdown file associated with the route.
+ * Use `next-mdx-remote` to compile the Markdown file and parse the frontmatter.
+ *
+ * @param fileContent - The string contents of the Markdown file.
+ */
+export async function compileMarkdown(fileContent: Markdown) {
+  const compsighTheme = await import('./compsigh-theme.json')
+  const rehypePrettyCodeOptions: Options = { theme: JSON.parse(JSON.stringify(compsighTheme)) }
+  const { content, frontmatter } = await compileMDX<Frontmatter>({
+    source: fileContent,
+    components: { CasePreserver, Grid, Hidden, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, remarkMath],
+        rehypePlugins: [
+          [rehypePrettyCode, rehypePrettyCodeOptions],
+          rehypeSlug,
+          rehypeKatex
+        ]
+      }
+    }
+  })
+
+  return { content, frontmatter }
+}
+
+/**
+ * Given a route served by the Next.js App Router, attempt to read the Markdown file associated with the route.
+ * If a `slug` is not specified in the frontmatter, use the route segments to compose the slug and inject it into the frontmatter.
  *
  * @param {string[]} segments - A route served by the Next.js App Router. The last element in the array is the filename, and each preceding element is a parent directory.
  * @example readMarkdownFileAtRoute(['docs', 'about']) // Reads `app/docs/about.md`
@@ -98,33 +131,21 @@ export type PostProps = {
 export async function readMarkdownFileAtRoute(segments: string[]) {
   try {
     const filePath = path.join(process.cwd(), 'app', ...segments) + '.md'
-    const page = await fs.readFile(filePath, 'utf8')
+    const fileContent = await fs.readFile(filePath, 'utf8')
+    const { content, frontmatter } = await compileMarkdown(fileContent)
 
-    const compsighTheme = await import('./compsigh-theme.json')
-    const rehypePrettyCodeOptions: Options = {
-      theme: JSON.parse(JSON.stringify(compsighTheme))
+    if (!frontmatter.slug) {
+      frontmatter.slug = segments.join('/')
     }
 
-    const { content, frontmatter } = await compileMDX<Frontmatter>({
-      source: page,
-      components: { CasePreserver, Grid, Hidden, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
-      options: {
-        parseFrontmatter: true,
-        mdxOptions: {
-          remarkPlugins: [remarkGfm, remarkMath],
-          rehypePlugins: [
-            [rehypePrettyCode, rehypePrettyCodeOptions],
-            rehypeSlug,
-            rehypeKatex
-          ]
-        }
-      }
-    })
     return { content, frontmatter }
-  } catch (error) {
-    // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
-    // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
+  }
+
+  catch (error) {
     if ((error as any).code === 'ENOENT') {
+      // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
+      // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
+      // TODO: this is scuffed and should be redone; perhaps using a map of slugs to file paths
       const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
       for (const { slug } of slugs) {
         const { frontmatter } = await readMarkdownFileAtRoute(slug)

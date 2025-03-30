@@ -1,6 +1,3 @@
-import path from 'node:path'
-import fs from 'fs'
-
 import Link from 'next/link'
 import Image from 'next/image'
 import { EventFrontmatter } from './page'
@@ -11,23 +8,34 @@ import { StatusIndicator } from '@/components/StatusIndicator'
 
 import styles from './Events.module.css'
 
-function readEventMarkdownFilename(date: string): string {
-  try {
-    const files = fs.readdirSync(path.join(process.cwd(), 'app/events', date))
-    return '-' + files[files.length-1].split('.')[0]
-  } catch {
-    return ''
-  }
-}
-
 export function Event({ event }: { event: EventFrontmatter }) {
   const { start, end } = event.event_details
+  const START_TIME_IN_MS = start * 1000
   const currentYear = new Date().getFullYear()
-  const year = new Date(start * 1000).getFullYear()
-  const startDate = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', month: 'short', day: '2-digit', year: year === currentYear ? undefined : 'numeric' }).replace(',', '')
-  const startTime = new Date(start * 1000).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit' })
-  const idStartDate = new Date(start * 1000).toLocaleDateString('sv-SE', { timeZone: 'America/Los_Angeles'})
-  const mdFilename = readEventMarkdownFilename(idStartDate)
+  const year = new Date(START_TIME_IN_MS).getFullYear()
+  const startDate = new Date(START_TIME_IN_MS)
+    .toLocaleString('en-US', {
+      timeZone: 'America/Los_Angeles',
+      month: 'short',
+      day: '2-digit',
+      year:
+        year === currentYear
+          ? undefined
+          : 'numeric'
+    })
+    .replace(',', '')
+  const startTime = new Date(START_TIME_IN_MS)
+    .toLocaleString('en-US', {
+      timeZone: 'America/Los_Angeles',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+
+  const slugSegments = event.slug?.split('/') || []
+  const id =
+    slugSegments[0] === 'events' && slugSegments[1] && slugSegments[2]
+      ? slugSegments[1].concat(`-${slugSegments[2]}`)
+      : event.slug
 
   const currentUnixTimestamp = Math.floor(Date.now() / 1000)
   function isEventHappeningNow(start: number, end: number) {
@@ -41,7 +49,7 @@ export function Event({ event }: { event: EventFrontmatter }) {
   return (
     <>
       <p
-        id={`${idStartDate}${mdFilename}`}
+        id={id}
         className={styles.date}
       >
         {startDate}
