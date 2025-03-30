@@ -28,6 +28,16 @@ export function EventList({
     const container = containerRef.current
     if (!container) return
 
+    const hash = window.location.hash
+    if (hash !== '') {
+      const eventId = hash.substring(1)
+      const eventCard = container.querySelector(`[id="${eventId}"]`)
+      if (eventCard) {
+        eventCard.scrollIntoView({ behavior: 'instant', block: 'center' })
+        return
+      }
+    }
+
     const nowEvents = container.querySelectorAll(`.${styles["now-event"]}`)
     const upcomingEvents = container.querySelectorAll(`.${styles["upcoming-event"]}`)
     const pastEvents = container.querySelectorAll(`.${styles["past-event"]}`)
