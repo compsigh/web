@@ -30,3 +30,4 @@ Status updates:
 - Nish: Discord bot [#41](https://github.com/compsigh/compsigh/issues/41)
 - Destination USF [#48](https://github.com/compsigh/compsigh/issues/48)
   - Edward: flyers [#54](https://github.com/compsigh/compsigh/issues/54)
+  - Going over agenda they sent

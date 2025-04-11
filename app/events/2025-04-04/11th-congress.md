@@ -17,6 +17,7 @@ event_details: {
 ---
 
 ## Agenda
+
 - Status Updates
   - Kiana: get to know leadership reel [#18](https://github.com/compsigh/compsigh/issues/18)
   - Kiana: BLOOM hoodies [#44](https://github.com/compsigh/compsigh/issues/44)
@@ -33,6 +34,7 @@ event_details: {
 - 4/11 compsigh night, nothing planned yet ([events spreadsheet](https://docs.google.com/spreadsheets/d/1DckS32nTv3T-VGtxjyszwPU1pmOGsweqXyTHRSSGEp0/edit?usp=sharing))
 
 ## Notes
+
 - ❗ Kiana: finding a cheaper place for BLOOM hoodies
 - Cascade
   - Jet finished 2 riddles
