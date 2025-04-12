@@ -31,3 +31,14 @@ Status updates:
 - Destination USF [#48](https://github.com/compsigh/compsigh/issues/48)
   - Edward: flyers [#54](https://github.com/compsigh/compsigh/issues/54)
   - Going over agenda they sent
+
+## Notes
+
+- Get to know leadership reel was good 👍
+- BLOOM Hoodies: Kiana has a vendor now, will send it to Edward
+- Gursh: game night photos are done somewhere? send to Kiana pls
+- Gursh: if rest of the photos are too far behind, we'll have to send them out raw
+- Gursh & Nish: Working on cascade platform
+- Nish: discord bot on pause till cascade done
+- Destination USF
+  - Flyers done and printed 👍
