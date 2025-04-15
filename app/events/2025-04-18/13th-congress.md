@@ -23,9 +23,10 @@ Status updates:
 - Gursh: [photos from staging 2/21, git workshop 3/28](https://github.com/compsigh/compsigh/issues/39)
 - Edward: E&I reimbursements ([January](https://github.com/compsigh/compsigh/issues/35), [February](https://github.com/compsigh/compsigh/issues/51), [March](https://github.com/compsigh/compsigh/issues/52), BLOOM)
 - Edward and Kiana: [BLOOM hoodies](https://github.com/compsigh/compsigh/issues/44)
+- Edward and Kiana: [BLOOM recap post](https://github.com/compsigh/compsigh/issues/45)
 - Edward and Kiana: [cascade promo reel](https://github.com/compsigh/compsigh/issues/57)
 
 Review:
 
-- Gursh and Nish: [cascade platform code review](https://github.com/compsigh/cascade/pull/5)
+- Gursh and Nish: [cascade platform code review / demo](https://github.com/compsigh/cascade/pull/5)
 - Destination USF debrief
