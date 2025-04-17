@@ -21,10 +21,10 @@ event_details: {
 Status updates:
 
 - Gursh: [photos from staging 2/21, git workshop 3/28](https://github.com/compsigh/compsigh/issues/39)
-- Edward: E&I reimbursements ([January](https://github.com/compsigh/compsigh/issues/35), [February](https://github.com/compsigh/compsigh/issues/51), [March](https://github.com/compsigh/compsigh/issues/52), BLOOM)
 - Edward and Kiana: [BLOOM hoodies](https://github.com/compsigh/compsigh/issues/44)
-- Edward and Kiana: [BLOOM recap post](https://github.com/compsigh/compsigh/issues/45)
 - Edward and Kiana: [cascade promo reel](https://github.com/compsigh/compsigh/issues/57)
+- Edward and Jet: [cascade poster prints](https://github.com/compsigh/compsigh/issues/64)
+- Edward and Jet: [cascade trophy](https://github.com/compsigh/compsigh/issues/62)
 
 Review:
 
