@@ -30,3 +30,13 @@ Review:
 
 - Gursh and Nish: [cascade platform code review / demo](https://github.com/compsigh/cascade/pull/5)
 - Destination USF debrief
+
+## Notes
+
+- Gursh still catching up
+- BLOOM hoodies progressing; we need to buy the hoodies themselves
+- Promo reel on track
+- Poster prints TBD
+- Trophy designs ready, Jet printing next week
+- Gursh and Nish PR not ready, going with Jet's changes, Edward will review over the weekend
+- Destination USF went well, not much to note, table & setup was *great*, props to Thomas and Leo for helping talk to people
