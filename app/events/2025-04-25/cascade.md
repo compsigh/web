@@ -6,6 +6,6 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2024-04-12/compsigh-cascade-og.png",
   pictures: [],
-  link: null
+  link: "https://cascade.compsigh.club"
 }
 ---
