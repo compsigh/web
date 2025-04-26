@@ -18,5 +18,20 @@ event_details: {
 
 ## Agenda
 
+Status updates:
+
+- Gursh: [photos from staging 2/21, git workshop 3/28](https://github.com/compsigh/compsigh/issues/39)
+- Kiana: [BLOOM hoodies](https://github.com/compsigh/compsigh/issues/44)
+- Kiana and Gursh: [End of sem recap post](https://github.com/compsigh/compsigh/issues/68)
+- Edward and Jet: [updates to framework](https://github.com/compsigh/compsigh/issues/28)
+
+Review:
+
 - cascade debrief & learnings
+- Going over ideas from the start of the semester to [revamp the Instagram](https://github.com/compsigh/compsigh/issues/12) — what did we get to do? What didn't we do? What can we take away from socials this sem?
+- Triaging issues/ideas for Fall sem
+  - ["Day in the life of a CS major" reel](https://github.com/compsigh/compsigh/issues/19)
+  - [Collabing with other clubs](https://github.com/compsigh/compsigh/issues/29)
+  - [Fall 2025 merch](https://github.com/compsigh/compsigh/issues/65)
+- Doing a [rough sketch of Fall 2025 events](https://github.com/compsigh/compsigh/issues/67)
 - DEPLOY/25 whiteboarding
