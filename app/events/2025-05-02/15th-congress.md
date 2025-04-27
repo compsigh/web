@@ -20,9 +20,8 @@ event_details: {
 
 Status updates:
 
-- Gursh: [photos from staging 2/21, git workshop 3/28](https://github.com/compsigh/compsigh/issues/39)
 - Kiana: [BLOOM hoodies](https://github.com/compsigh/compsigh/issues/44)
-- Kiana and Gursh: [End of sem recap post](https://github.com/compsigh/compsigh/issues/68)
+- Kiana, Gursh, and Edward: [End of sem recap post](https://github.com/compsigh/compsigh/issues/68)
 - Edward and Jet: [updates to framework](https://github.com/compsigh/compsigh/issues/28)
 
 Review:
