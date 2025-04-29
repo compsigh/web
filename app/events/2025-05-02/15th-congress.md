@@ -21,12 +21,14 @@ event_details: {
 Status updates:
 
 - Kiana: [BLOOM hoodies](https://github.com/compsigh/compsigh/issues/44)
-- Kiana, Gursh, and Edward: [End of sem recap post](https://github.com/compsigh/compsigh/issues/68)
+- Kiana, Gursh, and Edward: [end of sem recap post](https://github.com/compsigh/compsigh/issues/68)
 - Edward and Jet: [updates to framework](https://github.com/compsigh/compsigh/issues/28)
 
 Review:
 
-- cascade debrief & learnings
+- [cascade](https://github.com/compsigh/compsigh/issues/46) debrief & learnings
+  - Platform dev setups / what went wrong with `dev`
+  - Execution of [riddles](https://github.com/compsigh/compsigh/issues/50)
 - Going over ideas from the start of the semester to [revamp the Instagram](https://github.com/compsigh/compsigh/issues/12) — what did we get to do? What didn't we do? What can we take away from socials this sem?
 - Triaging issues/ideas for Fall sem
   - ["Day in the life of a CS major" reel](https://github.com/compsigh/compsigh/issues/19)
