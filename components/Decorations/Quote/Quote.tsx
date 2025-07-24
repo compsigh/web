@@ -7,6 +7,30 @@ type Quote = {
 
 export const quotes: Quote[] = [
   {
+    quote: 'shit does NOT work on my machine',
+    author: 'Dave'
+  },
+  {
+    quote: 'be ready for some vibe kernel coding next week',
+    author: 'Professor Benson'
+  },
+  {
+    quote: 'it will not be secure',
+    author: 'Pete'
+  },
+  {
+    quote: 'I had a dream that I was sleeping in a Docker container',
+    author: 'Dave'
+  },
+  {
+    quote: 'meow',
+    author: 'Gursh'
+  },
+  {
+    quote: 'fuck it im deleting everything',
+    author: 'Nish'
+  },
+  {
     quote: 'I could not be more powered by AI right now',
     author: 'Jet'
   },
@@ -41,10 +65,6 @@ export const quotes: Quote[] = [
   {
     quote: 'Java code makes the reader have cache misses in their brain',
     author: 'Tao'
-  },
-  {
-    quote: 'Put your editor where your mouth is',
-    author: 'Jet'
   }
 ]
 
