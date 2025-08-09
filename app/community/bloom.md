@@ -25,13 +25,31 @@ Here's how it went.
 
 <Spacer size={32} />
 
-Outline:
+## How BLOOM is different
+
+When we were brainstorming and looked over our notes from past events like DEPLOY/24, we wanted to do a few things differently. We felt our past events gave an outsized advantage, proportional to a project's technical complexity, which is not what we're going for as a club. We experimented with addressing this on a couple axes:
+
+### :3 For beginners
+
+Whether the vibes were intense, or we had strict registration deadlines, we'd received feedback that our previous events had a perceivable barrier to entry. We wanted to do away with those and make it clear beginners are not only welcome but encouraged.
+
+We also did away with the rubric and grade-level weighting we had for DEPLOY/24. We put trust in judges to essentially run a vibe check and adjust their evaluations on their own.
+
+### :o For people
+
+We encouraged teams to make projects unrelated to generative AI. At first, we were worried this would turn people away, but the results were awesome.
+
+### \<3 For everyone
+
+**BLOOM is all about personal project exploration.** A low-stakes, high-quality playground for ideas. We wanted to open the space to projects from all walks of scientific & creative life.
+
+From email campaigns, to posters, to presenting in 30+ class sections, we worked to emphasize that *anyone* from USF is welcome. After all, the most interesting projects are at the intersection of art & technology.
+
+---
+
+Outline todos:
 
 - Show off the winning projects
-- Go more in depth on how BLOOM differs conceptually from our previous events & as a hackathon in general
-  - More chill
-  - "No AI"
-  - Emphasis on arts & sciences
 - Talk about the platform: moodboard, aesthetic
 - Bringing on Ilce and Jake to bring the vision to life; how special it was to be able to work with USF artists
 - Our awesome judges; G promoting it
