@@ -223,7 +223,8 @@ export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
 
 export const dynamicParams = false
 export async function generateStaticParams() {
-  let slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+  const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+  const skippedSlugs = new Set<string>()
 
   // For each file:
   // 1. Read it
@@ -232,14 +233,15 @@ export async function generateStaticParams() {
   // 4. If it does, replace the entry in `slugs` with the new slug
   // 5. If it's an event, determine if it has a `link` key
   // 6. If it does, skip building the page
-  for (const [index, { slug: route }] of slugs.entries()) {
-    const { frontmatter } = await readMarkdownFileAtRoute(route)
+  for (const [index, { slug }] of slugs.entries()) {
+    const { frontmatter } = await readMarkdownFileAtRoute(slug)
     if (frontmatter.slug)
       slugs[index] = { slug: frontmatter.slug.split('/') }
     if (frontmatter.event_details?.link !== undefined)
-      slugs = slugs.filter((slug) => slug.slug.join('/') !== route.join('/'))
+      skippedSlugs.add(slug.join('/'))
   }
-  return slugs
+
+  return slugs.filter((slug) => !skippedSlugs.has(slug.slug.join('/')))
 }
 
 export default async function Page(
