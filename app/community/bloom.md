@@ -14,9 +14,16 @@ We just wrapped up BLOOM, our first ever Spring hackathon! This one means a lot.
 
 Here's how it went.
 
-<Media src="/community/deploy23/intro.gif" />
+<Media
+  alt="Participants at BLOOM in a group photo on Presentation Day"
+  src="/community/bloom/everyone-presentation-day.jpeg"
+  style={{
+    transform: "rotate(-2deg)",
+    border: "3px dashed #ffa200"
+  }}
+/>
 
-- Replace above with pic of everyone at presentation day
+<Spacer size={32} />
 
 Outline:
 
