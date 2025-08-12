@@ -5,20 +5,32 @@ next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 slug: "docs/leadership/about"
 ---
 
-# Current Leadership
+# Current leadership
 
 <Grid columns={2}>
-  <Media src="/avatars/jet.png" title="Jet Pham" description={<>
-    <p>President</p>
-    <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
-  </>} />
-  <Media src="/avatars/edward.png" title="Edward Shturman" description={<>
-    <p>Founder</p>
-    <Link href="mailto:emshturman@dons.usfca.edu">emshturman@dons.usfca.edu</Link>
-  </>} />
+  <Media
+    src="/avatars/jet.png"
+    title="Jet Pham"
+    description={
+      <>
+        <span>President</span>
+        <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
+      </>
+    }
+  />
+  <Media
+    src="/avatars/edward.png"
+    title="Edward Shturman"
+    description={
+      <>
+        <span>Founder</span>
+        <Link href="mailto:emshturman@dons.usfca.edu">emshturman@dons.usfca.edu</Link>
+      </>
+    }
+  />
 </Grid>
 
-# Philosophy of Leadership
+# Philosophy of leadership
 
 Every day, members of the club contribute their time and ideas to making our community awesome. Several of our events are organized by these passionate and generous people.
 
