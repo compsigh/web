@@ -43,7 +43,7 @@ The web platform uses **filesystem routing:** your post's <CasePreserver>URL</Ca
 | :- | :- |
 | `app/community/cue.md` | community/cue |
 | `app/community/viper.md` | community/viper |
-| `app/docs/readme.md` | docs/readme |
+| `app/docs/about.md` | docs/about |
 | `app/docs/leadership/about.md` | docs/leadership/about |
 
 You can override this behavior by using the [Metadata](#metadata) `slug` field.
