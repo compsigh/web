@@ -2,8 +2,13 @@
 title: "Current and past leadership teams"
 description: "compsigh teams from Fall 2022 to now"
 previous: { text: "Joining compsigh leadership", link: "/docs/leadership/joining" }
+next: { text: "About compsigh leadership", link: "/docs/leadership/about" }
 slug: "docs/leadership/team"
 ---
+## Fall 2025
+
+- Jet Pham
+- Edward Shturman
 
 ## Spring 2025
 

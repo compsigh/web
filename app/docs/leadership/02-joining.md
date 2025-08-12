@@ -6,20 +6,12 @@ next: { text: "Current and past leadership teams", link: "/docs/leadership/team"
 slug: "docs/leadership/joining"
 ---
 
-Instead of running applications for leadership, members are invited to join.
+# Leadership
 
-An invited club member is:
+We don't run applications, but we're regularly looking to invite club members. If you're involved, if you take an active interest in helping others, and if you're looking to push yourself in learning new skills, you'd be a great addition.
 
-- Genuinely passionate about what the club stands for
-- Likely to contribute to an objective club leadership is focusing on
-- Regularly showing up, engaged, and supportive, both online and offline
-- Motivated to expand their skillset (e.g. getting better at graphic design by working on promo material)
+We'll reach out to you. If you really think you'd be a good fit, we'll hear you out. Nothing is better than a self-motivated person.
 
-Here's what a typical invite process looks like:
-
-1. Leadership notices the engagement and contributions of a club member.
-2. A recommendation is made, and the team discusses internally.
-3. If the president approves, the club member is invited.
-4. If the club member accepts, they are onboarded.
+# Term Limits
 
 Members join the team on a rolling basis, and have no term limits.

@@ -1,30 +1,53 @@
 ---
-title: "compsigh Code of Conduct"
-description: "uhm— have you read the #rules 🤓"
+title: "Code of Conduct"
+description: "Our Rules and Expectations for the club"
 previous: { text: "compsigh values", link: "/docs/values" }
 slug: "docs/code-of-conduct"
 ---
 
-This Code of Conduct establishes expectations for online and offline interaction in club spaces. *(We assume a reasonable baseline of respect and civility.)* We don't take ourselves too seriously, but we are committed to maintaining a welcoming space to chill with friends after a long week of school. `vibes >>>`
+Our goal is to foster an open, inclusive, and safe community. This Code of Conduct establishes expectations to uphold those standards for the club.
 
-## Offline spaces
+## No bigotry, hate speech, harassment, or shitty behavior
 
-- Respect the space: our gracious hosts — such as the Engineering Department for the Social Hive — welcome us into their homes, and we should treat them accordingly.
+  compsigh is a safe space. Reports will be forwarded to the school, police, friends, and family.
 
-## Online spaces
+## No NSFW
 
-compsigh is a pretty chill place — you can largely say and do whatever you want. We are pro-free speech, and as a club we think it's important to stoke thought-provoking discussion. But there's a time & place for everything. :)
+  For the people that are young in college, for those who it makes uncomfortable, for the kids of speakers, for the sponsors we have. Do it somewhere else.
 
-### Content
+## Respect the space
 
-- Keep discussions on politics & other contentious topics in threads.
-- <CasePreserver>NSFW</CasePreserver> is ok, but it must be clearly labeled <CasePreserver>NSFW</CasePreserver> and sent behind a spoiler tag.
-- Avoid posting content that violates [Discord's <CasePreserver>TOS</CasePreserver>](https://discord.com/terms) or their [Community Guidelines](https://discord.com/guidelines).
+  We are grateful for the spaces we host events in. Please clean up after yourself and leave the space better than you found it.
 
-### Code & resource sharing
+## Don't break anyone else's rules
 
-- Avoid sharing cracked, pirated, or otherwise illegal resources.
-- Sharing code is ok, though we highly recommend following your professor's rules. If you get caught, it's not on us! :p
-- You're welcome to self-promo *(we encourage it!)* but avoid sending messages (including unsolicited DMs) that are:
-  - Spammy in nature; or
-  - Irrelevant advertisements, particularly when you don't send anything else.
+  We use Discord and are a USF club. Adhere to their rules as well:
+
+- Discord [Guidelines](https://discord.com/guidelines) and [TOS](https://discord.com/terms)
+
+- [USF Student Conduct](https://myusf.usfca.edu/fogcutter/student-conduct)
+
+## Don't break the law
+
+  It's simple. Don't break the law. Cracked or pirated resources are not allowed here.
+
+## Don't advertise
+
+  We are an open club; don't abuse your access to a group of wonderful people for your own benefit.
+  We encourage all members to self-promo, but please do it in a way that is not spammy or annoying.
+
+## Sharing code is okay
+
+  Follow your professor's rules on sharing, using, and collaborating on projects.
+
+We will not tolerate shitty behavior from anyone. If you cannot respect these standards, you are not welcome here.
+
+## Contact
+
+If you have a report or questions, please contact `leadership@compsigh.club` or anyone from [leadership](/docs/leadership/about).
+
+### Other Resources
+
+- [USF Public Safety](https://myusf.usfca.edu/public-safety-transportation/resources)
+
+- [USF Computer Science Faculty](https://www.usfca.edu/arts-sciences/programs/undergraduate/computer-science/faculty)
