@@ -166,7 +166,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             as={'h1'}
             options={{
               cursor: '_',
-              delay: 50,
+              delay: 10,
               }}
             strings={frontmatter.title.split(' ')}
             maxLength={maxStringLength}
