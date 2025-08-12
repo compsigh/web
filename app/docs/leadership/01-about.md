@@ -14,6 +14,7 @@ slug: "docs/leadership/about"
     description={
       <>
         <span>President</span>
+        <br />
         <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
       </>
     }
@@ -24,6 +25,7 @@ slug: "docs/leadership/about"
     description={
       <>
         <span>Founder</span>
+        <br />
         <Link href="mailto:emshturman@dons.usfca.edu">emshturman@dons.usfca.edu</Link>
       </>
     }
