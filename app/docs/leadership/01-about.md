@@ -5,7 +5,7 @@ next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 slug: "docs/leadership/about"
 ---
 
-# Current leadership
+## Current leadership
 
 <Grid columns={2}>
   <Media
@@ -30,7 +30,7 @@ slug: "docs/leadership/about"
   />
 </Grid>
 
-# Philosophy of leadership
+## Philosophy of leadership
 
 Every day, members of the club contribute their time and ideas to making our community awesome. Several of our events are organized by these passionate and generous people.
 
