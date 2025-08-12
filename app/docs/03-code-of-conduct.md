@@ -48,5 +48,6 @@ If you have a report or questions, please contact `leadership@compsigh.club` or 
 
 ### Other Resources
 
-[USF Public Safety](https://myusf.usfca.edu/public-safety-transportation/resources)
-[USF Computer Science Faculty](https://www.usfca.edu/arts-sciences/programs/undergraduate/computer-science/faculty)
+- [USF Public Safety](https://myusf.usfca.edu/public-safety-transportation/resources)
+
+- [USF Computer Science Faculty](https://www.usfca.edu/arts-sciences/programs/undergraduate/computer-science/faculty)
