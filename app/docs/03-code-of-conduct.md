@@ -7,41 +7,46 @@ slug: "docs/code-of-conduct"
 
 Our goal is to foster an open, inclusive, and safe community. This Code of Conduct establishes expectations to uphold those standards for the club.
 
-- ## No bigotry, hate speech, harassment, or shitty behavior
+## No bigotry, hate speech, harassment, or shitty behavior
 
   compsigh is a safe space. Reports will be forwarded to the school, police, friends, and family.
 
-- ## No NSFW
+## No NSFW
 
-  We are a family-friendly club, for the people that are young in collage, for those who it makes uncomfortable, for the professors we have, for the kids of speakers, for the sponsors we have. Do it somewhere else.
+  For the people that are young in college, for those who it makes uncomfortable, for the kids of speakers, for the sponsors we have. Do it somewhere else.
 
-- ## Respect the space
+## Respect the space
 
-  We are grateful for the spaces we host events in. Please cleanup after yourself and leave the space better than how you found it.
+  We are grateful for the spaces we host events in. Please clean up after yourself and leave the space better than you found it.
 
-- ## Don't break anyone else's rules
+## Don't break anyone else's rules
 
-  We use discord and are a USF club. Adhere to their rules aswell:
+  We use Discord and are a USF club. Adhere to their rules as well:
 
-  - Discord [Guidelines](https://discord.com/guidelines) and [TOS](https://discord.com/terms)
+- Discord [Guidelines](https://discord.com/guidelines) and [TOS](https://discord.com/terms)
 
-  - [USF Student Conduct](https://myusf.usfca.edu/fogcutter/student-conduct)
+- [USF Student Conduct](https://myusf.usfca.edu/fogcutter/student-conduct)
 
-- ## Don't break the law
+## Don't break the law
 
-  It's simple. Don't break the law. Cracked, pirated, resources are not allowed here.
+  It's simple. Don't break the law. Cracked or pirated resources are not allowed here.
 
-- ## Don't Advertize
+## Don't advertise
 
-  We are a open club, don't abuse your access to a group of wonderful people for your own benefit.
+  We are an open club; don't abuse your access to a group of wonderful people for your own benefit.
   We encourage all members to self-promo, but please do it in a way that is not spammy or annoying.
 
-- ## Sharing code is ok
+## Sharing code is okay
 
-  Following your professor's rules around sharing, using, and collaborating on projects.
+  Follow your professor's rules on sharing, using, and collaborating on projects.
 
-Our goal is beyond the shitty behaviour of a single person, we have no problem being without you.
+We will not tolerate shitty behavior from anyone. If you cannot respect these standards, you are not welcome here.
 
-# Contact
+## Contact
 
 If you have a report or questions, please contact `leadership@compsigh.club` or anyone from [leadership](/docs/leadership/about).
+
+### Other Resources
+
+[USF Public Safety](https://myusf.usfca.edu/public-safety-transportation/resources)
+[USF Computer Science Faculty](https://www.usfca.edu/arts-sciences/programs/undergraduate/computer-science/faculty)
