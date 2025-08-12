@@ -3,8 +3,8 @@ import { type StructuredSidebarProps } from '@/components/Sidebar'
 export const docs: StructuredSidebarProps =
 [
   {
-    text: 'README',
-    link: '/docs/readme'
+    text: 'About compsigh',
+    link: '/docs/about'
   },
   {
     text: 'Values',

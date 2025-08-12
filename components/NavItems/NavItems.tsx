@@ -5,7 +5,7 @@ export function NavItems() {
     <>
       <ul>
         <li>
-          <Link href="/docs/readme">README</Link>
+          <Link href="/docs/about">About</Link>
         </li>
         <li>
           <Link href="/events">Events</Link>

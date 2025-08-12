@@ -1,8 +1,8 @@
 ---
-title: "compsigh README"
+title: "about compsigh"
 description: "Why we're here"
 next: { text: "compsigh values", link: "/docs/values" }
-slug: "docs/readme"
+slug: "docs/about"
 ---
 
 Today, many computer science students feel pressured to follow the script of getting a job in tech because it pays well, keeping their head down and grinding the technical interview, and end up dissolving their curiosity, problem-solving, and ideas about the world along the way.
