@@ -19,10 +19,10 @@ export function NavItems() {
       </ul>
       <ul>
         <li>
-          <Link href="https://discord.compsigh.club">Discord</Link>
+          <Link href="/discord">Discord</Link>
         </li>
         <li>
-          <Link href="https://instagram.com/compsigh.club">Instagram</Link>
+          <Link href="/instagram">Instagram</Link>
         </li>
       </ul>
     </>
