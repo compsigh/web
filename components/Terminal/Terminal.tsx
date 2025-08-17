@@ -106,7 +106,7 @@ export function Terminal() {
           <Item
             onSelect={() => {
               setOpen(false)
-              window.open('https://discord.compsigh.club')
+              router.push('/discord')
             }}
           >
             Discord
@@ -114,7 +114,7 @@ export function Terminal() {
           <Item
             onSelect={() => {
               setOpen(false)
-              window.open('https://instagram.com/compsigh.club')
+              router.push('/instagram')
             }}
           >
             Instagram
