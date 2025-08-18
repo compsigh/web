@@ -1,5 +1,5 @@
 import { NavItems } from '@/components/NavItems'
-import { HiveVideo } from '@/components/HiveVideo'
+import { HomeLoop } from '@/components/HomeLoop'
 
 import styles from './Home.module.css'
 
@@ -16,7 +16,7 @@ export default function Home() {
         </nav>
       </div>
       <div id={styles.background}>
-        <HiveVideo />
+        <HomeLoop />
       </div>
     </>
   )
