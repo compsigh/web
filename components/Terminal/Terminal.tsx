@@ -1,5 +1,9 @@
 'use client'
 
+import {
+  FaDiscord as DiscordIcon,
+  FaInstagram as InstagramIcon
+} from 'react-icons/fa'
 import { Command } from 'cmdk'
 import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
@@ -109,6 +113,7 @@ export function Terminal() {
               router.push('/discord')
             }}
           >
+            <DiscordIcon size={16} />
             Discord
           </Item>
           <Item
@@ -117,6 +122,7 @@ export function Terminal() {
               router.push('/instagram')
             }}
           >
+            <InstagramIcon size={16} />
             Instagram
           </Item>
         </Command.Group>

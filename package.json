@@ -28,6 +28,7 @@
     "next-mdx-remote": "5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-icons": "5.5.0",
     "react-random-reveal": "2.0.1",
     "rehype-katex": "7.0.1",
     "rehype-pretty-code": "0.14.1",
