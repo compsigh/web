@@ -5,6 +5,9 @@ export function NavItems() {
     <>
       <ul>
         <li>
+          <Link href="/docs/code-of-conduct">Code of Conduct</Link>
+        </li>
+        <li>
           <Link href="/docs/about">About</Link>
         </li>
         <li>
@@ -12,9 +15,6 @@ export function NavItems() {
         </li>
         <li>
           <Link href="/community">Community</Link>
-        </li>
-        <li>
-          <Link href="/support">Support</Link>
         </li>
       </ul>
       <ul>
