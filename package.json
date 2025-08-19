@@ -14,13 +14,10 @@
     "predev": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "postinstall": "prisma generate",
     "start": "next start",
-    "lint": "next lint",
-    "migrate": "dotenv -e .env.local prisma migrate dev"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "6.5.0",
     "@vercel/edge-config": "1.4.0",
     "cmdk": "1.1.1",
     "image-size": "2.0.2",
@@ -46,7 +43,6 @@
     "@typescript-eslint/eslint-plugin": "8.28.0",
     "eslint": "9.23.0",
     "eslint-config-next": "15.2.4",
-    "prisma": "6.5.0",
     "typescript": "^5"
   },
   "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
