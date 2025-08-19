@@ -1,4 +1,9 @@
+import {
+  FaDiscord as DiscordIcon,
+  FaInstagram as InstagramIcon
+} from 'react-icons/fa'
 import Link from 'next/link'
+import styles from './NavItems.module.css'
 
 export function NavItems() {
   return (
@@ -19,10 +24,20 @@ export function NavItems() {
       </ul>
       <ul>
         <li>
-          <Link href="/discord">Discord</Link>
+          <Link href="/discord">
+            <span className={styles.icon}>
+              <DiscordIcon size={16} />
+            </span>
+            Discord
+          </Link>
         </li>
         <li>
-          <Link href="/instagram">Instagram</Link>
+          <Link href="/instagram">
+            <span className={styles.icon}>
+              <InstagramIcon size={16} />
+            </span>
+            Instagram
+          </Link>
         </li>
       </ul>
     </>
