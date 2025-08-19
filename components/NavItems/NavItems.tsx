@@ -19,7 +19,7 @@ export function NavItems() {
           <Link href="/community">Community</Link>
         </li>
         <li>
-          <Link href="/support">Support</Link>
+          <Link href="/docs/code-of-conduct">Code of Conduct</Link>
         </li>
       </ul>
       <ul>
