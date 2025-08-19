@@ -17,6 +17,3 @@ build/
 
 # TypeScript
 next-env.d.ts
-
-# Nix
-flake.lock
