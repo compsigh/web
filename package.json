@@ -11,7 +11,7 @@
   },
   "private": true,
   "scripts": {
-    "predev": "npm install --force",
+    "predev": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build",
     "postinstall": "prisma generate",
