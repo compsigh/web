@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FaDiscord, FaInstagram } from 'react-icons/fa'
+import styles from './NavItems.module.css'
 
 export function NavItems() {
   return (
@@ -16,13 +18,23 @@ export function NavItems() {
         <li>
           <Link href="/support">Support</Link>
         </li>
-      </ul>
-      <ul>
+        </ul>
+        <ul>
         <li>
-          <Link href="/discord">Discord</Link>
+          <Link href="/discord">
+            <span className={styles.icon}>
+              <FaDiscord size={16} />
+            </span>
+            Discord
+          </Link>
         </li>
         <li>
-          <Link href="/instagram">Instagram</Link>
+          <Link href="/instagram">
+            <span className={styles.icon}>
+              <FaInstagram size={16} />
+            </span>
+            Instagram
+          </Link>
         </li>
       </ul>
     </>

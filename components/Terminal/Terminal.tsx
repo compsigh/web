@@ -3,6 +3,7 @@
 import { Command } from 'cmdk'
 import { usePathname, useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
+import { FaDiscord, FaInstagram } from 'react-icons/fa'
 
 import './Terminal.css'
 
@@ -109,6 +110,7 @@ export function Terminal() {
               router.push('/discord')
             }}
           >
+            <FaDiscord size={16} />
             Discord
           </Item>
           <Item
@@ -117,6 +119,7 @@ export function Terminal() {
               router.push('/instagram')
             }}
           >
+            <FaInstagram size={16} />
             Instagram
           </Item>
         </Command.Group>
