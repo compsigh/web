@@ -7,7 +7,7 @@ slug: "docs/code-of-conduct"
 
 Our goal is to foster an open, inclusive, and safe community. This Code of Conduct establishes expectations to uphold those standards for the club.
 
-## No bigotry, hate speech, harassment, or shitty behavior
+## No bigotry, hate speech, harassment, or inappropriate behavior
 
   compsigh is a safe space. Reports will be forwarded to the school, police, friends, and family.
 
@@ -40,7 +40,7 @@ Our goal is to foster an open, inclusive, and safe community. This Code of Condu
 
   Follow your professor's rules on sharing, using, and collaborating on projects.
 
-We will not tolerate shitty behavior from anyone. If you cannot respect these standards, you are not welcome here.
+We will not tolerate inappropriate behavior from anyone. If you cannot respect these standards, you are not welcome here.
 
 ## Contact
 
