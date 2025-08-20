@@ -8,7 +8,9 @@ slug: "docs/leadership/team"
 ## Fall 2025
 
 - Jet Pham
-- Edward Shturman
+- Nora Kravets 
+- Z Moore
+- Samuel Simmons
 
 ## Spring 2025
 
