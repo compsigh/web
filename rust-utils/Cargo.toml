@@ -1,0 +1,29 @@
+[package]
+name = "compsigh-rust-utils"
+version = "0.1.0"
+edition = "2021"
+description = "Rust utilities for the compsigh web platform"
+license = "MIT"
+
+[lib]
+name = "compsigh_rust_utils"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "quote-cli"
+path = "src/bin/quote_cli.rs"
+
+[[bin]]
+name = "content-processor"
+path = "src/bin/content_processor.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand = "0.8"
+pulldown-cmark = "0.12"
+regex = "1.10"
+clap = { version = "4.5", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+anyhow = "1.0"
+md5 = "0.7"

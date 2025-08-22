@@ -20,3 +20,7 @@ next-env.d.ts
 
 # Nix
 flake.lock
+
+# Rust build artifacts
+/rust-utils/target/
+/rust-utils/Cargo.lock

@@ -13,9 +13,14 @@
   "scripts": {
     "predev": "pnpm install",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run build:rust && next build",
+    "build:rust": "cd rust-utils && cargo build --release",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "rust:quote": "cd rust-utils && ./target/release/quote-cli",
+    "rust:content": "cd rust-utils && ./target/release/content-processor",
+    "rust:test": "cd rust-utils && cargo test",
+    "rust:build": "cd rust-utils && cargo build --release"
   },
   "dependencies": {
     "@vercel/edge-config": "1.4.0",
