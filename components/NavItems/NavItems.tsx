@@ -16,6 +16,9 @@ export function NavItems() {
           <Link href="/events">Events</Link>
         </li>
         <li>
+          <Link href="/feedback">Feedback</Link>          
+        </li>
+        <li>
           <Link href="/community">Community</Link>
         </li>
         <li>
