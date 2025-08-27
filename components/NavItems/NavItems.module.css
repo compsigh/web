@@ -3,4 +3,45 @@
   align-items: center;
   margin-right: 0.4rem;
   vertical-align: middle;
+  /* Prevent layout shifts by ensuring consistent icon sizing */
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  /* Ensure consistent positioning */
+  position: relative;
+}
+
+/* Ensure icons maintain consistent size across different screen sizes */
+.icon svg {
+  width: 16px;
+  height: 16px;
+  /* Prevent layout shifts by ensuring consistent rendering */
+  display: block;
+}
+
+/* Responsive icon sizing for smaller screens */
+@media (max-width: 480px) {
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.3rem;
+  }
+  
+  .icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.2rem;
+  }
+  
+  .icon svg {
+    width: 12px;
+    height: 12px;
+  }
 }

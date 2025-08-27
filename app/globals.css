@@ -16,6 +16,10 @@
 
   --max-width: 700px;
   --margin: 40px auto;
+  
+  /* Font fallback stacks for better loading */
+  --font-fallback-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-fallback-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 }
 
 * {
@@ -24,19 +28,76 @@
   box-sizing: border-box;
 }
 
+/* Prevent layout shifts by ensuring consistent scrollbar behavior */
+html {
+  /* Prevent horizontal scrollbar from appearing */
+  overflow-x: hidden;
+  /* Ensure consistent font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent zoom on iOS */
+  -webkit-text-size-adjust: 100%;
+  /* Ensure consistent scrollbar width */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-compsigh-20) transparent;
+}
+
+/* Custom scrollbar for webkit browsers */
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-compsigh-20);
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-compsigh-40);
+}
+
 body {
   overflow-x: hidden;
   color: var(--color-light);
   background-color: var(--color-dark);
-  font-family: var(--font-ia-writer-quattro), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-ia-writer-quattro), var(--font-fallback-sans);
   font-size: 1rem;
   line-height: 180%;
+  /* Prevent layout shifts during font loading */
+  min-height: 100vh;
+  /* Ensure consistent text rendering */
+  text-rendering: optimizeLegibility;
+  /* Prevent layout shifts by ensuring consistent scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-compsigh-20) transparent;
+}
+
+/* Custom scrollbar for body */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-compsigh-20);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-compsigh-40);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-tronica-mono);
+  font-family: var(--font-tronica-mono), var(--font-fallback-mono);
   font-weight: 400;
   margin: 1.5em 0 1em;
   line-height: 1.2;
@@ -48,6 +109,8 @@ h1 {
   color: var(--color-compsigh);
   text-shadow: 0 0 10px var(--color-compsigh-60);
   margin-bottom: 32px;
+  /* Prevent layout shift by ensuring consistent height */
+  min-height: 1.2em;
 }
 
 h2,
@@ -117,7 +180,7 @@ details > summary::before {
   position: absolute;
   margin-left: -22px;
   content: '>';
-  font-family: var(--font-proto-mono);
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
   color: var(--color-compsigh);
 }
 
@@ -130,7 +193,7 @@ details > summary::-webkit-details-marker {
 }
 
 code {
-  font-family: var(--font-ia-writer-mono);
+  font-family: var(--font-ia-writer-mono), var(--font-fallback-mono);
   counter-reset: line;
 }
 
@@ -174,7 +237,7 @@ pre > code[data-line-numbers] > span[data-line]:hover::before {
 }
 
 figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
-  font-family: var(--font-tronica-mono);
+  font-family: var(--font-tronica-mono), var(--font-fallback-mono);
   font-size: 0.9em;
   color: var(--color-compsigh-60);
 
@@ -245,4 +308,114 @@ th {
 th,
 td {
   padding: 0.4em 0.8em;
+}
+
+/* Prevent layout shifts for images and media */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure consistent button sizing */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Prevent focus outline from causing layout shifts */
+*:focus {
+  outline: 2px solid var(--color-compsigh);
+  outline-offset: 2px;
+}
+
+/* Ensure consistent spacing for all interactive elements */
+a, button, input, textarea, select {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/* Prevent layout shifts for form elements */
+input, textarea, select {
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid var(--color-light-30);
+  border-radius: 4px;
+  padding: 0.5em;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-compsigh);
+  outline: none;
+}
+
+/* Prevent layout shifts for loading states */
+[data-loading="true"] {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Ensure consistent spacing for all containers */
+.container, .wrapper, .content {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Prevent layout shifts for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Prevent layout shifts for responsive images */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Ensure consistent behavior across different screen sizes */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Prevent layout shifts for high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img, video, iframe {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Ensure consistent behavior for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  a, button, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px;
+  }
 }

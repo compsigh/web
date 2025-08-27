@@ -7,6 +7,9 @@
   overflow: hidden;
   z-index: -1;
   background-color: black;
+  /* Prevent layout shifts by ensuring consistent dimensions */
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .video {
@@ -18,4 +21,21 @@
   object-fit: cover;
   transform: translate(-50%, -50%);
   opacity: 0.4;
+  /* Prevent layout shifts by ensuring consistent rendering */
+  will-change: transform;
+  /* Ensure video loads properly */
+  preload: auto;
+  /* Prevent layout shifts during video loading */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Prevent layout shifts during video loading */
+.video:not([src]) {
+  opacity: 0;
+}
+
+.video[src] {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
 }

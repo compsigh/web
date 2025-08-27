@@ -1,3 +1,11 @@
+/* Layout wrapper to ensure proper spacing */
+.layoutWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 div#background {
   pointer-events: none;
   user-select: none;
@@ -9,7 +17,8 @@ div#background {
 div#content {
   z-index: 1;
   position: fixed;
-  top: 50%;
+  /* Adjust top position to account for UpcomingEvent height */
+  top: calc(50% + 100px);
   transform: translateY(-50%);
   right: 50px;
 
@@ -19,12 +28,25 @@ div#content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  
+  /* Prevent content from being cut off */
+  max-height: calc(90vh - 200px);
+  overflow-y: auto;
+  
+  /* Ensure consistent spacing */
+  gap: 1rem;
+  
+  /* Ensure content doesn't go off screen */
+  max-width: calc(100vw - 100px);
 }
 
 h1#title {
-  font-family: var(--font-delko);
+  font-family: var(--font-delko), var(--font-fallback-sans);
   letter-spacing: 0.04em;
   margin: 0;
+  /* Prevent layout shift by ensuring consistent height */
+  min-height: 1.2em;
+  line-height: 1.2;
 }
 
 h1#title:hover {
@@ -32,10 +54,24 @@ h1#title:hover {
 }
 
 p#description {
-  font-family: var(--font-tronica-mono);
+  font-family: var(--font-tronica-mono), var(--font-fallback-mono);
   text-transform: lowercase;
   text-align: right;
   margin-bottom: 0;
+  /* Prevent layout shift by ensuring consistent line height */
+  line-height: 1.6;
+  /* Ensure text doesn't overflow */
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+nav#navbar {
+  /* Remove negative margin that could cause layout issues */
+  margin: 0;
+  /* Ensure consistent width */
+  width: 100%;
+  /* Ensure navbar doesn't go off screen */
+  max-width: 100%;
 }
 
 nav#navbar ul {
@@ -45,11 +81,23 @@ nav#navbar ul {
 
   list-style: none;
   padding: 0;
-  margin-right: -26px;
+  margin: 0;
+  
+  /* Ensure consistent spacing */
+  gap: 0.5rem;
+  
+  /* Ensure list doesn't go off screen */
+  max-width: 100%;
 }
 
 nav#navbar ul li {
   margin: 0;
+  /* Ensure consistent width for all list items */
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* Ensure items don't go off screen */
+  max-width: 100%;
 }
 
 nav#navbar ul li::before {
@@ -63,7 +111,7 @@ nav#navbar ul li a {
   padding: 4px 26px;
   border-radius: 6px;
 
-  font-family: var(--font-proto-mono);
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
   font-size: 1rem;
   font-weight: 600;
   line-height: 180%;
@@ -72,6 +120,18 @@ nav#navbar ul li a {
   color: var(--color-light);
   text-shadow: 0 0 10px var(--color-compsigh-60);
   transition: all 0.2s ease;
+  
+  /* Prevent text wrapping that could cause layout shifts */
+  white-space: nowrap;
+  /* Ensure consistent height */
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  
+  /* Ensure links don't go off screen */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 nav#navbar ul li a:hover {
@@ -95,7 +155,15 @@ nav#navbar ul li a:active {
   div#content {
     right: 0;
     margin: 0 40px;
-    align-items: unset;
+    align-items: flex-start;
+    max-height: calc(75vh - 160px);
+    /* Adjust top position for mobile */
+    top: calc(60% + 80px);
+    transform: translateY(-50%);
+    /* Ensure content doesn't get cut off on small screens */
+    padding-bottom: 2rem;
+    /* Ensure content doesn't go off screen */
+    max-width: calc(100vw - 80px);
   }
 
   p#description {
@@ -103,8 +171,75 @@ nav#navbar ul li a:active {
   }
 
   nav#navbar ul {
-    align-items: unset;
-    margin-right: unset;
-    margin-left: -26px;
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  nav#navbar ul li {
+    justify-content: flex-start;
+  }
+  
+  nav#navbar ul li a {
+    /* Ensure consistent padding on mobile */
+    padding: 4px 20px;
+    /* Allow text to wrap on very small screens */
+    white-space: normal;
+    min-height: auto;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  div#content {
+    margin: 0 20px;
+    /* Adjust positioning for very small screens */
+    top: calc(55% + 70px);
+    /* Ensure content doesn't go off screen */
+    max-width: calc(100vw - 40px);
+  }
+  
+  h1#title {
+    font-size: 2rem;
+  }
+  
+  p#description {
+    font-size: 0.85rem;
+  }
+  
+  nav#navbar ul li a {
+    font-size: 0.85rem;
+    padding: 3px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  div#content {
+    margin: 0 10px;
+    /* Further adjust for very small screens */
+    top: calc(50% + 60px);
+    /* Ensure content doesn't go off screen */
+    max-width: calc(100vw - 20px);
+  }
+  
+  h1#title {
+    font-size: 1.8rem;
+  }
+  
+  p#description {
+    font-size: 0.8rem;
+  }
+  
+  nav#navbar ul li a {
+    font-size: 0.8rem;
+    padding: 2px 12px;
+  }
+}
+
+/* Prevent layout shifts during font loading */
+@supports (font-display: swap) {
+  h1#title,
+  p#description,
+  nav#navbar ul li a {
+    font-display: swap;
   }
 }

@@ -9,7 +9,8 @@ const Delko = localFont({
     weight: '400',
     style: 'normal'
   }],
-  variable: '--font-delko'
+  variable: '--font-delko',
+  display: 'swap'
 })
 
 const ProtoMono = localFont({
@@ -35,7 +36,8 @@ const ProtoMono = localFont({
       style: 'normal'
     }
   ],
-  variable: '--font-proto-mono'
+  variable: '--font-proto-mono',
+  display: 'swap'
 })
 
 const TXA = localFont({
@@ -51,7 +53,8 @@ const TXA = localFont({
       style: 'normal'
     }
   ],
-  variable: '--font-txa'
+  variable: '--font-txa',
+  display: 'swap'
 })
 
 const TronicaMono = localFont({
@@ -62,7 +65,8 @@ const TronicaMono = localFont({
       style: 'normal'
     }
   ],
-  variable: '--font-tronica-mono'
+  variable: '--font-tronica-mono',
+  display: 'swap'
 })
 
 const iAWriterQuattro = localFont({
@@ -88,7 +92,8 @@ const iAWriterQuattro = localFont({
       style: 'italic'
     }
   ],
-  variable: '--font-ia-writer-quattro'
+  variable: '--font-ia-writer-quattro',
+  display: 'swap'
 })
 
 const iAWriterMono = localFont({
@@ -114,7 +119,8 @@ const iAWriterMono = localFont({
       style: 'italic'
     }
   ],
-  variable: '--font-ia-writer-mono'
+  variable: '--font-ia-writer-mono',
+  display: 'swap'
 })
 
 import './globals.css'
@@ -129,6 +135,12 @@ export const metadata: Metadata = {
   description: 'A social computer science club for meeting cool people and building cool things at the University of San Francisco',
   openGraph: {
     images: '/og/root.png'
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false
   }
 }
 

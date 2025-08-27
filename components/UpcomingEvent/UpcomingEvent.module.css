@@ -1,0 +1,406 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 16px;
+  pointer-events: none;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  /* Prevent layout shifts by ensuring consistent height */
+  min-height: 200px;
+  /* Ensure banner doesn't go off screen */
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.container > * {
+  pointer-events: auto;
+  max-width: var(--max-width);
+  margin-right: 50px;
+  /* Ensure consistent width */
+  width: 100%;
+  max-width: 600px;
+  /* Ensure banner doesn't go off screen */
+  max-width: calc(100vw - 100px);
+}
+
+/* Override default link styling when banner is wrapped in Link */
+.container a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* Prevent layout shifts */
+  width: 100%;
+  height: 100%;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  /* Prevent layout shifts by ensuring consistent dimensions */
+  min-height: 180px;
+  border-radius: 8px;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, var(--color-compsigh) 50%, transparent 50%) 0 0,
+    linear-gradient(90deg, var(--color-compsigh) 50%, transparent 50%) 0 100%,
+    linear-gradient(0deg, var(--color-compsigh) 50%, transparent 50%) 0 0,
+    linear-gradient(0deg, var(--color-compsigh) 50%, transparent 50%) 100% 0;
+  background-size: 15px 3px, 15px 3px, 3px 15px, 3px 15px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  transition: all 0.1s ease;
+  pointer-events: none;
+  z-index: 4;
+  animation: border-dance 1s infinite linear;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 0px 100%, 0px 0px, 100% 0px;
+  }
+  100% {
+    background-position: 15px 0px, -15px 100%, 0px -15px, 100% 15px;
+  }
+}
+
+.banner:hover::before {
+  background: none;
+  border: 4px solid var(--color-compsigh);
+  animation: none;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Prevent layout shifts for images */
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 16px;
+  /* Prevent layout shifts by ensuring consistent layout */
+  min-height: 180px;
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  /* Prevent layout shifts by ensuring consistent dimensions */
+  width: 70px;
+  height: 60px;
+}
+
+.date {
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
+  font-size: 0.8rem;
+  color: var(--color-light);
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  /* Prevent layout shifts by ensuring consistent height */
+  line-height: 1.2;
+  min-height: 1.2em;
+}
+
+.time {
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
+  font-size: 0.7rem;
+  color: var(--color-light-60);
+  margin: 0;
+  text-align: center;
+  /* Prevent layout shifts by ensuring consistent height */
+  line-height: 1.2;
+  min-height: 1.2em;
+}
+
+.eventInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  /* Prevent layout shifts by ensuring consistent spacing */
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-tronica-mono), var(--font-fallback-mono);
+  font-size: 1.25rem;
+  color: var(--color-light);
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* Prevent layout shifts by ensuring consistent height */
+  min-height: 1.5em;
+}
+
+.title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title a:hover {
+  color: var(--color-compsigh);
+  text-shadow: 0 0 15px var(--color-compsigh);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  /* Prevent layout shifts by ensuring consistent height */
+  min-height: 1.2em;
+}
+
+.location span {
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
+  font-size: 0.8rem;
+  color: var(--color-light-80);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  font-family: var(--font-proto-mono), var(--font-fallback-mono);
+  font-size: 0.8rem;
+  color: var(--color-light-70);
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* Prevent layout shifts by ensuring consistent height */
+  min-height: 2.6em;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 12px;
+    height: 160px;
+    justify-content: center;
+    min-height: 160px;
+  }
+  
+  .container > * {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    /* Ensure banner doesn't go off screen on mobile */
+    max-width: calc(100vw - 24px);
+  }
+  
+  .banner {
+    height: 140px;
+    min-height: 140px;
+  }
+  
+  .content {
+    padding: 16px;
+    gap: 12px;
+    min-height: 140px;
+  }
+  
+  .dateTime {
+    min-width: 60px;
+    padding: 8px;
+    width: 60px;
+    height: 50px;
+  }
+  
+  .date {
+    font-size: 0.75rem;
+  }
+  
+  .time {
+    font-size: 0.65rem;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+  
+  .location span {
+    font-size: 0.75rem;
+  }
+  
+  .description {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 1;
+    min-height: 1.3em;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+    height: 140px;
+    justify-content: center;
+    min-height: 140px;
+  }
+  
+  .container > * {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    /* Ensure banner doesn't go off screen on small mobile */
+    max-width: calc(100vw - 20px);
+  }
+  
+  .banner {
+    height: 120px;
+    min-height: 120px;
+  }
+  
+  .content {
+    padding: 12px;
+    gap: 10px;
+    min-height: 120px;
+  }
+  
+  .dateTime {
+    min-width: 50px;
+    padding: 6px;
+    width: 50px;
+    height: 40px;
+  }
+  
+  .title {
+    font-size: 0.9rem;
+  }
+  
+  .description {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 8px;
+    height: 120px;
+    justify-content: center;
+    min-height: 120px;
+  }
+  
+  .container > * {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    /* Ensure banner doesn't go off screen on very small mobile */
+    max-width: calc(100vw - 16px);
+  }
+  
+  .banner {
+    height: 100px;
+    min-height: 100px;
+  }
+  
+  .content {
+    padding: 8px;
+    gap: 8px;
+    min-height: 100px;
+  }
+  
+  .dateTime {
+    min-width: 40px;
+    padding: 4px;
+    width: 40px;
+    height: 32px;
+  }
+  
+  .date {
+    font-size: 0.65rem;
+  }
+  
+  .time {
+    font-size: 0.55rem;
+  }
+  
+  .title {
+    font-size: 0.8rem;
+  }
+  
+  .location span {
+    font-size: 0.65rem;
+  }
+  
+  .description {
+    display: none;
+  }
+}
+
+/* Prevent layout shifts during font loading */
+@supports (font-display: swap) {
+  .date,
+  .time,
+  .title,
+  .location span,
+  .description {
+    font-display: swap;
+  }
+}

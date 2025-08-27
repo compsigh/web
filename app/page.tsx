@@ -1,11 +1,16 @@
 import { NavItems } from '@/components/NavItems'
 import { HomeLoop } from '@/components/HomeLoop'
+import { UpcomingEvent } from '@/components/UpcomingEvent'
+import { getUpcomingEvents } from '@/app/events/utils'
 
 import styles from './Home.module.css'
 
-export default function Home() {
+export default async function Home() {
+  const upcomingEvents = await getUpcomingEvents()
+
   return (
-    <>
+    <div className={styles.layoutWrapper}>
+      <UpcomingEvent events={upcomingEvents} />
       <div id={styles.content}>
         <h1 id={styles.title}>compsigh</h1>
         <p id={styles.description}>
@@ -18,6 +23,6 @@ export default function Home() {
       <div id={styles.background}>
         <HomeLoop />
       </div>
-    </>
+    </div>
   )
 }
