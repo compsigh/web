@@ -1,8 +1,6 @@
 ---
 title: "compsigh Jeopardy! night"
-description: "Now, entering the studio are today's contestants. CS majors! These contestants will compete today, on… Jeopardy! And now, here is the host of Jeopardy!, compsigh!
-
-We're hosting a CS themed Jeopardy!"
+description: "Now, entering the studio are today's contestants. CS majors! These contestants will compete today, on… Jeopardy! And now, here is the host of Jeopardy!, compsigh! We're hosting a CS themed Jeopardy!"
 event_details: {
   start: 1757642400,
   location: "Meet at the Social Hive. The first floor of Harney Science Center",
