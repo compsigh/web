@@ -19,23 +19,21 @@ here's how it went :)
 <Media
   alt="Participants at BLOOM in a group photo on Presentation Day"
   src="/community/bloom/everyone-presentation-day.jpeg"
-  style={{
-    transform: "rotate(-2deg)",
-    border: "3px dashed #ffa200"
-  }}
 />
 
 <Spacer size={32} />
 
 ## how BLOOM is different
 
-when we were brainstorming, we wanted to do a few things differently. we felt our past events gave an outsized advantage to technically complex projects, which is not what we're going for as a club. we experimented with addressing this on a couple axes:
+we felt our past events gave an outsized advantage to technically complex projects, which is not what we're going for as a club. we experimented with addressing this on a few axes:
+
+- remove artificial barriers to entry & competition like registration deadlines
+- pick an aesthetic direction that was less intense, more cutesy & wholesome
+- discontinue rubrics & class weighting, instead trusting judges to run a vibe check & adjust on their own
 
 ### :3 for beginners
 
-whether the vibes were intense, or we had strict registration deadlines, we'd gotten feedback from y'all that our past events had a perceivable barrier to entry. so we wanted to make it clear that beginners are not only welcome but encouraged.
-
-we also did away with the rubric and grade-level weighting we had for DEPLOY/24 (sorry freshmen lol). we put trust in judges to run a vibe check and adjust evaluations on their own.
+we wanted to make it clear that beginners are not only welcome but encouraged.
 
 ### :o for people
 
