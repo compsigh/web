@@ -30,9 +30,11 @@ Before we continue, you'll want to make sure you have [<CasePreserver>Node.js</C
 
 For Windows, I recommend following the prerequisites of [<CasePreserver>Microsoft</CasePreserver>'s guide to setting up <CasePreserver>WSL</CasePreserver> for <CasePreserver>Next.js</CasePreserver>](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nextjs-on-wsl).
 
-Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `npm install` to install the dependencies.
+Make sure you have `pnpm` — a package manager built on top of the Node Package Manager (npm) — installed: `npm i -g pnpm`.
 
-Finally, run `npm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
+Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `pnpm install` to install the dependencies.
+
+Finally, run `pnpm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
 </details>
 
 ## Writing content
@@ -43,7 +45,7 @@ The web platform uses **filesystem routing:** your post's <CasePreserver>URL</Ca
 | :- | :- |
 | `app/community/cue.md` | community/cue |
 | `app/community/viper.md` | community/viper |
-| `app/docs/readme.md` | docs/readme |
+| `app/docs/about.md` | docs/about |
 | `app/docs/leadership/about.md` | docs/leadership/about |
 
 You can override this behavior by using the [Metadata](#metadata) `slug` field.
@@ -624,8 +626,8 @@ slug: "events/my-workshop/getting-started"
 
 When you open the PR, it'll prefill the description. Please make sure you double-check before submitting:
 
-- You've previewed your post locally with `npm run dev` and are happy with it
-- You've confirmed `npm run build` runs successfully
+- You've previewed your post locally with `pnpm run dev` and are happy with it
+- You've confirmed `pnpm run build` runs successfully
 - You've made sure all media is in a folder mirroring your post's URL in the `public/` directory
 
 Also, you're asked to what degree you're open to feedback, if any. Feedback will most likely come in the form of suggestions directly on the PR. Each change will have an option to accept the suggestion, reject it, or batch it along with others to accept as one commit.

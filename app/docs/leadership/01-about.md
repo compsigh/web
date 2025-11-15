@@ -5,10 +5,68 @@ next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 slug: "docs/leadership/about"
 ---
 
-Every day, members of the club contribute their time and ideas to making our community awesome. Several of our events — like **clone** workshops & **demos** — are organized by these passionate and generous people. Some even make food for events! <span style={{ color: 'var(--color-light-50)' }}>Shoutout Tao \<3</span>
+## Current leadership
 
-However, as the club grows, we need a stable, core group of members committed and responsible for the club's success. This is the leadership team.
+<Grid columns={2}>
+  <Media
+    src="/avatars/jet.png"
+    title="Jet Pham"
+    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
+    description={
+      <div>
+        <span>President</span>
+        <br />
+        <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
+      </div>
+    }
+  />
+  
+  <Media
+    src="/avatars/nora.png"
+    title="Nora Kravets"
+    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
+    description={
+      <div>
+        <span>Leadership</span>
+        <br />
+        <Link href="mailto:nckravets@dons.usfca.edu">nckravets@dons.usfca.edu</Link>
+      </div>
+    }
+  />
 
-We don't use phrases like "eboard" because we don't prioritize seniority or experience — we've had members join a month into their first semester at USF. *Genuine passion and motivation to learn & to help the club thrive are more valuable than either of these.*
+  <Media
+    src="/avatars/z.png"
+    title="Z Moore"
+    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
+    description={
+      <div>
+        <span>Leadership</span>
+        <br />
+        <Link href="mailto:anmoore4@dons.usfca.edu">anmoore4@dons.usfca.edu</Link>
+      </div>
+    }
+  />
 
-We don't run applications, but we're regularly looking to invite club members. If you're involved, if you take an active interest in helping others, and if you're looking to push yourself in learning new skills, you'd be a great addition. :)
+  <Media
+    src="/avatars/sam.png"
+    title="Samuel Simmons"
+    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
+    description={
+      <div>
+        <span>Leadership</span>
+        <br />
+        <Link href="mailto:sbsimmons@dons.usfca.edu">sbsimmons@dons.usfca.edu</Link>
+      </div>
+    }
+  />
+</Grid>
+
+## Philosophy of leadership
+
+Every day, members of the club contribute their time and ideas to making our community awesome. Several of our events are organized by these passionate and generous people.
+
+However, as the club grows, we need a stable, core group of members who are committed and responsible for the club's success. This is the leadership team.
+
+We don't use phrases like "eboard" because we don't prioritize seniority or experience — we've had members join a month into their first semester at USF.
+
+*Genuine passion and motivation to learn & to help the club thrive are more valuable than either of these.*

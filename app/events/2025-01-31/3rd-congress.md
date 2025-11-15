@@ -5,7 +5,8 @@ authors: [
   { name: "Quinn", avatar: "/avatars/quinn.png" },
   { name: "Jet", avatar: "/avatars/jet.png" },
   { name: "Gursh", avatar: "/avatars/gursh.png" },
-  { name: "Nish", avatar: "/avatars/nish.png" }
+  { name: "Nish", avatar: "/avatars/nish.png" },
+  { name: "Thomas", avatar: "/avatars/thomas.png" }
 ]
 event_details: {
   hide_on_timeline: true,
