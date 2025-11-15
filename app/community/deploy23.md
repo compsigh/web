@@ -1,5 +1,5 @@
 ---
-title: "DEPLOY/23 recap"
+title: "DEPLOY/23: compsigh's first hackathon"
 description: "We just wrapped up our first hackathon, and our biggest event of the Fall 2023 semester! Here's the story of DEPLOY/23: an entirely student-bootstrapped, three-day event, bringing together the best minds in CS, design, and engineering to hack on a project for a weekend."
 post_date: 1700442000
 authors: [
