@@ -116,6 +116,17 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
                 <Emote emote="rust" />
                 <Emote emote="sunflowers" />
                 <Emote emote="taoFedora" />
+                <Emote emote="tgBamboo" />
+                <Emote emote="tgBlackeyedsusan" />
+                <Emote emote="tgCherryblossom" />
+                <Emote emote="tgCommonmilkweed" />
+                <Emote emote="tgGrass" />
+                <Emote emote="tgKangaroopaw" />
+                <Emote emote="tgLavender" />
+                <Emote emote="tgMexicanmarigold" />
+                <Emote emote="tgPrincessflower" />
+                <Emote emote="tgProtea" />
+                <Emote emote="tgTulsi" />
                 <Emote emote="threejs" />
                 <Emote emote="tunnel" />
                 <Emote emote="typescript" />

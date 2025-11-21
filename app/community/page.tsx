@@ -7,8 +7,6 @@ import {
 
 // Components
 import Link from 'next/link'
-import { Suspense } from 'react'
-import { Marquee } from '@/components/Marquee'
 import { TextStream } from '@/components/TextStream'
 import { NeonSunsetVideo } from '@/components/NeonSunsetVideo'
 
@@ -37,9 +35,6 @@ export default async function Community() {
   return (
     <>
       <div id={styles.page}>
-        <Suspense fallback={<></>}>
-          <Marquee />
-        </Suspense>
         <div id={styles.content}>
           <h1 id={styles.title}>Community</h1>
           <ul>

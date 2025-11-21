@@ -11,23 +11,52 @@ slug: "docs/leadership/about"
   <Media
     src="/avatars/jet.png"
     title="Jet Pham"
+    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
     description={
-      <>
+      <div>
         <span>President</span>
         <br />
         <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
-      </>
+      </div>
     }
   />
+  
   <Media
-    src="/avatars/edward.png"
-    title="Edward Shturman"
+    src="/avatars/nora.png"
+    title="Nora Kravets"
+    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
     description={
-      <>
-        <span>Founder</span>
+      <div>
+        <span>Leadership</span>
         <br />
-        <Link href="mailto:emshturman@dons.usfca.edu">emshturman@dons.usfca.edu</Link>
-      </>
+        <Link href="mailto:nckravets@dons.usfca.edu">nckravets@dons.usfca.edu</Link>
+      </div>
+    }
+  />
+
+  <Media
+    src="/avatars/z.png"
+    title="Z Moore"
+    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
+    description={
+      <div>
+        <span>Leadership</span>
+        <br />
+        <Link href="mailto:anmoore4@dons.usfca.edu">anmoore4@dons.usfca.edu</Link>
+      </div>
+    }
+  />
+
+  <Media
+    src="/avatars/sam.png"
+    title="Samuel Simmons"
+    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
+    description={
+      <div>
+        <span>Leadership</span>
+        <br />
+        <Link href="mailto:sbsimmons@dons.usfca.edu">sbsimmons@dons.usfca.edu</Link>
+      </div>
     }
   />
 </Grid>
