@@ -246,3 +246,7 @@ th,
 td {
   padding: 0.4em 0.8em;
 }
+
+::selection {
+  background: var(--color-compsigh-60);
+}
