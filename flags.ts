@@ -9,5 +9,3 @@ export const showMarquee = flag({
     return (await get(this.key)) as boolean
   }
 })
-
-export const flags = [showMarquee] as const
