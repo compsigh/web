@@ -14,12 +14,17 @@
     "predev": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postinstall": "prisma generate",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "dotenv -e .env.local prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "6.5.0",
     "@vercel/edge-config": "1.4.0",
+    "@vercel/toolbar": "0.1.41",
     "cmdk": "1.1.1",
+    "flags": "4.0.2",
     "image-size": "2.0.2",
     "next": "15.3.0-canary.9",
     "next-mdx-remote": "5.0.0",
@@ -46,6 +51,7 @@
     "@typescript-eslint/parser": "^8.41.0",
     "eslint": "^9.34.0",
     "eslint-config-next": "15.2.4",
+    "prisma": "6.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.41.0"
   },
