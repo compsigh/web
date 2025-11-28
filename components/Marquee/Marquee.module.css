@@ -1,0 +1,49 @@
+/* H/T Lewis Carey: https://codepen.io/lewismcarey/pen/GJZVoG */
+
+div.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  padding-left: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-dark);
+}
+
+div.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  animation: marquee 30s linear infinite;
+}
+
+div.marquee:hover {
+  animation-play-state: paused;
+}
+
+p.text {
+  display: inline-block;
+  font-family: var(--font-ia-writer-mono);
+  text-transform: uppercase;
+  color: var(--color-compsigh);
+}
+
+p.text span.name {
+  font-weight: 700;
+}
+
+p.text:not(:last-child)::after {
+  content: '|';
+  padding: 0 32px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

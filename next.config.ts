@@ -1,21 +1,24 @@
-import { type NextConfig } from 'next'
+import { type NextConfig } from "next"
+import { withVercelToolbar as Toolbar } from "@vercel/toolbar/plugins/next"
 
 const nextConfig: NextConfig = {
   experimental: {
-    ppr: 'incremental'
+    ppr: "incremental"
   },
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "ts", "tsx"],
   reactStrictMode: true,
-  transpilePackages: ['next-mdx-remote', 'shiki'],
+  transpilePackages: ["next-mdx-remote", "shiki"],
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        fs: false,
+        fs: false
       }
     }
     return config
-  },
+  }
 }
 
-export default nextConfig
+const withVercelToolbar = Toolbar()
+
+export default withVercelToolbar(nextConfig)
