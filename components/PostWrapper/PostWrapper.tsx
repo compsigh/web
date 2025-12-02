@@ -13,7 +13,7 @@ import { type PostProps } from '@/app/[...slug]/page'
 import { Decorations } from '@/components/Decorations'
 import { Emote } from '@/components/Decorations/Emote'
 import { Quote, quotes } from '@/components/Decorations/Quote'
-import { TypewriterWrapper } from '@/components/TypewriterWrapper'
+import TypeWriter from 'react-typewriter-reveal'
 
 import styles from './PostWrapper.module.css'
 
@@ -53,20 +53,15 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
 
 export function PostWrapper({ content, frontmatter }: PostProps) {
   const [typewriterDone, setTypewriterDone] = useState(false)
-  const CURSOR_WIDTH = 1
-  const MAX_LENGTH_MOBILE = 11 - CURSOR_WIDTH
-  const MAX_LENGTH_TABLET = 20 - CURSOR_WIDTH
-  const MAX_LENGTH_DESKTOP = 23 - CURSOR_WIDTH
-  const [maxStringLength, setMaxStringLength] = useState(MAX_LENGTH_DESKTOP)
-  useLayoutEffect(() => {
-    function calculateMaxStringLength() {
-      if (window.innerWidth < 768) return MAX_LENGTH_MOBILE
-      if (window.innerWidth < 1024) return MAX_LENGTH_TABLET
-      return MAX_LENGTH_DESKTOP
-    }
-    setMaxStringLength(calculateMaxStringLength())
-  }, [MAX_LENGTH_MOBILE, MAX_LENGTH_TABLET, MAX_LENGTH_DESKTOP])
+
   const pathName = usePathname()
+
+  async function waitForTypewriter() {
+    await new Promise(res => setTimeout(res, 800))
+    setTypewriterDone(true)
+  }
+  waitForTypewriter()
+
   return (
     <>
       <article className={styles.post}>
@@ -173,16 +168,9 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             </div>
         }
         <div className={styles.content}>
-          <TypewriterWrapper
-            as={'h1'}
-            options={{
-              cursor: '_',
-              delay: 10,
-              }}
-            strings={frontmatter.title.split(' ')}
-            maxLength={maxStringLength}
-            handleDone={() => setTypewriterDone(true)}
-          />
+          <TypeWriter duration={800} fps={30} caret={<h1>_</h1>}>
+            <h1>{frontmatter.title}</h1>
+          </TypeWriter>
           {typewriterDone && <AuthorsAndContent content={content} frontmatter={frontmatter} />}
         </div>
         {
