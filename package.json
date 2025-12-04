@@ -38,7 +38,6 @@
     "rehype-slug": "6.0.0",
     "remark-gfm": "4.0.1",
     "remark-math": "6.0.0",
-    "typewriter-effect": "2.22.0",
     "use-sound": "5.0.0"
   },
   "devDependencies": {
