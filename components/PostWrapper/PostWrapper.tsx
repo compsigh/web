@@ -8,14 +8,16 @@ import { Author } from '@/components/Author'
 import { Spacer } from '@/components/Spacer'
 import { Sidebar } from '@/components/Sidebar'
 import { LinkBar } from '@/components/LinkBar'
+import TypeWriter from 'react-typewriter-reveal'
 import { Sound } from '../Decorations/Soundboard'
 import { type PostProps } from '@/app/[...slug]/page'
 import { Decorations } from '@/components/Decorations'
 import { Emote } from '@/components/Decorations/Emote'
 import { Quote, quotes } from '@/components/Decorations/Quote'
-import TypeWriter from 'react-typewriter-reveal'
 
 import styles from './PostWrapper.module.css'
+
+const TYPEWRITER_ANIMATION_DURATION_MS = 800
 
 function AuthorsAndContent({ content, frontmatter }: PostProps) {
   return (
@@ -57,7 +59,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
   const pathName = usePathname()
 
   async function waitForTypewriter() {
-    await new Promise(res => setTimeout(res, 800))
+    await new Promise(res => setTimeout(res, TYPEWRITER_ANIMATION_DURATION_MS))
     setTypewriterDone(true)
   }
   waitForTypewriter()
@@ -168,9 +170,11 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
             </div>
         }
         <div className={styles.content}>
-          <TypeWriter duration={800} fps={30} caret={<h1>_</h1>}>
-            <h1>{frontmatter.title}</h1>
-          </TypeWriter>
+            <h1>
+              <TypeWriter duration={TYPEWRITER_ANIMATION_DURATION_MS} caret="_">
+                {frontmatter.title}
+              </TypeWriter>
+            </h1>
           {typewriterDone && <AuthorsAndContent content={content} frontmatter={frontmatter} />}
         </div>
         {
@@ -196,7 +200,7 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
 function DelayWrapper({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(false)
   useLayoutEffect(() => {
-    setTimeout(() => setShow(true), 1000)
+    setTimeout(() => setShow(true), TYPEWRITER_ANIMATION_DURATION_MS)
   }, [])
   return <>{show && children}</>
 }
