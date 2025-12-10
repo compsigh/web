@@ -14,7 +14,7 @@ import styles from './Events.module.css'
 type CompleteEventDetails = EventDetails & { end: number, link: string | null }
 export type EventFrontmatter = Omit<Frontmatter, 'event_details'> & { event_details: CompleteEventDetails }
 
-async function getEvents() {
+export async function getEvents() {
   const markdownFiles = await generateUnmodifiedSlugsFromMarkdownFiles('app/events')
   const events: Frontmatter[] = []
   for (const { slug } of markdownFiles) {
