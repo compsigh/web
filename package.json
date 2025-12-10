@@ -14,12 +14,17 @@
     "predev": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postinstall": "prisma generate",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "dotenv -e .env.local prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "6.5.0",
     "@vercel/edge-config": "1.4.0",
+    "@vercel/toolbar": "0.1.41",
     "cmdk": "1.1.1",
+    "flags": "4.0.2",
     "image-size": "2.0.2",
     "next": "15.3.0-canary.9",
     "next-mdx-remote": "5.0.0",
@@ -27,12 +32,12 @@
     "react-dom": "19.0.0",
     "react-icons": "5.5.0",
     "react-random-reveal": "2.0.1",
+    "react-typewriter-reveal": "0.0.7",
     "rehype-katex": "7.0.1",
     "rehype-pretty-code": "0.14.1",
     "rehype-slug": "6.0.0",
     "remark-gfm": "4.0.1",
     "remark-math": "6.0.0",
-    "typewriter-effect": "2.22.0",
     "use-sound": "5.0.0"
   },
   "devDependencies": {
@@ -46,8 +51,12 @@
     "@typescript-eslint/parser": "^8.41.0",
     "eslint": "^9.34.0",
     "eslint-config-next": "15.2.4",
+    "prisma": "6.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.41.0"
   },
-  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
 }
