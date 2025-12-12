@@ -12,11 +12,12 @@
   "private": true,
   "scripts": {
     "predev": "pnpm install",
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
     "postinstall": "prisma generate",
+    "dev": "next dev --turbopack",
+    "lint": "eslint .",
+    "prebuild": "pnpm run lint",
+    "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint",
     "migrate": "dotenv -e .env.local prisma migrate dev"
   },
   "dependencies": {
@@ -41,19 +42,15 @@
     "use-sound": "5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.34.0",
-    "@next/eslint-plugin-next": "^15.5.2",
+    "@eslint/eslintrc": "3.3.3",
     "@types/howler": "2.2.12",
     "@types/node": "25.0.0",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.41.0",
-    "@typescript-eslint/parser": "^8.41.0",
-    "eslint": "^9.34.0",
-    "eslint-config-next": "15.2.4",
+    "eslint": "9.39.1",
+    "eslint-config-next": "15.5.9",
     "prisma": "6.5.0",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.41.0"
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": "24.x"
