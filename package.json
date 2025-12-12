@@ -12,11 +12,12 @@
   "private": true,
   "scripts": {
     "predev": "pnpm install",
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
     "postinstall": "prisma generate",
-    "start": "next start",
+    "dev": "next dev --turbopack",
     "lint": "eslint .",
+    "prebuild": "pnpm run lint",
+    "build": "next build --turbopack",
+    "start": "next start",
     "migrate": "dotenv -e .env.local prisma migrate dev"
   },
   "dependencies": {
