@@ -2,9 +2,7 @@ import { type NextConfig } from "next"
 import { withVercelToolbar as Toolbar } from "@vercel/toolbar/plugins/next"
 
 const nextConfig: NextConfig = {
-  experimental: {
-    ppr: "incremental"
-  },
+  cacheComponents: true,
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote", "shiki"]
