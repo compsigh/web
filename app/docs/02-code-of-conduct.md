@@ -1,7 +1,7 @@
 ---
 title: "Code of Conduct"
 description: "Our Rules and Expectations for the club"
-previous: { text: "compsigh values", link: "/docs/values" }
+previous: { text: "about compsigh", link: "/docs/about" }
 slug: "docs/code-of-conduct"
 ---
 
@@ -9,19 +9,19 @@ Our goal is to foster an open, inclusive, and safe community. This Code of Condu
 
 ## No bigotry, hate speech, harassment, or inappropriate behavior
 
-  compsigh is a safe space. Reports will be forwarded to the school, police, friends, and family.
+compsigh is a safe space. Reports will be forwarded to the school, police, friends, and family.
 
 ## No NSFW
 
-  For the people that are young in college, for those who it makes uncomfortable, for the kids of speakers, for the sponsors we have. Do it somewhere else.
+For the people that are young in college, for those who it makes uncomfortable, for the kids of speakers, for the sponsors we have. Do it somewhere else.
 
 ## Respect the space
 
-  We are grateful for the spaces we host events in. Please clean up after yourself and leave the space better than you found it.
+We are grateful for the spaces we host events in. Please clean up after yourself and leave the space better than you found it.
 
 ## Don't break anyone else's rules
 
-  We use Discord and are a USF club. Adhere to their rules as well:
+We use Discord and are a USF club. Adhere to their rules as well:
 
 - Discord [Guidelines](https://discord.com/guidelines) and [TOS](https://discord.com/terms)
 
@@ -29,16 +29,16 @@ Our goal is to foster an open, inclusive, and safe community. This Code of Condu
 
 ## Don't break the law
 
-  It's simple. Don't break the law. Cracked or pirated resources are not allowed here.
+It's simple. Don't break the law. Cracked or pirated resources are not allowed here.
 
 ## Don't advertise
 
-  We are an open club; don't abuse your access to a group of wonderful people for your own benefit.
-  We encourage all members to self-promo, but please do it in a way that is not spammy or annoying.
+We are an open club; don't abuse your access to a group of wonderful people for your own benefit.
+We encourage all members to self-promo, but please do it in a way that is not spammy or annoying.
 
 ## Sharing code is okay
 
-  Follow your professor's rules on sharing, using, and collaborating on projects.
+Follow your professor's rules on sharing, using, and collaborating on projects.
 
 We will not tolerate inappropriate behavior from anyone. If you cannot respect these standards, you are not welcome here.
 
