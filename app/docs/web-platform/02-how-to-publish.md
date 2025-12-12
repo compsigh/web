@@ -2,7 +2,11 @@
 title: "How to publish on the compsigh web platform"
 description: "Guidelines & tips on getting your work out there and shared by the club"
 authors: [{ name: "Edward", avatar: "/avatars/edward.png" }]
-previous: { text: "Why share your work on the compsigh web platform", link: "/docs/web-platform/why-publish" }
+previous:
+  {
+    text: "Why share your work on the compsigh web platform",
+    link: "/docs/web-platform/why-publish"
+  }
 decorations: false
 slug: "docs/web-platform/how-to-publish"
 ---
@@ -35,18 +39,19 @@ Make sure you have `pnpm` — a package manager built on top of the Node Package
 Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `pnpm install` to install the dependencies.
 
 Finally, run `pnpm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
+
 </details>
 
 ## Writing content
 
 The web platform uses **filesystem routing:** your post's <CasePreserver>URL</CasePreserver> directly maps to where it is on the repo.
 
-| If your post's filepath is | Your post is accessible at compsigh.club/ |
-| :- | :- |
-| `app/community/cue.md` | community/cue |
-| `app/community/viper.md` | community/viper |
-| `app/docs/about.md` | docs/about |
-| `app/docs/leadership/about.md` | docs/leadership/about |
+| If your post's filepath is     | Your post is accessible at compsigh.club/ |
+| :----------------------------- | :---------------------------------------- |
+| `app/community/cue.md`         | community/cue                             |
+| `app/community/viper.md`       | community/viper                           |
+| `app/docs/about.md`            | docs/about                                |
+| `app/docs/leadership/about.md` | docs/leadership/about                     |
 
 You can override this behavior by using the [Metadata](#metadata) `slug` field.
 
@@ -58,7 +63,7 @@ Get started by creating a file based on where you want it to be available online
 <summary>Every post in the Community tab is written in <CasePreserver>Markdown</CasePreserver>, the same text formatting language <CasePreserver>GitHub</CasePreserver>, <CasePreserver>Discord</CasePreserver>, and many other platforms use:</summary>
 
 ```markdown showLineNumbers title="example.md"
-In a Markdown file, we can *italicize text* by putting one asterisk around it, or **bold text** by putting two asterisks around it.
+In a Markdown file, we can _italicize text_ by putting one asterisk around it, or **bold text** by putting two asterisks around it.
 
 We can also make lists:
 
@@ -88,11 +93,13 @@ We can also make lists:
 - Item 3
 
 Plus embed images, headings, and more.
-    </CasePreserver>
+</CasePreserver>
+
   </div>
 </Playground>
 
 Check out the [<CasePreserver>Markdown</CasePreserver> guide](https://markdownguide.org) for more info on syntax and why it's a great, platform-independent language of choice.
+
 </details>
 
 ### Using React
@@ -100,7 +107,7 @@ Check out the [<CasePreserver>Markdown</CasePreserver> guide](https://markdowngu
 <details>
 <summary><CasePreserver>Markdown</CasePreserver> is great, but with the power of <CasePreserver>React</CasePreserver>, we can make our content more visual and interactive. Everything you need to know about using the web platform's <CasePreserver>React</CasePreserver> components is in their documentation below, but if you'd rather get comfortable with the framework first, this is the *Hello World* to read!</summary>
 
-[<CasePreserver>React</CasePreserver>](https://react.dev) is a <CasePreserver>JavaScript</CasePreserver> framework for crafting *composable* <CasePreserver>UI</CasePreserver>s. Before the "component era" of web development, developers had to manually place elements *on each page they appeared.* Can you imagine writing a sidebar 10+ times? <CasePreserver>React</CasePreserver> and other frameworks like it allow developers to "componentize" <CasePreserver>UI</CasePreserver> so that it can be reused across our application.
+[<CasePreserver>React</CasePreserver>](https://react.dev) is a <CasePreserver>JavaScript</CasePreserver> framework for crafting _composable_ <CasePreserver>UI</CasePreserver>s. Before the "component era" of web development, developers had to manually place elements _on each page they appeared._ Can you imagine writing a sidebar 10+ times? <CasePreserver>React</CasePreserver> and other frameworks like it allow developers to "componentize" <CasePreserver>UI</CasePreserver> so that it can be reused across our application.
 
 Let's take a look at a simplified example. You might have an application where each page greets the user:
 
@@ -125,7 +132,7 @@ function Greeting() {
 }
 ```
 
-That's it — this is the *Hello World* of <CasePreserver>React</CasePreserver>! This looks very similar to <CasePreserver>HTML</CasePreserver>: it's called <CasePreserver>JSX</CasePreserver>, or "<CasePreserver>JavaScript XML</CasePreserver>".
+That's it — this is the _Hello World_ of <CasePreserver>React</CasePreserver>! This looks very similar to <CasePreserver>HTML</CasePreserver>: it's called <CasePreserver>JSX</CasePreserver>, or "<CasePreserver>JavaScript XML</CasePreserver>".
 
 **A <CasePreserver>React</CasePreserver> component is a function that returns JSX.**
 
@@ -168,6 +175,7 @@ function Greeting(props) {
 I think that should be enough context for us here.
 
 This mini intro was intentionally minimal — there is so much more to <CasePreserver>React</CasePreserver>, and I recommend [the <CasePreserver>React</CasePreserver> docs](https://react.dev) if you're interested in learning more. It's a good time to be a web dev. :)
+
 </details>
 
 ### Adding media
@@ -176,15 +184,15 @@ This mini intro was intentionally minimal — there is so much more to <CasePres
 <summary>You can upload any media related to your post — images, videos, etc. — to the `public/` folder, with a filepath that mirrors its URL:</summary>
 
 | If your post is accessible at compsigh.club/ | Your post's media should be in |
-| :- | :- |
-| community/cue | `public/community/cue/` |
-| community/viper | `public/community/viper/` |
-| events/2024-08-30/compsigh-night | `public/events/2024-08-30/` |
-| events/2024-08-30/compsigh-clone | `public/events/2024-08-30/` |
+| :------------------------------------------- | :----------------------------- |
+| community/cue                                | `public/community/cue/`        |
+| community/viper                              | `public/community/viper/`      |
+| events/2024-08-30/compsigh-night             | `public/events/2024-08-30/`    |
+| events/2024-08-30/compsigh-clone             | `public/events/2024-08-30/`    |
 
 And so on.
 
-*If possible, please compress your media!* We want to be courteous to everyone that has the repo cloned; let's not bloat it. Here are a couple strategies to reduce filesize:
+_If possible, please compress your media!_ We want to be courteous to everyone that has the repo cloned; let's not bloat it. Here are a couple strategies to reduce filesize:
 
 - If your media is a non-transparent image, convert it to JPEG
   - On Mac, right-click the image, go to Quick Actions, then click Convert Image
@@ -206,17 +214,17 @@ On the web platform, we use a dedicated `Media` component, which auto-optimizes 
 Props:
 
 - `src: string` <span style={{ color: 'red' }}>(required)</span><br />
-A filepath, relative to the `public/` directory, to the image or video to embed
+  A filepath, relative to the `public/` directory, to the image or video to embed
 - `title: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-A caption placed directly under the image
+  A caption placed directly under the image
 - `description: string | React.ReactElement` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-A more subtle caption, if additional context would help
+  A more subtle caption, if additional context would help
 - `cta: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-"Call to action"; displays under the title or description if present
+  "Call to action"; displays under the title or description if present
 - `link: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-Clicking on the image, title, or `cta` will take the reader to this <CasePreserver>URL</CasePreserver>
+  Clicking on the image, title, or `cta` will take the reader to this <CasePreserver>URL</CasePreserver>
 - `alt: string` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-A description of the media, for accessibility
+  A description of the media, for accessibility
 
 Example:
 
@@ -255,9 +263,7 @@ Markdown uses "code fences" — three backticks (\`\`\`) — around a snippet to
 <summary>There is also a `Playground` component, which is good for interactive showcases or examples:</summary>
 
 ```mdx showLineNumbers title="example.md"
-<Playground>
-  This content is not editable
-</Playground>
+<Playground>This content is not editable</Playground>
 ```
 
 <Playground>
@@ -267,9 +273,7 @@ Markdown uses "code fences" — three backticks (\`\`\`) — around a snippet to
 <Spacer size={16} />
 
 ```mdx showLineNumbers title="example.md"
-<Playground editable>
-  This content is editable *(click me!)*
-</Playground>
+<Playground editable>This content is editable *(click me!)*</Playground>
 ```
 
 <Playground editable>
@@ -329,6 +333,7 @@ this page is getting kinda long bruh
 
 lunch anyone?
 </CasePreserver>
+
 </details>
 
 ### Displaying content side-by-side
@@ -341,9 +346,9 @@ Say you have a screenshot from your phone. In the single-column layout, images a
 Props:
 
 - `columns: number` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-Divides all children of `Grid` by this number
+  Divides all children of `Grid` by this number
 - `columnSizeDistribution: string[]` <span style={{ color: 'var(--color-light-50)' }}>(optional)</span><br />
-Override the default even-division behavior to create custom layouts like 1:2:1
+  Override the default even-division behavior to create custom layouts like 1:2:1
 
 <Note>
 **Good to know:** `Grid` divides "top-level" children. This means if you want to treat a group of text as one, you'll want to wrap it with a parent element, such as a `<div>`.
@@ -362,6 +367,7 @@ Example:
     Invites had conditions like `no-invite` (invited students can't also +1) to help us scale reasonably.
 
     We also gave these out at Destination USF.
+
   </div>
 </Grid>
 ```
@@ -374,14 +380,15 @@ Example:
         <CasePreserver>
 We really liked the idea of invites, and we went all out, because why not?
 
-We produced a set of 50 *physical* invite cards, each with their own unique invite linked via QR code.
+We produced a set of 50 _physical_ invite cards, each with their own unique invite linked via QR code.
 
 Invites had conditions like `no-invite` (invited students can't also +1) to help us scale reasonably.
 
 We also gave these out at Destination USF.
-        </CasePreserver>
-      </div>
-    </Grid>
+</CasePreserver>
+</div>
+</Grid>
+
   </div>
 </Playground>
 </details>
@@ -395,7 +402,8 @@ We also gave these out at Destination USF.
 
 ```mdx showLineNumbers title="example.md"
 <Note>
-  compsigh is a social computer science club for meeting cool people & building cool things
+  compsigh is a social computer science club for meeting cool people & building
+  cool things
 </Note>
 ```
 
@@ -422,8 +430,9 @@ These two paragraphs could use some space
 
   <Spacer size={16} />
 
-  These two paragraphs could use some space
+These two paragraphs could use some space
 </Playground>
+
 </details>
 
 ### Hiding content
@@ -443,9 +452,10 @@ These two paragraphs could use some space
 <Hidden>
   ## Setup
 
-  ### Fall decorations
+### Fall decorations
 
-  ### Snacks
+### Snacks
+
 </Hidden>
 ```
 
@@ -514,7 +524,7 @@ This is mainly for proper ordering in the Community tab. You don't have to actua
 
 Authors are rendered at the top of the page.
 
-- `name` can be whatever you want — *most put their <CasePreserver>Discord</CasePreserver> username to keep with the theme :)*
+- `name` can be whatever you want — _most put their <CasePreserver>Discord</CasePreserver> username to keep with the theme :)_
 - `avatar` represents a filepath, relative to the `public/` directory, to the image displayed next to your name
 
 Examples:
@@ -523,10 +533,11 @@ Examples:
 ---
 title: "compsigh team project: Cue"
 description: "A minimalist active recall study app focused on helping students ask the right questions. Transform your notes into actionable study cards for easy pasting back into Google Docs or Notion, or export to Anki."
-authors: [
-  { name: "Edward", avatar: "/avatars/edward.png" },
-  { name: "Sanju", avatar: "/avatars/sanju.jpeg" }
-]
+authors:
+  [
+    { name: "Edward", avatar: "/avatars/edward.png" },
+    { name: "Sanju", avatar: "/avatars/sanju.jpeg" }
+  ]
 og_image: "/og/cue.png"
 ---
 ```
@@ -536,9 +547,7 @@ og_image: "/og/cue.png"
 title: "compsigh DEPLOY/23 project: Viper"
 description: "Looking back at my first ever hackathon W"
 post_date: 1723236660
-authors: [
-  { name: "Andrew", avatar: "/avatars/andrew.png" },
-]
+authors: [{ name: "Andrew", avatar: "/avatars/andrew.png" }]
 og_image: "/community/viper/og.png"
 ---
 ```
@@ -555,7 +564,7 @@ og_image: "/community/viper/og.png"
 
 "og" stands for opengraph, a standard for metadata across the Web. The `og_image` is a filepath, relative to the `public/` directory, to an image that'll be used when you share a link to your post (like the image on a <CasePreserver>Discord</CasePreserver> embed).
 
-If you do upload one *(encouraged!)*, if possible, please ensure it is `1200 × 630` pixels. This is the standard and will guarantee your image looks good on all platforms (<CasePreserver>LinkedIn</CasePreserver>, <CasePreserver>Discord</CasePreserver>, <CasePreserver>Slack</CasePreserver>, <CasePreserver>Twitter</CasePreserver>, etc.).
+If you do upload one _(encouraged!)_, if possible, please ensure it is `1200 × 630` pixels. This is the standard and will guarantee your image looks good on all platforms (<CasePreserver>LinkedIn</CasePreserver>, <CasePreserver>Discord</CasePreserver>, <CasePreserver>Slack</CasePreserver>, <CasePreserver>Twitter</CasePreserver>, etc.).
 
 <Spacer size={16} />
 
@@ -583,7 +592,7 @@ If you're writing a series of posts (for example, clone workshop notes), this is
 ---
 title: "compsigh leadership"
 description: "The mission & methods of club leadership"
-previous: { text: "compsigh values", link: "/docs/values" }
+previous: { text: "about compsigh", link: "/docs/about" }
 next: { text: "Joining leadership", link: "/docs/leadership/joining" }
 ---
 ```
@@ -633,4 +642,5 @@ When you open the PR, it'll prefill the description. Please make sure you double
 Also, you're asked to what degree you're open to feedback, if any. Feedback will most likely come in the form of suggestions directly on the PR. Each change will have an option to accept the suggestion, reject it, or batch it along with others to accept as one commit.
 
 Once the PR is opened, the platforms team will review it and give feedback to the degree you mentioned. Assuming all checks out and the PR gets merged, congrats! It's live and ready to share.
+
 </details>

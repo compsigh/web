@@ -7,16 +7,7 @@ const nextConfig: NextConfig = {
   },
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   reactStrictMode: true,
-  transpilePackages: ["next-mdx-remote", "shiki"],
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false
-      }
-    }
-    return config
-  }
+  transpilePackages: ["next-mdx-remote", "shiki"]
 }
 
 const withVercelToolbar = Toolbar()
