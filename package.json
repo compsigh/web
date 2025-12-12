@@ -13,7 +13,7 @@
   "scripts": {
     "predev": "pnpm install",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "next lint",
