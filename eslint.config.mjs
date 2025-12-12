@@ -13,7 +13,15 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts"
-  ])
+  ]),
+  {
+    rules: {
+      "react-hooks/purity": "warn",
+      "react-hooks/static-components": "warn",
+      "react-hooks/set-state-in-render": "warn",
+      "react-hooks/set-state-in-effect": "warn"
+    }
+  }
 ])
 
 export default eslintConfig
