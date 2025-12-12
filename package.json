@@ -42,7 +42,6 @@
     "use-sound": "5.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.3.3",
     "@types/howler": "2.2.12",
     "@types/node": "25.0.0",
     "@types/react": "19.2.7",
