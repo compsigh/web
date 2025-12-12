@@ -25,8 +25,8 @@ function FeedbackContent() {
   return (
     <div>
       <p>
-        We&apos;d love to get your feedback on compsigh! Let us know your
-        thoughts, complaints, suggestions, and more!
+        We'd love to get your feedback on compsigh! Let us know your thoughts,
+        complaints, suggestions, and more!
       </p>
       <p>
         Your feedback is anonymous and will be reviewed by the compsigh
