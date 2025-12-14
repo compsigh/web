@@ -27,7 +27,7 @@
     "cmdk": "1.1.1",
     "flags": "4.0.2",
     "image-size": "2.0.2",
-    "next": "15.6.0-canary.60",
+    "next": "16.0.10",
     "next-mdx-remote": "5.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -42,13 +42,12 @@
     "use-sound": "5.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.3.3",
     "@types/howler": "2.2.12",
     "@types/node": "25.0.0",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.1",
-    "eslint-config-next": "15.5.9",
+    "eslint-config-next": "16.0.10",
     "prisma": "6.5.0",
     "typescript": "5.9.3"
   },
