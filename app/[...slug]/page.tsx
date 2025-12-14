@@ -257,11 +257,13 @@ export async function generateStaticParams() {
   return slugs
 }
 
-export default async function Page(props: {
+export default async function Page({
+  params
+}: {
   params: Promise<{ slug: string[] }>
 }) {
-  const params = await props.params
-  const { content, frontmatter } = await readMarkdownFileAtRoute(params.slug)
+  const { slug } = await params
+  const { content, frontmatter } = await readMarkdownFileAtRoute(slug)
   if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (
     <>
