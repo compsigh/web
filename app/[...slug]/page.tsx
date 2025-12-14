@@ -237,7 +237,7 @@ export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
   return slugs
 }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 export async function generateStaticParams() {
   let slugs = await generateUnmodifiedSlugsFromMarkdownFiles("app")
 
