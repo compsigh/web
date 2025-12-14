@@ -1,5 +1,5 @@
-import prisma from '@/functions/db'
-import { MarqueeEntry } from '@prisma/client'
+import prisma from "@/functions/db"
+import { MarqueeEntry } from "@prisma/client"
 
 export async function getMarqueeEntry(id: string) {
   return await prisma.marqueeEntry.findUnique({
