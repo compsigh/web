@@ -34,7 +34,6 @@ async function getPosts() {
   return posts
 }
 
-export const experimental_ppr = true
 export default async function Community() {
   const posts = await getPosts()
   return (
