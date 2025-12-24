@@ -15,7 +15,7 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
       title: "DAVE",
       description: "register!",
       event_details: {
-        start: 17665518600,
+        start: 1766551860,
         end: 9999999999999,
         location: "The Hive",
         cover_image: "/events/2025-11-07/deploy25.png",
