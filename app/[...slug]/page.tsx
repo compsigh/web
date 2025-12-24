@@ -1,29 +1,29 @@
-import path from 'node:path'
-import Link from 'next/link'
-import { Suspense } from 'react'
-import fs from 'node:fs/promises'
-import { type Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { compileMDX } from 'next-mdx-remote/rsc'
+import path from "node:path"
+import Link from "next/link"
+import { Suspense } from "react"
+import fs from "node:fs/promises"
+import { type Metadata } from "next"
+import { notFound } from "next/navigation"
+import { compileMDX } from "next-mdx-remote/rsc"
 
-import '@/app/katex.min.css'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import rehypeSlug from 'rehype-slug'
-import rehypeKatex from 'rehype-katex'
-import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
+import "@/app/katex.min.css"
+import remarkGfm from "remark-gfm"
+import remarkMath from "remark-math"
+import rehypeSlug from "rehype-slug"
+import rehypeKatex from "rehype-katex"
+import rehypePrettyCode, { type Options } from "rehype-pretty-code"
 
-import { Mic } from '@/components/Mic'
-import { Grid } from '@/components/Grid'
-import { Note } from '@/components/Note'
-import { Media } from '@/components/Media'
-import { Spacer } from '@/components/Spacer'
-import { Author } from '@/components/Author'
-import { Hidden } from '@/components/Hidden'
-import { LinkBar } from '@/components/LinkBar'
-import { Playground } from '@/components/Playground'
-import { PostWrapper } from '@/components/PostWrapper'
-import { CasePreserver } from '@/components/CasePreserver'
+import { Mic } from "@/components/Mic"
+import { Grid } from "@/components/Grid"
+import { Note } from "@/components/Note"
+import { Media } from "@/components/Media"
+import { Spacer } from "@/components/Spacer"
+import { Author } from "@/components/Author"
+import { Hidden } from "@/components/Hidden"
+import { LinkBar } from "@/components/LinkBar"
+import { Playground } from "@/components/Playground"
+import { PostWrapper } from "@/components/PostWrapper"
+import { CasePreserver } from "@/components/CasePreserver"
 
 /**
  * Contents of a Markdown file.
@@ -47,18 +47,18 @@ type Activity = {
 }
 
 export const locationIcons = {
-  'hive': '/emotes/hive.svg',
-  'classroom': '/emotes/classroom.png',
-  'ka-499': '/emotes/ka-499.png',
-  'lucky-strike': '/emotes/lucky-strike.png',
-  'getty-study': '/emotes/getty-study.png',
-  'cs-labs': '/emotes/cs-labs.png',
-  'escape-game': '/emotes/escape-game.png',
-  'billiards': '/emotes/billiards.png',
-  'ggp': '/emotes/ggp.png',
-  'undercaf': '/emotes/undercaf.png',
-  'uc-4': '/emotes/uc-4.png',
-  'mclaren': '/emotes/mclaren.png'
+  hive: "/emotes/hive.svg",
+  classroom: "/emotes/classroom.png",
+  "ka-499": "/emotes/ka-499.png",
+  "lucky-strike": "/emotes/lucky-strike.png",
+  "getty-study": "/emotes/getty-study.png",
+  "cs-labs": "/emotes/cs-labs.png",
+  "escape-game": "/emotes/escape-game.png",
+  billiards: "/emotes/billiards.png",
+  ggp: "/emotes/ggp.png",
+  undercaf: "/emotes/undercaf.png",
+  "uc-4": "/emotes/uc-4.png",
+  mclaren: "/emotes/mclaren.png"
 }
 
 export type EventDetails = {
@@ -90,7 +90,7 @@ export type Frontmatter = {
 }
 
 export type PostProps = {
-  content: React.ReactElement,
+  content: React.ReactElement
   frontmatter: Frontmatter
 }
 
@@ -100,11 +100,24 @@ export type PostProps = {
  * @param fileContent - The string contents of the Markdown file.
  */
 export async function compileMarkdown(fileContent: Markdown) {
-  const compsighTheme = await import('./compsigh-theme.json')
-  const rehypePrettyCodeOptions: Options = { theme: JSON.parse(JSON.stringify(compsighTheme)) }
+  const compsighTheme = await import("./compsigh-theme.json")
+  const rehypePrettyCodeOptions: Options = {
+    theme: JSON.parse(JSON.stringify(compsighTheme))
+  }
   const { content, frontmatter } = await compileMDX<Frontmatter>({
     source: fileContent,
-    components: { CasePreserver, Grid, Hidden, Link, LinkBar, Media, Mic, Note, Playground, Spacer },
+    components: {
+      CasePreserver,
+      Grid,
+      Hidden,
+      Link,
+      LinkBar,
+      Media,
+      Mic,
+      Note,
+      Playground,
+      Spacer
+    },
     options: {
       parseFrontmatter: true,
       mdxOptions: {
@@ -130,26 +143,24 @@ export async function compileMarkdown(fileContent: Markdown) {
  */
 export async function readMarkdownFileAtRoute(segments: string[]) {
   try {
-    const filePath = path.join(process.cwd(), 'app', ...segments) + '.md'
-    const fileContent = await fs.readFile(filePath, 'utf8')
+    const filePath = path.join(process.cwd(), "app", ...segments) + ".md"
+    const fileContent = await fs.readFile(filePath, "utf8")
     const { content, frontmatter } = await compileMarkdown(fileContent)
 
     if (!frontmatter.slug) {
-      frontmatter.slug = segments.join('/')
+      frontmatter.slug = segments.join("/")
     }
 
     return { content, frontmatter }
-  }
-
-  catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
       // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
       // TODO: this is scuffed and should be redone; perhaps using a map of slugs to file paths
-      const slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+      const slugs = await generateUnmodifiedSlugsFromMarkdownFiles("app")
       for (const { slug } of slugs) {
         const { frontmatter } = await readMarkdownFileAtRoute(slug)
-        if (frontmatter.slug === segments.join('/'))
+        if (frontmatter.slug === segments.join("/"))
           return readMarkdownFileAtRoute(slug)
       }
     }
@@ -157,17 +168,16 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
   }
 }
 
-export async function generateMetadata(
-  props:
-  { params: Promise<{ slug: string[] }> }
-) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string[] }>
+}) {
   const params = await props.params
   const { frontmatter } = await readMarkdownFileAtRoute(params.slug)
   const metadata: Metadata = {
     title: frontmatter.title,
     description: frontmatter.description,
     openGraph: {
-      siteName: 'compsigh'
+      siteName: "compsigh"
     }
   }
 
@@ -177,20 +187,24 @@ export async function generateMetadata(
   if (frontmatter.authors)
     for (const author of frontmatter.authors)
       url = url.concat(`&author=${author.name}&avatar=${author.avatar}`)
-  metadata.openGraph!.images = [{
-    url: url,
-    width: 1200,
-    height: 630,
-    alt: ''
-  }]
-
-  if (frontmatter.og_image)
-    metadata.openGraph!.images = [{
-      url: frontmatter.og_image,
+  metadata.openGraph!.images = [
+    {
+      url: url,
       width: 1200,
       height: 630,
-      alt: ''
-    }]
+      alt: ""
+    }
+  ]
+
+  if (frontmatter.og_image)
+    metadata.openGraph!.images = [
+      {
+        url: frontmatter.og_image,
+        width: 1200,
+        height: 630,
+        alt: ""
+      }
+    ]
 
   return metadata
 }
@@ -199,22 +213,24 @@ export async function generateMetadata(
  * Recursively generate a list of slugs for Next.js' `generateStaticParams()` from all Markdown files in a folder and its subfolders. The slugs are relative to the `app/` directory. Does not modify the slug regardless of frontmatter; that is done in `generateStaticParams()`.
  *
  * @param {string} folder - The folder from where to scan for Markdown files.
- * @example generateUnmodifiedSlugsFromMarkdownFiles('app') // Returns [{ slug: ['docs', '01-about'] }, { slug: ['docs', '02-values'] }, ...]
+ * @example generateUnmodifiedSlugsFromMarkdownFiles('app') // Returns [{ slug: ['docs', '01-about'] }, { slug: ['docs', '02-code-of-conduct'] }, ...]
  */
 export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
   const folderContents = await fs.readdir(folder, { withFileTypes: true })
   const files = folderContents.filter((file) => file.isFile())
   const directories = folderContents.filter((file) => file.isDirectory())
   let slugs = files
-    .filter((file) => file.name.endsWith('.md'))
-    .map((file) => file.name.replace(/\.md$/, ''))
+    .filter((file) => file.name.endsWith(".md"))
+    .map((file) => file.name.replace(/\.md$/, ""))
     .map((slug) => path.join(folder, slug))
-    .map((slug) => slug.split('/'))
+    .map((slug) => slug.split("/"))
     .map((slug) => slug.slice(1))
     .map((slug) => ({ slug }))
 
   for (const directory of directories) {
-    const nestedSlugs = await generateUnmodifiedSlugsFromMarkdownFiles(path.join(folder, directory.name))
+    const nestedSlugs = await generateUnmodifiedSlugsFromMarkdownFiles(
+      path.join(folder, directory.name)
+    )
     slugs = slugs.concat(nestedSlugs)
   }
 
@@ -223,7 +239,7 @@ export async function generateUnmodifiedSlugsFromMarkdownFiles(folder: string) {
 
 export const dynamicParams = false
 export async function generateStaticParams() {
-  let slugs = await generateUnmodifiedSlugsFromMarkdownFiles('app')
+  let slugs = await generateUnmodifiedSlugsFromMarkdownFiles("app")
 
   // For each file:
   // 1. Read it
@@ -234,20 +250,20 @@ export async function generateStaticParams() {
   // 6. If it does, skip building the page
   for (const [index, { slug: route }] of slugs.entries()) {
     const { frontmatter } = await readMarkdownFileAtRoute(route)
-    if (frontmatter.slug)
-      slugs[index] = { slug: frontmatter.slug.split('/') }
+    if (frontmatter.slug) slugs[index] = { slug: frontmatter.slug.split("/") }
     if (frontmatter.event_details?.link !== undefined)
-      slugs = slugs.filter((slug) => slug.slug.join('/') !== route.join('/'))
+      slugs = slugs.filter((slug) => slug.slug.join("/") !== route.join("/"))
   }
   return slugs
 }
 
-export default async function Page(
-  props:
-  { params: Promise<{ slug: string[] }> }
-) {
-  const params = await props.params
-  const { content, frontmatter } = await readMarkdownFileAtRoute(params.slug)
+export default async function Page({
+  params
+}: {
+  params: Promise<{ slug: string[] }>
+}) {
+  const { slug } = await params
+  const { content, frontmatter } = await readMarkdownFileAtRoute(slug)
   if (frontmatter.decorations === undefined) frontmatter.decorations = true
   return (
     <>

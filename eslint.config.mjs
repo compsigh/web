@@ -1,16 +1,27 @@
-import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import pluginNext from '@next/eslint-plugin-next';
+import { defineConfig, globalIgnores } from "eslint/config"
+import nextVitals from "eslint-config-next/core-web-vitals"
+import nextTs from "eslint-config-next/typescript"
 
-export default [
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    ".vercel/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts"
+  ]),
   {
-    plugins: {
-      '@next/next': pluginNext,
-    },
     rules: {
-      ...pluginNext.configs.recommended.rules,
-    },
-  },
-];
+      "react-hooks/purity": "warn",
+      "react-hooks/static-components": "warn",
+      "react-hooks/set-state-in-render": "warn",
+      "react-hooks/set-state-in-effect": "warn"
+    }
+  }
+])
+
+export default eslintConfig
