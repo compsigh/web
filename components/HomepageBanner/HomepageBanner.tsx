@@ -1,6 +1,16 @@
 "use client";
+
 import { EventFrontmatter } from "@/app/events/page";
 import Link from "next/link";
+
+function isValidURL(url: string): boolean {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
   const currentTime = Math.floor(new Date().getTime() / 1000);
@@ -12,12 +22,12 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
       title: "DAVE",
       description: "register!",
       event_details: {
-        start: 1766551860,
+        start: 17665518600,
         end: 9999999999999,
         location: "The Hive",
         cover_image: "/events/2025-11-07/deploy25.png",
         pictures: [],
-        link: "https://touch-grass.com",
+        link: "/",
       },
       slug: "events/2025-11-07/deploy25",
     },
@@ -31,6 +41,8 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
   const nearestUpcomingEvent = upcomingEvents[0];
   const title = nearestUpcomingEvent.title;
   const eventLink = nearestUpcomingEvent.event_details.link!;
+
+  if (!isValidURL(eventLink)) return <></>;
 
   return (
     <Link href={eventLink}>
