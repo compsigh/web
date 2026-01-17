@@ -130,7 +130,7 @@ export const metadata: Metadata = {
   metadataBase,
   title: "compsigh",
   description:
-    "A social computer science club for meeting cool people and building cool things at the University of San Francisco",
+    "The social computer science club at the University of San Francisco for meeting cool people and building cool things",
   openGraph: {
     images: "/og/root.png"
   }
