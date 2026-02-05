@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1770268502153" clover="3.2.0">
-  <project timestamp="1770268502153" name="All files">
+<coverage generated="1770270581573" clover="3.2.0">
+  <project timestamp="1770270581573" name="All files">
     <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="11" coveredelements="11" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
     <file name="isValidURL.ts" path="/Users/ashid/Documents/comsigh/web/components/HomepageBanner/isValidURL.ts">
       <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -9,8 +9,8 @@
       <line num="3" count="14" type="stmt"/>
       <line num="4" count="14" type="stmt"/>
       <line num="5" count="14" type="cond" truecount="1" falsecount="0"/>
-      <line num="6" count="5" type="stmt"/>
-      <line num="7" count="5" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
       <line num="8" count="14" type="stmt"/>
     </file>
   </project>

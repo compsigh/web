@@ -9,13 +9,13 @@ DA:2,14
 DA:3,14
 DA:4,14
 DA:5,14
-DA:6,5
-DA:7,5
+DA:6,6
+DA:7,6
 DA:8,14
 LF:8
 LH:8
 BRDA:1,0,0,14
-BRDA:5,1,0,5
+BRDA:5,1,0,6
 BRF:2
 BRH:2
 end_of_record

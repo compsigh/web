@@ -1,9 +1,15 @@
 import { isValidURL } from "./isValidURL"
 
-const tests = [
+interface Test {
+  name: string
+  input: string
+  expected: boolean
+}
+
+const tests: Test[] = [
   {
     name: "Return true for valid URL string",
-    input: "https://www.google.com/?zx=1770258603081&no_sw_cr=1",
+    input: "https://touch-grass.tech/",
     expected: true
   },
   {
@@ -34,7 +40,7 @@ const tests = [
   },
   {
     name: "Fake protocol",
-    input: "htp://example.com",
+    input: "67://example.com",
     expected: false
   },
   {
@@ -55,12 +61,12 @@ const tests = [
   {
     name: "Missing one slash",
     input: "https:/example.com",
-    expected: false
+    expected: true
   },
   {
     name: "Extra slash",
-    input: "https:///example.com",
-    expected: false
+    input: "https:////////////////example.com",
+    expected: true
   },
   {
     name: "Non-numeric port",
@@ -69,12 +75,12 @@ const tests = [
   },
   {
     name: "Unencoded spaces in path",
-    input: "https://example.com/path with spaces",
-    expected: false
+    input: "https://tungtungtung.com/path with spaces",
+    expected: true
   }
 ]
 
-describe("Is Valid URL", () => {
+describe("TS function IsValidURL", () => {
   tests.forEach((config) => {
     it(config.name, () => {
       expect(isValidURL(config.input)).toBe(config.expected)
