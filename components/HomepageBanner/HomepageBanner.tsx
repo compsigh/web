@@ -1,20 +1,13 @@
-"use client";
+"use client"
 
-import { EventFrontmatter } from "@/app/events/page";
-import Link from "next/link";
+import { EventFrontmatter } from "@/app/events/page"
+import Link from "next/link"
 
-function isValidURL(url: string): boolean {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
-}
+import { isValidURL } from "./isValidURL"
 
 export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
-  const currentTime = Math.floor(new Date().getTime() / 1000);
-  if (events.length === 0) return <></>;
+  const currentTime = Math.floor(new Date().getTime() / 1000)
+  if (events.length === 0) return <></>
 
   const updatedEvents: EventFrontmatter[] = [
     ...events,
@@ -27,26 +20,26 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
         location: "The Hive",
         cover_image: "/events/2025-11-07/deploy25.png",
         pictures: [],
-        link: "/",
+        link: "/"
       },
-      slug: "events/2025-11-07/deploy25",
-    },
-  ];
+      slug: "events/2025-11-07/deploy25"
+    }
+  ]
 
-  const upcomingEvents: EventFrontmatter[] = [];
+  const upcomingEvents: EventFrontmatter[] = []
   for (const event of updatedEvents)
-    if (currentTime < event.event_details.start) upcomingEvents.push(event);
+    if (currentTime < event.event_details.start) upcomingEvents.push(event)
 
-  if (upcomingEvents.length === 0) return <></>;
-  const nearestUpcomingEvent = upcomingEvents[0];
-  const title = nearestUpcomingEvent.title;
-  const eventLink = nearestUpcomingEvent.event_details.link!;
+  if (upcomingEvents.length === 0) return <></>
+  const nearestUpcomingEvent = upcomingEvents[0]
+  const title = nearestUpcomingEvent.title
+  const eventLink = nearestUpcomingEvent.event_details.link!
 
-  if (!isValidURL(eventLink)) return <></>;
+  if (!isValidURL(eventLink)) return <></>
 
   return (
     <Link href={eventLink}>
       <h1>&quot;{title}&quot; is coming up.</h1>
     </Link>
-  );
+  )
 }

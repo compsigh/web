@@ -19,7 +19,10 @@
     "prebuild": "pnpm run lint",
     "build": "next build --turbopack",
     "start": "next start",
-    "migrate": "dotenv -e .env.local prisma migrate dev"
+    "migrate": "dotenv -e .env.local prisma migrate dev",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@prisma/client": "6.5.0",
@@ -43,14 +46,21 @@
     "use-sound": "5.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/howler": "2.2.12",
+    "@types/jest": "^30.0.0",
     "@types/node": "25.0.0",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.1",
     "eslint-config-next": "16.0.10",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-setup-mock": "^0.1.5",
     "prettier": "3.7.4",
     "prisma": "6.5.0",
+    "ts-jest": "^29.4.6",
     "typescript": "5.9.3"
   },
   "engines": {
