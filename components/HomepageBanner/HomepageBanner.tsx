@@ -15,12 +15,12 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
       title: "DAVE",
       description: "register!",
       event_details: {
-        start: 1766551860,
-        end: 9999999999999,
+        start: 1770420908,
+        end: 1770420968,
         location: "The Hive",
         cover_image: "/events/2025-11-07/deploy25.png",
         pictures: [],
-        link: "/"
+        link: "https://touch-grass.tech/"
       },
       slug: "events/2025-11-07/deploy25"
     }
