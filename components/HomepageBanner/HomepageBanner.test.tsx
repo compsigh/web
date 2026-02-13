@@ -25,7 +25,7 @@ describe("Next Component HomepageBanner", () => {
     render(<HomepageBanner events={testing_UpComingEvent} />)
 
     const banner = screen.getByText((content) =>
-      content.includes('"DAVE" is coming up.')
+      content.includes("Next event:")
     )
 
     expect(banner).toBeInTheDocument()
