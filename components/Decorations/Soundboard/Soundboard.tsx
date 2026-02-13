@@ -1,18 +1,18 @@
-'use client'
+"use client"
 
-import { type JSX } from 'react'
-import useSound from 'use-sound'
+import { type JSX, useState } from "react"
+import useSound from "use-sound"
 
-import styles from './Soundboard.module.css'
+import styles from "./Soundboard.module.css"
 
-export type Sound
-  = 'brainrot-1'
-  | 'brainrot-2'
-  | 'dude'
-  | 'have-you-tried-gdb'
-  | 'noti'
-  | 'petemob'
-  | 'skill-issue'
+export type Sound =
+  | "brainrot-1"
+  | "brainrot-2"
+  | "dude"
+  | "have-you-tried-gdb"
+  | "noti"
+  | "petemob"
+  | "skill-issue"
 
 export function Sound({ sound }: { sound: Sound }) {
   const [play] = useSound(`/sounds/${sound}.mp3`, { interrupt: true })
@@ -21,19 +21,21 @@ export function Sound({ sound }: { sound: Sound }) {
     play()
   }
 
+  // Random rotation between -10 and 10 degrees
+  const [rotation] = useState(() => Math.random() * 20 - 10)
+
   return (
     <>
       <button
         className={styles.sound}
         onClick={handlePlay}
         style={{
-          // Random rotation between -10 and 10 degrees
-          transform: `rotate(${Math.random() * 20 - 10}deg)`
+          transform: `rotate(${rotation}deg)`
         }}
       >
         <PlayIcon
           style={{
-            verticalAlign: 'middle'
+            verticalAlign: "middle"
           }}
         />
         {sound}
@@ -42,7 +44,7 @@ export function Sound({ sound }: { sound: Sound }) {
   )
 }
 
-export function PlayIcon(props: JSX.IntrinsicElements['svg']) {
+export function PlayIcon(props: JSX.IntrinsicElements["svg"]) {
   return (
     <svg
       {...props}
