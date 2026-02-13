@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "setup": "vc link --scope compsigh --project web --yes && vc env pull && pnpm i",
+    "run": "pnpm dev",
+    "archive": "rm -rf node_modules/"
+  }
+}
