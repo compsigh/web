@@ -1,4 +1,3 @@
-import "@testing-library/jest-dom"
 import { render, screen } from "@testing-library/react"
 import { HomepageBanner } from "./HomepageBanner"
 import { EventFrontmatter } from "@/app/events/page"
