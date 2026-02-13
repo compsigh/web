@@ -5,6 +5,10 @@ import { imageSizeFromFile } from 'image-size/fromFile'
 
 import styles from './Media.module.css'
 
+function LinkWrapper({ link, children }: { link?: Route, children: React.ReactNode }) {
+  return <>{link ? <Link href={link}>{children}</Link> : children}</>
+}
+
 export interface MediaProps extends Omit<ImageProps, 'alt'> {
   title?: string
   description?: React.ReactElement | string
@@ -58,10 +62,6 @@ export async function Media(
     </>
   )
 
-  function LinkWrapper({ children }: { children: React.ReactNode }) {
-    return <>{link ? <Link href={link}>{children}</Link> : children}</>
-  }
-
   return (
     <>
       <div
@@ -69,13 +69,13 @@ export async function Media(
         style={props.style}
       >
         <figure>
-          <LinkWrapper>
+          <LinkWrapper link={link}>
             {ImageWrapper}
             {VideoWrapper}
             {title && <figcaption>{title}</figcaption>}
           </LinkWrapper>
             {description && <div id={styles.description}>{description}</div>}
-            {cta && <p id={styles.cta}><LinkWrapper>{cta}</LinkWrapper></p>}
+            {cta && <p id={styles.cta}><LinkWrapper link={link}>{cta}</LinkWrapper></p>}
         </figure>
       </div>
     </>
