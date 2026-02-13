@@ -31,7 +31,12 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
       {frontmatter.previous && (
         <>
           <Spacer size={32} />
-          <LinkBar type="previous" href={frontmatter.previous.link}>
+          <LinkBar
+            arrowDirection="back"
+            alignment="start"
+            order="arrow-first"
+            href={frontmatter.previous.link}
+          >
             {frontmatter.previous.text}
           </LinkBar>
         </>
@@ -39,7 +44,12 @@ function AuthorsAndContent({ content, frontmatter }: PostProps) {
       {frontmatter.next && (
         <>
           <Spacer size={32} />
-          <LinkBar type="next" href={frontmatter.next.link}>
+          <LinkBar
+            arrowDirection="forward"
+            alignment="end"
+            order="text-first"
+            href={frontmatter.next.link}
+          >
             {frontmatter.next.text}
           </LinkBar>
         </>

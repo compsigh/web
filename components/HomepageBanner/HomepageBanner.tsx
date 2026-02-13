@@ -1,9 +1,16 @@
 "use client"
 
-import { EventFrontmatter } from "@/app/events/page"
-import Link from "next/link"
+// Components
+import { LinkBar } from "@/components/LinkBar"
 
+// Functions
 import { isValidURL } from "./isValidURL"
+
+// Types
+import { EventFrontmatter } from "@/app/events/page"
+
+// Styles
+import styles from "./HomepageBanner.module.css"
 
 export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
   const currentTime = Math.floor(new Date().getTime() / 1000)
@@ -12,7 +19,7 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
   const updatedEvents: EventFrontmatter[] = [
     ...events,
     {
-      title: "DAVE",
+      title: "compsigh night v2026.01.20 6 7",
       description: "register!",
       event_details: {
         start: 1770420908,
@@ -38,8 +45,19 @@ export function HomepageBanner({ events }: { events: EventFrontmatter[] }) {
   if (!isValidURL(eventLink)) return <></>
 
   return (
-    <Link href={eventLink}>
-      <h1>&quot;{title}&quot; is coming up.</h1>
-    </Link>
+    <div className={styles.banner}>
+      {/*<Link href={eventLink} style={{ fontFamily: "var(--font-tronica-mono)" }}>
+        <span>Next event: </span>
+        <TextStream duration={1} text={`${title} >`} />
+      </Link>*/}
+      <LinkBar
+        arrowDirection="forward"
+        alignment="end"
+        order="text-first"
+        href={"https://compsigh.club"}
+      >
+        Next event: {title}
+      </LinkBar>
+    </div>
   )
 }
