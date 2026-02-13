@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { useLayoutEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 
 import { docs } from "@/app/docs/docs"
 import { Author } from "@/components/Author"
@@ -53,13 +53,12 @@ export function PostWrapper({ content, frontmatter }: PostProps) {
 
   const pathName = usePathname()
 
-  async function waitForTypewriter() {
-    await new Promise((res) =>
-      setTimeout(res, TYPEWRITER_ANIMATION_DURATION_MS)
-    )
-    setTypewriterDone(true)
-  }
-  waitForTypewriter()
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTypewriterDone(true)
+    }, TYPEWRITER_ANIMATION_DURATION_MS)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
