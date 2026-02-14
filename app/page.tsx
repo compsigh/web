@@ -1,12 +1,12 @@
-import { NavItems } from "@/components/NavItems";
-import { HomeLoop } from "@/components/HomeLoop";
-import { HomepageBanner } from "@/components/HomepageBanner";
-import { getEvents } from "./events/page";
+import { NavItems } from "@/components/NavItems"
+import { HomeLoop } from "@/components/HomeLoop"
+import { HomepageBanner } from "@/components/HomepageBanner"
+import { getEvents } from "./events/page"
 
-import styles from "./Home.module.css";
+import styles from "./Home.module.css"
 
 export default async function Home() {
-  const events = await getEvents();
+  const events = await getEvents()
 
   return (
     <>
@@ -26,5 +26,5 @@ export default async function Home() {
         <HomeLoop />
       </div>
     </>
-  );
+  )
 }
