@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "next-devtools": {
+      "command": "pnpx",
+      "args": ["-y", "next-devtools-mcp@0.3.10"]
+    },
+    "vercel": {
+      "url": "https://mcp.vercel.com/compsigh/web",
+      "type": "http"
+    }
+  }
+}
