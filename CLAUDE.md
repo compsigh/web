@@ -1,5 +1,7 @@
 # Guide to the `compsigh/web` codebase for Claude Code
 
+`compsigh/web` is the web platform of compsigh, the social computer science club for meeting cool people && building cool things at the University of San Francisco
+
 ## Tech stack
 
 - Node version: 24.x
