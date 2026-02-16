@@ -1,6 +1,6 @@
 'use client'
 
-import { type JSX, useEffect, useState } from 'react'
+import { type JSX, useState } from 'react'
 
 import styles from './Icon.module.css'
 
@@ -75,11 +75,7 @@ const iconSrcs: Record<Icon, JSX.Element> = {
 }
 
 export function Icon({ icon }: { icon: Icon }) {
-  const [delay, setDelay] = useState(0)
-
-  useEffect(() => {
-    setDelay(Math.random() * 2)
-  }, [])
+  const [delay] = useState(() => Math.random() * 2)
 
   return (
     <>

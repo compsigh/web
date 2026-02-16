@@ -8,6 +8,10 @@ import { StatusIndicator } from '@/components/StatusIndicator'
 
 import styles from './Events.module.css'
 
+function LinkWrapper({ children, link }: { children: React.ReactNode, link?: string }) {
+  return link ? <Link href={link}>{children}</Link> : <>{children}</>
+}
+
 export function Event({ event }: { event: EventFrontmatter }) {
   const { start, end } = event.event_details
   const START_TIME_IN_MS = start * 1000
@@ -37,13 +41,9 @@ export function Event({ event }: { event: EventFrontmatter }) {
       ? slugSegments[1].concat(`-${slugSegments[2]}`)
       : event.slug
 
-  const currentUnixTimestamp = Math.floor(Date.now() / 1000)
+  const currentUnixTimestamp = Math.floor(new Date().getTime() / 1000)
   function isEventHappeningNow(start: number, end: number) {
     return start < currentUnixTimestamp && end > currentUnixTimestamp
-  }
-
-  function LinkWrapper({ children, link }: { children: React.ReactNode, link?: string }) {
-    return link ? <Link href={link}>{children}</Link> : <>{children}</>
   }
 
   return (
