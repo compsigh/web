@@ -18,6 +18,7 @@ build/
 
 # TypeScript
 next-env.d.ts
+*.tsbuildinfo
 
 # Nix
 flake.lock
