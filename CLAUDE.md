@@ -23,7 +23,7 @@
 
 ### Content system
 
-The website uses a file-based MDX content system, where Markdown files become pages.
+The web platform uses a file-based MDX content system, where Markdown files become pages.
 
 - Markdown files are located in `app/`
 - The catch-all route at `app/[...slug]/page.tsx` handles all `.md` files
