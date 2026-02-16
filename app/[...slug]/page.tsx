@@ -1,6 +1,6 @@
 import path from "node:path"
 import Link from "next/link"
-import { Suspense } from "react"
+import { cache, Suspense } from "react"
 import fs from "node:fs/promises"
 import { type Metadata } from "next"
 import { notFound } from "next/navigation"
@@ -141,7 +141,7 @@ export async function compileMarkdown(fileContent: Markdown) {
  * @param {string[]} segments - A route served by the Next.js App Router. The last element in the array is the filename, and each preceding element is a parent directory.
  * @example readMarkdownFileAtRoute(['docs', 'about']) // Reads `app/docs/about.md`
  */
-export async function readMarkdownFileAtRoute(segments: string[]) {
+export const readMarkdownFileAtRoute = cache(async (segments: string[]): Promise<PostProps> => {
   try {
     const filePath = path.join(process.cwd(), "app", ...segments) + ".md"
     const fileContent = await fs.readFile(filePath, "utf8")
@@ -166,7 +166,7 @@ export async function readMarkdownFileAtRoute(segments: string[]) {
     }
     notFound()
   }
-}
+})
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>
