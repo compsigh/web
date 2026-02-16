@@ -6,6 +6,7 @@
 
 - Node version: 24.x
 - Package manager: pnpm 10.27.0
+  - All installs, invocations, and scripts should use `pnpm`, e.g. `pnpm i`, `pnpm add`, `pnpm run`, `pnpx tsc`
 - Language: TypeScript (strict mode)
 - Framework: Next.js 16 (App Router) with Turbopack
 - Database: Postgres via Prisma ORM
