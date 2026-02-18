@@ -2,7 +2,9 @@
 
 `compsigh/web` is the web platform of compsigh, the social computer science club for meeting cool people && building cool things at the University of San Francisco
 
-## Tech stack
+## Technical details of the project
+
+### Tech stack
 
 - Node version: 24.x
 - Package manager: pnpm 10.27.0
@@ -13,16 +15,16 @@
 - Content: MDX (`next-mdx-remote`)
 - Hosting: Vercel with Edge Config & `@vercel/flags`
 
-## Code style
+### Code style
 
 - No semicolons in JavaScript/TypeScript files
 - No trailing commas
 - Path aliases: `@/*` maps to root directory
 - ESLint enforces Next.js best practices and React hooks rules
 
-## Architecture
+### Architecture
 
-### Content system
+#### Content system
 
 The web platform uses a file-based MDX content system, where Markdown files become pages.
 
@@ -34,7 +36,7 @@ The web platform uses a file-based MDX content system, where Markdown files beco
 - Events live in `app/events/YYYY-MM-DD/` directories
 - If `link` is defined in frontmatter, the page is not built (`generateStaticParams` filters it out)
 
-### Components
+#### Components
 
 - Generally, all reusable components live in `components/`
 - All styling is done with CSS Modules
@@ -42,3 +44,14 @@ The web platform uses a file-based MDX content system, where Markdown files beco
   - The actual component file, e.g. `Media.tsx`
   - A CSS Modules file, e.g. `Media.module.css`
   - An `index.ts` re-exporting the file
+
+## Heuristics
+
+### Committing work
+
+- Never commit or push unless explicitly instructed — always offer the user a chance to review first
+
+### Answering questions
+
+- When being asked a question, do not make any changes unless instructed to
+- When the user uses language like "isn't it the case that [...]?", do not blindly accept the proposition. They are simply asking you a question. Assess the truthfulness of their premises & soundness of any arguments, and ultimately, answer the question
