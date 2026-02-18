@@ -43,40 +43,40 @@ function getHeadings(): Heading[] {
   return cachedHeadings
 }
 
+function HeadingDetailsWrapper({
+  heading,
+  subheadings,
+  children
+}: {
+  heading: Heading
+  subheadings: Heading[]
+  children: React.ReactNode
+}) {
+  if (subheadings.length > 0)
+    return (
+      <>
+        <details>
+          <summary>
+            <Link href={`#${heading.id}`}>{heading.text}</Link>
+          </summary>
+          {children}
+        </details>
+      </>
+    )
+  return (
+    <>
+      <Link href={`#${heading.id}`}>{heading.text}</Link>
+      {children}
+    </>
+  )
+}
+
 export function TableOfContents() {
   const headings = useSyncExternalStore(
     emptySubscribe,
     getHeadings,
     () => cachedHeadings
   )
-
-  function HeadingDetailsWrapper({
-    heading,
-    subheadings,
-    children
-  }: {
-    heading: Heading
-    subheadings: Heading[]
-    children: React.ReactNode
-  }) {
-    if (subheadings.length > 0)
-      return (
-        <>
-          <details>
-            <summary>
-              <Link href={`#${heading.id}`}>{heading.text}</Link>
-            </summary>
-            {children}
-          </details>
-        </>
-      )
-    return (
-      <>
-        <Link href={`#${heading.id}`}>{heading.text}</Link>
-        {children}
-      </>
-    )
-  }
 
   if (headings.length === 0) return <></>
   return (
