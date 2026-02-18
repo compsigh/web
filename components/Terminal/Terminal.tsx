@@ -5,6 +5,8 @@ import {
   FaInstagram as InstagramIcon
 } from "react-icons/fa"
 import { Command } from "cmdk"
+import { DialogTitle } from "@radix-ui/react-dialog"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { usePathname, useRouter } from "next/navigation"
 import { ReactNode, useEffect, useState } from "react"
 
@@ -188,7 +190,11 @@ export function Terminal() {
           container={container ?? undefined}
           open={open}
           onOpenChange={setOpen}
+          label="Terminal navigation"
         >
+          <VisuallyHidden>
+            <DialogTitle>Terminal navigation</DialogTitle>
+          </VisuallyHidden>
           <Command.List>
             <Command.Empty>No results found</Command.Empty>
             <Items setOpen={setOpen} />
