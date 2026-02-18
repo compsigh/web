@@ -6,14 +6,106 @@ import {
 } from 'react-icons/fa'
 import { Command } from 'cmdk'
 import { usePathname, useRouter } from 'next/navigation'
-import { ReactNode, useEffect, useRef, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
 import './Terminal.css'
+
+function Item({
+  children,
+  onSelect = () => {},
+  disabled = false
+}: {
+  children: ReactNode
+  onSelect?: (value: string) => void
+  disabled?: boolean
+}) {
+  return (
+    <Command.Item onSelect={onSelect} disabled={disabled}>
+      {children}
+    </Command.Item>
+  )
+}
+
+function Items({ setOpen }: { setOpen: (open: boolean) => void }) {
+  const router = useRouter()
+  return (
+    <>
+      <Command.Group heading="Pages">
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/', {scroll: false})
+          }}
+        >
+          Home
+        </Item>
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/events')
+          }}
+        >
+          Events
+        </Item>
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/community')
+          }}
+        >
+          Community
+        </Item>
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/docs')
+          }}
+        >
+          Docs
+        </Item>
+      </Command.Group>
+
+      <Command.Separator />
+
+      <Command.Group heading="Socials">
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/discord')
+          }}
+        >
+          <DiscordIcon size={16} />
+          Discord
+        </Item>
+        <Item
+          onSelect={() => {
+            setOpen(false)
+            router.push('/instagram')
+          }}
+        >
+          <InstagramIcon size={16} />
+          Instagram
+        </Item>
+      </Command.Group>
+    </>
+  )
+}
+
+function TerminalToggle() {
+  return (
+    <button
+      id="terminal-toggle"
+      onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: '/' }))}
+    >
+      <kbd>/</kbd>
+    </button>
+  )
+}
 
 export function Terminal() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
-  const container = useRef<HTMLDivElement | null>(null)
+  const [container, setContainer] = useState<HTMLDivElement | null>(null)
   const [displayToggle, setDisplayToggle] = useState(false)
   const [displayTerminalEdu, setDisplayTerminalEdu] = useState(false)
   const [terminalEduStyle, setTerminalEduStyle] = useState<'subtle' | 'full'>('full')
@@ -41,121 +133,26 @@ export function Terminal() {
         setTerminalEduStyle('full')
     }
 
-    const hideTerminalEduOnSmallerScreens = () => {
+    const updateTerminalEduVisibility = () => {
       if (window.innerWidth < 860) {
         setDisplayTerminalEdu(false)
         setDisplayToggle(true)
+      } else {
+        setDisplayTerminalEdu(true)
+        if (hasOpenedTerminal())
+          setTimeout(() => setDisplayTerminalEdu(false), 3200)
       }
     }
 
-    const hideSubtleTerminalEduAfterDelay = () => {
-      if (hasOpenedTerminal())
-        setTimeout(() => setDisplayTerminalEdu(false), 3200)
-    }
-
     resetTerminalEduStyle()
-    setDisplayTerminalEdu(true)
-    hideTerminalEduOnSmallerScreens()
-    hideSubtleTerminalEduAfterDelay()
+    updateTerminalEduVisibility()
     document.addEventListener('keydown', showTerminalListener)
-    window.addEventListener('resize', hideTerminalEduOnSmallerScreens)
+    window.addEventListener('resize', updateTerminalEduVisibility)
     return () => {
       document.removeEventListener('keydown', showTerminalListener)
-      window.removeEventListener('resize', hideTerminalEduOnSmallerScreens)
+      window.removeEventListener('resize', updateTerminalEduVisibility)
     }
   }, [terminalEduStyle, pathname])
-
-  function Items() {
-    const router = useRouter()
-    return (
-      <>
-        <Command.Group heading="Pages">
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/', {scroll: false})
-            }}
-          >
-            Home
-          </Item>
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/events')
-            }}
-          >
-            Events
-          </Item>
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/community')
-            }}
-          >
-            Community
-          </Item>
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/docs')
-            }}
-          >
-            Docs
-          </Item>
-        </Command.Group>
-
-        <Command.Separator />
-
-        <Command.Group heading="Socials">
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/discord')
-            }}
-          >
-            <DiscordIcon size={16} />
-            Discord
-          </Item>
-          <Item
-            onSelect={() => {
-              setOpen(false)
-              router.push('/instagram')
-            }}
-          >
-            <InstagramIcon size={16} />
-            Instagram
-          </Item>
-        </Command.Group>
-      </>
-    )
-  }
-
-  function Item({
-    children,
-    onSelect = () => {},
-    disabled = false
-  }: {
-    children: ReactNode
-    onSelect?: (value: string) => void
-    disabled?: boolean
-  }) {
-    return (
-      <Command.Item onSelect={onSelect} disabled={disabled}>
-        {children}
-      </Command.Item>
-    )
-  }
-
-  function TerminalToggle() {
-    return (
-      <button
-        id="terminal-toggle"
-        onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: '/' }))}
-      >
-        <kbd>/</kbd>
-      </button>
-    )
-  }
 
   return (
     <>
@@ -165,7 +162,7 @@ export function Terminal() {
         }}
       />
       <div
-        ref={container}
+        ref={setContainer}
         id="terminal-container"
       >
         {
@@ -187,13 +184,13 @@ export function Terminal() {
             <TerminalToggle />
         }
         <Command.Dialog
-          container={container.current ?? undefined}
+          container={container ?? undefined}
           open={open}
           onOpenChange={setOpen}
         >
           <Command.List>
             <Command.Empty>No results found</Command.Empty>
-            <Items />
+            <Items setOpen={setOpen} />
           </Command.List>
           <div id="terminal-path">
             ~{pathname}
