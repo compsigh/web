@@ -1,0 +1,11 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+archive = "rm -rf node_modules/"
+setup = "vc link --scope compsigh --project web --yes && vc env pull && pnpm i"
+
+[scripts.run.run]
+available_in = "local"
+command = "pnpm dev"
+default = true
+icon = "play"
