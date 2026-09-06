@@ -81,7 +81,8 @@ export type Frontmatter = {
   description: string
   authors?: Author[]
   og_image?: string
-  post_date?: string
+  // UNIX time, in seconds
+  post_date?: number
   decorations?: boolean
   previous?: Reference
   next?: Reference
@@ -141,45 +142,40 @@ export async function compileMarkdown(fileContent: Markdown) {
  * @param {string[]} segments - A route served by the Next.js App Router. The last element in the array is the filename, and each preceding element is a parent directory.
  * @example readMarkdownFileAtRoute(['docs', 'about']) // Reads `app/docs/about.md`
  */
-export const readMarkdownFileAtRoute = cache(async (segments: string[]): Promise<PostProps> => {
-  try {
-    const filePath = path.join(process.cwd(), "app", ...segments) + ".md"
-    const fileContent = await fs.readFile(filePath, "utf8")
-    const { content, frontmatter } = await compileMarkdown(fileContent)
+export const readMarkdownFileAtRoute = cache(
+  async (segments: string[]): Promise<PostProps> => {
+    try {
+      const filePath = path.join(process.cwd(), "app", ...segments) + ".md"
+      const fileContent = await fs.readFile(filePath, "utf8")
+      const { content, frontmatter } = await compileMarkdown(fileContent)
 
-    if (!frontmatter.slug) {
-      frontmatter.slug = segments.join("/")
-    }
-
-    return { content, frontmatter }
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
-      // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
-      // TODO: this is scuffed and should be redone; perhaps using a map of slugs to file paths
-      const slugs = await generateUnmodifiedSlugsFromMarkdownFiles("app")
-      for (const { slug } of slugs) {
-        const { frontmatter } = await readMarkdownFileAtRoute(slug)
-        if (frontmatter.slug === segments.join("/"))
-          return readMarkdownFileAtRoute(slug)
+      if (!frontmatter.slug) {
+        frontmatter.slug = segments.join("/")
       }
+
+      return { content, frontmatter }
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+        // If a Markdown file does not exist at the route provided, it's possible the route is a slug alias
+        // For each Markdown file, read it and compare its frontmatter `slug` to the route provided
+        // TODO: this is scuffed and should be redone; perhaps using a map of slugs to file paths
+        const slugs = await generateUnmodifiedSlugsFromMarkdownFiles("app")
+        for (const { slug } of slugs) {
+          const { frontmatter } = await readMarkdownFileAtRoute(slug)
+          if (frontmatter.slug === segments.join("/"))
+            return readMarkdownFileAtRoute(slug)
+        }
+      }
+      notFound()
     }
-    notFound()
   }
-})
+)
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>
 }) {
   const params = await props.params
   const { frontmatter } = await readMarkdownFileAtRoute(params.slug)
-  const metadata: Metadata = {
-    title: frontmatter.title,
-    description: frontmatter.description,
-    openGraph: {
-      siteName: "compsigh"
-    }
-  }
 
   const title = encodeURIComponent(frontmatter.title)
   const description = encodeURIComponent(frontmatter.description)
@@ -187,24 +183,35 @@ export async function generateMetadata(props: {
   if (frontmatter.authors)
     for (const author of frontmatter.authors)
       url = url.concat(`&author=${author.name}&avatar=${author.avatar}`)
-  metadata.openGraph!.images = [
+
+  const images = [
     {
-      url: url,
+      url: frontmatter.og_image ?? url,
       width: 1200,
       height: 630,
       alt: ""
     }
   ]
 
-  if (frontmatter.og_image)
-    metadata.openGraph!.images = [
-      {
-        url: frontmatter.og_image,
-        width: 1200,
-        height: 630,
-        alt: ""
+  // `authors` metadata to follow, likely via a central author registry
+  // Also see: Fetching authors via Discord (#24)
+  const openGraph: Metadata["openGraph"] = frontmatter.post_date
+    ? {
+        siteName: "compsigh",
+        images,
+        type: "article",
+        publishedTime: new Date(frontmatter.post_date * 1000).toISOString()
       }
-    ]
+    : {
+        siteName: "compsigh",
+        images
+      }
+
+  const metadata: Metadata = {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    openGraph
+  }
 
   return metadata
 }

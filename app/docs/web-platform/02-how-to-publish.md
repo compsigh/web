@@ -386,6 +386,7 @@ Invites had conditions like `no-invite` (invited students can't also +1) to help
 
 We also gave these out at Destination USF.
 </CasePreserver>
+
 </div>
 </Grid>
 
@@ -512,7 +513,7 @@ This doesn't show up on a page itself, but like `title`, is used in search engin
 
 The date and time of when your post is considered published, in UNIX time (seconds after the epoch of January 1st, 1970). You can get the current UNIX time from your Terminal by running `date + '%s'` or by using an online tool like the [Epoch Converter](https://unixtimestamp.com).
 
-This is mainly for proper ordering in the Community tab. You don't have to actually sync `post_date` with when you expect your post to go live.
+This is mainly for proper ordering in the Community tab. It's also used for metadata, so search engines and social platforms know when your post came out. You don't have to sync `post_date` with exactly when you expect your post to go live.
 
 <Spacer size={16} />
 
