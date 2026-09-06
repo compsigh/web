@@ -11,12 +11,23 @@ div#container {
   width: 100%;
   height: 64px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   font-family: var(--font-tronica-mono);
 }
 
-div#container.previous {
+div#container.alignment-start {
+  justify-content: left;
+}
+
+div#container.alignment-end {
+  justify-content: right;
+}
+
+div#container.text-first {
+  flex-direction: row;
+}
+
+div#container.arrow-first {
   flex-direction: row-reverse;
 }
 
