@@ -6,6 +6,6 @@ event_details: {
   location: "The Hive",
   cover_image: "/events/2026-09-25/compsigh-night.jpeg",
   pictures: [],
-  link: "https://partiful.com/e/vk45ESXIvRenD2Pki0U9?"
+  link: "https://partiful.com/e/qoCDrtHEgxv7ClDXHFyh"
 }
 ---
