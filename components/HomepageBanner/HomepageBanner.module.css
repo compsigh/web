@@ -1,0 +1,19 @@
+div.banner {
+  /*font-size: 1.2rem;*/
+
+  /*a {
+    display: flex;
+    white-space: pre;
+    text-decoration: none;
+    padding: 4px 8px;
+  }*/
+}
+
+@media (max-width: 700px) {
+  div.banner {
+    margin-left: -24px;
+    /*a {
+      flex-direction: column;
+    }*/
+  }
+}
