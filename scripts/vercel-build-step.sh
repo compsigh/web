@@ -15,7 +15,7 @@ WATCH_PATHS=(
   "flags.ts"
   "next.config.ts"
   "package.json"
-  "pnpm-lock.yaml"
+  "bun.lock"
   "tsconfig.json"
 )
 

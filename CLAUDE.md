@@ -7,8 +7,8 @@
 ### Tech stack
 
 - Node version: 24.x
-- Package manager: pnpm 10.27.0
-  - All installs, invocations, and scripts should use `pnpm`, e.g. `pnpm i`, `pnpm add`, `pnpm run`, `pnpx tsc`
+- Package manager: Bun 1.4.2
+  - All installs, invocations, and scripts should use `bun`, e.g. `bun i`, `bun add`, `bun run`, `bunx tsc`
   - All packages should be pinned to their exact SemVer
 - Language: TypeScript (strict mode)
 - Framework: Next.js 16 (App Router) with Turbopack
