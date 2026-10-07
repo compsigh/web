@@ -17,6 +17,7 @@ WATCH_PATHS=(
   "package.json"
   "bun.lock"
   "tsconfig.json"
+  "vercel.ts"
 )
 
 # Allow force-skipping or force-building via commit message.
