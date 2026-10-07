@@ -34,11 +34,11 @@ Before we continue, you'll want to make sure you have [<CasePreserver>Node.js</C
 
 For Windows, I recommend following the prerequisites of [<CasePreserver>Microsoft</CasePreserver>'s guide to setting up <CasePreserver>WSL</CasePreserver> for <CasePreserver>Next.js</CasePreserver>](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nextjs-on-wsl).
 
-Make sure you have `pnpm` — a package manager built on top of the Node Package Manager (npm) — installed: `npm i -g pnpm`.
+Make sure you have [<CasePreserver>Bun</CasePreserver>](https://bun.sh) — a fast JavaScript package manager and toolkit — installed: `curl -fsSL https://bun.sh/install | bash` (or `npm i -g bun`).
 
-Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `pnpm install` to install the dependencies.
+Once you have <CasePreserver>Node.js</CasePreserver> installed, open a terminal session inside your cloned fork of the web platform and run `bun install` to install the dependencies.
 
-Finally, run `pnpm run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
+Finally, run `bun run dev` and open `http://localhost:3000` in your browser to preview your changes (hit `^C` to stop it). I recommend having this up while you're writing so you can refresh the page and see how everything looks.
 
 </details>
 
@@ -636,8 +636,8 @@ slug: "events/my-workshop/getting-started"
 
 When you open the PR, it'll prefill the description. Please make sure you double-check before submitting:
 
-- You've previewed your post locally with `pnpm run dev` and are happy with it
-- You've confirmed `pnpm run build` runs successfully
+- You've previewed your post locally with `bun run dev` and are happy with it
+- You've confirmed `bun run build` runs successfully
 - You've made sure all media is in a folder mirroring your post's URL in the `public/` directory
 
 Also, you're asked to what degree you're open to feedback, if any. Feedback will most likely come in the form of suggestions directly on the PR. Each change will have an option to accept the suggestion, reject it, or batch it along with others to accept as one commit.

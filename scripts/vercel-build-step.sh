@@ -15,8 +15,9 @@ WATCH_PATHS=(
   "flags.ts"
   "next.config.ts"
   "package.json"
-  "pnpm-lock.yaml"
+  "bun.lock"
   "tsconfig.json"
+  "vercel.ts"
 )
 
 # Allow force-skipping or force-building via commit message.

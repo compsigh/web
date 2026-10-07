@@ -10,14 +10,14 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        nodejs = pkgs.nodejs_22;
-        pnpm = pkgs.nodePackages.pnpm;
+        nodejs = pkgs.nodejs_24;
+        bun = pkgs.bun;
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = [
             nodejs
-            pnpm
+            bun
           ];
         };
 
@@ -27,12 +27,12 @@
           
           buildInputs = [
             nodejs
-            pnpm
+            bun
           ];
 
           buildPhase = ''
-            pnpm install --frozen-lockfile
-            pnpm build
+            bun install --frozen-lockfile
+            bun run build
           '';
 
           installPhase = ''
