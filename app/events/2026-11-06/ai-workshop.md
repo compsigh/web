@@ -5,7 +5,16 @@ event_details: {
   start: 1794016800,
   location: "The Hive",
   cover_image: "/events/2026-11-06/ai-workshop-landscape.jpeg",
-  pictures: [],
-  link: "https://partiful.com/e/ES3ySNuuL3RP3Ny4oEfF"
+  pictures: []
 }
 ---
+
+## one-shot build challenge
+
+sign in with your usf email, practice as much as you want, then submit **one** final prompt. claude turns it into a working product that gets its own page on the dashboard.
+
+**[enter the build challenge →](https://danil-theuser.github.io/ai-workshop/)**
+
+## rsvp
+
+[rsvp on partiful](https://partiful.com/e/ES3ySNuuL3RP3Ny4oEfF)
