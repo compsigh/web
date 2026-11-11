@@ -7,46 +7,21 @@ slug: "docs/leadership/about"
 
 ## Current leadership
 
-<Grid columns={2}>
+<Grid columns={3}>
   <Media
     src="/avatars/danil.png"
     title="Danil Tverdov"
-    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
-    description={
-      <div>
-        <span>Co-President</span>
-        <br />
-        <Link href="mailto:dtverdov@dons.usfca.edu">dtverdov@dons.usfca.edu</Link>
-      </div>
-    }
   />
 
   <Media
     src="/avatars/finn.png"
     title="Finn Helmholz"
-    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
-    description={
-      <div>
-        <span>Co-President</span>
-        <br />
-        <Link href="mailto:fjhelmholz@dons.usfca.edu">fjhelmholz@dons.usfca.edu</Link>
-      </div>
-    }
   />
 
   <Media
     src="/avatars/togi.png"
     title="Ashid Tuguldur (Togi)"
-    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
-    description={
-      <div>
-        <span>Leadership</span>
-        <br />
-        <Link href="mailto:atuguldur@dons.usfca.edu">atuguldur@dons.usfca.edu</Link>
-      </div>
-    }
   />
-
 </Grid>
 
 ## Philosophy of leadership
