@@ -5,10 +5,21 @@ previous: { text: "Joining compsigh leadership", link: "/docs/leadership/joining
 next: { text: "About compsigh leadership", link: "/docs/leadership/about" }
 slug: "docs/leadership/team"
 ---
+## Fall 2026
+- Danil Tverdov
+- Finn Helmholz
+- Ashid Tuguldur
+
+## Spring 2026
+- Edward Shturman
+- Nora Kravets
+- Z Moore
+- Samuel Simmons
+
 ## Fall 2025
 
 - Jet Pham
-- Nora Kravets 
+- Nora Kravets
 - Z Moore
 - Samuel Simmons
 

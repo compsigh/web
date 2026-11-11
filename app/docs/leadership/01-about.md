@@ -9,56 +9,44 @@ slug: "docs/leadership/about"
 
 <Grid columns={2}>
   <Media
-    src="/avatars/jet.png"
-    title="Jet Pham"
+    src="/avatars/danil.png"
+    title="Danil Tverdov"
     style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
     description={
       <div>
-        <span>President</span>
+        <span>Co-President</span>
         <br />
-        <Link href="mailto:jtpham9@dons.usfca.edu">jtpham9@dons.usfca.edu</Link>
-      </div>
-    }
-  />
-  
-  <Media
-    src="/avatars/nora.png"
-    title="Nora Kravets"
-    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
-    description={
-      <div>
-        <span>Leadership</span>
-        <br />
-        <Link href="mailto:nckravets@dons.usfca.edu">nckravets@dons.usfca.edu</Link>
+        <Link href="mailto:dtverdov@dons.usfca.edu">dtverdov@dons.usfca.edu</Link>
       </div>
     }
   />
 
   <Media
-    src="/avatars/z.png"
-    title="Z Moore"
-    style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
+    src="/avatars/finn.png"
+    title="Finn Helmholz"
+    style={{ marginTop: '0.5rem', marginBottom: '0rem' }}
     description={
       <div>
-        <span>Leadership</span>
+        <span>Co-President</span>
         <br />
-        <Link href="mailto:anmoore4@dons.usfca.edu">anmoore4@dons.usfca.edu</Link>
+        <Link href="mailto:fjhelmholz@dons.usfca.edu">fjhelmholz@dons.usfca.edu</Link>
       </div>
     }
   />
 
   <Media
-    src="/avatars/sam.png"
-    title="Samuel Simmons"
+    src="/avatars/togi.png"
+    title="Ashid Tuguldur (Togi)"
     style={{ marginTop: '0rem', marginBottom: '0.5rem' }}
     description={
       <div>
         <span>Leadership</span>
         <br />
-        <Link href="mailto:sbsimmons@dons.usfca.edu">sbsimmons@dons.usfca.edu</Link>
+        <Link href="mailto:atuguldur@dons.usfca.edu">atuguldur@dons.usfca.edu</Link>
       </div>
     }
   />
+
 </Grid>
 
 ## Philosophy of leadership
