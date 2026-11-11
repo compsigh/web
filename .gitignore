@@ -22,4 +22,3 @@ next-env.d.ts
 
 # Nix
 flake.lock
-.env*
